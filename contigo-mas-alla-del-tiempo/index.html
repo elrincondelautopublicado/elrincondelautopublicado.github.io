@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Trilogía Contigo — Cristina Villar Losa</title>
+  <meta name="description" content="La Trilogía Contigo, de Cristina Villar Losa. Ciencia ficción y distopía romántica: en un mundo futuro sin sentimientos, Laya e Izan aún tienen el poder de soñar. Contigo o sin ti · Contigo, el comienzo · Contigo, más allá del tiempo." />
+  <meta name="author" content="Cristina Villar Losa" />
+  <meta name="keywords" content="Trilogía Contigo, Contigo o sin ti, Contigo el comienzo, Contigo más allá del tiempo, Cristina Villar Losa, ciencia ficción, distopía, romántica, novela autopublicada" />
+
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Trilogía Contigo — Cristina Villar Losa" />
+  <meta property="og:description" content="¿Puede crecer el amor en una sociedad sin sentimientos? ¿O está abocado al fracaso?" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trilogía Contigo — Cristina Villar Losa" />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317102a'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23b98cff' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ff8a3d'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Karla:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --noche: #17102a;
+      --noche-2: #1d1638;
+      --morado: #251b45;
+      --lila: #a97fe0;
+      --lila-viva: #c6a6ff;
+      --lila-honda: #7b52b5;
+      --naranja: #ff8a3d;
+      --naranja-viva: #ffa662;
+      --naranja-honda: #d9682a;
+      --hueso: #f3edff;
+      --gris: #a99cc4;
+      --gris-2: #746a90;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--hueso);
+      font-family: 'Karla', Helvetica, Arial, sans-serif;
+      font-size: 1.06rem;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .display { font-family: 'Chakra Petch', sans-serif; letter-spacing: .01em; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(23,16,42,.82); backdrop-filter: blur(9px); border-bottom: 1px solid rgba(169,127,224,.3); }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--hueso); letter-spacing: .16em; font-size: 1rem; text-transform: uppercase; }
+    nav .links { display: flex; gap: 24px; }
+    nav .links a { text-decoration: none; font-size: .74rem; letter-spacing: .12em; color: var(--gris); text-transform: uppercase; transition: color .3s; font-family: 'Chakra Petch', sans-serif; }
+    nav .links a:hover { color: #fff; }
+    nav .links a.home { color: var(--naranja); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--lila-viva); margin: 5px 0; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 820px) {
+      .nav-toggle { display: block; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px); flex-direction: column; justify-content: center; gap: 30px; background: rgba(23,16,42,.98); border-left: 1px solid rgba(169,127,224,.4); transform: translateX(100%); transition: transform .35s ease; }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 120px 0 70px;
+      background: radial-gradient(circle at 80% 20%, rgba(255,138,61,.22), transparent 50%), radial-gradient(circle at 14% 82%, rgba(169,127,224,.28), transparent 55%), linear-gradient(180deg, #120b24 0%, var(--noche-2) 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.04) 1px, transparent 1px); background-size: 3px 3px; }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
+    .cover-frame { justify-self: center; width: 380px; max-width: 100%; border-radius: 8px; box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 30px 70px rgba(0,0,0,.7), 0 0 70px rgba(169,127,224,.3); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 8px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 4/5; padding: 30px; background: linear-gradient(160deg, #3a2a63, #17102a); border-radius: 8px; color: var(--hueso); font-family: 'Chakra Petch', sans-serif; text-transform: uppercase; }
+    .hero-text .eyebrow { color: var(--naranja); text-transform: uppercase; letter-spacing: .3em; font-size: .74rem; margin-bottom: 16px; font-family: 'Chakra Petch', sans-serif; }
+    .hero-text h1 { font-size: clamp(2.7rem, 7vw, 4.6rem); line-height: .96; font-weight: 700; color: #fff; text-transform: uppercase; }
+    .hero-text h1 span { color: var(--lila-viva); }
+    .hero-text .subtitulo { margin-top: 12px; font-family: 'Chakra Petch', sans-serif; color: var(--hueso); font-size: 1.2rem; letter-spacing: .06em; }
+    .hero-text .autora { margin-top: 16px; color: var(--gris); font-size: 1rem; font-family: 'Chakra Petch', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-text .autora strong { color: var(--hueso); font-weight: 600; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.28rem; font-style: italic; color: var(--naranja-viva); max-width: 42ch; }
+    .badge { display: inline-block; margin-top: 20px; padding: 8px 18px; border: 1px solid rgba(169,127,224,.55); border-radius: 30px; color: var(--lila-viva); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-family: 'Chakra Petch', sans-serif; }
+    @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; } .hero-text .tagline { margin-left:auto; margin-right:auto; } .cta-row { justify-content: center; } .cover-frame { width: 300px; } }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 4px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--naranja), var(--naranja-honda)); color: #fff; box-shadow: 0 10px 28px rgba(255,138,61,.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(255,138,61,.5); }
+    .btn-ghost { border: 1px solid rgba(198,166,255,.4); color: var(--hueso); background: transparent; }
+    .btn-ghost:hover { background: rgba(169,127,224,.12); border-color: var(--lila-viva); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 92px 0; }
+    .section-title { text-align: center; font-size: clamp(2rem, 4.4vw, 3rem); color: #fff; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; }
+    .section-title span { color: var(--lila-viva); }
+    .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--naranja), transparent); margin: 0 auto 46px; }
+
+    .sinopsis { background: linear-gradient(180deg, var(--noche-2), var(--noche)); border-top: 1px solid rgba(169,127,224,.25); border-bottom: 1px solid rgba(169,127,224,.25); }
+    .sinopsis .lead { max-width: 62ch; margin: 0 auto; text-align: center; }
+    .sinopsis .lead p { font-size: 1.18rem; color: #ded6f0; margin-bottom: 22px; }
+    .sinopsis .lead .cita { font-family: 'Chakra Petch', sans-serif; color: var(--lila-viva); font-size: 1.24rem; font-style: normal; }
+    .sinopsis .lead .qs { font-family: 'Chakra Petch', sans-serif; color: var(--naranja-viva); font-size: 1.3rem; }
+    .sinopsis .lead .cierre { color: var(--naranja-viva); font-family: 'Chakra Petch', sans-serif; font-size: 1.4rem; letter-spacing: .02em; }
+
+    /* ============ LOS TRES LIBROS ============ */
+    .libro-row { display: grid; grid-template-columns: 260px 1fr; gap: 46px; align-items: center; max-width: 960px; margin: 0 auto; padding: 46px 0; border-bottom: 1px solid rgba(169,127,224,.16); }
+    .libro-row:last-child { border-bottom: 0; }
+    .libro-row.alt { direction: rtl; }
+    .libro-row.alt > * { direction: ltr; }
+    .libro-portada { position: relative; justify-self: center; width: 260px; max-width: 100%; }
+    .libro-portada img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 22px 50px rgba(0,0,0,.55), 0 0 40px rgba(169,127,224,.22); transition: transform .4s ease; }
+    .libro-portada:hover img { transform: translateY(-5px); }
+    .libro-portada .num { position: absolute; top: 12px; left: 12px; background: var(--naranja); color: #17102a; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .08em; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; }
+    .libro-info h3 { color: #fff; font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+    .libro-info .etiqueta { color: var(--naranja); font-family: 'Chakra Petch', sans-serif; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 16px; }
+    .libro-info p { color: #ded6f0; font-size: 1rem; line-height: 1.7; margin-bottom: 14px; }
+    .libro-info p.quote { border-left: 2px solid var(--lila); padding-left: 16px; font-style: italic; color: #c9bee6; }
+    .libro-info .btn { margin-top: 8px; }
+    @media (max-width: 820px) {
+      .libro-row, .libro-row.alt { grid-template-columns: 1fr; direction: ltr; gap: 26px; text-align: center; }
+      .libro-info p { text-align: left; }
+      .libro-info .cta-row { justify-content: center; }
+    }
+
+    /* firma / ejemplar firmado */
+    .firma-box { margin: 60px auto 0; max-width: 680px; text-align: center; padding: 10px 20px; }
+    .firma-box .firma-icono { font-size: 1.8rem; margin-bottom: 10px; }
+    .firma-box p { color: var(--hueso); margin-bottom: 20px; font-size: 1.2rem; line-height: 1.5; }
+    .firma-box p strong { color: var(--naranja); }
+
+    /* ============ AUTORA ============ */
+    .autor-grid { display: grid; grid-template-columns: 250px 1fr; gap: 50px; align-items: start; max-width: 940px; margin: 0 auto; }
+    .autor-foto { justify-self: center; width: 240px; border-radius: 12px; overflow: hidden; box-shadow: 0 18px 44px rgba(0,0,0,.6), 0 0 40px rgba(255,138,61,.18); border: 1px solid rgba(255,255,255,.08); background: var(--morado); }
+    .autor-foto img { display: block; width: 100%; height: auto; }
+    .autor-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 1/1; background: linear-gradient(160deg, #3a2a63, #17102a); color: var(--lila-viva); font-family: 'Chakra Petch', sans-serif; font-size: 3.4rem; }
+    .autor-texto h3 { color: #fff; font-size: 1.9rem; margin-bottom: 2px; font-weight: 700; }
+    .autor-texto .rol { color: var(--naranja); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; font-family: 'Chakra Petch', sans-serif; }
+    .autor-texto p { color: #ded6f0; margin-bottom: 16px; max-width: 60ch; }
+    @media (max-width: 760px) { .autor-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; } .autor-texto p { text-align: left; } }
+
+    /* ============ CONTACTO / REDES ============ */
+    .redes { background: linear-gradient(180deg, rgba(169,127,224,.1), transparent), var(--noche); text-align: center; }
+    .redes p { max-width: 50ch; margin: 0 auto 30px; color: #ded6f0; }
+    .redes-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+    /* ============ COMPRA ============ */
+    .compra { background: linear-gradient(180deg, rgba(255,138,61,.1), transparent), var(--noche-2); text-align: center; }
+    .compra p { max-width: 50ch; margin: 0 auto 30px; color: #ded6f0; }
+    .compra-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .9rem; border-top: 1px solid rgba(255,255,255,.06); }
+    footer a { color: var(--lila-viva); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Trilogía Contigo</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#sinopsis">La historia</a>
+        <a href="#libros">Los libros</a>
+        <a href="#autora">La autora</a>
+        <a href="#redes">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Trilogía Contigo, de Cristina Villar Losa"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>Trilogía Contigo<br><br><small style="font-family:'Karla',sans-serif;font-style:italic;text-transform:none;color:var(--gris);">Añade la portada como<br>portada.jpg</small></div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Ciencia ficción · Distopía romántica</div>
+        <h1>Trilogía <span>Contigo</span></h1>
+        <div class="subtitulo">Contigo o sin ti · Contigo, el comienzo · Contigo, más allá del tiempo</div>
+        <div class="autora"><strong>Cristina Villar Losa</strong></div>
+        <p class="tagline">En un mundo futuro sin sentimientos, Laya e Izan todavía tienen el poder de soñar.</p>
+        <div class="badge">Trilogía completa</div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#libros">Ver los libros</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>historia</span></h2>
+      <div class="divider reveal"></div>
+      <div class="lead reveal">
+        <p>En un mundo futuro donde la ciencia y la razón lo son todo, los hombres han sido despojados de toda sensibilidad. Solo cuentan el progreso y la tecnología. Pero no todo está perdido: <strong>Laya e Izan</strong> todavía tienen el poder de soñar.</p>
+        <p>A lo largo de tres novelas, su historia de amor se entrelaza con el pacto de cinco amigos y un proyecto que atraviesa el tiempo, en una trilogía que es también una radiografía de aquello en lo que podemos convertirnos como sociedad.</p>
+        <p class="qs">¿Puede crecer el amor en una sociedad sin sentimientos? ¿O está abocado al fracaso?</p>
+        <p class="cierre">Esto es la Trilogía Contigo.</p>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu ejemplar <strong>firmado por la autora</strong>? Escríbele por sus redes y te lo cuenta todo.</p>
+        <a class="btn btn-ghost" href="#redes">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOS TRES LIBROS ============ -->
+  <section id="libros">
+    <div class="wrap">
+      <h2 class="section-title reveal">Los tres <span>libros</span></h2>
+      <div class="divider reveal"></div>
+      <!-- LIBRO 1 -->
+      <div class="libro-row reveal">
+        <div class="libro-portada">
+          <img src="contigo1.jpg" alt="Contigo o sin ti — Trilogía Contigo, Libro 1" loading="lazy" />
+          <span class="num">Libro 1</span>
+        </div>
+        <div class="libro-info">
+          <div class="etiqueta">Trilogía Contigo · Libro 1</div>
+          <h3>Contigo o sin ti</h3>
+          <p class="quote">«Laya sabía que él la observaba ya que su piel se erizaba cuando lo sentía cerca. El tacto de sus manos sobre su cuerpo era una locura maravillosa que acabaría en el momento en que le confesara que se habían encontrado por una razón y que los dos juntos deberían cambiarlo todo».</p>
+          <p class="quote">«Sus ojos reflejaban su anhelo mientras la besaba lentamente. Esos ojos negros y profundos como un cielo sin estrellas, le llevaban más allá de lo que la razón le aconsejaba. Pero todo su juicio parecía haberse evaporado desde el momento en que la vio y sus miradas se cruzaron. Ahora que la tenía en sus brazos tendría que averiguar cómo iba a cumplir su misión y matarla», pensaba Izan.</p>
+          <p>En un mundo futuro donde la ciencia y la razón se consideran supremas, la vida se organiza después de que los hombres hayan sido despojados de toda sensibilidad. Un mundo donde sólo cuentan el progreso y la tecnología. Pero no todo está perdido, Laya e Izan tienen todavía el poder de soñar.</p>
+          <p><em>Contigo o sin ti</em> es una acertada radiografía de aquello en lo que podemos convertirnos como sociedad. Frente a esto, Cristina Villar Losa nos propone a través de este libro una llamada a lo auténtico, a lo genuino de nosotros mismos.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.es/dp/B0C1THCFBZ" target="_blank" rel="noopener">Comprar en Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIBRO 2 -->
+      <div class="libro-row alt reveal">
+        <div class="libro-portada">
+          <img src="contigo2.jpg" alt="Contigo, el comienzo — Trilogía Contigo, Libro 2" loading="lazy" />
+          <span class="num">Libro 2</span>
+        </div>
+        <div class="libro-info">
+          <div class="etiqueta">Trilogía Contigo · Libro 2</div>
+          <h3>Contigo, el comienzo</h3>
+          <p class="quote">«Cuando la miro, veo en ella el motor, la fuerza que me conduce a lo más alto. A su lado todo es posible. Ella es mi todo». Izan sentía que su corazón vibraba cuando Laya estaba cerca. Los dos interpretaban una misma sintonía.</p>
+          <p class="quote">«Con él puedo seguir adelante, él es mi apoyo, el que siempre está conmigo», pensaba Laya cuando lo miraba. Y, sin embargo, su separación está cada vez más cerca.</p>
+          <p>La vida comienza para Laya e Izan y un futuro juntos se dibuja en el horizonte. Sin embargo, no todo es tan sencillo y los cambios que se avecinan tendrán consecuencias que los llevarán a luchar por lo que han conseguido y su supervivencia como especie.</p>
+          <p>Mientras, en otro tiempo, cinco amigos unidos por un pacto darán comienzo a un proyecto que culminará años después. ¿Cómo influirán sus decisiones en lo que ocurrirá en el futuro?</p>
+          <p class="quote">¿Puede crecer el amor en una sociedad sin sentimientos? ¿O está abocado al fracaso?</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.es/dp/B0DY5HPLKM" target="_blank" rel="noopener">Comprar en Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIBRO 3 -->
+      <div class="libro-row reveal">
+        <div class="libro-portada">
+          <img src="contigo3.jpg" alt="Contigo, más allá del tiempo — Trilogía Contigo, Libro 3" loading="lazy" />
+          <span class="num">Libro 3</span>
+        </div>
+        <div class="libro-info">
+          <div class="etiqueta">Trilogía Contigo · Libro 3</div>
+          <h3>Contigo, más allá del tiempo</h3>
+          <p>Laya ha sido enviada a un mundo del que no conoce nada mientras los que la rodean intentan traerla de vuelta. Izan no puede esperar y se lanza en un viaje desconocido hacia un mundo incierto.</p>
+          <p>Los cinco amigos han continuado con el proyecto de las bibliotecas y sus caminos se entrecruzarán con los de la pareja. ¿Qué relación guardan los misteriosos edificios con la situación de Izan y Laya?</p>
+          <p>El tiempo avanza imparable tejiendo un tapiz que los une a todos. Los hilos son invisibles, pero forman un entramado que necesitará de la intervención de todos sus ejes para encontrar un patrón único que conlleve a una solución.</p>
+          <p class="quote">«Luchaba, se ahogaba mientras el agua inundaba sus pulmones. No podía respirar y, cuando lo intentaba, más agua volvía a llenar el hueco que debía ocupar el aire. Pensó en dejarse ir, pero la imagen de Laya inundó su pensamiento y su cuerpo y su mente se rebelaron. ¿Cómo había podido pensar algo así? Ella estaba allí y él tenía que encontrarla. —Sin ti, no puedo».</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.es/dp/B0H7QGCRHQ" target="_blank" rel="noopener">Comprar en Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autor-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autor-grid">
+        <div class="autor-foto reveal">
+          <img src="cristina-autora.jpg" alt="Cristina Villar Losa, autora"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">C</div>
+        </div>
+        <div class="autor-texto reveal">
+          <h3>Cristina Villar Losa</h3>
+          <div class="rol">Autora · ciencia ficción · distopía romántica</div>
+          <p>Me llamo Cristina Villar Losa, nací en San Sebastián en 1970, la madrugada de un 7 de julio, preparada para el chupinazo de San Fermín. Mi afición por la lectura me viene desde muy temprana edad. Ya desde pequeña era capaz de "devorar" sin discriminación alguna todo tipo de libros. Después de una trayectoria formativa y profesional muy variada, mi vocación humana y educativa me ha llevado a trabajar en los últimos años realizando labores de apoyo a niños con algún tipo de discapacidad en colegios.</p>
+          <p>Soy la madre de dos hijas, maravillosas y únicas, a las que quiero con locura y que son lo mejor que me ha pasado en la vida. Me desesperan, me vuelven loca y me hacen la persona más feliz del mundo. Son mi orgullo y mi gran amor.</p>
+          <p>Mi vocación por la escritura me llevó hace muchos años a escribir poesía, género que comencé a alternar con el relato, en el que opté por hacer protagonistas de mis historias a todas mis amigas. Fui coautora del libro <em>«Manual de recomendaciones para la búsqueda de orígenes»</em>, publicada por CORA (Coordinadora de asociaciones de adopción y acogimiento). <em>«Contigo o sin ti»</em> fue mi primera publicación en solitario.</p>
+          <p>En estos últimos años desde la aparición de mi primer libro, <em>«Contigo o sin ti»</em>, he publicado varios relatos cortos y microrrelatos. He participado con uno de ellos en el libro <em>Catorce de febrero</em>, escrito para dicha fecha por varias autoras.</p>
+          <p>Asimismo, gané el año pasado el Concurso de relatos de terror organizado por Estamos leyendo, con el relato <em>La mirada en el espejo</em>. Confesarte que era la primera vez que escribía algo de este género y lo hice por insistencia de la escritora Teresa Pérez Landa, que no se dio por vencida hasta que lo envié; al final, tenía razón. Lo cedí a Tentetieso editoriales para publicar un compendio de relatos para recaudar dinero para los daños ocurridos tras la Dana, llamado <em>«Escritos para la esperanza»</em>.</p>
+          <p>Ese mismo año publiqué la segunda parte de la trilogía Contigo: <em>«Contigo, el comienzo»</em> y, para no desesperar a los lectores, llega la tercera parte: <em>«Contigo, más allá del tiempo»</em>.</p>
+          <p>Mi perfil en Instagram, por si queréis saber más de mí, es <a href="https://www.instagram.com/contigocvlescribe/" target="_blank" rel="noopener" style="color:var(--naranja);">@contigocvlescribe</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO / REDES ============ -->
+  <section id="redes" class="redes">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sígue<span>la</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Cristina comparte la trilogía y su día a día como escritora en Instagram. Pásate a saludar y pregúntale por tu ejemplar firmado.</p>
+      <div class="redes-row reveal">
+        <a class="btn btn-primary" href="https://www.instagram.com/contigocvlescribe/" target="_blank" rel="noopener">Instagram · @contigocvlescribe</a>
+        <a class="btn btn-ghost" href="https://www.amazon.es/stores/author/B0C33QM8GL/about" target="_blank" rel="noopener">Su página de autora en Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRAR ============ -->
+  <section id="comprar" class="compra">
+    <div class="wrap">
+      <h2 class="section-title reveal">Consigue <span>la trilogía</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Sumérgete en el mundo de Laya e Izan de principio a fin. Los tres libros están disponibles en Amazon.</p>
+      <div class="compra-row reveal">
+        <a class="btn btn-primary" href="https://www.amazon.es/dp/B0C1THCFBZ" target="_blank" rel="noopener">Libro 1 · Contigo o sin ti</a>
+        <a class="btn btn-primary" href="https://www.amazon.es/dp/B0DY5HPLKM" target="_blank" rel="noopener">Libro 2 · Contigo, el comienzo</a>
+        <a class="btn btn-primary" href="https://www.amazon.es/dp/B0H7QGCRHQ" target="_blank" rel="noopener">Libro 3 · Más allá del tiempo</a>
+      </div>
+      <p class="reveal" style="margin-top:26px;">¿Prefieres tu ejemplar firmado? Escríbele a Cristina por Instagram.</p>
+      <div class="compra-row reveal">
+        <a class="btn btn-ghost" href="https://www.instagram.com/contigocvlescribe/" target="_blank" rel="noopener">Pregúntale por Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Cristina Villar Losa · <em>Trilogía Contigo</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

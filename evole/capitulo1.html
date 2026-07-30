@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenidos a La Ciudad — primeras páginas de Évole | Tania Huelga Bardo</title>
+  <meta name="description" content="Lee gratis el comienzo de Évole, la novela de ciencia ficción de Tania Huelga Bardo. Capítulo 1: Bienvenidos a La Ciudad." />
+  <meta name="author" content="Tania Huelga Bardo" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313111a'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff2e88' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2364e8ff'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --grafito: #13111a;
+      --grafito-2: #1b1826;
+      --neon: #ff2e88;
+      --neon-viva: #ff6cae;
+      --cian: #64e8ff;
+      --hueso: #ece9f2;
+      --gris: #9d97ad;
+      --gris-2: #6b6580;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--grafito); color: var(--hueso); font-family: 'Manrope', Helvetica, Arial, sans-serif; font-size: 1.08rem; line-height: 1.85; }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; font-weight: 700; }
+    a { color: var(--neon-viva); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 40; background: rgba(19,17,26,.92); backdrop-filter: blur(9px); border-bottom: 1px solid rgba(255,46,136,.28); }
+    nav .wrap { max-width: 1080px; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 24px; flex-wrap: wrap; }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: .95rem; }
+    nav .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav .links a { text-decoration: none; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gris); transition: color .3s; }
+    nav .links a:hover { color: #fff; }
+    nav .links a.home { color: var(--neon-viva); }
+
+    header.cabecera { padding: 74px 0 44px; text-align: center; background: radial-gradient(circle at 50% 0%, rgba(255,46,136,.18), transparent 60%), linear-gradient(180deg, #0e0c14, var(--grafito)); }
+    header.cabecera .eyebrow { color: var(--cian); text-transform: uppercase; letter-spacing: .3em; font-size: .72rem; margin-bottom: 14px; }
+    header.cabecera h1 { font-size: clamp(2rem, 6vw, 3.1rem); color: #fff; text-transform: uppercase; line-height: 1.05; font-weight: 800; }
+    header.cabecera .libro { margin-top: 16px; color: var(--gris); letter-spacing: .16em; text-transform: uppercase; font-size: .8rem; }
+
+    .aviso { max-width: 640px; margin: 34px auto 0; border: 1px solid rgba(255,46,136,.35); border-radius: 6px; background: rgba(255,46,136,.07); padding: 18px 22px; text-align: left; }
+    .aviso strong { color: var(--neon-viva); display: block; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 6px; }
+    .aviso p { color: #d8d3e4; font-size: .98rem; line-height: 1.6; }
+
+    main { padding: 60px 0 40px; }
+    main p { margin-bottom: 20px; color: #e2ddec; }
+    main p.dial { }
+    .capitulo-titulo { text-align: center; margin-bottom: 40px; }
+    .capitulo-titulo .num { color: var(--cian); font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; margin-bottom: 10px; }
+    .capitulo-titulo h2 { font-size: clamp(1.6rem, 4.4vw, 2.3rem); color: #fff; text-transform: uppercase; }
+    .capitulo-titulo .rule { width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--neon), transparent); margin: 18px auto 0; }
+
+    .fin { margin-top: 60px; padding: 40px 28px; border-top: 1px solid rgba(255,46,136,.25); text-align: center; }
+    .fin h3 { color: #fff; font-size: 1.5rem; margin-bottom: 12px; }
+    .fin p { color: #d8d3e4; max-width: 46ch; margin: 0 auto 24px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-weight: 600; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--neon), #a8155a); color: #fff; box-shadow: 0 10px 28px rgba(255,46,136,.35); }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost { border: 1px solid rgba(236,233,242,.32); color: var(--hueso); }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: var(--neon); }
+
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .9rem; border-top: 1px solid rgba(255,255,255,.06); }
+    footer a { color: var(--neon-viva); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Évole</span>
+      <div class="links">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="index.html">Ficha del libro</a>
+        <a href="index.html#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cabecera">
+    <div class="wrap">
+      <div class="eyebrow">Primeras páginas · lectura gratuita</div>
+      <h1>Bienvenidos a La Ciudad</h1>
+      <div class="libro">Évole · Tania Huelga Bardo</div>
+      <div class="aviso">
+        <strong>Aviso de contenido</strong>
+        <p>Este fragmento es para público adulto: contiene violencia explícita y referencias a tráfico de personas y a drogas.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="capitulo-titulo">
+        <div class="num">Capítulo 1</div>
+        <h2>Bienvenidos a La Ciudad</h2>
+        <div class="rule"></div>
+      </div>
+
+      <p>—Ya no es lo que era. Creo que quizá deba plantearme algo más real, auténtico, ya sabes…</p>
+      <p>—Sí, cariño, pero ten en cuenta los riesgos que ello conlleva. ¿Por qué si no iban a existir clubes como el mío? El mundo está loco, no podemos fiarnos unos de otros, ni siquiera para el placer. Además, con tu edad…, ya sabes lo cotizados que están los jóvenes como tú en el mercado de la robótica ilegal.</p>
+      <p>—Sí, lo sé. Tienes razón.</p>
+      <p>—La última vez que vi al joven Luca, iba de una correa, Évole. Lo habían transformado en poco menos que una mascota humana…</p>
+      <p>—No te preocupes, sé cuidarme sola. Bueno, ya nos veremos, Elvira. Hasta otro día, cuídate.</p>
+      <p>—Ya sabes dónde encontrarme, cariño. Y vigila con esa basura. —Con un movimiento de cabeza, señaló hacia la entrada del estrecho callejón en el que se situaba su local.</p>
+      <p>Un par de hombres estaban apoyados contra la pared. Parecían no prestar demasiada atención a lo que pasaba a su alrededor. Incluso se podría decir que se encontraban bajo los efectos de algún tipo de droga. Daba la sensación de que sus cuerpos solo se mantenían en pie por la sujeción que les proporcionaba aquella pared, y sus movimientos eran lánguidos.</p>
+      <p>Tras despedirse de Elvira, se dirigió por el único camino posible.</p>
+      <p>«No creo que estos dos me den problemas, aunque no me vendría mal un poco de adrenalina», pensó. El simple hecho de imaginar una posible refriega, la hizo tensar los músculos de los brazos y rotar los hombros hacia atrás. Se preparaba como el depredador tras un tiempo sin cazar.</p>
+      <p>A medida que se acercaba a aquellos hombres, notaba que cambiaban de actitud. Sus movimientos ya no eran tan torpes y sus cuerpos parecían recobrar solidez. No pudo esconder una sonrisa.</p>
+      <p>Al pasar junto a ellos, los vio con un poco más de claridad. Nadie dijo nada, hasta que Évole comenzó a percibir pasos tras de sí.</p>
+      <p>—¿Ahora es cuando tengo que echar a correr? —Hizo aquel comentario con el mayor desprecio del que fue capaz, lo que causó una inmediata reacción en los hombres.</p>
+      <p>Sintió cómo la agarraban por el brazo, pero se zafó con rapidez. Acto seguido, cogió y retorció el brazo de su atacante con un solo movimiento, obligándolo a arrodillarse. Con la otra mano, sacó un arma y apuntó a la cabeza del que tenía inmovilizado, mientras se dirigía a su compinche:</p>
+      <p>—Dejadme adivinar, ¿robótica ilegal? —Aun estando bajo la presión de aquel momento, no quiso deshacerse del tono irónico que sabía muy bien que los irritaría.</p>
+      <p>—¡Mátala, no dejes que me rompa el brazo! —El que estaba arrodillado no paraba de forcejear y gritar.</p>
+      <p>—¡Imbécil, muerta, no nos serviría de nada! —vociferó el que permanecía de pie, paralizado.</p>
+      <p>—No creas, en el mercado negro siempre hay sitio para un cuerpo muerto. —El hombre arrodillado seguía forcejeando mientras hablaba con su compañero, en un intento desesperado por liberarse.</p>
+      <p>Évole creyó ver un atisbo de decisión en el hombre que estaba de pie. Quizás las palabras de su compañero le hubieran insuflado algo de valentía. Así que, sin siquiera darle tiempo, cambió de objetivo y apuntó hacia él. Pero, en ese mismo instante, el que tenía agarrado por el brazo sacó con la mano libre una especie de táser casero, que apoyó contra la pierna de Évole. Ella le soltó el brazo, retrocediendo de forma brusca.</p>
+      <p>Aprovechando la situación, el que estaba de pie trató de quitarle el arma. Forcejearon durante algunos segundos hasta que el otro compinche le asestó un puñetazo en el estómago, provocando que Évole se tambaleara hacia atrás. Cayó de rodillas con las manos en el vientre. Entonces, los dos se le acercaron.</p>
+      <p>—¿Lo ves? No es tan dura.</p>
+      <p>Cuando se aproximaron lo suficiente, le asestó un puñetazo cerca de la ingle a uno y un golpe en la rodilla al otro, y ambos cayeron al suelo. Évole se irguió y le propinó una patada en la cabeza a uno de ellos, que quedó inconsciente de inmediato. El otro intentó alcanzar el arma, que se encontraba en el suelo, pero, en el mismo instante en que la recogía y apuntaba hacia la cabeza de la mujer, esta ya le estaba apuntando con otra arma más pequeña, pero no por ello menos eficaz. En una milésima de segundo, lo ejecutó.</p>
+
+      <div class="fin">
+        <h3>Aquí termina el adelanto</h3>
+        <p>La historia de Évole y de La Ciudad continúa en el libro. Si te ha atrapado, sigue leyendo.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0D1NJYWYC" target="_blank" rel="noopener">Seguir leyendo en Amazon</a>
+          <a class="btn btn-ghost" href="index.html">Volver a la ficha del libro</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Tania Huelga Bardo · <em>Évole</em>. Fragmento publicado con permiso de la autora.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

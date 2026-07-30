@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Évole — Tania Huelga Bardo | Bilogía de ciencia ficción</title>
+  <meta name="description" content="Évole, de Tania Huelga Bardo. Bilogía de ciencia ficción: en La Ciudad, un mundo despiadado donde el futuro está en manos de los marginados. Évole y Agnos frente a Los Recién Llegados." />
+  <meta name="author" content="Tania Huelga Bardo" />
+  <meta name="keywords" content="Évole, Évole los constructores, Tania Huelga Bardo, ciencia ficción, distopía, bilogía, autopublicado, La Ciudad, Los Recién Llegados" />
+
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Évole — Tania Huelga Bardo" />
+  <meta property="og:description" content="El futuro de un mundo despiadado y cruel se encuentra en manos de aquellos a los que han relegado a la marginación." />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Évole — Tania Huelga Bardo" />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313111a'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff2e88' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2364e8ff'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --grafito: #13111a;
+      --grafito-2: #1b1826;
+      --grafito-3: #262133;
+      --neon: #ff2e88;
+      --neon-viva: #ff6cae;
+      --neon-honda: #a8155a;
+      --cian: #64e8ff;
+      --acido: #b6ff5c;
+      --hueso: #ece9f2;
+      --gris: #9d97ad;
+      --gris-2: #6b6580;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--grafito);
+      color: var(--hueso);
+      font-family: 'Manrope', Helvetica, Arial, sans-serif;
+      font-size: 1.06rem;
+      line-height: 1.78;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .display { font-family: 'Syne', Georgia, sans-serif; font-weight: 700; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(19,17,26,.86); backdrop-filter: blur(9px); border-bottom: 1px solid rgba(255,46,136,.28); }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--hueso); letter-spacing: .16em; font-size: 1rem; text-transform: uppercase; }
+    nav .links { display: flex; gap: 24px; }
+    nav .links a { text-decoration: none; font-size: .74rem; letter-spacing: .14em; color: var(--gris); text-transform: uppercase; transition: color .3s; }
+    nav .links a:hover { color: #fff; }
+    nav .links a.home { color: var(--neon-viva); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--neon); margin: 5px 0; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 900px) {
+      .nav-toggle { display: block; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px); flex-direction: column; justify-content: center; gap: 28px; background: rgba(19,17,26,.98); border-left: 1px solid rgba(255,46,136,.4); transform: translateX(100%); transition: transform .35s ease; }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 120px 0 70px;
+      background: radial-gradient(circle at 78% 20%, rgba(255,46,136,.22), transparent 55%), radial-gradient(circle at 12% 85%, rgba(100,232,255,.14), transparent 55%), linear-gradient(180deg, #0e0c14 0%, var(--grafito-2) 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size: 46px 46px; mask-image: radial-gradient(circle at 50% 40%, #000 30%, transparent 78%); }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 330px 1fr; gap: 56px; align-items: center; }
+    .cover-frame { justify-self: center; width: 330px; max-width: 100%; border-radius: 4px; box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 30px 70px rgba(0,0,0,.75), 0 0 70px rgba(255,46,136,.22); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 4px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, #322a45, #14121b); border-radius: 4px; color: var(--hueso); font-family: 'Syne', sans-serif; }
+    .hero-text .eyebrow { color: var(--cian); text-transform: uppercase; letter-spacing: .3em; font-size: .74rem; margin-bottom: 16px; }
+    .hero-text h1 { font-size: clamp(3rem, 9vw, 6rem); line-height: .95; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -.01em; }
+    .hero-text h1 span.sub { display: block; font-size: clamp(1rem, 2.4vw, 1.5rem); letter-spacing: .22em; color: var(--neon-viva); margin-top: 14px; font-weight: 500; }
+    .hero-text .autor { margin-top: 18px; color: var(--hueso); font-size: 1.05rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.2rem; font-style: italic; color: var(--gris); max-width: 46ch; }
+    .badge { display: inline-block; margin-top: 20px; padding: 8px 18px; border: 1px solid rgba(100,232,255,.45); border-radius: 30px; color: var(--cian); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; } .hero-text .tagline { margin-left:auto; margin-right:auto; } .cta-row { justify-content: center; } }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 2px; cursor: pointer; transition: all .3s ease; border: 0; }
+    .btn-primary { background: linear-gradient(135deg, var(--neon), var(--neon-honda)); color: #fff; box-shadow: 0 10px 28px rgba(255,46,136,.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(255,46,136,.55); }
+    .btn-cian { background: linear-gradient(135deg, var(--cian), #2b9ec2); color: #0e0c14; box-shadow: 0 10px 28px rgba(100,232,255,.25); }
+    .btn-cian:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(100,232,255,.42); }
+    .btn-ghost { border: 1px solid rgba(236,233,242,.32); color: var(--hueso); background: transparent; }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: var(--neon); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 92px 0; }
+    .section-title { text-align: center; font-size: clamp(2rem, 4.6vw, 3rem); color: #fff; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; }
+    .section-title span { color: var(--neon-viva); }
+    .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--neon), transparent); margin: 0 auto 46px; }
+
+    .sinopsis { background: linear-gradient(180deg, var(--grafito-2), var(--grafito)); border-top: 1px solid rgba(255,46,136,.2); border-bottom: 1px solid rgba(255,46,136,.2); }
+    .sinopsis .lead { max-width: 64ch; margin: 0 auto; }
+    .sinopsis .lead p { font-size: 1.13rem; color: #d8d3e4; margin-bottom: 22px; }
+    .sinopsis .lead p.cierre { text-align: center; font-style: italic; color: var(--cian); font-size: 1.22rem; }
+
+    /* cita de apertura */
+    .consigna { max-width: 60ch; margin: 0 auto 46px; border-left: 3px solid var(--neon); padding: 4px 0 4px 24px; }
+    .consigna p { font-family: 'Syne', sans-serif; font-weight: 500; font-size: 1.22rem; line-height: 1.6; color: var(--hueso); font-style: italic; }
+    .consigna cite { display: block; margin-top: 12px; font-family: 'Manrope', sans-serif; font-style: normal; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gris-2); }
+
+    /* ============ LOS DOS LIBROS ============ */
+    .libros { background: var(--grafito); }
+    .libros .intro { max-width: 50ch; margin: 0 auto 50px; text-align: center; color: var(--gris); font-style: italic; font-size: 1.14rem; }
+    .vol { display: grid; grid-template-columns: 220px 1fr; gap: 38px; align-items: center; max-width: 900px; margin: 0 auto 46px; padding: 30px; border: 1px solid rgba(255,46,136,.22); border-radius: 6px; background: rgba(255,46,136,.04); transition: transform .35s ease, border-color .35s ease; }
+    .vol:hover { transform: translateY(-4px); border-color: var(--neon-viva); }
+    .vol .vol-port { width: 220px; max-width: 100%; justify-self: center; border-radius: 3px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,.6); background: var(--grafito-3); }
+    .vol .vol-port img { display: block; width: 100%; height: auto; }
+    .vol .vol-port .ph { display: grid; place-items: center; aspect-ratio: 2/3; color: var(--gris-2); font-family: 'Syne', sans-serif; font-size: 2.6rem; }
+    .vol .num { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--cian); margin-bottom: 8px; }
+    .vol h3 { color: #fff; font-size: 1.7rem; margin-bottom: 12px; }
+    .vol p { color: #cec8dc; font-size: 1.02rem; margin-bottom: 18px; }
+    @media (max-width: 780px) { .vol { grid-template-columns: 1fr; text-align: center; } .vol .cta-row { justify-content: center; } }
+
+    /* firma / ejemplar firmado */
+    .firma-box { margin: 58px auto 0; max-width: 680px; text-align: center; padding: 10px 20px; }
+    .firma-box .firma-icono { font-size: 1.8rem; margin-bottom: 10px; }
+    .firma-box p { color: var(--hueso); margin-bottom: 20px; font-size: 1.18rem; line-height: 1.5; }
+    .firma-box p strong { color: var(--neon-viva); }
+
+    /* ============ MUESTRA ============ */
+    .muestra { text-align: center; background: linear-gradient(180deg, var(--grafito), var(--grafito-2)); border-top: 1px solid rgba(100,232,255,.16); }
+    .muestra .muestra-intro { max-width: 56ch; margin: 0 auto 30px; color: #d8d3e4; }
+
+    /* ============ AUTORA ============ */
+    .autor-grid { display: grid; grid-template-columns: 300px 1fr; gap: 50px; align-items: start; max-width: 960px; margin: 0 auto; }
+    .autor-foto { justify-self: center; width: 300px; max-width: 100%; border-radius: 5px; overflow: hidden; box-shadow: 0 18px 44px rgba(0,0,0,.7), 0 0 44px rgba(255,46,136,.14); border: 1px solid rgba(255,255,255,.08); background: var(--grafito-3); }
+    .autor-foto img { display: block; width: 100%; height: auto; }
+    .autor-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 3/4; background: linear-gradient(160deg, #322a45, #14121b); color: var(--neon-viva); font-family: 'Syne', sans-serif; font-size: 3.4rem; }
+    .autor-texto h3 { color: #fff; font-size: 1.9rem; margin-bottom: 2px; }
+    .autor-texto .rol { color: var(--cian); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 20px; }
+    .autor-texto p { color: #d8d3e4; margin-bottom: 16px; max-width: 58ch; }
+
+    /* ============ COMPRA ============ */
+    .compra { background: linear-gradient(180deg, rgba(255,46,136,.1), transparent), var(--grafito-2); }
+    .compra .intro { text-align: center; max-width: 52ch; margin: 0 auto 44px; color: #d8d3e4; }
+    .formatos { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 860px; margin: 0 auto; }
+    .formato { border: 1px solid rgba(255,46,136,.24); border-radius: 6px; padding: 32px 28px; text-align: center; background: rgba(0,0,0,.24); transition: transform .35s ease, border-color .35s ease; }
+    .formato:hover { transform: translateY(-5px); border-color: var(--neon); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { color: #fff; font-size: 1.28rem; margin-bottom: 8px; }
+    .formato p { color: var(--gris); font-size: .97rem; margin-bottom: 22px; min-height: 3.4em; }
+    .formato .extra { display: inline-block; margin-top: 14px; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--cian); }
+    @media (max-width: 780px) { .formatos { grid-template-columns: 1fr; } }
+
+    /* ============ REDES ============ */
+    .redes-sec { text-align: center; }
+    .redes-sec p.intro { max-width: 50ch; margin: 0 auto 34px; color: #d8d3e4; }
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border: 1px solid rgba(255,46,136,.3); border-radius: 30px; text-decoration: none; color: var(--hueso); font-size: .9rem; transition: all .3s ease; }
+    .red:hover { border-color: var(--neon); background: rgba(255,46,136,.1); transform: translateY(-2px); }
+    .red svg { width: 18px; height: 18px; fill: var(--neon-viva); }
+
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .9rem; border-top: 1px solid rgba(255,255,255,.06); }
+    footer a { color: var(--neon-viva); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Évole</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#sinopsis">La historia</a>
+        <a href="#libros">La bilogía</a>
+        <a href="capitulo1.html">Primeras páginas</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de Évole, de Tania Huelga Bardo"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>Évole<br><br><small style="font-style:italic;color:var(--gris);">Añade la portada como<br>portada.jpg</small></div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Ciencia ficción · Distopía · Bilogía</div>
+        <h1>Évole<span class="sub">Bilogía de ciencia ficción</span></h1>
+        <div class="autor">Tania Huelga Bardo</div>
+        <p class="tagline">El futuro de un mundo despiadado y cruel está en manos de aquellos a los que han relegado a la marginación.</p>
+        <div class="badge">Reedición ampliada y corregida · Amazon</div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0D1NJYWYC" target="_blank" rel="noopener">Empezar por el libro I</a>
+          <a class="btn btn-ghost" href="capitulo1.html">Leer las primeras páginas</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>historia</span></h2>
+      <div class="divider reveal"></div>
+
+      <blockquote class="consigna reveal">
+        <p>«Aquel al que le tiemble el pulso al matar a alguien seguramente se convertirá en el cadáver.» Esta fue la consigna con la que creció Évole. Su infancia no fue muy satisfactoria, todo lo que aprendió fue en las calles. En aquellas ruinosas calles.</p>
+        <cite>Del libro</cite>
+      </blockquote>
+
+      <div class="lead reveal">
+        <p>El futuro de un mundo despiadado y cruel se encuentra en manos de aquellos a los que han relegado a la marginación.</p>
+        <p>Évole y Agnos se enfrentarán a la decisión más difícil que han tenido hasta ahora: ¿será La Ciudad merecedora de una segunda oportunidad? Y aún más importante, ¿serán capaces de enfrentarse con éxito a Los Recién Llegados y a su séquito?</p>
+        <p>La bilogía cuenta la vida y los peligros a los que se enfrentan Évole y su compañero Agnos tras el contacto con unos seres de otro planeta conocidos por todos como Los Recién Llegados.</p>
+        <p class="cierre">Bienvenidos a La Ciudad.</p>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu ejemplar <strong>firmado por la autora</strong>? Escríbele por sus redes y lo habláis directamente con ella.</p>
+        <a class="btn btn-cian" href="#redes">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA BILOGÍA ============ -->
+  <section id="libros" class="libros">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>bilogía</span></h2>
+      <div class="divider reveal"></div>
+      <p class="intro reveal">Dos novelas y una misma historia. En 2024 la autora les dio una nueva vida con una reedición ampliada, mejorada y corregida.</p>
+
+      <article class="vol reveal">
+        <div class="vol-port">
+          <img src="portada.jpg" alt="Portada de Évole, libro I" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="ph" style="display:none;">I</div>
+        </div>
+        <div>
+          <div class="num">Libro I · publicado en 2017 · reeditado en 2024</div>
+          <h3>Évole</h3>
+          <p>Aquí empieza todo. Évole se crió en las calles ruinosas de La Ciudad, donde la robótica ilegal cotiza a los jóvenes como mercancía y nadie puede fiarse de nadie, ni siquiera para el placer. Una novela de ciencia ficción sucia y de calle, con una protagonista que aprendió a sobrevivir antes que a confiar.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.es/dp/B0D1NJYWYC" target="_blank" rel="noopener">Comprar el libro I</a>
+            <a class="btn btn-ghost" href="capitulo1.html">Leer el comienzo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="vol reveal">
+        <div class="vol-port">
+          <img src="portada2.jpg" alt="Portada de Évole: los constructores" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="ph" style="display:none;">II</div>
+        </div>
+        <div>
+          <div class="num">Libro II · publicado en 2019 · reeditado</div>
+          <h3>Évole: los constructores</h3>
+          <p>El cierre de la bilogía. Évole y Agnos deben decidir si La Ciudad merece una segunda oportunidad, mientras se enfrentan a Los Recién Llegados y a su séquito. La decisión más difícil que han tomado hasta ahora.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.es/dp/B0F796H8S5" target="_blank" rel="noopener">Comprar el libro II</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PRIMERAS PÁGINAS ============ -->
+  <section id="muestra" class="muestra">
+    <div class="wrap">
+      <h2 class="section-title reveal">Las primeras <span>páginas</span></h2>
+      <div class="divider reveal"></div>
+      <p class="muestra-intro reveal">Empieza a leerla gratis: el arranque del libro I, un callejón de La Ciudad y dos tipos que han elegido muy mal a quién asaltar. Para público adulto: contiene violencia.</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-cian" href="capitulo1.html">Empezar a leer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autor-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autor-grid">
+        <div class="autor-foto reveal">
+          <img src="tania-autora.jpg" alt="Tania Huelga Bardo, autora de Évole" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">T</div>
+        </div>
+        <div class="autor-texto reveal">
+          <h3>Tania Huelga Bardo</h3>
+          <div class="rol">Asturias, 1987 · ciencia ficción · terror · fantástico</div>
+          <p>Escribió sus primeros relatos alrededor de los doce años, todos ellos de una marcada temática oscura y lúgubre, inspirados por el cine y la literatura de terror por la que empezaba a interesarse. Años después, su interés por la ciencia ficción la lleva a publicar en 2017 su primera novela, <em>Évole</em>, cuya segunda parte aparecería en 2019 bajo el título <em>Évole: los constructores</em>. En 2024 decide darle una nueva vida a esta bilogía con una reedición ampliada y corregida.</p>
+          <p>Además, ha publicado el relato <em>Sonrisa muerta</em> en NGC3660, <em>Campo de amapolas</em> en la revista Libros Libres y <em>La gruta errante</em> en la revista Círculo de Lovecraft, y quedó finalista en el concurso de microrrelatos del Día del Tentáculo. También realizó recomendaciones de ciencia ficción para la librería Cervantes.</p>
+          <p>En 2025 presentó, junto a otras autoras, en el Celsius una antología de género fantástico titulada <em>Nosotres</em>, editada por Ediciones Radagast y escrita en asturiano, en la que participó con su relato «Sangre nes muries».</p>
+          <p>En 2026 descubriremos su nueva novela, <em>Estrellas de sangre</em>, un thriller paranormal ambientado en Asturias.</p>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Ver sus redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRAR ============ -->
+  <section id="comprar" class="compra">
+    <div class="wrap">
+      <h2 class="section-title reveal">Consigue <span>la bilogía</span></h2>
+      <div class="divider reveal"></div>
+      <p class="intro reveal">Las dos novelas están disponibles en Amazon en su reedición ampliada y corregida. Si no la conoces, empieza por el libro I.</p>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📘</div>
+          <h3>Évole (Libro I)</h3>
+          <p>El comienzo de la historia. Reedición de 2024, ampliada, mejorada y corregida.</p>
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0D1NJYWYC" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <span class="extra">Edición Kindle</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📗</div>
+          <h3>Évole: los constructores (Libro II)</h3>
+          <p>El desenlace de la bilogía: La Ciudad, Los Recién Llegados y una última decisión.</p>
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0F796H8S5" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <span class="extra">Edición Kindle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="redes-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sigue a la <span>autora</span></h2>
+      <div class="divider reveal"></div>
+      <p class="intro reveal">Tania comparte por aquí sus novedades, relatos y presentaciones. Pásate a saludarla.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.evole.es" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.7a15.6 15.6 0 0 0-1.3-3.4A8 8 0 0 1 18.9 8zM12 4.1c.6.9 1.2 2.2 1.6 3.9h-3.2c.4-1.7 1-3 1.6-3.9zM4.3 14a8 8 0 0 1 0-4h3a19 19 0 0 0 0 4zm.8 2h2.7c.3 1.3.7 2.4 1.3 3.4A8 8 0 0 1 5.1 16zm2.7-8H5.1a8 8 0 0 1 4-3.4A15.6 15.6 0 0 0 7.8 8zM12 19.9c-.6-.9-1.2-2.2-1.6-3.9h3.2c-.4 1.7-1 3-1.6 3.9zM14 14h-4a17 17 0 0 1 0-4h4a17 17 0 0 1 0 4zm.9 5.4c.6-1 1-2.1 1.3-3.4h2.7a8 8 0 0 1-4 3.4zM16.7 14a19 19 0 0 0 0-4h3a8 8 0 0 1 0 4z"/></svg>
+          Web · evole.es
+        </a>
+        <a class="red" href="https://www.instagram.com/t.huelga.bardo/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @t.huelga.bardo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Tania Huelga Bardo · <em>Évole</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

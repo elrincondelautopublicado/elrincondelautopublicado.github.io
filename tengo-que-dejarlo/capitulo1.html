@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Lectura de muestra — Tengo que dejarlo · Saray Ramírez</title>
+  <meta name="description" content="Lee gratis el comienzo de Tengo que dejarlo, de Saray Ramírez: prólogo de Cristina Sevilla y los primeros capítulos, Codependencia y Farmacocinética." />
+  <meta name="author" content="Saray Ramírez" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Lectura de muestra — Tengo que dejarlo" />
+  <meta property="og:description" content="Todos somos adictos a algo. Empieza a leer la novela de Saray Ramírez." />
+  <meta property="og:image" content="portada.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0d12'/%3E%3Cpath d='M32 20 C26 20 22 24 22 30 c0 8 10 14 10 14 s10-6 10-14 c0-6-4-10-10-10z' fill='%2363b6ee'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Mulish:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --negro: #0a0d12;
+      --negro-2: #10151d;
+      --carbon: #161d27;
+      --sangre: #3f86c4;
+      --sangre-viva: #63b6ee;
+      --sangre-honda: #234f77;
+      --hueso: #e6ebf1;
+      --gris: #8a95a4;
+      --gris-2: #5f6a79;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: 'Mulish', Helvetica, Arial, sans-serif;
+      font-size: 1.08rem;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .display { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 600; letter-spacing: .02em; }
+    a { color: inherit; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(11,11,12,.9); backdrop-filter: blur(9px); border-bottom: 1px solid rgba(63,134,196,.35); }
+    nav .wrap { max-width: 1080px; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--hueso); letter-spacing: .18em; font-size: 1rem; text-transform: uppercase; }
+    nav .links { display: flex; gap: 24px; }
+    nav .links a { text-decoration: none; font-size: .72rem; letter-spacing: .16em; color: var(--gris); text-transform: uppercase; transition: color .3s; font-family: 'Oswald', sans-serif; }
+    nav .links a:hover { color: #fff; }
+    nav .links a.home { color: var(--sangre-viva); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--sangre-viva); margin: 5px 0; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 820px) {
+      .nav-toggle { display: block; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px); flex-direction: column; justify-content: center; gap: 30px; background: rgba(11,11,12,.98); border-left: 1px solid rgba(63,134,196,.4); transform: translateX(100%); transition: transform .35s ease; }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ CABECERA ============ */
+    header.cap-hero { padding: 150px 0 60px; text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(63,134,196,.22), transparent 60%), linear-gradient(180deg, #050505, var(--negro)); }
+    header.cap-hero .eyebrow { color: var(--sangre-viva); text-transform: uppercase; letter-spacing: .3em; font-size: .72rem; margin-bottom: 14px; font-family: 'Oswald', sans-serif; }
+    header.cap-hero h1 { font-size: clamp(2.1rem, 5.6vw, 3.4rem); color: #fff; text-transform: uppercase; line-height: 1.05; }
+    header.cap-hero .autora { margin-top: 14px; color: var(--gris); font-family: 'Oswald', sans-serif; letter-spacing: .2em; text-transform: uppercase; font-size: .92rem; }
+    header.cap-hero .divider { width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--sangre), transparent); margin: 26px auto 0; }
+
+    /* ============ AVISO DE CONTENIDO ============ */
+    .aviso { max-width: 700px; margin: 40px auto 0; border: 1px solid rgba(63,134,196,.45); border-left: 3px solid var(--sangre-viva); border-radius: 4px; background: rgba(63,134,196,.07); padding: 20px 24px; text-align: left; }
+    .aviso h2 { font-size: .82rem; letter-spacing: .18em; text-transform: uppercase; color: var(--sangre-viva); margin-bottom: 8px; }
+    .aviso p { color: var(--gris); font-size: .98rem; line-height: 1.7; }
+
+    /* ============ TEXTO ============ */
+    main { padding: 30px 0 80px; }
+    .cita-libro { max-width: 640px; margin: 50px auto 70px; padding: 26px 30px; border-left: 2px solid var(--sangre-honda); color: var(--gris); font-style: italic; font-size: 1.06rem; }
+    .cita-libro cite { display: block; margin-top: 14px; font-style: normal; font-family: 'Oswald', sans-serif; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sangre-viva); }
+
+    .cap { margin-bottom: 80px; }
+    .cap-num { text-align: center; font-family: 'Oswald', sans-serif; font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gris-2); margin-bottom: 6px; }
+    .cap h2.cap-titulo { text-align: center; font-size: clamp(1.6rem, 4vw, 2.3rem); color: #fff; text-transform: uppercase; margin-bottom: 10px; }
+    .cap .linea { width: 54px; height: 1px; background: var(--sangre-honda); margin: 0 auto 34px; }
+    .cap .epigrafe { text-align: center; font-style: italic; color: var(--sangre-viva); max-width: 46ch; margin: 0 auto 38px; font-size: 1.04rem; }
+    .cap p { margin-bottom: 20px; color: #d6d3ce; text-align: justify; hyphens: auto; }
+    .cap p.dial { text-align: left; }
+    .cap p:first-of-type::first-letter { font-family: 'Oswald', sans-serif; font-size: 3.1rem; float: left; line-height: .9; padding: 4px 12px 0 0; color: var(--sangre-viva); }
+    .cap p.nofl::first-letter { font-size: inherit; float: none; padding: 0; color: inherit; font-family: inherit; }
+    .cap .cierre-ritmo { text-align: center; font-family: 'Oswald', sans-serif; letter-spacing: .04em; color: var(--sangre-viva); font-size: 1.12rem; }
+    .nota-pie { margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.1); color: var(--gris-2); font-size: .9rem; }
+
+    /* ============ FIN / CTA ============ */
+    .fin { text-align: center; padding: 70px 0 90px; background: linear-gradient(180deg, transparent, rgba(63,134,196,.08)); border-top: 1px solid rgba(63,134,196,.25); }
+    .fin h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); color: #fff; text-transform: uppercase; margin-bottom: 14px; }
+    .fin p { color: var(--gris); max-width: 46ch; margin: 0 auto 30px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border-radius: 3px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--sangre-viva), var(--sangre-honda)); color: #fff; box-shadow: 0 10px 28px rgba(63,134,196,.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(63,134,196,.6); }
+    .btn-ghost { border: 1px solid rgba(233,229,223,.35); color: var(--hueso); background: transparent; }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: var(--hueso); }
+
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .9rem; border-top: 1px solid rgba(255,255,255,.06); }
+    footer a { color: var(--sangre-viva); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Tengo que dejarlo</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="index.html">La novela</a>
+        <a href="#lectura">La muestra</a>
+        <a href="#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="cap-hero">
+    <div class="wrap">
+      <div class="eyebrow">Lectura de muestra</div>
+      <h1>Tengo que dejarlo</h1>
+      <div class="autora">Saray Ramírez</div>
+      <div class="divider"></div>
+
+      <div class="aviso">
+        <h2>Aviso de contenido</h2>
+        <p>Esta novela es un thriller de terror psicológico para <strong>público adulto</strong>. Estas páginas contienen violencia explícita, consumo de drogas, lenguaje soez y referencias a la explotación de menores. Si algo de esto te resulta sensible, quizá prefieras no seguir leyendo.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="lectura">
+    <div class="wrap">
+
+      <!-- Cita de apertura del libro -->
+      <blockquote class="cita-libro reveal">
+        Hace mucho tiempo que no sentía que esa casa era su hogar. Antes era un espacio para dormir y comer. Un lugar con palabras quebradas, silencios encapsulados en las paredes, con la acumulación de tristezas astillando el aire, raspándolo, agrietando el oxígeno. Una casa donde se estaba gestando una locura agazapada, inminente.
+        <cite>Agustina Bazterrica · Cadáver exquisito</cite>
+      </blockquote>
+
+      <!-- ============ PRÓLOGO ============ -->
+      <article class="cap reveal">
+        <div class="cap-num">Prólogo · por Cristina Sevilla</div>
+        <h2 class="cap-titulo">Prólogo</h2>
+        <div class="linea"></div>
+
+        <p>Conocí a Saray Ramírez hace unos años, compartiendo espacio en las redes sociales, y entonces una de sus novelas cayó en mis manos —fue <em>El pozo de Granados</em>, para los curiosos—. Desde aquel primer encuentro con su prosa, supe que no era una escritora común y que, sin duda alguna, iba a llegar muy lejos. Mi pronóstico fue acertado. Otro pensamiento que me sigue perturbando a día de hoy es: «¿cómo es posible que una persona tan bella y luminosa sea capaz de crear tales atrocidades?».</p>
+
+        <p class="nofl">Y es que leer a Ramírez es entrar en su mente, y eso significa adentrarse en una peligrosa telaraña de la que no se puede escapar; una red estructurada de hilos que constituye una trampa para sus presas. Se trata de un laberinto donde las respuestas generan nuevas preguntas, con caminos entrecruzados que provocan confusión y esquinas tras las que esperan nuevas emboscadas, acechantes. Sus víctimas tiemblan, sienten pavor, saben que van a ser devoradas... y, sin embargo, no desean salir. No quieren dejarlo.</p>
+
+        <p class="nofl">Estamos hablando de una autora excelente —aclamada como maestra del terror, a la altura de Stephen King—, que goza de una pluma impecable y elegante, tanto que es capaz de narrar el peor de los horrores de forma estética y sofisticada. Su narrativa es cruda y directa, pero rica en matices y atmósferas oscuras. Cabe señalar que también hace uso de ese humor negro e inteligente que tanto la caracteriza.</p>
+
+        <p class="nofl">En esta novela, que mezcla el suspense con el terror psicológico y, por qué no, también corporal —aviso de contenido delicado—, encontramos un rompecabezas policial perfecto, pero va mucho más allá de eso. Ramírez logra retratar la dualidad humana y la obsesión con jugar a ser Dios, conceptos muy presentes pero desapercibidos en nuestra cotidianidad. Es una lectura que estremece: se sabe que van a suceder cosas horribles, el laberinto está lleno de giros y más giros, siempre inesperados; pero el lector ni quiere ni es capaz de detenerse, es una adicción masoquista.</p>
+
+        <p class="nofl">Así pues, lector, estás ante una obra excepcional que trasciende la propia ficción. ¿Te atreves a probar esta droga tan peligrosa? No querrás dejarla.</p>
+
+        <p class="nofl" style="text-align:right;color:var(--gris);font-style:italic;">Cristina Sevilla,<br>mayo de 2026</p>
+      </article>
+
+      <!-- ============ CODEPENDENCIA ============ -->
+      <article class="cap reveal">
+        <div class="cap-num">Capítulo uno</div>
+        <h2 class="cap-titulo">Codependencia</h2>
+        <div class="linea"></div>
+        <p class="epigrafe">Si la dependencia fuera buena amante, ninguna adicción implicaría tanto vacío, tanto desgaste, tanto dolor.</p>
+
+        <p>Gom721 era, sin duda, el usuario más leal de Bikini Bets, una plataforma online donde la lujuria se disfrazaba de azar bajo el encanto de anfitrionas semidesnudas. Su favorita, Miranda, atendía la ruleta. Esperar a que ella leyera los comentarios en el chat y le dedicara su saludo de rigor se había convertido en una rutina íntima y agradable, cálida.</p>
+
+        <p class="nofl">La bola había empezado a girar con su característico clic, clic, clic. Gom721 sintió la ya tan familiar adrenalina que recorre a todo buen jugador, la descarga que desencadenaba el temblor involuntario de sus rodillas; un baile nervioso que su padre habría condenado como una ofensa a la virilidad, la muestra lamentable de cuán débil era. Menos mal que el hombre ya no vivía para ver en qué se había convertido su único hijo.</p>
+
+        <p class="nofl">«¡Hagan sus apuestas!», anunció Miranda, con esa impoluta y ensayada sonrisa. Los números y los colores parpadeaban en el tablero virtual; la bola seguía girando con su hipnótico sonido circular. En sus casas, los jugadores esperaban el milagro improbable, dispuestos a olvidar, momentáneamente al menos, la pesadez de sus insignificantes vidas.</p>
+
+        <p class="nofl">Miranda evitaba mover las manos más de lo necesario. La última vez, el jefe la había reprendido por ser especialmente «activa», recordándole que la inmovilidad era un recurso erótico y deseable, además de garantizar una imagen más limpia y profesional.</p>
+
+        <p class="nofl">«Y la bola cae en... ¡el 7 rojo! ¡Impar y falta!», exclamó ella. Miró el monitor y felicitó a varios de los usuarios afortunados. Por supuesto, Gom721 no estaba entre ellos. Ni esa vez ni en las veinticinco anteriores, así que, con gran pesar, se vio obligado a abandonar la sala.</p>
+
+        <p class="nofl">«He de irme, bombón. Pero mañana volveré sin falta. Besos».</p>
+
+        <p class="nofl">Miranda sonrió, guiñó un ojo a la pantalla y continuó su labor. Gom721 sabía que aquel gesto era exclusivo para él. O eso le gustaba pensar.</p>
+      </article>
+
+      <!-- ============ FARMACOCINÉTICA ============ -->
+      <article class="cap reveal">
+        <div class="cap-num">Capítulo dos</div>
+        <h2 class="cap-titulo">Farmacocinética</h2>
+        <div class="linea"></div>
+
+        <p>El despertador sonó a las seis en punto. Era la única garantía de puntualidad que le quedaba a José Ontiveros —Sito, para los amigos—: había empeñado el reloj de su padre, la última reliquia familiar, y ahora aquel despertador robado lo acompañaba a todas partes. La legítima dueña, una vecina anciana que dependía de la alarma para no olvidar su medicación, llevaba semanas buscando «el chisme de los pitidos», naturalmente sin éxito. Sito lo guardaba en el bolsillo, por si Hipólito le encomendaba tareas que no admitían demora.</p>
+
+        <p class="nofl">Y habrían llegado a tiempo de no ser porque aquel padrastro volvía a sangrar. Harto de ver cómo el agua despegaba las tiritas convencionales una tras otra, le pidió a su amigo algodón y esparadrapo. Gustavo lo observó mientras cubría la herida con torpeza, pasando el carrete a lo largo del dedo como un modo desesperado de no volver a mancharse la ropa.</p>
+
+        <p class="dial nofl">—Tal vez si no te las mordieras —sugirió—. Las uñas, digo. Se te acabarán infectando. ¿Es que no te das cuenta?</p>
+        <p class="dial nofl">—Deja de dar por culo, manitas suaves —respondió Sito, alterado—. Tendríamos que haber salido hace un cuarto de hora y aquí sigo, envolviendo un puto dedo con esparadrapo.</p>
+        <p class="dial nofl">—¿Os quedáis a merendar con nosotros? —preguntó la abuela de Gustavo.</p>
+
+        <p class="nofl">A Sito no le caía bien, probablemente porque la animadversión era mutua. La mujer lo examinaba con sus ojos pétreos y él tenía la incómoda sensación de que era capaz de adivinarle el pensamiento. No, no soportaba a la vieja. Aguantarla constituía uno de esos sacrificios que se hacen únicamente por los buenos amigos; y Gustavo, aunque él jamás lo confesaría en voz alta —temiendo ser etiquetado como uno de esos «blandos» que salían en la tele—, era, sin lugar a duda, la persona que más apreciaba en este miserable mundo.</p>
+
+        <p class="dial nofl">—Gracias, señora. Pero tenemos que irnos —dijo Sito—. En marcha, Hurón.</p>
+        <p class="dial nofl">—¿Por qué consientes que tus amigos te llamen así? —intervino de nuevo la mujer, esta vez dirigiéndose a su nieto—. Con lo bonito que es tu nombre, mi niño.</p>
+        <p class="dial nofl">—Es sólo una broma entre nosotros, abu —explicó Gustavo.</p>
+
+        <p class="nofl">Mientras tanto, Sito le declaraba la guerra al esparadrapo, insultándolo con lindezas como: «mierda rebelde que no se adapta al jodido dedo de los cojones». Hurón juzgó prudente alejar a su pobre abuela del baño y le pidió que preparara calabaza asada para cenar. Ella asintió, nada conforme, pero lo hizo por él, por su ojito derecho, por su Gustavito: el niño que aún residía en alguna parte de aquel saco de huesos que tenía enfrente, el virtuoso de la trompeta a quien ella y su marido habían costeado carísimas lecciones, con la ilusión de que la música lo apartara de las malas compañías, amistades fatales que se aferraban a sus piernas como hierbas sucias y pegajosas.</p>
+
+        <p class="nofl">Desconocía los trapicheos que Gus y Sito se traían entre manos. O quizás había llegado a un punto de hartazgo en el que prefería ignorarlos. En cualquier caso, la mujer consideraba a Sito una influencia perniciosa, convencida de que la ingenuidad de su nieto le impedía ver las cosas con claridad. Albergaba la esperanza de que el muchacho acabara ubicándose en el buen camino, creyendo que aquella amistad estaba condenada a extinguirse. «Son cosas de críos», solía decir cada vez que lo imaginaba sucumbiendo al mismo destino que su hija, una adicta a los opiáceos que había destruido la estabilidad familiar y segado la infancia de Gustavo. «Él no acabará como ella. Sabe el daño que nos ha hecho. Él no es igual. No seguirá sus pasos. No…» Negación y más negación.</p>
+
+        <p class="nofl">Ansioso por poner fin a la visita, Gus ayudó a su amigo, quien seguía dejando un reguero de sangre en el lavabo. Aun siendo delgadas, sus manos nada tenían que ver con las de Sito: fuertes y ágiles, forjadas por años de disciplina; dedos largos, precisos y veloces, cuyas yemas endurecidas conservaban aún la memoria táctil de las válvulas de la trompeta. Había vendido el instrumento por una miseria, una deslealtad que lo perseguía a todas horas. Se sentía un artista vacío, el desertor de sus propios sueños que deambulaba por el barrio en busca de un alivio en forma de veneno. La droga, amante tiránica donde las haya, sabía explotar las carencias afectivas con demoledora crueldad. Hurón podía dar fe de ello.</p>
+
+        <p class="nofl">Sito volaba por la calle, indiferente al olor a quemado y el ruido de las sirenas que anunciaban la llegada de los bomberos. Una ambulancia se unió al concierto, y un corrillo de vecinos, arremolinados en una esquina, discutían sobre cómo se había originado el incendio. Hablaban en voz alta sobre lo que había podido pasar en aquella casa envuelta en llamas. Alguno señaló lo evidente: a unos mocosos se les había ido la mano con la juerga y ahora los demás debían pagar las consecuencias.</p>
+
+        <p class="dial nofl">—¿Ahí no vive Reinaldo? —preguntó Gus.</p>
+        <p class="dial nofl">—¿¡Y qué sé yo!? ¡Coño, corre!</p>
+
+        <p class="nofl">Sito sólo podía pensar en que el reloj marcaba las seis y cuarto; a menos que aquel incendio empezara a devorarlo por sus pies maltrechos, no dejaría de correr.</p>
+
+        <p class="nofl">Un par de rostros se giraron al verlos pasar. «Los fantasmas del barrio van a por su dosis», dijo una mujer. No era la primera vez que los llamaban así; estaban tan delgados que parecían almas flotando por la acera. Gustavo era el más enjuto, pero a Sito se le notaba más la adicción. Apenas llevaban cuatro años consumiendo y ya presentaban las típicas señales que delatan a un drogadicto habitual: los tics nerviosos, la irritabilidad, el envejecimiento prematuro.</p>
+
+        <p class="nofl">Esa condición marginal, sin embargo, no les impedía llevarse bien con el sexo opuesto. Sito prefería las relaciones fugaces; su miedo al compromiso lo ubicaba en el pabellón de los solteros empedernidos y picajosos. Ninguna chica era lo suficientemente guapa o lista como para renunciar a su libertad «felina». Sito quería vivir igual que un gato salvaje: trepar por los tejados y dejarse ver en callejones estrechos cada noche, pelear con gatos domésticos y dejarles claro que él jamás se rebajaría a mear en un arenero.</p>
+
+        <p class="nofl">Gustavo sospechaba que decía esas cosas con segundas, y a menudo contenía el impulso de replicarle que no todos los gatos querían vivir en la calle; a él le complacía ser un gato mimado, con su cama mullida, los cuencos siempre llenos y un arenero para él solito. Pero luego, si encontraba una ventana abierta en plena noche, salía disparado en busca de aventuras, renunciando al tedio higiénico del hogar para revolcarse en la inmundicia, donde el celo de las gatas callejeras convertía la podredumbre urbana en la mejor de las fragancias.</p>
+
+        <p class="nofl">A diferencia de Sito, Hurón apenas había tenido dos novias. La primera fue Enith, flautista profesional con quien mantuvo una relación de dos años y medio; la segunda, Bárbara, Barbie para los amigos. Técnicamente, era la competencia de Hipólito en el barrio, y eso, por supuesto, contrariaba a Sito. Temiendo que Tritón descubriera el vínculo y castigara a Gustavo, emprendió una campaña en contra de la chica, exagerando sus defectos al máximo. La bautizó como «gata egipcia», insinuando que tenía las orejas tan desproporcionadas que, si sacudía con fuerza la cabeza, enfriaría los cafés de los turistas en el paseo marítimo.</p>
+
+        <p class="nofl">Gustavo respondía que, precisamente, los gatos egipcios eran sus favoritos y Sito dejaba de machacarlo con el tema hasta nueva orden.</p>
+
+        <p class="nofl">Pasaron cerca del supermercado, por la zona del parking al aire libre, justo donde Barbie realizaba sus ventas. Al verlos, ella les guiñó un ojo.</p>
+
+        <p class="dial nofl">—Cierra la boca o nos resbalaremos con tus babas —dijo Sito, sin aminorar la marcha.</p>
+        <p class="dial nofl">—¿Qué? —preguntó Gus, distraído.</p>
+        <p class="dial nofl">—Que dejes de verte con la competencia de Hipólito, coño.</p>
+        <p class="dial nofl">—¿Qué tendrá que ver? Me gusta, es una chica que me hace reír.</p>
+        <p class="dial nofl">—Escucha, Hurón —dijo, jadeando debido al cansancio—, me da igual si estás colado hasta las trancas o si sólo se trata de un rollo más, pero aléjate de Guepardo. Es traicionera y una bocachancla. ¿Ya te la has follado? Bueno, menuda pregunta la mía… Se la folla todo el mundo. Yo me la tiré hace un par de años. De todas formas, ¿para qué más la querrías? No seas estúpido: si ya se la metiste, pasa de ella, ¿me oyes?</p>
+
+        <p class="nofl">Hurón mantuvo silencio. Detestaba que Sito abusara de su superioridad en la relación para imponerse siempre. «Gus, ¿conoces a algún guepardo que sea monógamo? Ni siquiera sé si un guepardo es capaz de llevarse bien con un hurón, cariño», eso había dicho ella en su último encuentro. Aun así, no hizo ningún comentario para defender a la chica de la que estaba enamorado, y eso hizo que se sintiera un cobarde insoportable.</p>
+
+        <p class="nofl">Al llegar, sudorosos y acelerados, dieron el característico toque en la puerta, la clave sonora que distinguía a la clientela de Tritón de cualquier otro usuario. El despacho de Hipólito, una tapadera en forma de agencia de viajes, apenas atendía a viajeros reales. El jefe pecaba de insensato, además de poco juicioso, al pasearse con un coche de lujo por las mugrientas calles del Desguace. Hasta el impulsivo de Sito sabía que no era buena idea exhibirse de aquella manera si la agencia de viajes no recibía demasiados clientes. El otro negocio, el de verdad, dependía de la discreción, de ser invisible, pero Hipólito no parecía ser consciente del riesgo que implicaba negar la lógica de la clandestinidad. Sin embargo, aquella lucidez se desvanecía en cuanto el jefe le daba a probar una nueva partida de tiza<a href="#nota1" id="ref1" style="color:var(--sangre-viva);text-decoration:none;"><sup>1</sup></a>, su veneno favorito.</p>
+
+        <p class="nofl">Gustavo, un adicto del montón, procuraba no establecer demasiados vínculos con Hipólito. Daba la imagen de ser uno más de tantos que le adoraban, contándole chistes y cumpliendo todas sus órdenes. Nunca le llevaba la contraria ni mantenía conversaciones excesivamente profundas con él. De sobra sabía que Tritón acostumbraba a usar los detalles personales de su ejército de subordinados como munición si veía peligrar su autoridad. Gus había cometido el error de contarle la historia de su madre, la mujer negligente que permitió que un acreedor despiadado mutilara y aterrorizara a un niño de cuatro años.</p>
+
+        <p class="nofl">Sito aporreó la puerta del local. El cartelito de «cerrado» colgaba inmóvil, pero la luz del interior se mantenía encendida. Insistió hasta que le dolieron los nudillos. Nada.</p>
+
+        <p class="dial nofl">—¿Dónde coño se habrá metido? —dijo entre dientes. Miró a su amigo, que se liaba un porro, y preguntó—: ¿Bromeas? ¿Vas a fumar ahora? ¿Aquí?</p>
+
+        <p class="nofl">Como respuesta, Gustavo se encogió de hombros y siguió su cometido.</p>
+
+        <p class="nofl">Sito, asustado por creer que Hipólito no atendía a sus llamadas porque estaba molesto, siguió golpeando, esta vez con más contundencia.</p>
+
+        <p class="dial nofl">—Vas a romper la puerta —intervino Hurón.</p>
+        <p class="dial nofl">—Cierra la boca, gilipollas.</p>
+        <p class="dial nofl">—Habrá ido a comprar cigarros, o a lo mejor le ha dado un infarto, pero todavía es pronto para que te eches a llorar.</p>
+        <p class="dial nofl">—¿Quieres que te parta los dientes, imbécil? —amenazó con odio.</p>
+
+        <p class="nofl">Gustavo bajó la vista y continuó liándose el canuto. Habría contestado con uno de sus habituales chistes, pero conocía demasiado bien a su amigo como para arriesgarse a recibir uno de sus ardorosos coscorrones.</p>
+
+        <p class="nofl">Finalmente, a eso de las siete menos diez, apareció Hipólito. Le brillaban los ojos y se movía con cierta torpeza, probablemente porque se encontraba bajo el efecto de uno de sus conocidos «aperitivos».</p>
+
+        <p class="dial nofl">—Tritón, yo…</p>
+
+        <p class="nofl">Sito balbuceaba. Nunca se le había dado bien articular disculpas, pero con el jefe todo era aún más complicado.</p>
+
+        <p class="dial nofl">—Entrad —pidió Hipólito. La eterna sonrisa que acompañaba al gesto de abrir el cerrojo era como firmar un talón en blanco: terrorífica.</p>
+
+        <p class="nofl">Los jóvenes obedecieron. Ya dentro, el jefe bajó las persianas con una lentitud exasperante. Sito lo encontró un modo ridículo de irritarle, pero guardó silencio. Mordiéndose las uñas, permaneció en un rincón, consciente de que, bajo el disfraz de aparente serenidad, Hipólito hervía de ira.</p>
+
+        <p class="dial nofl">—¿Qué haces ahí? ¿Tienes miedo de que te muerda?</p>
+
+        <p class="nofl">Tras formular la pregunta, Tritón comenzó a mover la mandíbula, imitando la ferocidad de un perro que fuera a atacar. Luego se echó a reír, señalando la silla que había al lado de Gustavo. Hurón había guardado el porro detrás de la oreja izquierda para fumárselo después. Hipólito pasó a su lado y tomó el canuto sin pedir permiso. Lo olió y dijo con desdén:</p>
+
+        <p class="dial nofl">—¿De quién es esto?</p>
+        <p class="dial nofl">—Ni idea, me lo regaló una amiga —respondió, tranquilo.</p>
+        <p class="dial nofl">—Huele a tubo de escape —espetó, lanzándoselo de vuelta.</p>
+
+        <p class="nofl">Sentado tras la mesa de caoba, abarrotada de papeles y un calendario con vistas de Madeira, expuso con voz ronca:</p>
+
+        <p class="dial nofl">—Deberías ser más selectivo —continuó, dirigiéndose a Hurón—. Las golosinas baratas tienen efectos secundarios feos, muy feos… Y si no, mira a Sito. Su idiotez es fruto de haberse metido las anfetas que vende la tía esa del súper, la zorra del asqueroso aparato de dientes. Por favor, el pobre que sufra sus mamadas debe de tenerla llena de surcos… ¿Por dónde iba? Ah, sí. Las neuronas de Sito están estropeadas, completamente fritas. Y tú, Gustavito, aún estás a tiempo de no volverte un subnormal de su categoría.</p>
+        <p class="dial nofl">—Tritón, te he pedido disculpas —dijo Sito, avergonzado—. Hemos llegado tarde por culpa del maldito incendio… ¿No te has enterado? —Hipólito ni siquiera lo miraba, así que decidió seguir hablando sin esperar una respuesta—. Estaba todo lleno de peña, ¿a que sí, Hurón? —su amigo asintió, para reforzar el argumento—. ¿Lo ves? La casa de Reinaldo... Se… se ha quemado de arriba abajo. Un disparate, en serio…</p>
+        <p class="dial nofl">—¿Ves lo que te digo, Gus? —intervino Hipólito, ignorando al chico deliberadamente—. Es imbécil. Eso pasa cuando te metes mierdas preparadas por una putilla inexperta. No sé si estás comprendiendo a dónde quiero llegar…</p>
+        <p class="dial nofl">—Dejaré de ver a Guepardo —dijo, tirando el porro a la papelera.</p>
+        <p class="dial nofl">—La lealtad es importante. Entiendo que si un chocho se te pone a tiro lo aproveches, pero no seas estúpido. No seas como Sito.</p>
+
+        <p class="nofl">El aludido se removía inquieto en el asiento. En otra época, habría estallado a gritos, intentando imponerse sobre el otro a base de insultar y agredir, el único lenguaje que la vida le había enseñado; sin embargo, la dependencia que lo ataba a Hipólito lo condujo a un silencio hiriente. Se mordió la lengua con fuerza, dispuesto a tragarse el orgullo, aunque acabara con la boca llena de sangre.</p>
+
+        <p class="nofl">Tritón se incorporó y extrajo de su bolsillo un paquetito cuyo contenido centelleaba bajo la luz. Hizo unas rayas pequeñas y delgadas sobre la mesa e invitó a Gustavo a inhalarlas. El polvo, de un brillo plateado, despedía un suave olor a vainilla.</p>
+
+        <p class="dial nofl">—Esto es categoría. Aprende, chiquitín.</p>
+
+        <p class="nofl">Hurón obedeció. La cocaína normal, la que circulaba por cualquier calle del Desguace, sólo le activaba la lengua y se pasaba horas hablando sin parar. Pero esta, con aquel color tan distintivo, operaba de otro modo. Sentía que le refrescaba la sangre, que expandía sus músculos, que hidrataba todas las esquinas áridas de su cerebro. Era una sensación gloriosa.</p>
+
+        <p class="dial nofl">—Ni siquiera quiero saber qué es —dijo, sonriendo—. Pero sí voy a preguntar cuánto cuesta.</p>
+        <p class="dial nofl">—Me temo que no está al alcance de los mocosos. Se creó sólo para gente importante. Si te he dado a probarla es para que veas lo lejos que estás de merecerla.</p>
+
+        <p class="nofl">Sito seguía en su asiento, con la cabeza gacha, tratando de contener el movimiento de sus nerviosas rodillas.</p>
+
+        <p class="dial nofl">—Tú, niñato. Pruébala —le ordenó Hipólito.</p>
+
+        <p class="nofl">El chico, feliz no sólo por poder consumir, sino por ver restablecida la dinámica habitual con su jefe, aspiró la raya y dejó escapar un suspiro de satisfacción.</p>
+
+        <p class="dial nofl">—Brutal —sonrió—. ¿Quién la prepara?</p>
+        <p class="dial nofl">—Me la ha conseguido un árabe. Es un puto armario empotrado. En serio, no he visto a un tío tan cachas en toda mi puñetera vida. Tenemos en marcha algunos negocios, pero antes he de hacerle un par de favores. Bueno, yo no. Para eso os tengo a vosotros.</p>
+
+        <p class="nofl">El encargo consistía en conseguir un menor, preferentemente, una niña, que no superara los diez años.</p>
+
+        <p class="dial nofl">—¿Menos de diez? —preguntó Hurón, preocupado—. Pero ¿para qué? ¿Para adoptarla?</p>
+        <p class="dial nofl">—Tiene que ser independiente; no valen los bebés ni ningún chiquillo en silla de ruedas ni mierdas de esas. Un niño normal, que ande, coma por sí mismo, que sepa hablar… Nada de ciegos, ni despojos sin brazos ni cosas así —respondió Hipólito, sin un ápice de empatía.</p>
+
+        <p class="nofl">Los chicos intercambiaron una mirada, pero no hicieron más preguntas. El trabajo debía realizarse lo antes posible, así que abreviaron el encuentro y se despidieron del jefe.</p>
+
+        <p class="nofl">Hurón ya había salido cuando un golpe proveniente del interior lo obligó a regresar sobre sus pasos. Sito estaba en el suelo, con las manos en la cara. La sangre salía contundente, manchando parte de la alfombra y sus pantalones. Se retorcía de dolor, mientras Hipólito, impasible, le decía:</p>
+
+        <p class="dial nofl">—La próxima vez serás puntual.</p>
+
+        <p class="nofl">Gustavo ayudó a su amigo a levantarse y juntos salieron del lugar.</p>
+
+        <p class="nofl cierre-ritmo">Así eran las cosas siempre: violencia, presión, chute. Violencia, chute, vergüenza. Violencia, miedo, chute. Chute, terror, muerte.</p>
+
+        <p class="nota-pie nofl" id="nota1"><sup>1</sup> Argot callejero para llamar a la metanfetamina. <a href="#ref1" style="color:var(--sangre-viva);text-decoration:none;">↩</a></p>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ============ FIN / CTA ============ -->
+  <section class="fin" id="comprar">
+    <div class="wrap">
+      <h2>Hasta aquí la muestra</h2>
+      <p>Si has llegado hasta el final, ya sabes cómo funciona: la historia engancha y no suelta. Sigue leyendo la novela completa.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://amzn.eu/d/0hqM5qdA" target="_blank" rel="noopener">Comprar en Amazon</a>
+        <a class="btn btn-ghost" href="index.html">Volver a la novela</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024-<span id="year"></span> Saray Ramírez Martín · <em>Tengo que dejarlo</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;">Fragmento reproducido con permiso de la autora. Diseño de portada: Oscarfr.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

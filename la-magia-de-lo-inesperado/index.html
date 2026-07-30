@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>La Magia de lo Inesperado — Adelaida M. F. | Novela romántica</title>
+  <meta name="description" content="La Magia de lo Inesperado, de Adelaida M. F. Una comedia romántica sobre segundas oportunidades: Adriana lo tiene todo bajo control… hasta que aparece Jaime. ¿Podrá la razón vencer al deseo?" />
+  <meta name="author" content="Adelaida M. F." />
+  <meta name="keywords" content="La Magia de lo Inesperado, Adelaida M. F., novela romántica, romance, comedia romántica, amor, libro" />
+
+  <!-- ====== Open Graph ====== -->
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="La Magia de lo Inesperado — Adelaida M. F." />
+  <meta property="og:description" content="Porque lo que menos esperas… puede ser justo lo que más necesitas. Una comedia romántica llena de chispa." />
+  <meta property="og:image" content="magia-portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La Magia de lo Inesperado — Adelaida M. F." />
+  <meta name="twitter:description" content="Una comedia romántica sobre segundas oportunidades y amores que llegan cuando menos los esperas." />
+  <meta name="twitter:image" content="magia-portada.jpg" />
+
+  <!-- ====== Favicon ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6f61'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23fff7f0' text-anchor='middle'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== Datos estructurados ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "La Magia de lo Inesperado",
+    "author": { "@type": "Person", "name": "Adelaida M. F." },
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/Paperback",
+    "genre": ["Romántica", "Comedia romántica"],
+    "image": "magia-portada.jpg",
+    "datePublished": "2026-05",
+    "description": "Una comedia romántica sobre segundas oportunidades. Adriana ha aprendido a valorar la calma hasta que aparece Jaime, el hermano pequeño de su compañera de piso."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --crema: #fff8f2;
+      --crema-2: #fff0e6;
+      --melocoton: #ffe0cf;
+      --coral: #ff6f61;
+      --coral-oscuro: #e0554a;
+      --cielo: #5ea6d8;
+      --cielo-suave: #dcecf7;
+      --dorado: #e6a94e;
+      --texto: #4a403b;
+      --gris: #8a7d75;
+      --blanco: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--crema);
+      color: var(--texto);
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; letter-spacing: .01em; }
+    .script { font-family: 'Dancing Script', cursive; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(255,248,242,.85); backdrop-filter: blur(9px);
+      border-bottom: 1px solid rgba(255,111,97,.2);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Dancing Script', cursive; color: var(--coral-oscuro); font-size: 1.5rem; font-weight: 700; }
+    nav .links { display: flex; gap: 26px; align-items: center; }
+    nav .links a { text-decoration: none; font-size: .82rem; letter-spacing: .04em; color: var(--gris); text-transform: uppercase; font-weight: 500; transition: color .3s; }
+    nav .links a:hover { color: var(--coral); }
+    nav .links a.home { color: var(--cielo); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--coral); margin: 5px 0; transition: transform .3s ease, opacity .3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 760px) {
+      .nav-toggle { display: block; }
+      nav .links {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px);
+        flex-direction: column; justify-content: center; gap: 30px;
+        background: rgba(255,248,242,.98); backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(255,111,97,.25);
+        transform: translateX(100%); transition: transform .35s ease;
+      }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(94,166,216,.28), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(255,111,97,.25), transparent 45%),
+        linear-gradient(160deg, var(--cielo-suave) 0%, var(--crema) 45%, var(--melocoton) 100%);
+      overflow: hidden; padding: 120px 0 70px;
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: center; }
+    .cover-frame { justify-self: center; width: 300px; max-width: 100%; border-radius: 10px; box-shadow: 0 20px 50px rgba(216,79,69,.28), 0 8px 20px rgba(0,0,0,.12); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-8px) rotate(-1deg); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 10px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, var(--cielo-suave), var(--melocoton)); border-radius: 10px; color: var(--coral-oscuro); }
+    .cover-fallback .script { font-size: 2rem; line-height: 1.2; }
+    .cover-fallback small { display:block; margin-top: 14px; color: var(--gris); font-family: 'Poppins',sans-serif; font-size: .72rem; letter-spacing: .05em; }
+    .hero-text .eyebrow { color: var(--cielo); text-transform: uppercase; letter-spacing: .3em; font-size: .76rem; font-weight: 600; margin-bottom: 14px; }
+    .hero-text h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05; color: var(--coral-oscuro); }
+    .hero-text .autora { margin-top: 12px; font-family: 'Dancing Script', cursive; color: var(--dorado); font-size: 1.9rem; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.3rem; font-style: italic; color: var(--texto); max-width: 44ch; font-family: 'Playfair Display', serif; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+    }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: .92rem; letter-spacing: .03em; text-decoration: none; border-radius: 40px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--coral), var(--coral-oscuro)); color: #fff; box-shadow: 0 10px 26px rgba(216,79,69,.4); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(216,79,69,.55); }
+    .btn-ghost { border: 2px solid var(--cielo); color: var(--cielo); background: transparent; }
+    .btn-ghost:hover { background: var(--cielo); color: #fff; }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 90px 0; }
+    .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--coral-oscuro); margin-bottom: 10px; }
+    .divider { width: 90px; height: 30px; margin: 4px auto 44px; background-repeat: no-repeat; background-position: center; }
+    .divider::after { content: "❧"; display: block; text-align: center; color: var(--dorado); font-size: 1.6rem; }
+
+    /* ============ SINOPSIS ============ */
+    .sinopsis { background: var(--blanco); }
+    .sinopsis .hook { text-align: center; font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--coral); max-width: 24ch; margin: 0 auto 40px; line-height: 1.3; }
+    .sinopsis p { max-width: 64ch; margin: 0 auto 20px; font-size: 1.12rem; color: #5b514b; }
+    .sinopsis .cierre { text-align: center; font-style: italic; font-family: 'Playfair Display', serif; color: var(--coral-oscuro); font-size: 1.25rem; max-width: 52ch; }
+
+    /* ============ AUTORA ============ */
+    .autora-sec { background: linear-gradient(160deg, var(--crema-2), var(--cielo-suave)); }
+    .autora-grid { display: grid; grid-template-columns: 260px 1fr; gap: 50px; align-items: start; max-width: 940px; margin: 0 auto; }
+    .autora-foto { justify-self: center; width: 240px; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 44px rgba(94,166,216,.35); background: var(--blanco); }
+    .autora-foto img { display: block; width: 100%; height: auto; }
+    .autora-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 4/5; background: linear-gradient(160deg, var(--melocoton), var(--cielo-suave)); color: var(--coral-oscuro); font-family: 'Dancing Script', cursive; font-size: 3.6rem; }
+    .autora-texto h3 { color: var(--coral-oscuro); font-size: 1.7rem; margin-bottom: 4px; }
+    .autora-texto .rol { color: var(--cielo); font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+    .autora-texto p { margin-bottom: 16px; color: #5b514b; }
+    .otras-obras { margin-top: 22px; padding: 22px 26px; background: rgba(255,255,255,.65); border-left: 3px solid var(--coral); border-radius: 10px; }
+    .otras-obras h4 { font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: .1em; font-size: .78rem; color: var(--gris); margin-bottom: 12px; }
+    .otras-obras ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+    .otras-obras li { background: var(--crema); border: 1px solid var(--melocoton); border-radius: 30px; padding: 7px 16px; font-size: .9rem; color: var(--coral-oscuro); font-style: italic; }
+    @media (max-width: 760px) {
+      .autora-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .autora-texto p { text-align: left; }
+      .otras-obras ul { justify-content: center; }
+    }
+
+    /* ============ REDES ============ */
+    .redes { background: var(--blanco); text-align: center; }
+    .redes p { max-width: 46ch; margin: 0 auto 34px; color: var(--gris); }
+    .redes-row { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: .92rem; border: 2px solid var(--melocoton); color: var(--texto); transition: all .3s ease; background: var(--crema); }
+    .red:hover { transform: translateY(-3px); border-color: var(--coral); color: var(--coral-oscuro); box-shadow: 0 10px 24px rgba(255,111,97,.25); }
+    .red svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* ============ COMPRA ============ */
+    .buy { background: linear-gradient(160deg, var(--melocoton), var(--crema)); text-align: center; }
+    .buy p { max-width: 50ch; margin: 0 auto 32px; font-size: 1.15rem; color: #5b514b; }
+
+    /* ============ EJEMPLAR FIRMADO ============ */
+    .firma-box { margin: 50px auto 0; max-width: 640px; text-align: center; }
+    .firma-box .firma-icono { font-size: 1.8rem; margin-bottom: 10px; }
+    .firma-box p { color: #5b514b; margin-bottom: 18px; font-size: 1.2rem; font-family: 'Playfair Display', serif; font-style: italic; }
+    .firma-box p strong { color: var(--coral-oscuro); font-style: normal; }
+
+    /* ============ FOOTER ============ */
+    footer { text-align: center; padding: 38px 24px; color: var(--gris); font-size: .88rem; background: var(--crema-2); border-top: 1px solid var(--melocoton); }
+    footer a { color: var(--coral-oscuro); text-decoration: none; }
+
+    /* ============ ANIMACIÓN ============ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">La Magia de lo Inesperado</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#capitulo">Primer capítulo</a>
+        <a href="#autora">La autora</a>
+        <a href="#redes">Redes</a>
+        <a href="#comprar">Comprar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <!-- Cuando dejes la portada en esta carpeta como magia-portada.jpg, se mostrará aquí.
+             Si el archivo no existe, se ve el recuadro de abajo como respaldo. -->
+        <img src="magia-portada.jpg" alt="Portada de La Magia de lo Inesperado, de Adelaida M. F."
+             loading="eager"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>
+            <span class="script">La Magia de lo Inesperado</span>
+            <small>Añade la portada como<br>magia-portada.jpg</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Novela romántica</div>
+        <h1>La Magia de lo Inesperado</h1>
+        <div class="autora">Adelaida M. F.</div>
+        <p class="tagline">«Porque lo que menos esperas… puede ser justo lo que más necesitas.»</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.amazon.es/stores/author/B07GYH4N24" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span class="script" style="color:var(--coral);font-size:1.3em;">sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <p class="hook reveal">Porque lo que menos esperas… puede ser justo lo que más necesitas.</p>
+      <p class="reveal">Adriana lo tiene todo bajo control: es trabajadora, independiente y, después de un matrimonio fallido, ha aprendido a valorar la calma como si fuera oro puro. Comparte piso con su mejor amiga, y la rutina tranquila se ha convertido en su refugio. Hasta que aparece Jaime.</p>
+      <p class="reveal">Jaime es el hermano pequeño de su compañera de piso… y «pequeño» no solo en parentesco: tiene trece años menos que Adriana. Pero lo que le falta de años lo compensa con descaro, frescura y una forma de mirarla que consigue desarmarla sin que ella quiera admitirlo. Lo que empieza como un jueguecito inocente, un tira y afloja lleno de miradas y comentarios, pronto se transforma en un huracán de emociones que amenaza con derribar todas las murallas que Adriana había levantado.</p>
+      <p class="reveal">Ella lucha entre la sensatez que le dice que no se complique la vida y la chispa que Jaime despierta en su interior, devolviéndole la risa, la pasión y ese cosquilleo que pensaba olvidado.</p>
+      <p class="cierre reveal">¿Podrá la razón vencer al deseo? ¿O acabarán comprobando que, a veces, los amores más locos son los que merecen más la pena?</p>
+
+      <div id="capitulo" class="cap-cta reveal" style="text-align:center;margin-top:44px;">
+        <p style="max-width:52ch;margin:0 auto 22px;color:#5b514b;">¿Te apetece empezar? Conoce a Adriana en el primer capítulo, gratis.</p>
+        <a class="btn btn-primary" href="capitulo1.html">Leer el primer capítulo</a>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu <strong>ejemplar firmado</strong> por la autora? Ponte en contacto conmigo a través de mis redes.</p>
+        <a class="btn btn-ghost" href="#redes">Ver mis redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autora-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span class="script" style="color:var(--coral);font-size:1.3em;">autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autora-grid">
+        <div class="autora-foto reveal">
+          <!-- Cuando dejes la foto como adelaida-autora.jpg, se mostrará aquí. -->
+          <img src="adelaida-autora.jpg" alt="Adelaida M. F., autora"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">A</div>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Adelaida M. F.</h3>
+          <div class="rol">Autora de La Magia de lo Inesperado</div>
+          <p>Nací en Sevilla, aunque actualmente vivo en Granada. Estudié Pedagogía y siento una gran pasión por la lectura, la escritura y la fotografía.</p>
+          <p>Comencé a escribir pequeñas historias durante mi adolescencia y, poco después, descubrí el mundo de los <em>fanfictions</em>, lo que me animó a compartir mis relatos en plataformas como FanFiction, Potterfics y Wattpad.</p>
+          <div class="otras-obras">
+            <h4>También he publicado</h4>
+            <ul>
+              <li>No voy a enamorarme de ti</li>
+              <li>¿Algo pendiente?</li>
+              <li>Yo solo iba a regar las plantas…</li>
+              <li>Desde aquel verano</li>
+            </ul>
+          </div>
+          <p style="margin-top:22px;"><em>La Magia de lo Inesperado</em> es mi novela más reciente, que vio la luz en mayo de 2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="redes">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sígueme en <span class="script" style="color:var(--coral);font-size:1.3em;">redes</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">¿Te ha gustado la historia? Acompáñame en el día a día, novedades y próximos proyectos.</p>
+      <div class="redes-row reveal">
+        <a class="red" href="https://www.instagram.com/adelaidamf_escritora/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2m0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07m0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9m0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94m5.66-2.2a1.04 1.04 0 1 1-2.08 0 1.04 1.04 0 0 1 2.08 0"/></svg>
+          Instagram
+        </a>
+        <a class="red" href="https://www.tiktok.com/@adelaidamf_escritora" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.2a2.44 2.44 0 0 1-2.44 2.36 2.44 2.44 0 0 1-.6-4.8V9.5a5.62 5.62 0 1 0 6.44 5.56V9.03a7.5 7.5 0 0 0 4.36 1.39V7.22a4.28 4.28 0 0 1-3.5-1.4z"/></svg>
+          TikTok
+        </a>
+        <a class="red" href="https://twitter.com/m_escritora" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.24 2.25h6.83l4.71 6.23 5.46-6.23zm-1.16 17.52h1.83L7.01 4.13H5.04l12.04 15.64z"/></svg>
+          X
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="buy">
+    <div class="wrap">
+      <h2 class="section-title reveal">Empieza a <span class="script" style="color:var(--coral);font-size:1.3em;">leer</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Déjate llevar por la chispa entre Adriana y Jaime. Disponible en Amazon, junto al resto de novelas de Adelaida M. F.</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://www.amazon.es/stores/author/B07GYH4N24" target="_blank" rel="noopener">Ver en Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Adelaida M. F. · <em>La Magia de lo Inesperado</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

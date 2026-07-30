@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Los crímenes de la esquela — Alejandra de San Cristóbal</title>
+  <meta name="description" content="Los crímenes de la esquela, de Alejandra de San Cristóbal. Un thriller de misterio: Diego lee su propia esquela en el periódico, con la fecha de su muerte dentro de una semana." />
+  <meta name="author" content="Alejandra de San Cristóbal" />
+  <meta name="keywords" content="Los crímenes de la esquela, Alejandra de San Cristóbal, thriller, misterio, suspense, novela negra, esquela" />
+
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Los crímenes de la esquela — Alejandra de San Cristóbal" />
+  <meta property="og:description" content="Todo comienza con una esquela: su nombre, su fotografía y la fecha de su muerte dentro de una semana." />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Los crímenes de la esquela — Alejandra de San Cristóbal" />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2315181b'/%3E%3Crect x='20' y='14' width='24' height='36' fill='none' stroke='%23dbd8d0' stroke-width='2'/%3E%3Cpath d='M32 20 v10 M28 24 h8' stroke='%23b89768' stroke-width='2'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --negro: #15181b;      /* gris frío casi negro */
+      --negro-2: #1c2024;
+      --carbon: #24292e;
+      --vino: #977c53;       /* ocre otoñal (marrón apagado) */
+      --vino-viva: #b89768;  /* ocre claro, hoja seca */
+      --vino-honda: #5f4d33; /* marrón hondo */
+      --niebla: #9fb2ba;     /* azul pálido, frío de niebla */
+      --hueso: #dbd8d0;      /* hueso grisáceo */
+      --gris: #8b9196;
+      --gris-2: #5f656a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.14rem;
+      line-height: 1.78;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .display { font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: .01em; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(12,12,14,.85); backdrop-filter: blur(9px); border-bottom: 1px solid rgba(151,124,83,.4); }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Libre Baskerville', serif; font-weight: 700; color: var(--hueso); letter-spacing: .08em; font-size: .9rem; text-transform: uppercase; }
+    nav .links { display: flex; gap: 26px; }
+    nav .links a { text-decoration: none; font-family: 'Libre Baskerville', serif; font-size: .68rem; letter-spacing: .12em; color: var(--gris); text-transform: uppercase; transition: color .3s; }
+    nav .links a:hover { color: #fff; }
+    nav .links a.home { color: var(--vino-viva); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--vino-viva); margin: 5px 0; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 820px) {
+      .nav-toggle { display: block; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px); flex-direction: column; justify-content: center; gap: 28px; background: rgba(12,12,14,.98); border-left: 1px solid rgba(151,124,83,.45); transform: translateX(100%); transition: transform .35s ease; }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: .9rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 120px 0 70px;
+      background: radial-gradient(circle at 78% 24%, rgba(159,178,186,.16), transparent 55%), radial-gradient(circle at 12% 84%, rgba(151,124,83,.2), transparent 55%), linear-gradient(180deg, #0f1113 0%, var(--negro-2) 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.02) 1px, transparent 1px); background-size: 3px 3px; }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 330px 1fr; gap: 56px; align-items: center; }
+    .cover-frame { justify-self: center; width: 330px; max-width: 100%; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 30px 70px rgba(0,0,0,.8), 0 0 60px rgba(151,124,83,.22); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 3px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, #20242a, #060607); border-radius: 3px; color: var(--hueso); font-family: 'Libre Baskerville', serif; }
+    .hero-text .eyebrow { color: var(--niebla); text-transform: uppercase; letter-spacing: .3em; font-size: .74rem; margin-bottom: 16px; font-family: 'Libre Baskerville', serif; }
+    .hero-text h1 { font-size: clamp(2.3rem, 5.4vw, 3.7rem); line-height: 1.1; color: #fff; font-weight: 700; }
+    .hero-text .autora { margin-top: 16px; color: var(--hueso); font-size: 1.3rem; font-style: italic; }
+    .hero-text .tagline { margin-top: 20px; font-size: 1.24rem; color: var(--gris); max-width: 44ch; }
+    .badges { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge { display: inline-block; padding: 8px 18px; border: 1px solid rgba(151,124,83,.55); border-radius: 30px; color: var(--vino-viva); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; }
+    .badge.premio { border-color: rgba(217,169,78,.6); color: #e6c877; background: rgba(217,169,78,.08); }
+    @media (max-width: 820px) { .badges { justify-content: center; } }
+    @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; } .hero-text .tagline { margin-left:auto; margin-right:auto; } .cta-row { justify-content: center; } }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 3px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--vino), var(--vino-honda)); color: #fff; box-shadow: 0 10px 28px rgba(151,124,83,.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(151,124,83,.6); }
+    .btn-ghost { border: 1px solid rgba(236,231,222,.35); color: var(--hueso); background: transparent; }
+    .btn-ghost:hover { background: rgba(255,255,255,.06); border-color: var(--vino-viva); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 92px 0; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 3.6vw, 2.5rem); color: #fff; margin-bottom: 10px; font-weight: 700; }
+    .section-title span { color: var(--vino-viva); }
+    .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--vino), transparent); margin: 0 auto 46px; }
+
+    /* ============ LA ESQUELA (motivo) ============ */
+    .esquela-sec { text-align: center; }
+    .esquela { max-width: 420px; margin: 0 auto; background: var(--hueso); color: #17140f; padding: 30px 34px 34px; border: 2px solid #17140f; box-shadow: 0 24px 60px rgba(0,0,0,.6); position: relative; }
+    .esquela::before { content: ""; position: absolute; inset: 6px; border: 1px solid rgba(23,20,15,.5); pointer-events: none; }
+    .esquela .cruz { font-size: 1.8rem; color: #17140f; }
+    .esquela .rip { font-family: 'Libre Baskerville', serif; letter-spacing: .34em; font-size: .7rem; text-transform: uppercase; color: #6b573a; margin-top: 4px; }
+    .esquela .foto { width: 92px; height: 92px; margin: 18px auto 14px; border-radius: 2px; background: linear-gradient(160deg,#d8d2c6,#b7b0a2); display: grid; place-items: center; color: #6b6459; font-family: 'Libre Baskerville', serif; font-size: 1.8rem; border: 1px solid #17140f; }
+    .esquela .nombre { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 1.6rem; line-height: 1.15; color: #17140f; }
+    .esquela .datos { font-style: italic; color: #3c362d; margin-top: 8px; }
+    .esquela .fecha { margin-top: 14px; border-top: 1px solid rgba(23,20,15,.4); padding-top: 12px; font-family: 'Libre Baskerville', serif; font-size: .92rem; color: #6b573a; letter-spacing: .04em; }
+    .esquela-pregunta { margin-top: 34px; font-family: 'Libre Baskerville', serif; font-size: 1.3rem; color: var(--hueso); }
+    .esquela-pregunta span { color: var(--vino-viva); }
+
+    .sinopsis { background: linear-gradient(180deg, var(--negro-2), var(--negro)); border-top: 1px solid rgba(151,124,83,.3); border-bottom: 1px solid rgba(151,124,83,.3); }
+    .sinopsis .lead { max-width: 62ch; margin: 0 auto; }
+    .sinopsis .lead p { font-size: 1.18rem; color: #ded9cf; margin-bottom: 20px; }
+    .sinopsis .lead .cierre { text-align: center; font-style: italic; color: var(--vino-viva); font-size: 1.25rem; font-family: 'Libre Baskerville', serif; }
+
+    /* ejemplar firmado */
+    .firma-box { margin: 54px auto 0; max-width: 680px; text-align: center; padding: 10px 20px; }
+    .firma-box .firma-icono { font-size: 1.7rem; margin-bottom: 10px; }
+    .firma-box p { color: var(--hueso); margin-bottom: 20px; font-size: 1.24rem; line-height: 1.5; }
+    .firma-box p strong { color: var(--vino-viva); }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 250px 1fr; gap: 50px; align-items: start; max-width: 940px; margin: 0 auto; }
+    .autora-foto { justify-self: center; width: 230px; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 44px rgba(0,0,0,.7), 0 0 40px rgba(151,124,83,.2); border: 1px solid rgba(255,255,255,.08); background: var(--carbon); }
+    .autora-foto img { display: block; width: 100%; height: auto; }
+    .autora-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 4/5; background: linear-gradient(160deg, #20242a, #060607); color: var(--vino-viva); font-family: 'Libre Baskerville', serif; font-size: 3rem; }
+    .autora-texto h3 { color: #fff; font-size: 1.8rem; margin-bottom: 2px; font-weight: 700; }
+    .autora-texto .rol { color: var(--vino-viva); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; font-family: 'Libre Baskerville', serif; }
+    .autora-texto p { color: #ded9cf; margin-bottom: 16px; max-width: 60ch; }
+    .placeholder-nota { max-width: 60ch; color: var(--gris-2); font-style: italic; font-size: .95rem; border: 1px dashed rgba(151,124,83,.4); border-radius: 8px; padding: 14px 18px; }
+    @media (max-width: 760px) { .autora-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; } .autora-texto p { text-align: left; } }
+
+    /* ============ CONTACTO ============ */
+    .contacto { background: linear-gradient(180deg, rgba(151,124,83,.12), transparent), var(--negro); text-align: center; }
+    .contacto p { max-width: 48ch; margin: 0 auto 30px; color: #ded9cf; }
+    .redes-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 9px; padding: 13px 24px; border-radius: 40px; text-decoration: none; font-size: .95rem; letter-spacing: .03em; border: 1px solid rgba(236,231,222,.28); color: var(--hueso); background: rgba(255,255,255,.03); transition: all .3s ease; }
+    .red:hover { transform: translateY(-3px); border-color: var(--vino-viva); color: #fff; }
+    .red svg { width: 18px; height: 18px; fill: currentColor; }
+
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .92rem; border-top: 1px solid rgba(255,255,255,.06); }
+    footer a { color: var(--vino-viva); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Los crímenes de la esquela</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#esquela">La esquela</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#autora">La autora</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <!-- Portada: deja el archivo portada.jpg en esta carpeta. -->
+        <img src="portada.jpg" alt="Portada de Los crímenes de la esquela, de Alejandra de San Cristóbal"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>Los crímenes de la esquela<br><br><small style="font-family:'Lora',serif;font-style:italic;text-transform:none;color:var(--gris);">Añade la portada como<br>portada.jpg</small></div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Thriller · Misterio</div>
+        <h1>Los crímenes de la esquela</h1>
+        <div class="autora">Alejandra de San Cristóbal</div>
+        <p class="tagline">A veces, lo más aterrador no es lo que te espera al final, sino lo que descubres por el camino.</p>
+        <div class="badge">Ya disponible en Amazon</div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0GZ8Y55NX" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ LA ESQUELA ============ -->
+  <section id="esquela" class="esquela-sec">
+    <div class="wrap">
+      <div class="esquela reveal">
+        <div class="cruz" aria-hidden="true">&#10013;</div>
+        <div class="rip">In memoriam</div>
+        <div class="foto" aria-hidden="true">D</div>
+        <div class="nombre">DIEGO</div>
+        <div class="datos">Amado hijo, hermano y amigo</div>
+        <div class="fecha">Fallecerá dentro de siete días</div>
+      </div>
+      <p class="esquela-pregunta reveal">¿Una broma? <span>¿Una advertencia?</span></p>
+    </div>
+  </section>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>historia</span></h2>
+      <div class="divider reveal"></div>
+      <div class="lead reveal">
+        <p>Todo comienza con una esquela en el periódico: su nombre, su fotografía y la fecha de su muerte dentro de una semana.</p>
+        <p>Sin respuestas, la vida de Diego empieza a desmoronarse rápidamente. Llamadas extrañas, accidentes, alguien siguiendo sus pasos… Incluso su propia familia actúa como si le ocultara algo.</p>
+        <p>Desesperado por encontrar apoyo, acude a un antiguo profesor de criminología, experto en comunicación no verbal, que vive recluido en una librería, huyendo de sus propios demonios. Juntos intentarán descubrir quién está detrás del anuncio de su muerte y qué oscuro motivo se esconde tras su publicación.</p>
+        <p>Solo existe una opción: averiguar la verdad antes de que acabe el plazo marcado y sea demasiado tarde. Sobrevivir dependerá de elegir bien en quién confiar.</p>
+        <p class="cierre">Porque, a veces, lo más aterrador no es lo que te espera al final, sino lo que descubres por el camino.</p>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu ejemplar <strong>firmado por la autora</strong>? Ponte en contacto con ella a través de sus redes.</p>
+        <a class="btn btn-ghost" href="#contacto">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autora-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autora-grid">
+        <div class="autora-foto reveal">
+          <img src="alejandra-autora.jpg" alt="Alejandra de San Cristóbal, autora"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">A</div>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Alejandra de San Cristóbal</h3>
+          <div class="rol">Autora · misterio y suspense</div>
+          <p>Alejandra de San Cristóbal, nacida en Vizcaya en 1979, se siente cántabra de adopción. Diplomada en Educación Social y lectora voraz, no publicó su primera novela, <em>Awen: Viajeros de la noche</em>, hasta 2018, iniciando con ella una trilogía juvenil repleta de aventura y fantasía, que continuó con <em>El segundo viaje Awen: La pirámide negra</em> y <em>El tercer viaje Awen: El volcán rojo</em>. En sus historias siempre están presentes los enigmas y acertijos.</p>
+          <p>En 2020 cambió de registro para adentrarse en el misterio, mezclando datos históricos reales con la ficción: así nacieron <em>El maestro de ilusiones</em> y <em>La clave de Agatha</em>, tras la pista de personajes tan célebres como Harry Houdini o Agatha Christie. En 2022, <em>La sombra de la Gioconda</em> permaneció siete meses consecutivos en el Top 100 general de los más vendidos de Amazon España, con una explicación tan ficticia como plausible del robo de la Mona Lisa en el Louvre en 1911.</p>
+          <p>Siempre en busca de misterios reales sin resolver, sorprendió en 2023 con <em>La profecía de las 6 puertas</em>, construida alrededor del Manuscrito Voynich, y en 2024 con <em>El corredor de los engendros</em>, un viaje por el Londres de Jack el Destripador. Con <em>Los crímenes de la esquela</em> (2026) se consolida como autora de suspense: novelas de giros inesperados y finales capaces de sorprender hasta la última página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="contacto">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sígueme y <span>contacta</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Encuentra a la autora en Facebook. Escríbele para hablar del libro o pedir tu ejemplar firmado.</p>
+      <div class="redes-row reveal">
+        <a class="red" href="https://www.facebook.com/share/1Eiksyud4V/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+          Perfil en Facebook
+        </a>
+        <a class="red" href="https://www.facebook.com/share/18pHHqggUd/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+          Página en Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Alejandra de San Cristóbal · <em>Los crímenes de la esquela</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Tres Dioses — Un thriller oscuro en Córdoba | Rafael Mariscal Roca</title>
+  <meta name="description" content="Tres Dioses, de Rafael Mariscal Roca. Un thriller oscuro y vibrante: una desaparición en Córdoba, símbolos antiguos y una lucha silenciosa por el control del relato. Lee gratis el primer capítulo." />
+  <meta name="author" content="Rafael Mariscal Roca" />
+  <meta name="keywords" content="Tres Dioses, thriller, novela negra, Córdoba, Rafael Mariscal Roca, libro, misterio, inspector Sanz" />
+
+  <!-- ====== Open Graph (para compartir en redes) ====== -->
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Tres Dioses — Rafael Mariscal Roca" />
+  <meta property="og:description" content="Una desaparición en Córdoba desata un laberinto de símbolos antiguos, fe e historia. Un thriller oscuro y vibrante." />
+  <meta property="og:image" content="portada-libro.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tres Dioses — Rafael Mariscal Roca" />
+  <meta name="twitter:description" content="Un thriller oscuro en Córdoba. Historia y fe entrelazadas en una lucha por el relato." />
+  <meta name="twitter:image" content="portada-libro.jpg" />
+
+  <!-- ====== Favicon (SVG en línea, sin archivo externo) ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0708'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23c9a24b' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='bold' fill='%23c01620' text-anchor='middle'%3EIII%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== Datos estructurados (schema.org) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Tres Dioses",
+    "author": { "@type": "Person", "name": "Rafael Mariscal Roca" },
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/Paperback",
+    "genre": ["Thriller", "Novela negra"],
+    "isbn": "979-8264760112",
+    "image": "portada-libro.jpg",
+    "description": "Una desaparición en Córdoba desata un laberinto de símbolos antiguos, fe e historia. Un thriller oscuro y vibrante del inspector Sanz.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "bestRating": "5",
+      "ratingCount": "14"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --negro: #0a0708;
+      --negro-2: #140d0f;
+      --rojo: #8b0e13;
+      --rojo-vivo: #c01620;
+      --dorado: #c9a24b;
+      --hueso: #e8e2d8;
+      --gris: #9c948c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.12rem;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, .cinzel { font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(10,7,8,.75); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(139,14,19,.25);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Cinzel', serif; color: var(--dorado); letter-spacing: .2em; font-size: .9rem; }
+    nav .links { display: flex; gap: 26px; }
+    nav .links a { text-decoration: none; font-family: 'Cinzel', serif; font-size: .72rem; letter-spacing: .12em; color: var(--gris); text-transform: uppercase; transition: color .3s; }
+    nav .links a:hover { color: #fff; }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--dorado); margin: 5px 0; transition: transform .3s ease, opacity .3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 720px) {
+      .nav-toggle { display: block; }
+      nav .links {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(72vw, 280px);
+        flex-direction: column; justify-content: center; gap: 32px;
+        background: rgba(10,7,8,.97); backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(139,14,19,.3);
+        transform: translateX(100%); transition: transform .35s ease;
+      }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background: radial-gradient(circle at 50% 40%, rgba(139,14,19,0.35), transparent 60%), linear-gradient(180deg, #000 0%, var(--negro-2) 100%);
+      overflow: hidden;
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 120%, rgba(192,22,32,0.25), transparent 55%); pointer-events: none; }
+    .hero-grid { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 34px; max-width: 680px; margin: 0 auto; padding: 130px 0 80px; }
+    .cover-frame { justify-self: center; align-self: center; width: 265px; max-width: 100%; border-radius: 6px; box-shadow: 0 0 0 1px rgba(201,162,75,0.25), 0 30px 80px rgba(0,0,0,0.8), 0 0 60px rgba(139,14,19,0.4); transition: transform .5s ease, box-shadow .5s ease; }
+    .cover-frame:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 0 1px rgba(201,162,75,0.5), 0 40px 100px rgba(0,0,0,0.85), 0 0 90px rgba(192,22,32,0.55); }
+    .cover-frame img { display: block; width: 100%; height: auto; aspect-ratio: 507 / 768; object-fit: contain; border-radius: 6px; }
+    .hero-text .eyebrow { color: var(--dorado); text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.78rem; font-family: 'Cinzel', serif; margin-bottom: 18px; }
+    .hero-text h1 { font-size: clamp(2.8rem, 7vw, 4.6rem); line-height: 1; color: #fff; text-shadow: 0 0 30px rgba(192,22,32,0.5); }
+    .hero-text .autor { margin-top: 14px; color: var(--gris); font-style: italic; font-size: 1.25rem; }
+    .hero-text .tagline { margin: 28px auto 0; font-size: 1.3rem; max-width: 42ch; color: var(--hueso); }
+    .stars-hero { margin-top: 22px; color: var(--dorado); font-size: 1.1rem; letter-spacing: 2px; }
+    .stars-hero small { display:block; color: var(--gris); font-size: .8rem; letter-spacing: .1em; margin-top: 4px; font-family: 'Cinzel', serif; }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.08em; text-decoration: none; border-radius: 3px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--rojo-vivo), var(--rojo)); color: #fff; box-shadow: 0 8px 30px rgba(192,22,32,0.45); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(192,22,32,0.65); }
+    .btn-ghost { border: 1px solid rgba(201,162,75,0.5); color: var(--dorado); background: transparent; }
+    .btn-ghost:hover { background: rgba(201,162,75,0.1); border-color: var(--dorado); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 100px 0; }
+    .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); color: #fff; margin-bottom: 12px; }
+    .section-title span { color: var(--rojo-vivo); }
+    .divider { width: 70px; height: 2px; background: linear-gradient(90deg, transparent, var(--dorado), transparent); margin: 0 auto 48px; }
+
+    .sinopsis { background: linear-gradient(180deg, var(--negro-2), var(--negro)); border-top: 1px solid rgba(139,14,19,0.3); border-bottom: 1px solid rgba(139,14,19,0.3); }
+    .sinopsis p { max-width: 62ch; margin: 0 auto 22px; text-align: center; font-size: 1.25rem; color: #d8d0c6; }
+    .sinopsis .drop::first-letter { font-family: 'Cinzel', serif; font-size: 3.4rem; float: left; line-height: 0.8; padding: 6px 12px 0 0; color: var(--rojo-vivo); }
+
+    /* ============ BOOKTRAILER ============ */
+    .trailer-wrap { position: relative; max-width: 860px; margin: 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.7), 0 0 50px rgba(192,22,32,.25); border: 1px solid rgba(201,162,75,.2); }
+    .trailer-wrap video { display: block; width: 100%; background: #000; }
+    .sound-btn { position: absolute; top: 16px; right: 16px; z-index: 3; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; font-family: 'Cinzel', serif; font-size: .78rem; letter-spacing: .08em; color: #fff; background: linear-gradient(135deg, var(--rojo-vivo), var(--rojo)); border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 6px 22px rgba(192,22,32,.5); transition: transform .3s ease, background .3s ease; }
+    .sound-btn:hover { transform: translateY(-2px); }
+    .sound-btn.is-on { background: rgba(10,7,8,.7); box-shadow: 0 6px 22px rgba(0,0,0,.5); border: 1px solid rgba(201,162,75,.4); }
+    @media (max-width: 480px) { .sound-btn { font-size: .68rem; padding: 8px 12px; top: 10px; right: 10px; } }
+
+    /* ============ PRIMER CAPITULO ============ */
+    .cap { background: linear-gradient(180deg, var(--negro-2), var(--negro)); border-top: 1px solid rgba(139,14,19,0.3); border-bottom: 1px solid rgba(139,14,19,0.3); text-align: center; }
+    .cap p { max-width: 56ch; margin: 0 auto 30px; color: #d8d0c6; font-size: 1.2rem; }
+    .cap .quote { font-style: italic; color: var(--gris); border-left: 2px solid var(--rojo); padding-left: 18px; text-align: left; max-width: 46ch; }
+
+    /* ============ PERSONAJES ============ */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
+    .card { background: var(--negro-2); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 34px 28px; transition: border-color .3s ease, transform .3s ease; }
+    .card:hover { border-color: rgba(192,22,32,0.5); transform: translateY(-4px); }
+    .card h3 { color: var(--dorado); font-size: 1.4rem; margin-bottom: 12px; }
+    .card p { color: var(--gris); font-size: 1.05rem; }
+
+    /* ============ RESEÑAS ============ */
+    .resenas { background: var(--negro-2); }
+    .grid-r { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .resena { background: var(--negro); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 30px; transition: border-color .3s, transform .3s; }
+    .resena:hover { border-color: rgba(201,162,75,.4); transform: translateY(-3px); }
+    .resena .stars { color: var(--dorado); letter-spacing: 2px; font-size: 1rem; }
+    .resena h4 { font-family: 'Cinzel', serif; color: #fff; font-size: 1.1rem; margin: 10px 0 6px; }
+    .resena .meta { color: var(--gris); font-size: .85rem; margin-bottom: 14px; }
+    .resena p { color: #cfc7bd; font-size: 1.02rem; }
+    .resena .autor { margin-top: 16px; color: var(--dorado); font-family: 'Cinzel', serif; font-size: .82rem; letter-spacing: .1em; }
+    @media (max-width: 720px) { .grid-r { grid-template-columns: 1fr; } }
+
+    /* ============ AUTOR ============ */
+    .autor-sec { background: linear-gradient(180deg, var(--negro-2), var(--negro)); border-top: 1px solid rgba(139,14,19,0.3); border-bottom: 1px solid rgba(139,14,19,0.3); }
+    .autor-grid { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: center; max-width: 900px; margin: 0 auto; }
+    .autor-foto { justify-self: center; width: 200px; height: 200px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, rgba(139,14,19,0.5), var(--negro-2)); border: 1px solid rgba(201,162,75,0.4); box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 50px rgba(139,14,19,0.35); overflow: hidden; }
+    .autor-foto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .autor-foto .monograma { font-family: 'Cinzel', serif; font-size: 4.4rem; font-weight: 700; color: var(--dorado); text-shadow: 0 0 24px rgba(192,22,32,0.6); }
+    .autor-texto h3 { color: var(--dorado); font-size: 1.6rem; margin-bottom: 6px; }
+    .autor-texto .rol { color: var(--gris); font-family: 'Cinzel', serif; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 20px; }
+    .autor-texto p { color: #d8d0c6; font-size: 1.15rem; margin-bottom: 18px; max-width: 60ch; }
+    .autor-texto .firma-quote { font-style: italic; color: var(--hueso); border-left: 2px solid var(--rojo); padding-left: 18px; }
+    @media (max-width: 720px) {
+      .autor-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+      .autor-texto p { margin-left: auto; margin-right: auto; }
+      .autor-texto .firma-quote { text-align: left; }
+    }
+
+    /* ============ COMPRA ============ */
+    .buy { background: linear-gradient(180deg, rgba(139,14,19,0.15), transparent), var(--negro); text-align: center; }
+    .buy .isbn { color: var(--gris); font-family: 'Cinzel', serif; letter-spacing: 0.1em; font-size: 0.9rem; margin-top: 26px; }
+    .buy .isbn strong { color: var(--hueso); }
+
+    /* ============ EJEMPLAR FIRMADO ============ */
+    .firma-box { margin: 54px auto 0; max-width: 640px; text-align: center; }
+    .firma-box .firma-icono { font-size: 1.8rem; margin-bottom: 10px; }
+    .firma-box p { color: var(--hueso); margin-bottom: 18px; font-size: 1.2rem; }
+    .firma-box p strong { color: var(--dorado); }
+
+    /* ============ FOOTER ============ */
+    footer { text-align: center; padding: 40px 24px; color: #6a635d; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    /* ============ ANIMACIÓN ============ */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">TRES DIOSES</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a href="../index.html">&larr; El Rincón</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#trailer">Booktrailer</a>
+        <a href="#autor">Autor</a>
+        <a href="#capitulo">Primer capítulo</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#comprar">Comprar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada-libro.jpg" alt="Portada de Tres Dioses, de Rafael Mariscal Roca" loading="eager" width="507" height="768" />
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Rafael Mariscal Roca</div>
+        <h1>Tres Dioses</h1>
+        <div class="autor">Un thriller oscuro en el corazón de Córdoba</div>
+        <p class="tagline">Historia y fe se entrelazan en una lucha silenciosa por el control del relato.</p>
+        <div class="stars-hero">★★★★☆ <strong style="color:var(--hueso);font-family:'Cinzel',serif;font-size:.95rem;">4,4</strong> <small>Sobre 14 valoraciones en Amazon</small></div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://amzn.eu/d/00TuOENB" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <a class="btn btn-ghost" href="#capitulo">Leer el primer capítulo</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <p class="drop reveal">La calma de Córdoba se quiebra cuando una joven universitaria desaparece en extrañas circunstancias. El inspector Sanz, curtido en mil batallas, se ve obligado a colaborar con G., un brillante pero enigmático analista recién llegado de Madrid, y con Cruz, una agente decidida a dejar huella.</p>
+      <p class="reveal">Juntos, se enfrentan a una investigación que los lleva por un laberinto de símbolos antiguos, tensiones culturales y heridas que creían superadas.</p>
+      <p class="reveal"><em>Tres Dioses</em> es un thriller oscuro y vibrante, donde la historia y la fe se entrelazan en una lucha silenciosa por el control del relato.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKTRAILER ============ -->
+  <section id="trailer">
+    <div class="wrap">
+      <h2 class="section-title reveal">El <span>booktrailer</span></h2>
+      <div class="divider reveal"></div>
+      <div class="trailer-wrap reveal">
+        <video id="booktrailer" controls muted playsinline preload="metadata">
+          <source src="Booktrailer.mp4" type="video/mp4" />
+          Tu navegador no admite la reproducción de vídeo.
+        </video>
+        <button id="soundBtn" class="sound-btn" type="button" aria-pressed="false" aria-label="Activar sonido del booktrailer">🔇 Activar sonido</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOR ============ -->
+  <section id="autor" class="autor-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre el <span>autor</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autor-grid">
+        <div class="autor-foto reveal">
+          <!-- Para poner una foto real: deja el archivo autor.jpg en esta carpeta
+               y sustituye la línea <span ...> de abajo por:
+               <img src="autor.jpg" alt="Rafael Mariscal Roca" /> -->
+          <span class="monograma">R</span>
+        </div>
+        <div class="autor-texto reveal">
+          <h3>Rafael Mariscal Roca</h3>
+          <div class="rol">Autor de Tres Dioses</div>
+          <p>Rafael Mariscal Roca firma con <em>Tres Dioses</em> su primera novela: un thriller oscuro que transcurre entre Córdoba y Málaga, dos ciudades que conoce bien y a las que devuelve todo su misterio. En sus páginas, la investigación policial se entrelaza con la historia y la fe, y el escenario andaluz deja de ser telón de fondo para convertirse en un personaje más.</p>
+          <p>Su escritura busca atrapar desde la primera línea —ese «un capítulo más» que reconocen sus lectores— sin renunciar a hacer pensar. <em>Tres Dioses</em> es una invitación a recorrer, entre símbolos antiguos y heridas que creíamos cerradas, el lado más inquietante de dos ciudades luminosas.</p>
+          <p class="firma-quote">«Escribo la clase de historia que a mí me gustaría leer: la que no te suelta hasta la última página.»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIMER CAPITULO ============ -->
+  <section id="capitulo" class="cap">
+    <div class="wrap">
+      <h2 class="section-title reveal">Lee el <span>primer capítulo</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Adéntrate gratis en las primeras páginas de <em>Tres Dioses</em>. El amanecer de Córdoba está a punto de romperse.</p>
+      <p class="quote reveal">«La ciudad no espera que un despertar tan tranquilo como el de hoy acabe de la manera que lo va a hacer.»</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-primary" href="capitulo1.html">Leer el Capítulo 1</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAJES ============ -->
+  <section id="personajes">
+    <div class="wrap">
+      <h2 class="section-title reveal">Tres <span>voces</span>, una verdad</h2>
+      <div class="divider reveal"></div>
+      <div class="cards">
+        <div class="card reveal">
+          <h3>El inspector Sanz</h3>
+          <p>Curtido en mil batallas. Conoce Córdoba como la palma de su mano, pero este caso removerá heridas que creía cerradas.</p>
+        </div>
+        <div class="card reveal">
+          <h3>G.</h3>
+          <p>Un analista brillante y enigmático, recién llegado de Madrid. Ve patrones donde los demás solo ven caos.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Cruz</h3>
+          <p>Una agente decidida a dejar huella, dispuesta a llegar hasta el final por muy oscuro que sea el camino.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section id="resenas" class="resenas">
+    <div class="wrap">
+      <h2 class="section-title reveal">Lo que dicen los <span>lectores</span></h2>
+      <div class="divider reveal"></div>
+      <div class="grid-r">
+        <div class="resena reveal">
+          <div class="stars">★★★★★</div>
+          <h4>Un thriller que incomoda, atrapa y hace reflexionar</h4>
+          <div class="meta">Compra verificada · España</div>
+          <p>Un thriller oscuro y ambicioso que va mucho más allá de una investigación policial. Uno de los mayores aciertos del autor es la ambientación: Córdoba está magníficamente retratada y se convierte en un elemento clave de la narración.</p>
+          <div class="autor">— Carolina</div>
+        </div>
+
+        <div class="resena reveal">
+          <div class="stars">★★★★★</div>
+          <h4>Trepidante thriller, no te deja respirar</h4>
+          <div class="meta">Compra verificada · España</div>
+          <p>No apta para ritmos cardíacos que no estén al 100%: la tensión va aumentando a medida que las páginas quedan atrás y eso de «un capítulo más» es inevitable. Personajes sólidos y un final de infarto.</p>
+          <div class="autor">— Teresa Pérez Landa</div>
+        </div>
+
+        <div class="resena reveal">
+          <div class="stars">★★★★★</div>
+          <h4>Ópera prima muy recomendable</h4>
+          <div class="meta">Compra verificada · España</div>
+          <p>Acontecimientos a priori inconexos que se relacionan en un punto de la lectura dándole sentido a la historia. Desenlace inesperado y cierre correcto. Si te gustan las novelas con las que te "enganchas", no lo dudes.</p>
+          <div class="autor">— Juanma</div>
+        </div>
+
+        <div class="resena reveal">
+          <div class="stars">★★★★★</div>
+          <h4>Mis dieces</h4>
+          <div class="meta">Compra verificada · España</div>
+          <p>Entretenida y fácil de leer, ambientada en dos preciosas ciudades andaluzas en las que el autor nos sumerge y nos hace sentir que vivimos las mismas experiencias que los protagonistas. Muy recomendable.</p>
+          <div class="autor">— Jorge</div>
+        </div>
+
+        <div class="resena reveal">
+          <div class="stars">★★★★★</div>
+          <h4>Thriller policíaco</h4>
+          <div class="meta">Compra verificada · España</div>
+          <p>Thriller muy entretenido y fácil de leer. Si conoces Málaga o Córdoba te encantará, describe muchos lugares emblemáticos de ambas ciudades. Y para los que tenemos ese puntito friki, hay guiños a otras sagas y a pelis de Marvel que te sacan una sonrisa.</p>
+          <div class="autor">— Lector verificado</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="buy">
+    <div class="wrap">
+      <h2 class="section-title reveal">Empieza a <span>leer</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal" style="max-width:52ch;margin:0 auto 34px;color:#d8d0c6;font-size:1.2rem;">
+        Adéntrate en el laberinto de <em>Tres Dioses</em>. Disponible en Amazon en tapa blanda y versión Kindle.
+      </p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://amzn.eu/d/00TuOENB" target="_blank" rel="noopener">Comprar en Amazon</a>
+      </div>
+      <p class="isbn reveal">ISBN-13: <strong>979-8264760112</strong></p>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu <strong>ejemplar firmado</strong> por el autor? Escríbeme y lo vemos.</p>
+        <a class="btn btn-ghost" href="https://x.com/messages/compose?recipient_id=126349629" target="_blank" rel="noopener">Escríbeme por X</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Rafael Mariscal Roca · <em>Tres Dioses</em>. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menú de navegación en móvil
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      // Cierra el menú al pulsar un enlace o la tecla Escape
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Reproduce el booktrailer automáticamente (silenciado) al entrar en pantalla
+    const trailer = document.getElementById('booktrailer');
+    const soundBtn = document.getElementById('soundBtn');
+    if (trailer) {
+      const trailerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const p = trailer.play();
+            if (p) p.catch(() => {}); // ignora bloqueos de autoplay del navegador
+          } else {
+            trailer.pause();
+          }
+        });
+      }, { threshold: 0.5 });
+      trailerObserver.observe(trailer);
+
+      // Botón que alterna sonido/silencio y refleja siempre el estado real del vídeo
+      if (soundBtn) {
+        soundBtn.addEventListener('click', () => {
+          trailer.muted = !trailer.muted;
+          if (!trailer.muted) {
+            trailer.volume = 1;
+            const p = trailer.play();
+            if (p) p.catch(() => {});
+          }
+        });
+
+        // Mantiene el botón sincronizado aunque el usuario use los controles del vídeo
+        const syncSoundBtn = () => {
+          const on = !trailer.muted;
+          soundBtn.classList.toggle('is-on', on);
+          soundBtn.setAttribute('aria-pressed', String(on));
+          soundBtn.setAttribute('aria-label', on ? 'Silenciar el booktrailer' : 'Activar sonido del booktrailer');
+          soundBtn.textContent = on ? '🔊 Sonido activado' : '🔇 Activar sonido';
+        };
+        trailer.addEventListener('volumechange', syncSoundBtn);
+        syncSoundBtn();
+      }
+    }
+  </script>
+</body>
+</html>

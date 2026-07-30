@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo I — Las Sirenas no Existen | Naviru Shorno</title>
+  <meta name="description" content="Lee gratis el capítulo I de Las Sirenas no Existen, de Naviru Shorno: la noche en que María Antonia conoció a Marciana." />
+  <meta name="author" content="Naviru Shorno" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1226'/%3E%3Ccircle cx='32' cy='30' r='16' fill='none' stroke='%23e8c39a' stroke-width='3'/%3E%3Cpath d='M12 50c6-4 10-4 16 0s10 4 16 0' stroke='%232e8b7f' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Alegreya:ital,wght@0,400;0,500;1,400;1,500&family=Alegreya+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* PALETA AZUL CELESTE CLARO (a juego con la ficha del libro).
+         Los nombres se conservan, pero los tonos son claros. */
+      --noche: #eef7fd;
+      --noche-2: #ddedf9;
+      --noche-3: #ffffff;
+      --hoja-clara: #1c6f9c;
+      --oro: #2b8cc4;
+      --oro-claro: #10557f;
+      --hueso: #0f3550;
+      --texto: #33566b;
+      --texto-suave: #5f8098;
+      --linea: rgba(43, 140, 196, .28);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche); color: var(--texto);
+      font-family: 'Alegreya Sans', system-ui, sans-serif; line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--oro); color: var(--noche); }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(238,247,253,.9); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; flex-wrap: wrap; }
+    .brand { font-family: 'Italiana', serif; font-size: 1.3rem; color: var(--oro-claro); letter-spacing: .06em; }
+    nav .links { display: flex; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .84rem; letter-spacing: .1em; text-transform: lowercase; }
+    nav a:hover, nav a:focus-visible { color: var(--oro); }
+    nav a.home { color: var(--hueso); }
+
+    header.cab { padding: 76px 0 34px; text-align: center; }
+    header.cab .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--hoja-clara); }
+    header.cab h1 { font-family: 'Italiana', serif; font-size: clamp(2.4rem, 6vw, 4rem); color: var(--hueso); margin-top: 14px; line-height: 1.05; }
+    header.cab .libro { margin-top: 16px; font-size: .84rem; letter-spacing: .22em; text-transform: uppercase; color: var(--oro-claro); }
+    .rule { width: 90px; height: 1px; background: linear-gradient(90deg, transparent, var(--oro), transparent); margin: 26px auto 0; }
+
+    .aviso {
+      max-width: 62ch; margin: 34px auto 0; padding: 18px 22px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-left: 3px solid var(--hoja-clara);
+      border-radius: 3px; font-size: .92rem; color: var(--texto-suave); text-align: left;
+    }
+    .aviso strong { color: var(--hueso); font-weight: 500; }
+
+    .lectura { padding: 40px 0 90px; }
+    .texto { max-width: 68ch; margin: 0 auto; font-family: 'Alegreya', serif; font-size: 1.16rem; line-height: 1.95; color: var(--texto); }
+    /* Narración: como en un libro. Justificado con partición de palabras para
+       evitar las calles blancas, y sangría de primera línea en vez de espaciar
+       todos los párrafos. */
+    .texto p {
+      margin: 0; text-align: justify;
+      hyphens: auto; -webkit-hyphens: auto; text-indent: 1.6em;
+    }
+    /* el primer párrafo de cada bloque o escena no lleva sangría */
+    .texto > p:first-child,
+    .texto p.sin-sangria,
+    .texto .escena + p,
+    .texto p.carta + p:not(.carta) { text-indent: 0; }
+
+    /* Diálogos: sangría francesa, el guión sobresale y las líneas siguientes
+       se alinean debajo del texto, como en la edición impresa. */
+    .texto p.dialogo {
+      text-align: left; hyphens: manual;
+      margin: .35em 0 .35em 1.7em; text-indent: -1.7em;
+    }
+
+    /* Las líneas del cuaderno que María Antonia escribe a su hijo */
+    .texto p.carta {
+      font-style: italic; color: var(--oro-claro); text-align: left;
+      text-indent: 0; margin: .2em 0; font-size: 1.2rem;
+    }
+    .texto p.carta:first-of-type { margin-top: 0; }
+
+    /* Separador de escena */
+    .texto .escena {
+      margin: 34px auto; text-align: center; color: var(--oro);
+      font-size: 1rem; letter-spacing: .8em; text-indent: 0;
+    }
+
+    /* Letra capital del primer párrafo narrativo */
+    .texto p.capitular { text-indent: 0; }
+    .texto p.capitular::first-letter {
+      float: left; font-family: 'Italiana', serif; color: var(--oro);
+      font-size: 3.4em; line-height: .82; padding: .06em .12em 0 0;
+    }
+    .fin {
+      max-width: 68ch; margin: 60px auto 0; padding-top: 34px; border-top: 1px solid var(--linea); text-align: center;
+    }
+    .fin h2 { font-family: 'Italiana', serif; font-size: clamp(1.6rem, 3.6vw, 2.3rem); color: var(--hueso); }
+    .fin p { color: var(--texto-suave); margin: 14px auto 0; max-width: 52ch; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 40px;
+      text-decoration: none; font-family: 'Alegreya Sans', sans-serif; font-size: .84rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase; transition: transform .2s, border-color .2s, color .2s;
+    }
+    .btn-oro { background: linear-gradient(135deg, var(--oro), #1c6f9c); color: #ffffff; }
+    .btn-oro:hover { transform: translateY(-2px); }
+    .btn-ghost { background: #ffffff; color: var(--oro-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--oro); color: var(--oro); transform: translateY(-2px); }
+
+    footer {
+      padding: 44px 0 56px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .88rem;
+    }
+    footer a { color: var(--oro-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--oro); border-color: var(--oro); }
+
+    @media (max-width: 700px) {
+      .texto { font-size: 1.08rem; }
+      .texto p { text-align: left; }
+      nav .links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Las Sirenas no Existen</span>
+      <div class="links">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="index.html">Ficha del libro</a>
+        <a href="index.html#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <div class="wrap">
+      <div class="eyebrow">Primer capítulo · lectura gratuita</div>
+      <h1>Capítulo I</h1>
+      <div class="libro">Las Sirenas no Existen · Naviru Shorno</div>
+      <div class="rule"></div>
+      <div class="aviso">
+        <strong>Antes de empezar:</strong> este capítulo se publica aquí con permiso del autor. La novela habla de un duelo, de una familia rota y de una mujer al límite; el tono es adulto, aunque no hay escenas explícitas. Si te engancha, en la ficha del libro tienes cómo conseguirlo entero.
+      </div>
+    </div>
+  </header>
+
+  <main class="lectura">
+    <div class="wrap">
+      <div class="texto">
+        <p class="carta">Hola, hijo:</p>
+        <p class="carta">Hace mucho que no te escribo. No puedo creerme que haya pasado tanto tiempo.</p>
+        <p class="capitular">Ha pasado un año entre una línea y otra. Lo que son las cosas, si parece que fue ayer cuando abrí este cuaderno y te escribí: «Hola, hijo. Hace mucho que no te escribo. No puedo creerme que haya pasado tanto tiempo».</p>
+        <p>Sigo aquí, cariño. Esta vez no me he ido. Esta vez no he cerrado el cuaderno y lo he guardado en el tocador muerta de miedo durante un año. Esta vez, mi niño, pienso llegar hasta el final. No es porque quiera explayarme. No, no es eso. Lo hago porque soy ese tipo de personas que no acaba de comprender las cosas hasta que las pone por escrito. Y necesito entenderlo todo.</p>
+        <p>Es una suerte no saber qué día nos cambiará la vida para siempre. A mí me cambió la vida el día que conocí a Marciana. Doy gracias por ello. Tengo la sensación de que me he readaptado al mundo con su ayuda. ¿Y esa quién es? Te preguntarás. Quizás el nombre te suene de algo… Yo no lo vi venir, la verdad, y no es que lo haya olvidado. Nunca olvidaré lo que pasó; lo que te pasó. De todas formas, si algo he aprendido en los cincuenta y un años que tengo, es que la vida es muy puñetera.</p>
+        <p>Todo empezó un año atrás, cuando te escribí la dichosa línea del inicio de este cuaderno; esa noche te escribí porque conocí a Marciana y me sentía poderosa. No te voy a engañar. Su aparición fue como un rayo de sol desde el minuto uno. Supongo que eso fue lo que me eclipsó, nunca mejor dicho. Ya entenderás esta broma. No te impacientes.</p>
+        <p>Antes de describirte nuestro primer encuentro, tengo que ponerte en antecedentes y hablarte un poco de cómo estaban las cosas por casa en aquel momento. Tu padre ya no era el mismo. No lo reconocerías. Apenas hablábamos. Se había vuelto un completo desconocido. Yo me pasaba todo el día amonestándolo y leyéndole la cartilla…</p>
+        <p>En cuanto a tu hermana, bueno, le había dado por vestirse con ropa ancha y oscura. Pasaba muy poco tiempo en casa, y cuando lo hacía, se encerraba en su cuarto con el ordenador. Salía con un grupo de amigos que hablaban raro, vestían raro y la llevaban a sitios raros. No me gustaban, y cuanto más le prohibía verlos, más tiempo pasaba con ellos.</p>
+        <p>No sé si te has enterado de que la abuela Carmen falleció a causa de un aneurisma hace un par de años; la pobre llevaba pachucha mucho tiempo y la teníamos ingresada en una residencia de pago porque me era imposible dedicarle todo el tiempo que precisaba… La iba a visitar en mis días libres y jugábamos a lo que más le gustaba: el ajedrez. Había partidas que duraban horas, ya sabes que a la abu le gustaba pensar bien todos los movimientos antes de mover. En eso he salido a ella. No soy nada impulsiva.</p>
+        <p>Respecto a mi vida social… Las pocas amistades que tenía han desaparecido en los últimos años y, para serte sincera, no me interesaba hacer amigas a cualquier precio. No estaba dispuesta a desilusionarme de nuevo.</p>
+        <p>Y en el trabajo, bueno, eso era harina de otro costal. En fin, era la vida que me había tocado vivir y no podía hacer nada para cambiarla, o eso creía, porque tengo en mente un par de locuras que si yo te contara… Ese cambio de mentalidad empezó con el momento que te voy a relatar:</p>
+        <p>Bueno, Eric, ¿estás preparado? Se abrió la puerta y apareció una tipa gordita con pinta de bruja en el gran comedor del restaurante en el que llevo trabajando más de treinta años. Como ves, hay cosas que no cambian. Eran cerca de las doce de la noche, quedaba poco para cerrar y ya no esperábamos más clientes.</p>
+        <p>Mi queridísima compañera Amparo, sí, la que con cariño apodaste «la farola», pululaba por la barra y, en dos zancadas, se colocó a mi lado, se puede decir que se abalanzó sobre mí. Siempre invadía mi espacio vital. No dijo nada. Se quedó quieta enganchándose a mi brazo, examinando a la desconocida. La susodicha, una vez cruzó la entrada, se quedó estática mirándonos en silencio. Era como si hubiera visto un fantasma.</p>
+        <p>Nadie más en el comedor le prestó atención. En aquel momento, teníamos varias mesas ocupadas de clientes del hotel de al lado. Amparo carraspeó, la observé desde abajo, como bien sabes, ella es casi tan alta como un avestruz, y yo, en cambio, sigo siendo un llavero humano que apenas roza el metro sesenta. Aspiré su perfume frutal y el olor a laca que sobresalía entre la amalgama de aromas que desprendía su delgado cuerpo.</p>
+        <p class="dialogo">—Vaya pintas tiene la tiparraca —dijo mi compañera con cara de revenida.</p>
+        <p>Su aliento olía a tabaco y menta. Debía de estar mascando un chicle, aunque lo más importante de todo era que había vuelto a fumar en el servicio.</p>
+        <p class="dialogo">—¿Has vuelto a fumar en el escusado? —pregunté.</p>
+        <p>Sí, sigo usando esa palabra. Ya sabes que tenemos un cuarto de baño detrás de la cocina que solo es para uso del personal y mi queridísima compañera había decidido que era el lugar perfecto para convertirlo en su pequeño fumadero…</p>
+        <p class="dialogo">—¿Qué pasa? Tú te encierras en el baño más de diez veces al día y yo nunca me quejo —protestó Amparo con cara de ofendida y con un deje que conocía muy bien. La miré atónita, confirmando que tenía un chicle de color verde en uno de los laterales de la boca.</p>
+        <p class="dialogo">—Yo tengo una enfermedad —dije casi en un susurro porque no podía creerme lo que mi compañera había dicho. Su frase era un golpe bajo.</p>
+        <p class="dialogo">—Ese no es mi problema. Además, yo también estoy enferma: soy adicta a la nicotina y me puede el estrés —dijo toda digna y tan estirada como un pavo real.</p>
+        <p>Estábamos condenadas a entendernos como las Azúcar Moreno, por lo que callé por el bien común y no le dije lo que pensaba. La observé con detenimiento; se encontraba a muy pocos centímetros de mí. La piel de su cara estaba muy estirada y el bronceado que lucía era artificial, desde luego, no era el que se coge tomando el sol en la terraza de tu casa. Algo que siempre me gustaba de ella era lo bien que olía. A lo largo del día, se perfumaba unas cuantas veces y se rociaba un bote entero de laca en su cabello rubio de bote. Es una presumida en toda regla, vamos. Ese día, llevaba una permanente que le sentaba muy bien y resaltaba su rostro enjuto.</p>
+        <p>Lo primero que noté de la clienta que acababa de entrar fue un aroma más natural. Caminó unos pasitos en el comedor, continuaba a varios metros de la barra, aunque la distancia no impidió que apreciara su rostro. Su nariz era ganchuda y prominente —sin verruga—, sus mejillas estaban rojas como tomates y unos hermosos ojos verde manzana le daban una expresión de niña traviesa. Al acercarse, noté un pequeño matiz a romero en el aire; era un aroma que no había estado presente antes y que, claramente, ella había traído consigo.</p>
+        <p>Al llegar a la barra, colocó un enorme bolso de topos negros sobre fondo blanco que llevaba cruzado en su cuerpo y le colgaba de un hombro. Vestía también una chaqueta tejana muy descolorida con varios pines que mostraban imágenes difusas con mensajes de paz y, debajo, un vestido que me recordó a un mantel por el estampado de flores que tenía. Le saludé y pregunté si deseaba tomar algo, que ya no dábamos de cenar.</p>
+        <p>Es curioso que algunos clientes se enfaden al encontrar la cocina cerrada a las doce de la noche. La gasolinera de al lado está abierta las veinticuatro horas y pueden ir allí y comprarse algún aperitivo, qué te voy a contar a ti si cada dos por tres me pedías que te comprara Shornolletas. ¡Qué tiempos aquellos! ¿Verdad? Te duraban un visto y no visto… El caso, si algo aprendes trabajando de cara al público, son las siguientes dos cosas: la primera es que tienes más paciencia de lo que pensabas y, la segunda, que odias a la gente mucho más de lo que creías.</p>
+        <p>Regresando al momento que te estaba narrando, la clienta que acababa de llegar no quería cenar.</p>
+        <p class="dialogo">—Solo quiero tomar un té —respondió. Su voz era ronca, pero llena de fuerza y energía. Caminé unos pasos hacia la cafetera cuando me interrumpió—. Disculpa, ¿te importaría usar esta agua?</p>
+        <p>Al girarme, comprobé que sacaba un recipiente transparente que estaba medio vacío y lo depositaba sobre la barra.</p>
+        <p>No supe qué decir; Amparo lo hizo en mi lugar:</p>
+        <p class="dialogo">—El agua de la cafetera es potable —dijo con un retintín muy suyo. Se pasaba todo el día utilizándolo para amonestar a los clientes que no le caían en gracia. Menuda es ella.</p>
+        <p class="dialogo">—Es agua de luna —dijo la desconocida.</p>
+        <p class="dialogo">—¿Agua de luna? —pregunté. ¿Qué puñetas era eso? Por supuesto, no lo verbalicé, yo sí sé tratar con la gente.</p>
+        <p class="dialogo">—Como si es agua del Himalaya, reina —respondió Amparo con los labios curvados hacia arriba.</p>
+        <p>Otra cosa no, pero mi compañera tenía respuestas para todo.</p>
+        <p class="escena" aria-hidden="true">···</p>
+        <p>Recuerdo una vez que un cliente llamó a Amparo con un chasquido de dedos. Mal movimiento, por supuesto.</p>
+        <p>Ella se acercó con una sonrisa tan falsa que hubiera puesto los pelos de punta al mismísimo Joker.</p>
+        <p class="dialogo">—Dígame, caballero —dijo con una dulzura empalagosa.</p>
+        <p class="dialogo">—La sopa está fría —soltó él, agitando la cuchara en el aire como si fuera una prueba irrefutable.</p>
+        <p>Amparo apenas parpadeó antes de responder:</p>
+        <p class="dialogo">—Normal, mi rey, es gazpacho. Pero, si quieres, lo meto en el microondas y lo convertimos en un puré.</p>
+        <p>El tipo se quedó callado y dejó una generosa propina.</p>
+        <p class="escena" aria-hidden="true">···</p>
+        <p>Volviendo a la clienta del agua de luna, nos pidió, de forma extrañamente amable, si podíamos calentarle el agua que traía consigo en un fogón…, nada de microondas, matizó varias veces, acompañándolo de un «por favor». No vi impedimento alguno y acepté, de vez en cuando, me gustaba llevarle la contraria a Amparo. Me escudé en el dicho ese de que el cliente siempre tiene la razón y ese tipo de patrañas. Además, como casi siempre, me había cambiado el turno a la fuerza y me tocaba volver a cerrar y estaba un poco disgustada con ella porque nunca respetaba los turnos y me debía tantas horas y favores que había perdido la cuenta.</p>
+        <p>Lo más chistoso de todo esto es que no importa cuánto hagas por alguien, al final, solo valoran aquello que no hiciste.</p>
+        <p>Antes de entregarle la taza con el agua caliente de luna a la tipa del vestido de flores, mi compañera ya había salido por la puerta. Tenía prisa por marcharse porque había quedado con su chico. Me hacía mucha gracia que llamase «chico» a su ligue, cuando estaba segura de que sería un señor de más de medio siglo… Pero, bueno, ahora está muy de moda decir que los cincuenta son los nuevos treinta. Yo se lo repetía continuamente a tu hermana para sacarla de quicio.</p>
+        <p>Los siguientes minutos fueron frenéticos, tenía prisa por marcharme; mi alarma sonaría en pocas horas. Me comporté como una abeja laboriosa: llevé la cuenta a las mesas ocupadas, retiré todo el utillaje de ellas y lo coloqué en el lavavajillas, limpié la barra, barrí el comedor, retiré del congelador la bollería que se usaría a la mañana siguiente —y que no había sacado el cocinero— y un largo etcétera que llevaba más de media vida realizando y no quiero exponer aquí para no aburrirte. Cuando me quise dar cuenta, eran las doce y media de la noche y en el comedor solo quedaba la mujer rechoncha de melena color fuego sentada en la barra, como si el tiempo se hubiera detenido a su alrededor.</p>
+        <p class="dialogo">—Estoy a punto de cerrar. Si no le importa, abone la consumición, por favor —dije, depositando un tique con el precio del té.</p>
+        <p>Suspiré.</p>
+        <p class="dialogo">—¿Un día duro? —preguntó la clienta.</p>
+        <p class="dialogo">—Todos los días lo son —respondí.</p>
+        <p>No sé por qué lo dije. Solía mentir, salir de casa con una sonrisa que no sentía mientras en mi interior deseaba quedarme en la cama, llorando hasta que el mundo dejara de girar.</p>
+        <p class="dialogo">—La vida es un regalo —dijo ella con una sonrisa tan resplandeciente que me fue imposible devolvérsela. Acto seguido, metió los dos brazos en el gigante bolso que me recordó a un caldero y removió su contenido.</p>
+        <p>Sacó de él un monedero con forma de sapo. Abrió la cremallera tirando de un monigote desgastado de Marge Simpson. Cuando sus ojos se apartaron de los míos, me entraron ganas de llorar, pero aguanté el tipo como una jabata. Apreté los labios con fuerza y conseguí tragar la amarga desazón que emergía del abismo en el que se había convertido mi corazón.</p>
+        <p class="dialogo">—La vida es una porquería —repliqué con sinceridad y con la voz queda. Me encontraba fatigada, el dolor en el abdomen llevaba todo el día acuchillándome y no había comido nada desde el almuerzo por la falta de apetito. La verdad es que no suelo verbalizar lo que pienso. Nunca. Y sigo sin saber por qué lo hice en aquel momento, pero había una especie de energía flotando alrededor de ella que me inspiraba confianza. Soy consciente de que, si le hubiera mentido, tal vez, ahora, no estaría escribiendo estas palabras y no hubiera sufrido tantas… desventuras.</p>
+        <p class="dialogo">—Tus pensamientos son semillas, y lo que cosechas dependerá de las semillas que plantas.</p>
+        <p>No le respondí. ¡Qué tontería tan absurda! Le cobré y le señalé la puerta. Sin ganas de entablar una conversación existencial con una desconocida, observé cómo la mujer hacía una mueca de decepción. Pero poco me importaba. ¡Que se largara a hacer puñetas con sus buenas intenciones y frases vendehumo! ¡A esas alturas de la vida lo que menos necesitaba era ese tipo de tonterías! Digan lo que digan, Paulo Coelho ha hecho más mal que bien.</p>
+        <p>En cuanto la perdí de vista, me vine abajo y empecé a llorar. Me encontraba sola. Sola y desamparada en un mundo que no parecía tener sentido. Más perdida que nunca.</p>
+        <p>Diez minutos más tarde, salía por la puerta del restaurante vestida con mi uniforme de trabajo gris, caminando hasta mi Terracota gris. Una vez dentro, intenté arrancar el motor, pero no hubo respuesta. «La batería quizás», pensé. Ya sabes que a tu madre nunca se le ha dado bien la mecánica.</p>
+        <p>Resoplé. Tu padre estaba de cena con unos amigotes y ni siquiera llevaba el teléfono encima, pues tenía la costumbre de dejarlo en casa cuando se reunía con ellos. Tu hermana seguía siendo menor de edad y nunca respondía a mi WhatsApp, así que solo tenía dos opciones: llamar a la grúa o a un taxi. Me quedaban poco más de seis horas para volver a trabajar; me tocaba doblar turno porque mi jefe se había cogido el día libre porque operaban a su hija, aunque al día siguiente descubriría que era mentira.</p>
+        <p>Yo necesitaba desahogarme del estrés de vida que llevaba, por lo que me dejé llevar. Grité con todas mis fuerzas mientras golpeaba el volante como si pudiera liberar mi frustración de esa manera. Puede que hasta hiciera sonar el claxon, no lo recuerdo. Sí sé que me detuve nada más visualizar a alguien al otro lado de la ventana: era ella. La última clienta; la del té con agua de luna calentado en el fuego.</p>
+        <p>Abrí la puerta y salí del coche llorando. Me costaba respirar y apenas podía articular palabras con coherencia. Tan solo decía una y otra vez: «¡Mi coche no va! ¡Mi coche no va!». Como si ese fuera el único problema que tenía en mi vida. ¿Te lo puedes creer? ¡Qué vergüenza! Pero la mujer pelirroja que acababa de conocer y que todavía no me había dicho su nombre hizo algo que me sorprendió. Me abrazó, a quemarropa. No supe cómo reaccionar, pero finalmente apoyé mi cabeza en su hombro, dejando escapar un torrente de lágrimas que no sabía que llevaba dentro. No recordaba cuándo fue la última vez que una persona me achuchó con tanta fuerza y sentimiento. No lo recuerdo, como tampoco sé cuánto tiempo estuvimos en aquella posición, tal vez un minuto, tal vez una hora… Lo que sí sé es que, cuando nos separamos, me sentía más ligera. Era como si me hubiera despojado de un peso invisible que había cargado durante años.</p>
+        <p class="dialogo">—¿Quieres que te lleve a algún lugar? —preguntó con voz suave. La ronquera de su voz me recordaba al ronroneo de un gato. Te puede parecer una tontería, pero creo que eso hizo que me abriera a ella en los primeros minutos de conocernos. Ya sabes que opino lo mismo que Leonardo da Vinci: «Un gato es una obra maestra de la naturaleza». El sueño de mi vida ha sido siempre tener uno, pero, ya sabes, tu padre y sus alergias…</p>
+        <p>Total, que asentí sin mirarla. No sé qué me da más vergüenza, si pedir ayuda o aceptar favores que no he solicitado. Además, tenía la cabeza embotada y no tenía fuerzas ni para hablar. Tragué saliva y observé el oscuro horizonte cargado de nubes que me impedían ver las estrellas.</p>
+        <p>Caminamos en silencio hasta su coche, tan solo se escuchaban nuestros pasos y el sonido de los vehículos que circulaban por la autopista. Me abrió la puerta del copiloto y, con un ademán de manos, me invitó a que me sentara. Tampoco recordaba cuándo fue la última vez que alguien se tomó la molestia de abrirme una simple puerta. Un detalle minúsculo que, en ese momento, me pareció de una enorme envergadura y me conmovió.</p>
+        <p>El vehículo era un modelo muy antiguo —con pegatinas por todos los lugares—, y su interior olía a sándalo. Aspiré despacio aquel aroma cálido que tanto me gustaba. Una vez se sentó tras el volante, me preguntó cómo me llamaba. Ni siquiera había reparado hasta ese momento en que no nos habíamos presentado.</p>
+        <p class="dialogo">—Me llamo María Antonia —respondí con voz afligida.</p>
+        <p class="dialogo">—¡Qué nombre tan retro! ¡Me encanta!</p>
+        <p>Me regaló una sonrisa resplandeciente que me hizo reír sin ton ni son. Y descubrí que reír con alguien y que te haga olvidar que estás triste es magia.</p>
+        <p class="dialogo">—¿Cómo te llamas tú? —pregunté algo más animada.</p>
+        <p class="dialogo">—Marciana.</p>
+        <p class="dialogo">—Vaya nombre tan… peculiar.</p>
+        <p>Aunque adecuado, parecía reflejar su espíritu audaz, y no pude evitar sentir una conexión inmediata. Me sentí extraña, como feliz, y aguanté la risa como pude, por respeto, pero al final surgió por mi garganta como el agua de un manantial seco tras un intenso chaparrón. Me tapé la boca con las manos; lo último que quería era ofenderla, aunque ella hizo un ademán y me acompañó con una carcajada algo forzada. Sentí hacia ella una simpatía instantánea.</p>
+        <p>Cuando pasó el momento, le pedí disculpas. Me sentía como una adolescente incapaz de controlar mis emociones.</p>
+        <p class="dialogo">—Nunca pidas perdón por algo que te haga feliz —respondió.</p>
+        <p class="dialogo">—Hace tiempo que no sé qué es eso —dije, volviendo a mi triste realidad, llena de grises, ausencias, dolores y tazas de váter.</p>
+        <p class="dialogo">—Bueno, cuando quieres cambiar tus circunstancias, primero debes cambiar tus pensamientos.</p>
+        <p class="dialogo">—La teoría es muy fácil…</p>
+        <p>No terminé la frase porque tenía miedo de contarle mis secretos más profundos. Estaba rodeada de personas, pero esa multitud nunca lograba llenar el vacío que sentía, una soledad que me acompañaba incluso en los momentos más concurridos, por ende, me quedé callada y no repliqué.</p>
+        <p>Sin olvidar que soy de las que piensan que las mujeres tenemos la obligación moral de aguantar lo que sea, por algo somos mucho más resistentes y fuertes que los hombres, aunque ellos nos llamen el sexo débil.</p>
+        <p>Marciana levantó la mirada, clavó sus ojos en los míos y habló:</p>
+        <p class="dialogo">—El universo siempre está conspirando a tu favor —dijo, como si compartiera un secreto ancestral que solo unos pocos elegidos podían escuchar—. Pídele lo que quieras y te lo concederá.</p>
+        <p class="dialogo">—¡El universo no es un supermercado! —respondí levantando la voz indignada. De rebato, me sentía enfadada. Mucho.</p>
+        <p>Un silencio incómodo nos invadió y desvié mi mirada. Examiné la fachada del restaurante en el que llevaba más de media vida trabajando. Era un sitio de paso, ubicado en el área de descanso de una autopista que contaba también con gasolinera y hotel.</p>
+        <p class="dialogo">—¿A dónde te llevo? —preguntó Marciana.</p>
+        <p>Estuve tentada de responder: «Lléveme a ninguna parte», pero no sé si «ninguna parte» existe, así que le dije el nombre de la calle de nuestra casa, y como no tenía ni idea de dónde se encontraba, le dije que le iría indicando el camino. El recorrido duró poco más de veinte minutos y estuvimos hablando de todo y nada en particular.</p>
+        <p>Me contó que el número doscientos veintidós le perseguía allá donde fuera y que en unas semanas se iba a una especie de convención a otro país para asistir a un eclipse solar. Yo le conté que nunca había salido del país.</p>
+        <p class="dialogo">—¿Ni siquiera en tu luna de miel? —preguntó, observando mi anillo de casada en mi dedo anular.</p>
+        <p class="dialogo">—De viaje de novios nos fuimos a Valldemossa, porque allí daba un concierto María del Monte —respondí.</p>
+        <p class="dialogo">—¿Eso está en Mallorca?</p>
+        <p class="dialogo">—Ajá.</p>
+        <p class="dialogo">—¿Fuisteis en avión?</p>
+        <p class="dialogo">—En barco. ¿Tú estás casada? —pregunté.</p>
+        <p>Observé un tráiler de Zeta-cola que teníamos delante, su matrícula familiar parpadeando como un eco del destino. MYV-222. Circulaba a poca velocidad y lo adelantamos. Otra casualidad más.</p>
+        <p class="dialogo">—Lo estuve —contestó Marciana tras unos segundos de silencio y cuando ya no esperaba respuesta.</p>
+        <p class="dialogo">—Vaya, lo siento.</p>
+        <p class="dialogo">—No, no, no, no lo sientas. Estoy mucho mejor así, ahora, por fin, tengo vida sexual.</p>
+        <p>Me hizo gracia el comentario porque yo estaba casada y no recordaba cuándo fue la última vez que tu padre y yo lo hicimos. Nuestra vida sexual era prácticamente nula. Bueno, prácticamente nula no, nula.</p>
+        <p>Esto es algo que no he contado a nadie, pero siempre me ha dado vergüenza hablar de sexo. Tu padre y yo, las pocas veces que lo hacíamos, allá por la era mesozoica, siempre nos referiremos a eso como hacer un poco de vainilla. Lo veía superromántico, pero ahora me doy cuenta de lo ingenua que he sido toda mi vida.</p>
+        <p>Cambié de tema y le pregunté a Marciana cómo le gustaba la tortilla de patatas. Ya sabes que soy una experta en la materia; no sé si te acuerdas de que gané dos años consecutivos el concurso de la mejor tortilla de patatas de Solmingo, ese que organiza la marca de cerveza San Antonio. Una vez me respondió, le pregunté cómo se ganaba la vida y su respuesta fue un tanto ambigua. Había dejado su trabajo hacía unas semanas y vendido su casa, desde entonces, se dedicaba a disfrutar de la vida. Qué envidia, ¿no? No. Vivir así es de insensatos y nunca puede terminar bien. Por supuesto, no se lo dije, la sinceridad es un arma afilada.</p>
+        <p class="dialogo">—¿Eres capricornio?</p>
+        <p class="dialogo">—¿Cómo lo sabes? —pregunté extrañada.</p>
+        <p class="dialogo">—Por tu forma de ser.</p>
+        <p class="dialogo">—Ya estamos llegando —respondí tajante. No quería que me explicara cómo soy. Observé la calle y le dije que siguiera recto—. Allí vivo yo. —Señalé una casita pequeña de dos plantas.</p>
+        <p>Éramos las únicas personas que circulaban a esa hora de la noche por el barrio. Qué diferente se veía todo bajo la luz de las farolas. El coche se detuvo delante de un naranjo cargado de frutos por el que pasaba todos los días y nunca prestaba atención. Me quedé traspuesta mirándolo por primera vez en todo su esplendor.</p>
+        <p class="dialogo">—Muchas gracias por traerme —murmuré anonadada y embelesada contemplando el naranjo. No sabía qué más decirle, atrapada en una mezcla de gratitud y extrañeza que me dejaba vulnerable ante su presencia. Por un lado, estaba agotada y quería meterme en la cama para poner punto final al horroroso día que llevaba, pero, por otro lado, estaba inquieta por despedirme de ella. Lo poco que habíamos hablado había servido para olvidar mi nefasta vida. Giré mi cabeza y la miré a los ojos—. Gracias también por el abrazo que me has dado.</p>
+        <p class="dialogo">—Para eso estamos, tranquila, tengo mucha experiencia abrazando árboles.</p>
+        <p>A pesar de mi irritación, algo en su tono me hizo detenerme un momento y preguntar con algo más de diplomacia:</p>
+        <p class="dialogo">—¿Me estás comparando con un árbol?</p>
+        <p class="dialogo">—No. Los árboles nunca se quejan. —No supe qué responder y ella continuó hablando—. Deberías probarlo alguna vez.</p>
+        <p class="dialogo">—¿El qué?</p>
+        <p class="dialogo">—Abrazar a un árbol.</p>
+        <p class="dialogo">—¿Tú estás loca o qué?</p>
+        <p>Vale, Eric. Sí. Lo sé. Me salió sin pensar. Esa es la primera regla de la vida: no hablar sin filtrar. En este caso, olvidé la lección. Pero no te preocupes, no pasó nada. Se supone que los pelirrojos se enfadan con mucha facilidad, pero comprobé que a ella no le importó mi comentario, más bien todo lo contrario, porque me respondió con mucha guasa:</p>
+        <p class="dialogo">—Aquí todos estamos locos. Yo estoy loca, tú estás loca.</p>
+        <p>No supe qué contestar. Me bajé del coche tras un escueto adiós y, mientras cerraba la puerta, escuché: «Buenas noches, hasta otra». No nos habíamos intercambiado nuestros números de teléfono, por lo que pensé que era una forma educada de despedirse. Queda muy feo eso de decir «hasta siempre» como suelen hacer los presentadores en los concursos de la caja tonta.</p>
+        <p>Caminé hasta mi casa y, antes de introducir la llave en la cerradura, miré el número que había a un lado de la puerta: doscientos veintidós.</p>
+        <p>Una vez dentro, me recibió la oscuridad y el silencio de un hogar roto, un contraste abrumador con la cálida conversación que había dejado atrás. Tu padre seguía de parranda, tu hermana dormía —o eso creía— y yo me encontraba tan cansada que sabía que no podría conciliar el sueño con facilidad. Me dirigí a la cocina y abrí la nevera buscando respuestas. Ya sabes que no como nada antes de acostarme porque me sienta muy mal, pero quería comprobar algo: Úrsula no había tocado el táper que le había preparado por la mañana para comer… «¿Qué habrá comido la chiquilla esta?», me pregunté. Siempre la misma cantinela con tu hermana.</p>
+        <p>Después, me senté en la mesa de la cocina, bueno, mejor dicho, me desplomé en la silla de lo agotada que estaba. Observé la montaña de papeles que había en un lateral: cartas del banco, propaganda de supermercados, un folleto de comida rápida de Fast Queen, un libro de Agatha Christie que no sabía de dónde había salido y un cuaderno repleto de páginas en blanco esperando que alguien escribiera en él. Imagino que sabrás cuáles fueron las dos primeras líneas que estampé. Exacto, Eric, siempre has sido un chico listo. Pero esas palabras llevan el peso de años de ausencia.</p>
+        <p class="escena" aria-hidden="true">···</p>
+        <p class="carta">Hola, hijo:</p>
+        <p class="carta">Hace mucho que no te escribo. No puedo creerme que haya pasado tanto tiempo.</p>
+      </div>
+
+      <div class="fin">
+        <h2>Aquí acaba el adelanto</h2>
+        <p>El cuaderno de María Antonia sigue, y lo que viene después es ese año entero de locuras que ella misma anuncia en las primeras líneas.</p>
+        <div class="cta-row">
+          <a class="btn btn-oro" href="index.html#comprar">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="index.html">Volver a la ficha</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Naviru Shorno · <em>Las Sirenas no Existen</em>. Capítulo publicado con permiso del autor.</p>
+      <p style="margin-top:8px;"><a href="../index.html">← Volver a El Rincón del Autopublicado</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
