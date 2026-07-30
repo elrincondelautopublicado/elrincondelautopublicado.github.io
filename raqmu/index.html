@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raqmu — Carmen Hinojal | Ficción histórica</title>
+  <meta name="description" content="Raqmu, de Carmen Hinojal. Una epopeya en el tiempo de los nabateos: la joven Nour emprende un viaje hacia la Ciudad de la Piedra Rosada, la legendaria Petra." />
+  <meta name="author" content="Carmen Hinojal" />
+  <meta name="keywords" content="Raqmu, Carmen Hinojal, ficción histórica, nabateos, Petra, novela histórica, autopublicado, Llanela" />
+  <meta property="og:title" content="Raqmu — Carmen Hinojal" />
+  <meta property="og:description" content="Una epopeya en el tiempo de los nabateos forjada bajo la mirada de antiguos dioses olvidados, en lo más profundo del desierto." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e1510'/%3E%3Cpath d='M18 48V16l14 8 14-8v32l-14-8-14 8z' fill='none' stroke='%233db9a4' stroke-width='2.5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --noche: #1e1510;
+      --noche-2: #281e14;
+      --noche-3: #342818;
+      --turquesa: #3db9a4;
+      --turquesa-claro: #7ed6c8;
+      --oro: #d4a54a;
+      --oro-claro: #e8c88a;
+      --hueso: #f0e8dc;
+      --texto: #ddd5c8;
+      --texto-suave: #a99e90;
+      --linea: rgba(61, 185, 164, .22);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .55);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--noche); color: var(--texto); font-family: 'Open Sans', system-ui, sans-serif; font-weight: 300; line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; }
+    ::selection { background: var(--turquesa); color: var(--noche); }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(30,21,16,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--turquesa-claro); letter-spacing: .02em; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .84rem; letter-spacing: .04em; transition: color .2s; }
+    nav a:hover, nav a:focus-visible { color: var(--turquesa); }
+    nav a.home { color: var(--hueso); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--turquesa); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* BOTONES */
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 3px; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: .84rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s; }
+    .btn-turquesa { background: linear-gradient(135deg, var(--turquesa), #2e9a88); color: #1e1510; box-shadow: 0 12px 28px rgba(61,185,164,.24); }
+    .btn-turquesa:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(61,185,164,.34); }
+    .btn-ghost { background: transparent; color: var(--turquesa-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--turquesa); color: var(--turquesa); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* UTILIDADES */
+    .section-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 4.8vw, 3.2rem); color: var(--hueso); line-height: 1.12; }
+    .section-title span { color: var(--turquesa); font-style: italic; }
+    .rule { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--turquesa), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; }
+    .eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--oro); }
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* HERO */
+    .hero { padding: 100px 0 94px; }
+    .hero .wrap { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+    .hero-portada { position: relative; justify-self: center; }
+    .hero-portada img { display: block; width: 100%; border-radius: 4px; box-shadow: var(--sombra); }
+    .hero-info .eyebrow { margin-bottom: 14px; }
+    .hero-info h1 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(2.8rem, 7vw, 4.2rem); color: var(--hueso); line-height: 1.05; }
+    .hero-info .autora { margin-top: 12px; font-size: .88rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--oro-claro); }
+    .hero-info .tagline { margin-top: 22px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.1rem, 2.4vw, 1.35rem); color: var(--texto); max-width: 44ch; line-height: 1.55; }
+    .badge { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(61,185,164,.08); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--texto); }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--turquesa); box-shadow: 0 0 0 4px rgba(61,185,164,.18); }
+
+    /* SINOPSIS */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.cierre { margin-top: 36px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--turquesa); text-align: center; }
+
+    /* PRIMERAS PÁGINAS */
+    .primeras { max-width: 700px; margin: 0 auto; padding: 40px 38px; background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px; text-align: center; box-shadow: var(--sombra); }
+    .primeras .icono { font-size: 2rem; margin-bottom: 12px; }
+    .primeras h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.5rem; color: var(--hueso); margin-bottom: 12px; }
+    .primeras p { color: var(--texto-suave); margin-bottom: 22px; }
+
+    /* AUTORA */
+    .autora-grid { display: grid; grid-template-columns: 280px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon { justify-self: center; width: 240px; height: 240px; border-radius: 50%; overflow: hidden; background: var(--noche-3); display: grid; place-items: center; box-shadow: var(--sombra); border: 2px solid var(--turquesa); }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+    .medallon .inicial { display: none; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--turquesa); }
+    .autora-texto h3 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--turquesa); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* COMPRA */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 600px; margin: 0 auto; }
+    .formato { background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px; padding: 34px 28px; text-align: center; box-shadow: var(--sombra); transition: transform .25s, border-color .25s; }
+    .formato:hover { transform: translateY(-5px); border-color: var(--turquesa); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .96rem; margin-bottom: 22px; }
+    .formato .extra { display: block; margin-top: 14px; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* FOOTER */
+    footer { padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea); background: var(--noche-2); color: var(--texto-suave); font-size: .9rem; }
+    footer a { color: var(--turquesa-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--turquesa); border-color: var(--turquesa); }
+
+    /* ANIMACIONES */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; gap: 36px; justify-items: center; text-align: center; }
+      .hero-portada { max-width: 260px; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .cta-row { justify-content: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: var(--noche); border-bottom: 1px solid var(--linea); max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Raqmu</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#historia">La historia</a>
+        <a href="#capitulo">Primer capítulo</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-portada reveal">
+        <img src="portada.jpg" alt="Portada de Raqmu, de Carmen Hinojal" loading="eager" decoding="async" />
+      </div>
+      <div class="hero-info reveal">
+        <div class="eyebrow">Ficción histórica</div>
+        <h1>Raqmu</h1>
+        <div class="autora">Carmen Hinojal</div>
+        <p class="tagline">Una epopeya en el tiempo de los nabateos forjada bajo la mirada de antiguos dioses olvidados, en lo más profundo del desierto.</p>
+        <div><span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible en Amazon</span></div>
+        <div class="cta-row">
+          <a class="btn btn-turquesa" href="https://amzn.eu/d/099E68xX" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="capitulo1.html">Leer primer capítulo</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SINOPSIS -->
+  <section id="historia" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="cuerpo reveal">
+        <p>Esta es una historia que desafía el paso del tiempo, una leyenda forjada bajo la mirada de antiguos dioses olvidados, en lo más profundo del desierto.</p>
+        <p>Desolada tras la partida de su hermano, la joven Nour se arma de valor y decide marcharse de casa para emprender un azaroso viaje junto a los camelleros de una gran caravana. Junto a su nuevo amigo Are, se embarca sin saberlo en el viaje de su vida. El desierto y sus peligros los acechan rumbo a la maravillosa Raqmu, la Ciudad de la Piedra Rosada.</p>
+        <p class="cierre">¿Lograrán llegar a su destino, entre los desafiantes farallones de la legendaria Petra?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMERAS PÁGINAS -->
+  <section id="capitulo">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Primeras <span>páginas</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="primeras reveal">
+        <div class="icono" aria-hidden="true">📖</div>
+        <h3>Capítulo 1: El recién llegado</h3>
+        <p>Léelo gratis aquí mismo: el arranque de la historia de Nour, Haroun y la caravana hacia Raqmu.</p>
+        <a class="btn btn-turquesa" href="capitulo1.html">Leer el primer capítulo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTORA -->
+  <section id="autora" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="carmen-autora.jpg" alt="Carmen Hinojal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">C</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Carmen Hinojal</h3>
+          <div class="rol">Escritora · Licenciada en Historia</div>
+          <p>Carmen Hinojal, nacida en Ceclavín, un pueblecito de Cáceres, en diciembre de 1959. Cursó sus estudios en la facultad de historia de la UEX. Esta autora, que superó una infancia difícil condicionada por la enfermedad de la poliomielitis, creció rodeada de libros y fue discípula de la tradición oral de su tierra como cuenta cuentos.</p>
+          <p>Carmen tiene un registro de obras de diferentes estilo y formas, todos ellos autopublicados, desde cuentos infantiles y antologías de relatos para adultos, poesía, ciencia ficción, novela de ficción histórica, fantasía y terror. Catorce libros para llegar al corazón de sus lectores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPRA -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Raqmu</em> está disponible en Amazon, autopublicado bajo el sello Llanela.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📕</div>
+          <h3>En Amazon</h3>
+          <p>La epopeya de Nour rumbo a la Ciudad de la Piedra Rosada, lista para ti.</p>
+          <a class="btn btn-turquesa" href="https://amzn.eu/d/099E68xX" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <span class="extra">Sello Llanela · Amazon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Carmen Hinojal · <em>Raqmu</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => { const w = !navLinks.classList.contains('open'); navToggle.classList.toggle('open',w); navLinks.classList.toggle('open',w); navToggle.setAttribute('aria-expanded',String(w)); navToggle.setAttribute('aria-label',w?'Cerrar menú':'Abrir menú'); });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if (e.key==='Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

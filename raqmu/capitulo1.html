@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capítulo 1: El recién llegado — Raqmu | Carmen Hinojal</title>
+  <meta name="description" content="Lee gratis el primer capítulo de Raqmu, de Carmen Hinojal. Ficción histórica ambientada en la época de los nabateos." />
+  <meta name="author" content="Carmen Hinojal" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e1510'/%3E%3Cpath d='M18 48V16l14 8 14-8v32l-14-8-14 8z' fill='none' stroke='%233db9a4' stroke-width='2.5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --noche: #1e1510;
+      --noche-2: #281e14;
+      --noche-3: #342818;
+      --turquesa: #3db9a4;
+      --turquesa-claro: #7ed6c8;
+      --oro: #d4a54a;
+      --oro-claro: #e8c88a;
+      --hueso: #f0e8dc;
+      --texto: #ddd5c8;
+      --texto-suave: #a99e90;
+      --linea: rgba(61, 185, 164, .22);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--noche); color: var(--texto); font-family: 'Open Sans', system-ui, sans-serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--turquesa); color: var(--noche); }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(30,21,16,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; flex-wrap: wrap; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.4rem; color: var(--turquesa-claro); }
+    nav .links { display: flex; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .84rem; letter-spacing: .04em; }
+    nav a:hover, nav a:focus-visible { color: var(--turquesa); }
+    nav a.home { color: var(--hueso); }
+
+    header.cab { padding: 76px 0 34px; text-align: center; }
+    header.cab .eyebrow { font-family: 'Open Sans', sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; color: var(--oro); }
+    header.cab h1 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.6rem); color: var(--hueso); margin-top: 14px; line-height: 1.1; }
+    header.cab .libro { margin-top: 16px; font-size: .84rem; letter-spacing: .22em; text-transform: uppercase; color: var(--oro-claro); }
+    .rule { width: 80px; height: 3px; background: linear-gradient(90deg, var(--turquesa), var(--oro)); margin: 26px auto 0; border-radius: 2px; }
+
+    .lectura { padding: 40px 0 90px; }
+    .texto { max-width: 68ch; margin: 0 auto; font-family: 'Open Sans', sans-serif; font-size: 1.14rem; line-height: 1.95; color: var(--texto); }
+    .texto p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-indent: 1.6em; }
+    .texto > p:first-child, .texto p.sin-sangria, .texto .escena + p, .texto .cap-titulo + p { text-indent: 0; }
+    .texto p.dialogo { text-align: left; hyphens: manual; margin: .35em 0 .35em 1.7em; text-indent: -1.7em; }
+    .texto .escena { margin: 34px auto; text-align: center; color: var(--turquesa); font-size: 1rem; letter-spacing: .8em; text-indent: 0; }
+    .texto p.capitular { text-indent: 0; }
+    .texto p.capitular::first-letter { float: left; font-family: 'Cormorant Garamond', serif; font-weight: 700; color: var(--turquesa); font-size: 3.4em; line-height: .82; padding: .06em .12em 0 0; }
+
+    .fin { max-width: 68ch; margin: 60px auto 0; padding-top: 34px; border-top: 1px solid var(--linea); text-align: center; }
+    .fin h2 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.2rem); color: var(--hueso); }
+    .fin p { color: var(--texto-suave); margin: 14px auto 0; max-width: 52ch; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 3px; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: .86rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transition: transform .2s, border-color .2s, color .2s; }
+    .btn-turquesa { background: var(--turquesa); color: #1e1510; }
+    .btn-turquesa:hover { background: var(--turquesa-claro); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--hueso); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--turquesa); color: var(--turquesa); transform: translateY(-2px); }
+
+    footer { padding: 44px 0 56px; text-align: center; border-top: 1px solid var(--linea); background: var(--noche-2); color: var(--texto-suave); font-size: .88rem; }
+    footer a { color: var(--turquesa-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--turquesa); border-color: var(--turquesa); }
+
+    @media (max-width: 700px) { .texto { font-size: 1.08rem; } .texto p { text-align: left; } nav .links { gap: 16px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Raqmu</span>
+      <div class="links">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="index.html">Ficha del libro</a>
+        <a href="index.html#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <div class="wrap">
+      <div class="eyebrow">Lectura gratuita · Capítulo 1</div>
+      <h1>Capítulo 1: El recién llegado</h1>
+      <div class="libro">Carmen Hinojal · Raqmu</div>
+      <div class="rule"></div>
+    </div>
+  </header>
+
+  <main class="lectura">
+    <div class="wrap">
+      <div class="texto">
+
+        <p class="capitular">Los golpes de las pezuñas sobre las piedras mantenían despierto al jinete. El burro serpenteaba entre matojos en flor, acercándose peligrosamente al afilado barranco. Haroun no parecía ser consciente de lo expuesto del sendero, absorto como iba, haciendo cábalas sobre su futuro. Ni siquiera le perturbaba el vuelo de las águilas con sus agudos chillidos sobre la quebrada.</p>
+
+        <p>El jumento resbaló en una llambria que aún retenía el rocío de la mañana, pero se mantuvo firme. De tanto repetir el recorrido, parecía tener la visión en las patas. El muchacho le acarició el pelaje del cuello y el animal resopló antes de reanudar la marcha.</p>
+
+        <p>El barranco abrió por fin su garganta y pudieron acelerar el paso. Debía llegar al campamento antes de que muriera el sol sobre las tiendas de piel de cabra.</p>
+
+        <p>El eco de las pisadas rebotaba mil veces entre las rocas, anunciando su llegada. Cuando la luz del ocaso tiñó de naranja y ocre el poblado nómada, vieron la silueta del jinete y su caballería recortada contra la línea del horizonte.</p>
+
+        <p class="dialogo">—¡Haroun! —gritó emocionada su hermana menor—. ¡Mirad, madre! Ya está con nosotras. Dushara, el señor de la montaña, ha guiado sus pasos a casa.</p>
+
+        <p class="dialogo">—¡A qué esperas, Nour! Ayuda a tu hermano —se abrazó a su pecho y exclamó— ¡Se te ve tan cansado, hijo mío! ¡Cuánto te hemos echado de menos!</p>
+
+        <p class="dialogo">—No se apure, madre, los dioses han protegido los senderos y allanado los caminos. Solamente necesito descansar un poco para recuperarme del viaje.</p>
+
+        <p>Haroun se sacudió el polvo, dejó en manos de un sirviente el cuidado del burro y se sentó en su estera preferida. Nour le llevó el cántaro con agua y la escudilla para que hiciera sus abluciones.</p>
+
+        <p>Una vez limpio y recuperado, Shori le estaba esperando con un cartucho que llevaba el sello real.</p>
+
+        <p class="dialogo">—Ha llegado esto para ti, hijo mío.</p>
+
+        <p>Haroun rompió el precinto, desenrolló el papiro que contenía y, suspirando por lo que significaba para él, lo leyó con atención.</p>
+
+        <p>Su mirada se fue iluminando a medida que avanzaba en la lectura: era lo que estaba esperando desde hacía muchos meses.</p>
+
+        <p class="dialogo">—Madre, ya tengo el permiso real para poder presentarme en la corte. El arquitecto del rey, Alejandro de Halicarnaso, ha puesto sus ojos en mi trabajo y me reclama como escriba a su lado.</p>
+
+        <p>Shori abrazó a su hijo y lo acompañó temblorosa hasta el altar del dios familiar; ambos se postraron ante la estatuilla de terracota y encendieron algunos pábilos de vela, mientras entonaban plegarias de agradecimiento. Por fin, las súplicas de la familia habían sido escuchadas. Su hijo mayor estaría al servicio del rey Rabel, soberano de la ciudad de Raqmu.</p>
+
+        <p>A la hora de la cena reinaba la alegría alrededor del fuego. Nour no se mostraba tan contenta. Apenas había probado bocado de los ricos platos que habían preparado para agasajar a Haroun. Acababa de llegar, terminados sus estudios en Alejandría, y ya tenía que marcharse de nuevo. Lo había echado tanto de menos y había esperado con tanta ansia su regreso… Sin él, la vida en la aldea volvería a reducirse a las obligadas tareas rutinarias que estaban a cargo de las mujeres. Una existencia sin alicientes, demasiado aburrida para una muchacha de quince años, sin otros jóvenes de su edad para conversar y disfrutar juntos.</p>
+
+        <p>Haroun había conocido otras culturas, vivió gran parte de su infancia y juventud en tierras egipcias… se había hecho un hombre lejos del hogar. Era su esperanza y ahora se apartaba de su vida, tal vez para siempre. Cuando llegara al reino de Raqmu, gozaría de las fiestas de la corte y las emociones de la gran ciudad; en cambio, sus ilusiones quedarían anegadas por la arena del desierto. Era desesperante ser mujer. Hasta preguntaba a los dioses por qué no se apiadaban de ella y la convertían en un camello. Todo antes que vivir una vida sin futuro.</p>
+
+        <p class="dialogo">—¿No te alegras por mí, querida hermanita? Voy a entrar a la corte del rey Rabel como escriba del mismísimo Alejandro de Halicarnaso y pronto todos dirán de mí que soy un hombre importante. Mi mano contará la historia de la gloria de los reyes nabateos. Me alojaré en unos aposentos muy cerca del palacio del rey y algún día tendré como privilegio educar a los príncipes. No te preocupes, te escribiré siempre que pueda. Además, aún nos quedan unos días hasta que pase la caravana que me llevará a Raqmu. Pero qué pasa, ¿lloras? Ven aquí y deja tus penas, debes alegrarte por la familia.</p>
+
+        <p>La madre observaba en silencio la conversación entre los hermanos: siempre se habían querido mucho y se respetaban. Quería lo mejor para sus hijos, pero la vida había ido embotando sus sentidos y su mirada cansada ya no alcanzaba a comprender el alma de su propia hija.</p>
+
+        <p>Shori recordó con ternura cuando su hijo aprendió a leer y a escribir. Eran tiempos difíciles para la familia. En el campamento de nómadas en el que vivían, muy pocos eran los elegidos. El niño había mostrado desde la primera infancia una facilidad especial para aprender idiomas. Le gustaba estudiar las lenguas de los pueblos vecinos. Siempre se mantenía expectante aguardando la llegada de las caravanas, quería oír de viva voz la jerga de aquellos hombres venidos desde tan lejos.</p>
+
+        <p>Haroun era traductor, y sería el intérprete de muchas lenguas. Pero, para eso, tendría que pasar el tiempo. Y el tiempo, como la arena entre sus manos marchitas, se deslizaba rápidamente, llenando su memoria de recuerdos tristes. Había hecho muchos sacrificios por su hijo, pero valió la pena.</p>
+
+        <p>Shori preparó para él los mejores ropajes: una túnica blanca, hilada por sus propias manos y cortada y cosida por su hija Nour. Una capa de lana de oveja y la pellica de cabra para guardar los útiles de escribir.</p>
+
+        <p>Cuando quedaba menos de una semana para partir, Shori organizó una fiesta para que Haroun se despidiera de todos sus parientes, entre ellos a los padres de Jordyn. Hacía solo unos meses, la joven y Haroun habían celebrado la ceremonia de un matrimonio apalabrado cuando aún eran niños. Pero los recién casados no vivían juntos todavía: debían esperar a que la situación económica del novio mejorase para disfrutar de su propio hogar.</p>
+
+        <p>Shori envió a un correo para que llevara la noticia hasta el poblado entre los dos ríos de que la suerte de los dioses había sido benévola con su hijo. Cuando Haroun se estableciera en la corte, se llevaría con él a Jordyn y las dos tribus unirían su sangre para siempre.</p>
+
+        <p>Aunque Nour ya tenía edad suficiente, su madre aún no le había buscado un compañero. Le costaba mucho separarse de la niña. Shori era muy joven cuando se quedó viuda con sus dos hijos. Su marido, Saleh, se había desnucado al caerse de su caballo. Muchas noches le lloró a escondidas. Nadie debía ver el dolor que sentía. Su suegro le había propuesto volver a casarse con uno de los ricos camelleros de la tribu, pero ella estaba convencida de que nunca encontraría a alguien como Saleh. Era único: un hombre valiente, aunque muy callado, que la amó como nunca nadie la había amado.</p>
+
+        <p>¿Tal vez se había equivocado sobreprotegiendo a su hija? Le preocupaba verla tan apegada a su hermano. Quizás había llegado el momento de buscar para ella un buen marido que tomara las riendas del patrimonio familiar.</p>
+
+        <p class="dialogo">—Nour, no quiero verte triste —le dijo Haroun, secándole la carita empapada por las lágrimas. Si lloras, los dioses creerán que no estamos contentos con nuestro destino. ¡Mira a madre! Ella está radiante de alegría, nunca antes la había visto así.</p>
+
+        <p>Shori mandó acondicionar las tiendas para los invitados. Iban llegando poco a poco en pequeños grupos. Al caer la tarde, vio llegar desde lejos el polvo de la caravana que traía a su joven nuera. Los padres de la muchacha estaban muy contentos con la suerte de su yerno.</p>
+
+        <p>Saludó primero a Aneas, el padre de su nuera, y luego abrazó a su esposa, Aglaia. Después, con una sonrisa, besó en la frente a su nueva hija.</p>
+
+        <p>La joven prometida se acercó hasta el corrillo de las mujeres. Había mozas casaderas que habían jugado con ella en su infancia. Muchas esperaban la llegada de la estación fértil para vivir con sus recientes maridos.</p>
+
+        <p>Nour estaba nerviosa. Nunca le gustó su cuñada. La veía presuntuosa y nada le agradaba menos que hablar con ella.</p>
+
+        <p class="dialogo">—Nour, que los dioses te den la belleza de las flores del oasis —Jordyn se dirigió a ella con la fórmula de cortesía de su pueblo: inclinó la cabeza y se llevó una mano al corazón. Aunque sus ojos desmentían sus hermosas palabras.</p>
+
+        <p class="dialogo">—Que la diosa Al-Uzza te proteja y engendre hijos sanos en tu vientre —respondió Nour.</p>
+
+        <p>Ambas muchachas se apartaron de los demás.</p>
+
+        <p class="dialogo">—Sé que no te gusta que yo sea la esposa de tu hermano —le dijo—, pero tú tampoco me gustas a mí. Eres rara y todos hablan a escondidas sobre tus manías de marimacho. Nunca encontrarás a un esposo para ti, y mucho menos como Haroun.</p>
+
+        <p class="dialogo">—Te cuidarás de ser buena esposa para él. Si no, los dioses te lo quitarán para dárselo a otra. Ve con tiento, querida cuñada, pues siempre habrá alguna que lo desea en el silencio de su alcoba y tú no lo sepas.</p>
+
+        <p class="dialogo">—¿Son celos los que veo en tu mirada, hermanita? Cuando Haroun y yo vivamos en la ciudad de los reyes, nunca más volverás a tenerlo para ti sola. Nadie te dará tantos caprichos de niña consentida.</p>
+
+        <p>La mirada desafiante de Nour obligó a callarse a Jordyn. Tenían que cuidar ante todo las formas. Nour debía respetar la ley de la hospitalidad: no podía hacer otra cosa que aguantarse la rabia que la embargaba. Pensaba que, si Jordyn supiera lo que le traería el destino, acabaría por apartarse de su hermano. Pero, por ahora, tenía que resignarse a su presencia.</p>
+
+        <p>Comenzó la fiesta para agasajar al nuevo escriba del rey, que con gusto aceptaba los regalos y parabienes.</p>
+
+        <p>Cuando las jóvenes llegaron donde la gente comía y reía, se sentaron entre ellos para hablar del futuro de los novios. Shori relataba a sus parientes con cuanto tesón su hijo había conseguido el puesto que lo encumbraba a la altura de los nobles nabateos. Aglaia preguntó a su consuegra por banalidades y Aeneas ofreció sus mejores contactos en Raqmu para ayudar a su yerno a prosperar. Era un hombre rico. Sus rebaños de cabras y camellos le habían hecho destacar entre todos los jefes de las demás tribus. Shori se sentía afortunada, había tenido suerte casando a su hijo con la bella Jordyn, pero cuando marchasen a la Ciudad Rosada dependerían tan solo del patrimonio de Haroun, pues era su deber como esposo mantenerla y darle todo lo necesario para criar los hijos que los dioses les dieran.</p>
+
+        <p>Nour y Jordyn seguían en silencio la charla entre sus mayores.</p>
+
+        <p>Haroun observaba a las dos jóvenes. Eran muy parecidas en hermosura la una a la otra, pero tan distantes como el aceite y el agua. Haroun amaba a Jordyn, pero sabía lo caprichosa que era; intentaría complacer a las dos. Nunca dejaría de querer a su hermana.</p>
+
+        <p class="escena" aria-hidden="true">···</p>
+
+        <p>La noche cayó sobre el campamento. Las cabras dormitaban en los apriscos y las camellas se arrebujaban sobre la arena al lado de sus crías. Todo era paz y tranquilidad la noche anterior a la partida de Haroun a la ciudad del rey nabateo.</p>
+
+        <p>Haroun buscó la tienda donde dormía su mujer. El corazón le latía acelerado en el pecho, todavía no habían gozado de intimidad. Algunos besos castos, miradas ardientes y conversaciones sin trascendencia fueron a lo máximo que pudieron llegar. Hasta que no viviera con él, no podría ser verdaderamente su marido. La miró a través de las rendijas de la tienda. La carpa de piel de cabra la mantendría caliente en las noches frías del desierto. Jordyn dormía tranquila, acompasando sus suspiros bajo el cielo protector.</p>
+
+        <p>La luna rielaba sobre un mar de arena. En la lejana ciudad pétrea del rey Rabel, todos se fueron a dormir. Pero el caprichoso destino les guardaba un terrible motivo para el insomnio…</p>
+
+      </div>
+
+      <div class="fin">
+        <h2>Fin del primer capítulo</h2>
+        <p>La historia de Nour sigue en Raqmu, disponible en Amazon.</p>
+        <div class="cta-row">
+          <a class="btn btn-turquesa" href="https://amzn.eu/d/099E68xX" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="index.html">Volver a la ficha</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Carmen Hinojal · <em>Raqmu</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
