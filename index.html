@@ -27,16 +27,20 @@
 
   <style>
     :root {
-      --papel: #f3ebdd;
-      --papel-2: #eaddc6;
-      --tinta: #3d2c1e;
-      --tinta-suave: #7c6a56;
-      --espresso: #2a1f18;
-      --espresso-2: #3a2b20;
-      --teja: #bb5a3c;
-      --teja-honda: #9c4529;
-      --ocre: #c9962f;
+      --papel: #f4f6f9;
+      --papel-2: #e8ecf2;
+      --tinta: #1a1e2e;
+      --tinta-suave: #4a5168;
+      --espresso: #1a1e2e;
+      --espresso-2: #222738;
+      --teja: #3d6b9e;
+      --teja-honda: #2c5580;
+      --ocre: #5b8abf;
       --sage: #7d9179;
+      --laton: #5b8abf;
+      --laton-claro: #a3c4e0;
+      --nogal: #1e2235;
+      --nogal-2: #282d42;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -60,10 +64,10 @@
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 26px; position: relative; z-index: 1; }
 
     /* ============ BARRA SUPERIOR (rótulo de tienda) ============ */
-    nav { position: sticky; top: 0; z-index: 50; background: var(--espresso); border-bottom: 3px solid var(--teja); }
+    nav { position: sticky; top: 0; z-index: 50; background: var(--espresso); border-bottom: 2px solid var(--laton); }
     nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 12px 26px; }
     .rotulo { display: flex; align-items: center; gap: 10px; color: var(--papel); }
-    .rotulo .luz { width: 11px; height: 11px; border-radius: 50%; background: var(--ocre); box-shadow: 0 0 10px var(--ocre); animation: parpadeo 4s ease-in-out infinite; }
+    .rotulo .luz { width: 11px; height: 11px; border-radius: 50%; background: var(--ocre); box-shadow: 0 0 10px rgba(91,138,191,.6); animation: parpadeo 4s ease-in-out infinite; }
     @keyframes parpadeo { 0%,92%,100% { opacity: 1; } 95% { opacity: .5; } }
     .rotulo b { font-family: 'Bitter', serif; font-weight: 700; font-size: 1.05rem; letter-spacing: .01em; }
     .rotulo .abierto { font-family: 'Caveat', cursive; font-size: 1.15rem; color: var(--ocre); transform: rotate(-4deg); }
@@ -77,7 +81,7 @@
     .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     @media (max-width: 800px) {
       .nav-toggle { display: block; z-index: 60; }
-      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 280px); flex-direction: column; justify-content: center; gap: 28px; background: var(--espresso-2); border-left: 3px solid var(--teja); transform: translateX(100%); transition: transform .35s ease; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 280px); flex-direction: column; justify-content: center; gap: 28px; background: var(--espresso-2); border-left: 2px solid var(--laton); transform: translateX(100%); transition: transform .35s ease; }
       nav .links.open { transform: translateX(0); }
       nav .links a { font-size: 1.05rem; }
     }
@@ -87,20 +91,20 @@
     .escaparate .wrap { display: grid; grid-template-columns: 1.4fr .9fr; gap: 40px; align-items: start; }
     .bienvenida .saludo { font-family: 'Caveat', cursive; font-size: 1.7rem; color: var(--teja); transform: rotate(-1.5deg); display: inline-block; }
     .bienvenida h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.04; font-weight: 700; margin: 6px 0 20px; max-width: 15ch; }
-    .bienvenida h1 u { text-decoration: none; background: linear-gradient(transparent 62%, rgba(201,150,47,.45) 62%); }
+    .bienvenida h1 u { text-decoration: none; background: linear-gradient(transparent 62%, rgba(91,138,191,.3) 62%); }
     .bienvenida p { font-size: 1.2rem; max-width: 44ch; color: var(--tinta); }
     .bienvenida p + p { margin-top: 16px; color: var(--tinta-suave); }
     .escaparate-cta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 
     /* nota clavada con chincheta */
     .nota { position: relative; background: #fffaf0; padding: 30px 26px 34px; box-shadow: 0 14px 34px rgba(42,31,24,.18); transform: rotate(2deg); border: 1px solid rgba(120,90,60,.12); }
-    .nota::before { content: ""; position: absolute; top: -9px; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #d0674a, var(--teja-honda)); box-shadow: 0 3px 6px rgba(0,0,0,.35); }
+    .nota::before { content: ""; position: absolute; top: -9px; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #5b8abf, var(--teja-honda)); box-shadow: 0 3px 6px rgba(0,0,0,.35); }
     .nota .mano { font-size: 1.55rem; line-height: 1.5; color: var(--tinta); }
     .nota .firma { display: block; margin-top: 12px; font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--teja); }
 
     /* ============ BOTONES ============ */
     .btn { display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; font-family: 'Bitter', serif; font-weight: 500; font-size: .95rem; text-decoration: none; border-radius: 2px; cursor: pointer; transition: all .25s ease; }
-    .btn-teja { background: var(--teja); color: #fff8ef; box-shadow: 0 8px 20px rgba(187,90,60,.3); }
+    .btn-teja { background: var(--teja); color: #fff; box-shadow: 0 8px 20px rgba(61,107,158,.3); }
     .btn-teja:hover { background: var(--teja-honda); transform: translateY(-2px); }
     .btn-lapiz { color: var(--tinta); border-bottom: 2px solid var(--ocre); padding: 4px 2px; border-radius: 0; }
     .btn-lapiz:hover { color: var(--teja); }
@@ -123,42 +127,44 @@
     .rec-texto .comilla { border-left: 3px solid var(--ocre); padding-left: 16px; font-style: italic; color: var(--tinta-suave); }
 
     /* ============ LA MESA (más libros) ============ */
-    .mesa { padding: 84px 0; }
-    .mesa .intro { text-align: center; max-width: 560px; margin: 0 auto 50px; }
-    .mesa .intro h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-bottom: 10px; }
-    .mesa .intro p { color: var(--tinta-suave); }
-    .tabla { background: linear-gradient(180deg, #6b4a2f, #593c26); border-radius: 8px; padding: 40px 30px; box-shadow: inset 0 3px 10px rgba(0,0,0,.25), 0 20px 40px rgba(42,31,24,.2); display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 34px; }
+    .mesa { padding: 84px 0; background: var(--nogal); }
+    .mesa .intro { text-align: center; max-width: 620px; margin: 0 auto 44px; }
+    .mesa .intro h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-bottom: 10px; color: var(--papel); }
+    .mesa .intro p { color: rgba(248,245,240,.7); }
+    .tabla { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 18px; }
 
-    /* filtro por género: cartelitos de madera */
+    /* filtro por género */
     .filtros { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 auto 30px; }
-    .filtro { font-family: 'Bitter', serif; font-size: .88rem; padding: 8px 18px; border: 1px solid rgba(120,90,60,.35); background: #fffaf0; color: var(--tinta-suave); border-radius: 20px; cursor: pointer; transition: all .25s ease; }
-    .filtro:hover { color: var(--teja); border-color: var(--teja); }
-    .filtro[aria-pressed="true"] { background: var(--teja); border-color: var(--teja); color: #fff8ef; box-shadow: 0 6px 16px rgba(187,90,60,.28); }
+    .filtro { font-family: 'Bitter', serif; font-size: .82rem; padding: 7px 16px; border: 1px solid rgba(184,151,90,.35); background: var(--nogal-2); color: rgba(248,245,240,.7); border-radius: 20px; cursor: pointer; transition: all .25s ease; }
+    .filtro:hover { color: var(--laton-claro); border-color: var(--laton); }
+    .filtro[aria-pressed="true"] { background: var(--laton); border-color: var(--laton); color: var(--nogal); box-shadow: 0 4px 12px rgba(184,151,90,.3); }
     .ficha[hidden], .ficha.libre[hidden] { display: none; }
-    .sin-resultados { grid-column: 1 / -1; text-align: center; font-family: 'Caveat', cursive; font-size: 1.5rem; color: rgba(243,235,221,.7); padding: 20px; }
-    .ficha { background: var(--papel); border-radius: 3px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 10px 22px rgba(0,0,0,.25); transform: rotate(var(--tilt, 0deg)); transition: transform .35s ease; }
-    .ficha:hover { transform: rotate(0deg) translateY(-6px); }
-    .ficha .port { aspect-ratio: 2/3; background: linear-gradient(135deg, var(--espresso-2), var(--espresso)); display: grid; place-items: center; }
-    .ficha .port img { width: 100%; height: 100%; object-fit: cover; }
-    .ficha .port .vacio { font-family: 'Caveat', cursive; font-size: 1.35rem; color: rgba(243,235,221,.55); text-align: center; padding: 18px; line-height: 1.3; }
-    .ficha .pie { padding: 14px 16px 18px; }
-    .ficha .pie h4 { font-family: 'Bitter', serif; font-size: 1.1rem; font-weight: 700; }
-    .ficha .pie span { font-family: 'Caveat', cursive; font-size: 1.15rem; color: var(--teja); }
-    .ficha.libre .pie h4 { color: var(--tinta-suave); }
+    .sin-resultados { grid-column: 1 / -1; text-align: center; font-family: 'Caveat', cursive; font-size: 1.5rem; color: rgba(248,245,240,.5); padding: 20px; }
+    .ficha { background: var(--nogal-2); border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 6px 18px rgba(0,0,0,.35); transform: rotate(0deg); transition: transform .3s ease, box-shadow .3s ease; }
+    .ficha:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0,0,0,.45); }
+    .ficha .port { aspect-ratio: 2/3; background: var(--espresso); display: grid; place-items: center; overflow: hidden; }
+    .ficha .port img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .ficha:hover .port img { transform: scale(1.04); }
+    .ficha .port .vacio { font-family: 'Caveat', cursive; font-size: 1.1rem; color: rgba(248,245,240,.4); text-align: center; padding: 14px; line-height: 1.3; }
+    .ficha .pie { padding: 10px 12px 14px; }
+    .ficha .pie h4 { font-family: 'Bitter', serif; font-size: .88rem; font-weight: 700; color: var(--papel); line-height: 1.2; }
+    .ficha .pie span { font-size: .78rem; color: var(--laton-claro); }
+    .ficha.libre { border: 1px dashed rgba(184,151,90,.3); }
+    .ficha.libre .pie h4 { color: rgba(248,245,240,.5); }
 
     /* ============ NOTA DEL LIBRERO ============ */
     .librero { background: var(--espresso); color: var(--papel); padding: 84px 0; }
     .librero .wrap { max-width: 760px; }
-    .librero .mano-titulo { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--ocre); }
+    .librero .mano-titulo { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--laton-claro); }
     .librero h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); font-weight: 700; margin: 4px 0 22px; }
-    .librero p { color: rgba(243,235,221,.85); margin-bottom: 18px; }
-    .librero p em { color: var(--ocre); font-style: normal; }
+    .librero p { color: rgba(248,245,240,.85); margin-bottom: 18px; }
+    .librero p em { color: var(--laton-claro); font-style: normal; }
     .librero .firma { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--papel); margin-top: 26px; }
-    .librero .firma small { display: block; font-family: 'Lora', serif; font-size: .85rem; color: rgba(243,235,221,.55); margin-top: 2px; }
+    .librero .firma small { display: block; font-family: 'Lora', serif; font-size: .85rem; color: rgba(248,245,240,.55); margin-top: 2px; }
 
     /* ============ PARA QUIEN ESCRIBE ============ */
     .escribes { padding: 84px 0; }
-    .corcho { background: #b98a5a; background-image: radial-gradient(rgba(90,60,35,.25) 1px, transparent 1px); background-size: 6px 6px; border-radius: 8px; padding: 60px 40px; text-align: center; box-shadow: inset 0 0 40px rgba(60,40,25,.35), 0 16px 34px rgba(42,31,24,.2); border: 8px solid #7a5a37; }
+    .corcho { background: #2a3448; background-image: radial-gradient(rgba(91,138,191,.12) 1px, transparent 1px); background-size: 6px 6px; border-radius: 8px; padding: 60px 40px; text-align: center; box-shadow: inset 0 0 40px rgba(0,0,20,.3), 0 16px 34px rgba(26,30,46,.3); border: 4px solid var(--teja); }
     .papelito { display: inline-block; background: #fffaf0; padding: 40px 40px 46px; max-width: 560px; transform: rotate(-1.2deg); box-shadow: 0 14px 30px rgba(0,0,0,.28); position: relative; }
     .papelito::before { content: ""; position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(3deg); width: 90px; height: 26px; background: rgba(201,150,47,.4); border: 1px dashed rgba(120,90,60,.4); }
     .papelito .mano-titulo { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--teja); }
@@ -170,14 +176,14 @@
     .papelito .papelito-mail a:hover { text-decoration: underline; }
 
     /* ============ FOOTER (tarjeta de la tienda) ============ */
-    footer { background: var(--espresso-2); color: rgba(243,235,221,.75); padding: 50px 26px 40px; border-top: 3px solid var(--teja); }
+    footer { background: var(--espresso-2); color: rgba(248,245,240,.75); padding: 50px 26px 40px; border-top: 2px solid var(--laton); }
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 26px; }
     footer .rotulo b { color: var(--papel); }
-    footer .lema { font-family: 'Caveat', cursive; font-size: 1.35rem; color: var(--ocre); margin-top: 6px; }
-    footer a { color: rgba(243,235,221,.75); text-decoration: none; display: block; margin-bottom: 5px; }
-    footer a:hover { color: var(--ocre); }
+    footer .lema { font-family: 'Caveat', cursive; font-size: 1.35rem; color: var(--laton-claro); margin-top: 6px; }
+    footer a { color: rgba(248,245,240,.75); text-decoration: none; display: block; margin-bottom: 5px; }
+    footer a:hover { color: var(--laton-claro); }
     footer .col h5 { font-family: 'Bitter', serif; color: var(--papel); font-size: .9rem; margin-bottom: 10px; letter-spacing: .04em; }
-    footer .legal { width: 100%; text-align: center; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(243,235,221,.12); font-size: .82rem; color: rgba(243,235,221,.5); }
+    footer .legal { width: 100%; text-align: center; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(248,245,240,.12); font-size: .82rem; color: rgba(248,245,240,.5); }
 
     /* ============ ANIMACIÓN ============ */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
@@ -241,19 +247,19 @@
       <h2 class="rec-titulo slab reveal">La recomendación de la casa</h2>
       <div class="rec-grid">
         <div class="rec-portada reveal">
-          <a href="la-magia-de-lo-inesperado/index.html" aria-label="Abrir la página de La Magia de lo Inesperado">
-            <img src="la-magia-de-lo-inesperado/magia-portada.jpg" alt="Portada de La Magia de lo Inesperado, de Adelaida M. F." loading="eager" decoding="async" />
+          <a href="sacristia/index.html" aria-label="Abrir la página de El enigma de la sacristía">
+            <img src="sacristia/portada.png" alt="Portada de El enigma de la sacristía, de Javier Vilar García" loading="eager" decoding="async" />
           </a>
           <span class="colgante">léelo</span>
         </div>
         <div class="rec-texto reveal">
-          <h3>La Magia de lo Inesperado</h3>
-          <div class="autor">de Adelaida M. F.</div>
-          <p>Comedia romántica con chispa: Adriana tiene su vida bajo control hasta que aparece Jaime, el hermano pequeño de su compañera de piso, trece años menor y con un descaro que se le cuela por debajo de la puerta.</p>
-          <p class="comilla">"Porque lo que menos esperas… puede ser justo lo que más necesitas."</p>
+          <h3>El enigma de la sacristía</h3>
+          <div class="autor">de Javier Vilar García</div>
+          <p>Valencia, años 80. Un cura exmilitar en un barrio de heroína. Una rica heredera que decide ser madre soltera. Dos vidas que no deberían cruzarse, un misterio que las une y una parroquia donde nada es lo que parece.</p>
+          <p class="comilla">"Tiene ese ritmo lento de novela negra española, de los que te meten en un barrio y no te dejan salir."</p>
           <div class="escaparate-cta">
-            <a class="btn btn-teja" href="la-magia-de-lo-inesperado/index.html">Entrar en su rincón</a>
-            <a class="btn btn-lapiz" href="la-magia-de-lo-inesperado/capitulo1.html">Leer el primer capítulo</a>
+            <a class="btn btn-teja" href="sacristia/index.html">Entrar en su rincón</a>
+            <a class="btn btn-lapiz" href="sacristia/capitulo1.html">Leer las primeras páginas</a>
           </div>
         </div>
       </div>
