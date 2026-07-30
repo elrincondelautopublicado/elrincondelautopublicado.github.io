@@ -149,6 +149,10 @@
     .autora-texto .rol { font-size: .74rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--rally); margin: 12px 0 22px; }
     .autora-texto p { margin-bottom: 18px; }
 
+    /* BOOKTRAILER */
+    .trailer-box { max-width: 900px; margin: 0 auto; border-radius: 4px; overflow: hidden; box-shadow: var(--sombra); background: #000; border: 1px solid var(--linea); }
+    .trailer-box video { display: block; width: 100%; height: auto; }
+
     /* COMPRA */
     .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
     .formato { background: var(--asfalto-3); border: 1px solid var(--linea); border-radius: 4px; padding: 38px 30px; text-align: center; box-shadow: var(--sombra); transition: transform .25s, border-color .25s; }
@@ -188,6 +192,7 @@
       <div class="links" id="navLinks">
         <a class="home" href="../index.html">&larr; El Rincón</a>
         <a href="#historia">La historia</a>
+        <a href="#booktrailer">Booktrailer</a>
         <a href="capitulo1.html">Primer capítulo</a>
         <a href="#autora">La autora</a>
         <a href="#comprar">Conseguirlo</a>
@@ -278,7 +283,23 @@
     </div>
   </section>
 
-  <section id="comprar">
+  <section id="booktrailer">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">El <span>booktrailer</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Un minuto para sentir la adrenalina y la tensión de Alisa y Beltrán.</p>
+      </div>
+      <div class="trailer-box reveal">
+        <video controls preload="metadata">
+          <source src="booktrailer.mp4" type="video/mp4" />
+          Tu navegador no puede reproducir este vídeo.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar" class="alt">
     <div class="wrap">
       <div class="center">
         <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
@@ -292,13 +313,6 @@
           <p>Para devorarlo de un tirón, con el rugido de los motores de fondo y las emociones a toda velocidad.</p>
           <a class="btn btn-rally" href="https://amzn.eu/d/0f3F7ih3" target="_blank" rel="noopener">Ir a Amazon</a>
           <span class="extra">Papel y Kindle</span>
-        </div>
-        <div class="formato reveal">
-          <div class="icono" aria-hidden="true">🎬</div>
-          <h3>Booktrailer</h3>
-          <p>Antes de decidir, mira el booktrailer: un minuto para sentir la adrenalina y la tensión de Alisa y Beltrán.</p>
-          <a class="btn btn-ghost" href="https://canva.link/znuukfft36kfaxa" target="_blank" rel="noopener">Ver el booktrailer</a>
-          <span class="extra">Enlace externo</span>
         </div>
       </div>
     </div>
