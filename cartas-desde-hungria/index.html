@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartas desde Hungría — Ana Barrera Pastor | Narrativa histórica</title>
+  <meta name="description" content="Cartas desde Hungría, de Ana Barrera Pastor. Mencía, una niña adoptada, crece en la Hungría de los años 30 mientras Europa camina hacia la guerra. Una novela sobre el amor familiar, la pobreza y el odio a lo diferente." />
+  <meta name="author" content="Ana Barrera Pastor" />
+  <meta name="keywords" content="Cartas desde Hungría, Ana Barrera Pastor, narrativa histórica, Hungría, Segunda Guerra Mundial, Platero Editorial" />
+  <meta property="og:title" content="Cartas desde Hungría — Ana Barrera Pastor" />
+  <meta property="og:description" content="Una novela sobre el amor familiar, la pobreza y las atrocidades que se pueden cometer cuando nos dejamos llevar por el odio a lo diferente." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f1710'/%3E%3Crect x='14' y='22' width='36' height='24' rx='2' fill='none' stroke='%23d4a54a' stroke-width='2'/%3E%3Cpath d='M20 34h24M20 38h16' stroke='%23d4a54a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --noche: #1f1710;
+      --noche-2: #2a1f16;
+      --noche-3: #362a1f;
+      --dorado: #d4a54a;
+      --dorado-claro: #f0d49a;
+      --puente: #8b6a3e;
+      --hueso: #f8f3eb;
+      --texto: #ddd5c8;
+      --texto-suave: #a99e90;
+      --linea: rgba(212, 165, 74, .24);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .55);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--noche); color: var(--texto); font-family: 'Lato', system-ui, sans-serif; font-weight: 300; line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; }
+    ::selection { background: var(--dorado); color: var(--noche); }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(31,23,16,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--dorado-claro); }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .84rem; letter-spacing: .04em; transition: color .2s; }
+    nav a:hover, nav a:focus-visible { color: var(--dorado); }
+    nav a.home { color: var(--hueso); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--dorado); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 3px; text-decoration: none; font-family: 'Lato', sans-serif; font-size: .84rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s; }
+    .btn-dorado { background: linear-gradient(135deg, var(--dorado), #b8873a); color: #1f1710; box-shadow: 0 12px 28px rgba(212,165,74,.24); }
+    .btn-dorado:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(212,165,74,.34); }
+    .btn-ghost { background: transparent; color: var(--dorado-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--dorado); color: var(--dorado); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    .section-title { font-family: 'Playfair Display', serif; font-weight: 600; font-size: clamp(2rem, 4.8vw, 3.2rem); color: var(--hueso); line-height: 1.12; }
+    .section-title span { color: var(--dorado); font-style: italic; }
+    .rule { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--dorado), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; }
+    .eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--puente); }
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    .hero { padding: 0 0 94px; position: relative; overflow: hidden; }
+    .hero-img { width: 100%; max-height: 480px; object-fit: cover; object-position: center 60%; display: block; border-bottom: 1px solid var(--linea); }
+    .hero-content { position: relative; max-width: 720px; margin: -60px auto 0; padding: 44px 40px 38px; background: var(--noche); border: 1px solid var(--linea); border-radius: 4px; box-shadow: var(--sombra); text-align: center; }
+    .hero-content h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2.4rem, 6vw, 3.8rem); color: var(--hueso); line-height: 1.05; }
+    .hero-content .autora { margin-top: 14px; font-size: .88rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--dorado-claro); }
+    .hero-content .tagline { margin-top: 20px; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--texto); max-width: 44ch; margin-left: auto; margin-right: auto; line-height: 1.5; }
+    .badge { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(212,165,74,.08); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--texto); }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--dorado); box-shadow: 0 0 0 4px rgba(212,165,74,.18); }
+
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.cierre { margin-top: 36px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--dorado); text-align: center; }
+
+    .cita-historiador { max-width: 62ch; margin: 48px auto 0; padding: 28px 30px; background: var(--noche-3); border: 1px solid var(--linea); border-left: 3px solid var(--dorado); border-radius: 3px; }
+    .cita-historiador p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--hueso); line-height: 1.6; }
+    .cita-historiador .autor-cita { margin-top: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-size: .84rem; color: var(--texto-suave); letter-spacing: .06em; }
+
+    .firma-box { max-width: 700px; margin: 68px auto 0; padding: 34px 32px; text-align: center; background: var(--noche-3); border: 1px solid var(--linea); border-left: 3px solid var(--dorado); border-radius: 4px; box-shadow: var(--sombra); }
+    .firma-box .firma-icono { font-size: 1.9rem; margin-bottom: 10px; }
+    .firma-box p { margin-bottom: 20px; }
+    .firma-box strong { color: var(--hueso); font-weight: 700; }
+
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon { justify-self: center; width: 260px; height: 260px; border-radius: 50%; overflow: hidden; background: var(--noche-3); display: grid; place-items: center; box-shadow: var(--sombra); border: 2px solid var(--dorado); }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+    .medallon .inicial { display: none; font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--dorado); }
+    .autora-texto h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--dorado); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    .otro-libro { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 180px 1fr; gap: 34px; align-items: center; background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px; padding: 30px; box-shadow: var(--sombra); transition: transform .25s, border-color .25s; }
+    .otro-libro:hover { transform: translateY(-4px); border-color: var(--dorado); }
+    .otro-libro img { width: 100%; border-radius: 3px; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+    .otro-libro h3 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.5rem; color: var(--hueso); }
+    .otro-libro .sub { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--dorado); margin: 8px 0 14px; }
+    .otro-libro p { font-size: 1rem; color: var(--texto); margin-bottom: 18px; }
+
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato { background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px; padding: 34px 28px; text-align: center; box-shadow: var(--sombra); transition: transform .25s, border-color .25s; }
+    .formato:hover { transform: translateY(-5px); border-color: var(--dorado); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .96rem; margin-bottom: 22px; }
+    .formato .extra { display: block; margin-top: 14px; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-suave); }
+
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px; background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px; color: var(--hueso); text-decoration: none; font-size: .94rem; transition: transform .2s, border-color .2s, color .2s, box-shadow .2s; }
+    .red:hover { transform: translateY(-3px); border-color: var(--dorado); color: var(--dorado); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    footer { padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea); background: var(--noche-2); color: var(--texto-suave); font-size: .9rem; }
+    footer a { color: var(--dorado-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--dorado); border-color: var(--dorado); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+    @media (max-width: 900px) { .hero-content { margin-top: -40px; padding: 32px 24px 30px; } .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; } .otro-libro { grid-template-columns: 1fr; text-align: center; } .otro-libro img { max-width: 160px; margin: 0 auto; } .cta-row { justify-content: center; } }
+    @media (max-width: 760px) { section { padding: 70px 0; } .nav-toggle { display: block; } nav .links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: var(--noche); border-bottom: 1px solid var(--linea); max-height: 0; overflow: hidden; transition: max-height .3s ease; } nav .links.open { max-height: 460px; } nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Cartas desde Hungría</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#historia">La historia</a>
+        <a href="#autora">La autora</a>
+        <a href="#otros">Su otra novela</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img class="hero-img" src="portada.jpg" alt="Portada de Cartas desde Hungría: el Puente de las Cadenas de Budapest iluminado de noche" loading="eager" decoding="async" />
+    <div class="wrap">
+      <div class="hero-content reveal">
+        <div class="eyebrow">Narrativa histórica · Platero Editorial</div>
+        <h1>Cartas desde Hungría</h1>
+        <div class="autora">Ana Barrera Pastor</div>
+        <p class="tagline">Una novela sobre el amor familiar, la pobreza y las atrocidades que se pueden cometer cuando nos dejamos llevar por el odio a lo diferente.</p>
+        <div><span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible · papel y digital</span></div>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-dorado" href="https://plateroeditorial.es/libro/cartas-desde-hungria_148097" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#historia">Leer de qué va</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="historia" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="cuerpo reveal">
+        <p>Mencía es una niña feliz que vive con sus padres en Hungría, hasta que su madre da a luz a dos gemelas. El parto provoca un cambio radical en la relación familiar, pues la depresión postparto hace que Mencía sea repudiada por su madre, quien le confiesa que en realidad es adoptada y proviene de una campesina pobre española.</p>
+        <p>Por suerte, su niñera, una joven judía que vive interna en la casa, acoge a Mencía como si fuera su propia hija.</p>
+        <p>La situación político-social en Europa va camino a una gran guerra durante la década de los años 30, lo que provocará, junto a los problemas familiares, que la vida de la niña cambie por completo.</p>
+        <p class="cierre">Una novela sobre el amor familiar, sobre la pobreza y sobre las atrocidades que se pueden llegar a cometer cuando nos dejamos llevar por el odio a lo diferente.</p>
+      </div>
+
+      <div class="cita-historiador reveal">
+        <p>Chiloé era una «cuasinación en el recoveco del mundo», como decían los antiguos cronistas, confirmando que su mayor riqueza se encontraba en la diferencia cultural.</p>
+        <div class="autor-cita">— Dante Montiel Vera, historiador</div>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu ejemplar <strong>firmado por la autora</strong>? Escríbele por sus redes y lo habláis directamente con ella.</p>
+        <a class="btn btn-ghost" href="#redes">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="autora">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="ana-autora.jpg" alt="Ana Barrera Pastor" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">A</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Ana Barrera Pastor</h3>
+          <div class="rol">Escritora y dramaturga</div>
+          <p>Ana Barrera Pastor (Sevilla, 1 de agosto de 1970) es escritora y dramaturga. Su obra se centra en la narrativa contemporánea de inspiración histórica y se caracteriza por una prosa cuidada y atención a la memoria, el contexto cultural y las emociones de sus personajes.</p>
+          <p>Su primera obra teatral, la comedia <em>Vérsame, vérsame mucho</em>, ha sido representada con gran acogida por el público.</p>
+          <p>En 2023 publicó su primera novela, <em>Cartas desde Hungría</em>, con Platero Editorial, a la que siguió <em>Verde Chiloé</em>, ambas acogidas por el público lector por su sensibilidad literaria y su mirada evocadora. Estas publicaciones consolidan su perfil como autora comprometida con la exploración de la historia y los vínculos humanos.</p>
+          <p>Asimismo, desarrolla su labor como autora teatral, ampliando su actividad creativa al ámbito de las artes escénicas.</p>
+          <p>Disfruta especialmente del encuentro con los lectores y de la conversación en torno a los libros, por lo que participa con ilusión en clubes de lectura y actividades culturales, espacios donde la literatura se convierte en experiencia compartida.</p>
+          <div class="cta-row"><a class="btn btn-ghost" href="#redes">Ver sus redes</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="otros" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Su otra <span>novela</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="otro-libro reveal">
+        <img src="verde-chiloe.jpg" alt="Portada de Verde Chiloé, de Ana Barrera Pastor" loading="lazy" />
+        <div>
+          <h3>Verde Chiloé</h3>
+          <div class="sub">Ana Barrera Pastor · Platero Editorial</div>
+          <p>En la España rural de 1935, Soledad parece tenerlo todo: un prometido de buena familia, la promesa de una vida acomodada en el majestuoso cortijo Los Laureles, y el sueño de un futuro seguro. Pero tras todo ello se esconde una profunda inquietud que la atormenta: ¿es este el destino que realmente desea?</p>
+          <p>La sabia y enigmática Marcela, una machi llegada de la lejana y misteriosa isla de Chiloé, comienza a cuestionar las normas impuestas y hace que Soledad comience a desenterrar sus verdaderos deseos. Una novela de amor, sacrificio y raíces.</p>
+          <div class="cta-row">
+            <a class="btn btn-dorado" href="https://plateroeditorial.es/libro/verde-chiloe_158864" target="_blank" rel="noopener">Ver en Platero Editorial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Cartas desde Hungría</em> está publicada por Platero Editorial, disponible en papel y en digital.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📕</div>
+          <h3>En papel</h3>
+          <p>El libro físico, para tenerlo en la estantería y sentir Budapest en las manos.</p>
+          <a class="btn btn-dorado" href="https://tienda.plateroeditorial.es/q/detalle?p2_id=48724" target="_blank" rel="noopener">Comprar en la editorial</a>
+          <span class="extra">Platero Editorial · papel</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📱</div>
+          <h3>En digital</h3>
+          <p>Para empezarlo esta noche en la tablet o el lector, sin esperar al cartero.</p>
+          <a class="btn btn-dorado" href="https://tienda.plateroeditorial.es/q/detalle?p2_id=62290" target="_blank" rel="noopener">Comprar digital</a>
+          <span class="extra">Platero Editorial · ebook</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">🏠</div>
+          <h3>Ficha en la editorial</h3>
+          <p>La página del libro en Platero, con toda la información y opciones de compra.</p>
+          <a class="btn btn-ghost" href="https://plateroeditorial.es/libro/cartas-desde-hungria_148097" target="_blank" rel="noopener">Ver ficha completa</a>
+          <span class="extra">plateroeditorial.es</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Ana</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Comparte su proceso de escritura, encuentros con lectores y el día a día de una autora que disfruta tanto escribiendo como charlando de libros.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://instagram.com/anaescrivivir" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @anaescrivivir
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ana Barrera Pastor · <em>Cartas desde Hungría</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => { const w = !navLinks.classList.contains('open'); navToggle.classList.toggle('open',w); navLinks.classList.toggle('open',w); navToggle.setAttribute('aria-expanded',String(w)); navToggle.setAttribute('aria-label',w?'Cerrar menú':'Abrir menú'); });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if (e.key==='Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
