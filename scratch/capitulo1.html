@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prólogo y Capítulo 1 — Scratch: El Rally de Mi Vida | Eva M. Saladrigas</title>
+  <meta name="description" content="Lee gratis el prólogo y el primer capítulo de Scratch: El Rally de Mi Vida, de Eva M. Saladrigas." />
+  <meta name="author" content="Eva M. Saladrigas" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a1a1a'/%3E%3Cpath d='M12 44h40l-4-16-8 6-8-12-8 12-8-6z' fill='%2348a626'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --asfalto: #1a1a1a; --asfalto-2: #222222; --asfalto-3: #2c2c2c;
+      --tierra: #c17a3a; --tierra-clara: #e8a862;
+      --rally: #48a626; --rally-clara: #6fd44a;
+      --hueso: #f5f1ec; --texto: #d4d0cb; --texto-suave: #9a9590;
+      --linea: rgba(193, 122, 58, .28);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--asfalto); color: var(--texto); font-family: 'Source Sans 3', system-ui, sans-serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--rally); color: #fff; }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(26,26,26,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; flex-wrap: wrap; }
+    .brand { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--hueso); letter-spacing: .06em; text-transform: uppercase; }
+    .brand em { color: var(--rally); font-style: normal; }
+    nav .links { display: flex; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .84rem; letter-spacing: .06em; }
+    nav a:hover, nav a:focus-visible { color: var(--rally); }
+    nav a.home { color: var(--hueso); }
+
+    header.cab { padding: 76px 0 34px; text-align: center; }
+    header.cab .eyebrow { font-family: 'Rajdhani', sans-serif; font-size: .78rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--tierra); }
+    header.cab h1 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.6rem); color: var(--hueso); margin-top: 14px; line-height: 1.05; text-transform: uppercase; }
+    header.cab .libro { margin-top: 16px; font-size: .84rem; letter-spacing: .22em; text-transform: uppercase; color: var(--tierra-clara); }
+    .rule { width: 80px; height: 3px; background: linear-gradient(90deg, var(--rally), var(--tierra)); margin: 26px auto 0; border-radius: 2px; }
+
+    .lectura { padding: 40px 0 90px; }
+    .texto { max-width: 68ch; margin: 0 auto; font-family: 'Source Sans 3', serif; font-size: 1.14rem; line-height: 1.95; color: var(--texto); }
+    .texto p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-indent: 1.6em; }
+    .texto > p:first-child, .texto p.sin-sangria, .texto .escena + p, .texto .cap-titulo + p { text-indent: 0; }
+    .texto p.dialogo { text-align: left; hyphens: manual; margin: .35em 0 .35em 1.7em; text-indent: -1.7em; }
+    .texto .cap-titulo { margin: 56px 0 28px; text-align: center; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--rally); text-transform: uppercase; letter-spacing: .1em; text-indent: 0; }
+    .texto .cap-sub { text-align: center; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--tierra-clara); text-transform: uppercase; letter-spacing: .16em; margin-bottom: 28px; text-indent: 0; }
+    .texto .escena { margin: 34px auto; text-align: center; color: var(--rally); font-size: 1rem; letter-spacing: .8em; text-indent: 0; }
+    .texto p.capitular { text-indent: 0; }
+    .texto p.capitular::first-letter { float: left; font-family: 'Rajdhani', sans-serif; font-weight: 700; color: var(--rally); font-size: 3.4em; line-height: .82; padding: .06em .12em 0 0; }
+
+    .fin { max-width: 68ch; margin: 60px auto 0; padding-top: 34px; border-top: 1px solid var(--linea); text-align: center; }
+    .fin h2 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: clamp(1.5rem, 3.4vw, 2.2rem); color: var(--hueso); text-transform: uppercase; }
+    .fin p { color: var(--texto-suave); margin: 14px auto 0; max-width: 52ch; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 3px; text-decoration: none; font-family: 'Rajdhani', sans-serif; font-size: .86rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transition: transform .2s, border-color .2s, color .2s; }
+    .btn-rally { background: var(--rally); color: #fff; }
+    .btn-rally:hover { background: var(--rally-clara); color: #1a1a1a; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--hueso); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--rally); color: var(--rally); transform: translateY(-2px); }
+
+    footer { padding: 44px 0 56px; text-align: center; border-top: 1px solid var(--linea); background: var(--asfalto-2); color: var(--texto-suave); font-size: .88rem; }
+    footer a { color: var(--tierra-clara); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--rally); border-color: var(--rally); }
+
+    @media (max-width: 700px) { .texto { font-size: 1.08rem; } .texto p { text-align: left; } nav .links { gap: 16px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Scratch <em>·</em> Rally</span>
+      <div class="links">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="index.html">Ficha del libro</a>
+        <a href="index.html#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <div class="wrap">
+      <div class="eyebrow">Lectura gratuita · Prólogo y Capítulo 1</div>
+      <h1>Scratch: El Rally de Mi Vida</h1>
+      <div class="libro">Eva M. Saladrigas</div>
+      <div class="rule"></div>
+    </div>
+  </header>
+
+  <main class="lectura">
+    <div class="wrap">
+      <div class="texto">
+        <p class="cap-titulo">Prólogo</p>
+
+        <p class="capitular">No lo puedo evitar. Siempre que vengo aquí, los primeros recuerdos que me asaltan son el olor penetrante de la gasolina y el aroma de la goma quemada pegada al asfalto. Aquellas carreras que mi abuelo, mi querido «güelito», compartía conmigo son el mapa de mi existencia. Fue él quien vio en mí la pasión que, igual que en mi madre, corría por mis venas. No era sangre lo que impulsaba mis latidos cuando apenas levantaba un palmo del suelo: era combustible de alto octanaje. Siempre dice que aprendí a conducir antes que a caminar. Ahora, con el paso de los años, todo aquello se me antoja más simple, más puro. No es que ya no sea feliz—lo soy, de un modo inmenso—, pues no todo el mundo puede decir que ha logrado atrapar su sueño y hacerlo suyo. Yo sí. Ese y todos los que vinieron después. Sin embargo, el éxito tiene un peso nuevo: la responsabilidad de una vida a tus espaldas, de unas hijas que reclaman atención constante y que llegaron casi sin avisar, justo cuando estábamos en la cima. Tuvimos que parar, respirar y recalcular la ruta. Por eso ahora cada carrera, cada rally y cada punto ganado tienen un sabor distinto: una mezcla de gloria y ese regusto amargo que aparece cuando suena el teléfono y te dicen que una de las peques ha enfermado mientras tú estás a kilómetros de distancia. Pero es el mundo que escogimos. Sabemos que no quedan tantos años de podio antes de que el cuerpo diga basta. Y entonces, tras una vida dedicada al asfalto, ¿qué quedará de nosotros, si no es este amor?</p>
+
+        <p>Mis ojos se clavan en la curva, allí donde el paisaje parece haber olvidado lo que sucedió, aunque yo lo guarde bajo la piel. Recuerdo la última carrera de ella como si fuera un fotograma congelado: la noticia corriendo como la pólvora, mi tía llevándome a rastras mientras mi güelito desaparecía entre la multitud con el rostro desencajado, sin que yo entendiera nada. Curva… terraplén… barranco… no se ha podido hacer nada… Retazos de conversaciones que perforaban mis oídos de niña de diez años. Aquel día, el asfalto dejó de ser un juego para convertirse en un altar de sacrificio.</p>
+
+        <p class="dialogo">—Cariño, ¿estás bien?—Su voz me devuelve al presente. Su aliento roza mi oído y, a pesar de los años, logra erizarme la piel. Siento sus brazos rodear mi cintura y anclarme a la realidad. Me relajo contra su pecho, absorbiendo el calor protector de su cuerpo.</p>
+
+        <p class="dialogo">—Sí. Sabes que siempre me pasa cuando venimos aquí—respondo en un hilo de voz—. Son los recuerdos. Están tan vivos que casi puedo oír el rugido de su motor perdiéndose en el vacío.</p>
+
+        <p>Acaricio sus antebrazos, dorados por el sol que aclara su vello, y me pierdo en el olor familiar de su perfume mezclado con el gel de ducha. Es mi refugio. Él no vuelve a hablar; me conoce mejor que nadie y sabe que ese silencio es necesario para que yo pueda seguir adelante. Hace tiempo que solo venimos una vez al año, en este fatídico aniversario, pero nunca ha fallado. Se mantiene a mi lado y sostiene mi mano cuando el viento de esta curva sopla demasiado fuerte. Saco de mi chaqueta un pequeño colgante: una vieja arandela de motor que mi madre usaba como amuleto y que recuperaron de entre los restos. La aprieto con fuerza hasta que me marca la palma de la mano.</p>
+
+        <p class="dialogo">—¿Vamos?—le propongo cuando el nudo de lágrimas—ese que me niego a dejar escapar—desciende por mi garganta como una piedra imposible de digerir—. Las peques deben de tener locos a los abuelos.</p>
+
+        <p>Él asiente y me da un suave beso en la sien, un gesto que dice más que cualquier promesa. Y sí, como he dicho, he sido feliz. Soy feliz. He cumplido mi sueño y el de ella. Sigo aquí—ya no como antes; competimos menos—en un mundo dominado por hombres, demostrando día tras día que el nombre de mi madre no se perdió en aquel barranco, sino que brilla en lo más alto conmigo. Porque yo soy la mejor. Siempre.</p>
+
+        <p class="dialogo">—Cuando quieras, amor—responde él mientras caminamos de vuelta al coche, dejando atrás el silencio del barranco para regresar al bendito ruido de nuestra vida.</p>
+
+        <p class="escena" aria-hidden="true">···</p>
+
+        <p class="cap-titulo">1</p>
+        <p class="cap-sub">Luchando por lo que quiero · Alisa (2019)</p>
+
+        <p class="dialogo">—Vamos, peque, que el podio nos espera.</p>
+
+        <p>La voz de Luis, mi copiloto, me arranca por un momento del mundo en el que me había perdido. Acabamos de conocer la clasificación final. Ha habido varios problemas de última hora y, sí, hemos ganado, al menos en nuestra categoría. Nuestro Peugeot 1.6 16v nos ha vuelto a dar la victoria en el grupo en el que competimos, el X2. Este, el XV Rallysprint Los Corrales de Buelna–Cieza, es una de las primeras pruebas del verano y ya tenemos casi todo el calendario comprometido. Es la cuarta prueba y la cuarta victoria; eso nos coloca en lo alto de la tabla. Sí, son rallies regionales, pero, teniendo en cuenta que ni siquiera tengo edad para conducir fuera de las pruebas—de hecho, Luis es quien tiene que llevar el coche en los enlaces—, no está nada mal. Solo tengo dieciséis años.</p>
+
+        <p class="dialogo">—¡Vamooos!—le digo, entusiasmada, sin soltar el casco, del que ni siquiera me había dado cuenta de que todavía llevaba en la mano—. Uno menos, Luis, uno menos para ganar el campeonato—añado sin dejar de sonreír.</p>
+
+        <p>Luis me rodea con su brazo y deposita un beso en mi cabeza sudorosa. Lo conozco desde siempre. Trabaja con mi padre en el taller, y correr ahora conmigo le está costando más de una discusión con él. Mi padre no quiere que yo pilote, pero es mi vida y es mi decisión. Supongo que cree que limitarme a rallies regionales hará que mi fiebre por las carreras se agote, pero no es así. Ojalá algún equipo del campeonato nacional se fije en mí y…</p>
+
+        <p>Tras la entrega de premios, Luis y yo tomamos algo con algunos de los otros pilotos, con quienes tenemos más afinidad: los de escuderías cercanas a San Vicente de la Barquera, que es donde vivimos. Después, aunque a veces mi copiloto insiste en quedarnos a dormir para no regresar tan tarde, casi siempre le digo que no. Mi padre me prohibiría seguir corriendo si no vuelvo a casa por la noche.</p>
+
+        <p>Tras la primera cerveza, Luis se pasa al refresco. No es que el trayecto sea largo, pero si algo lo define es la prudencia; conduce muy bien. Entre él y mi güelito me enseñaron a conducir: primero un kart y después un Peugeot 106, cuando apenas llegaba a los pedales.</p>
+
+        <p class="dialogo">—Enhorabuena, Alisa. Otra vez—dice uno de los pilotos que compiten en mi categoría, aunque pertenece a una escudería consolidada de la zona.</p>
+
+        <p class="dialogo">—Gracias. Tal vez la próxima lo consigas—respondo con sinceridad. Es muy buen piloto y su coche y el mío son casi iguales, pero yo he crecido al volante de uno.</p>
+
+        <p class="dialogo">—No lo creo, niña. Parece que tienes un pacto con el diablo. Deberían prohibirte conducir hasta que tengas el carné oficial—replica, divertido.</p>
+
+        <p>Su copiloto, una chica de veintipocos años, se acerca en cuanto lo ve hablando conmigo. No me gusta nada cómo me mira, como si yo fuera una amenaza. Un momento… ¿están saliendo? No me había enterado.</p>
+
+        <p class="dialogo">—Enhorabuena otra vez, Ali—me dice con un tono que no me gusta en absoluto.</p>
+
+        <p class="dialogo">—Alisa, si no te importa. No me llamo Ali y nadie me llama así. Y gracias. Le decía a Sergio que tal vez la próxima sea vuestra; os habéis quedado muy cerca.</p>
+
+        <p class="dialogo">—Claro, si te caes por un barranco. Ups, perdona, Alisa, no quería decir eso…—suelta, y tengo que sujetar a Luis porque está a punto de lanzarse sobre ella para hacer no sé qué.</p>
+
+        <p class="dialogo">—¿Pero a ti qué te pasa, Eli? ¿Se te va la olla o qué?—le recrimina su compañero.</p>
+
+        <p class="dialogo">—Da igual, Sergio. Tal vez esa sea la única forma de que puedas ganar. O quizá si cambias de copiloto también te ayude—contraataco—. Luis, ¿podemos irnos?—le pregunto.</p>
+
+        <p>Mi amigo se relaja al ver que no necesito defensa y toma mi mano, como tantas otras veces, para salir del bar en el que estábamos. Solo entonces me doy cuenta de que quizá no soy la única que despierta envidias. Acabamos de llegar al campeonato; este es el primer año que corremos todas las pruebas que podemos—si es posible, serán todas—y, aun así, ya llevamos ventaja. El resto acumula años de experiencia. Pero, como dice mi abuelo, para mí es algo innato. Y es mi sueño. Y soñar es gratis, aunque correr no lo sea. Mi abuelo ha invertido casi todos sus ahorros para verme aquí; Luis se juega su puesto en el taller de mi padre apoyándome en cada carrera, a pesar de sus reticencias, y yo solo puedo darlo todo y ofrecer mi mejor versión en cada segundo sobre el asfalto o la tierra.</p>
+
+        <p>Antes de salir, desde la esquina de una mesa cercana a la puerta, un piloto en el que no había reparado hasta ahora me mira fijamente. Es atractivo: moreno, de ojos oscuros, con el pelo algo largo y desordenado. Cruza su mirada con la mía y no sé si me gusta la forma en que lo hace. Habla con otros compañeros, pero me escanea con descaro y me lanza una sonrisa ladeada, de esas de quien se cree dueño del universo.</p>
+
+        <p class="dialogo">—Lis, ¿pasa algo?—me pregunta mi copi, siguiendo la dirección de mis ojos hasta dar con el tipo de la mesa. Se tensa al verlo—. Ni caso; es un capullo. Corre solo por placer. Es un niño de papá que se ha montado su propio equipo.</p>
+
+        <p>Salimos a la calle y el frescor de la noche me hace estremecer. Luis me rodea con su brazo y me acerca a su cuerpo. Deja un beso en mi pelo, como tantas veces. Con él me siento en casa.</p>
+
+        <p class="dialogo">—Mi campeona—susurra.</p>
+
+        <p class="dialogo">—Sin ti no sería posible, y lo sabes. No voy a poder agradecerte todo lo que te juegas por mí—le digo, mirándolo. Sigo preguntándome por qué no sale con nadie. Es muy guapo: ojos azules, pelo rubio oscuro y, según mi amiga Marta, está muy bueno. En eso no entro. Siempre ha estado en mi casa y en mi vida; lo veo como a un hermano mayor, alguien con quien contar para todo. Nunca podría verlo de otra manera. Además, me lleva catorce años.</p>
+
+        <p>Nos subimos al coche. No tenemos un equipo detrás y nuestros recursos son limitados, así que casi siempre vamos y venimos en el mismo vehículo con el que competimos, salvo que alguno de los mecánicos del taller de mi padre se quede y se lo lleve. Hoy no es el caso. Los dos que suelen acompañarnos se han marchado con la furgoneta en la que guardamos la maquinaria necesaria y el par de juegos de ruedas de repuesto. No damos para más.</p>
+
+        <p>Luis se acomoda al volante y yo me coloco en mi asiento para recorrer los kilómetros que nos separan de San Vicente. Mi güelito ya me llamó hace rato para felicitarnos y recordarme lo orgulloso que está de mí. Como siempre, termino emocionada al oírlo… y pensando en ella.</p>
+
+        <p>Hay poco más de cincuenta kilómetros hasta casa. A estas horas la carretera está poco transitada y Luis conduce con calma. Sabe que este coche es el único que tenemos para el campeonato y que, para mí, significa mucho más que un simple vehículo. Lo observo mientras sus manos cambian de marcha con suavidad. Mis dedos y mis pies hormiguean con el deseo de ser yo quien conduzca siempre, pero todavía me queda un año y medio para poder ir a la autoescuela. La vida es irónica: puedo derrotar a pilotos con años de carné y, sin embargo, no puedo circular por las carreteras españolas.</p>
+
+        <p class="dialogo">—Ya te queda menos, Spidi—dice divertido, como si me leyera el pensamiento. Es el apodo que mi abuelo y él usan cuando se me va el pie en el acelerador. Alguna vez. Muy pocas, de verdad.</p>
+
+        <p class="dialogo">—Buf…—resoplo—. Sí, claro, solo casi dos años. Nada—replico, provocando su carcajada. Aprieta mi rodilla, ahora descubierta. Me quité el mono al entrar en el bar; debajo siempre llevo mallas y un top, además de una camiseta de repuesto para no cargar con una mochila con ropa.</p>
+
+        <p class="dialogo">—Luis—lo interpelo mirándolo, y él desvía los ojos un segundo para invitarme a hablar—. ¿Por qué no sales con nadie?</p>
+
+        <p>Veo cómo traga saliva; el movimiento de su nuez lo delata. Toma aire antes de responder, como si no esperara la pregunta o no tuviera clara la respuesta.</p>
+
+        <p class="dialogo">—Mi vida es el taller y tú, desde que me metiste en este lío, Lis—continúa—. Y no me malinterpretes: no me quejo. Me encanta correr contigo; si no, no lo haría. Pero mi tiempo libre se ha reducido a nada.</p>
+
+        <p>Lo miro y me doy cuenta de que se me ha quedado la boca abierta. No esperaba esa respuesta. Su voz suena sincera, sin rastro de reproche. Aun así, insisto:</p>
+
+        <p class="dialogo">—Entrenamos unas horas, no corremos todo el año y trabajas… Vale, mi padre quizá te exprime un poco, pero tienes ofertas de otros talleres, incluso de equipos de rallies. Lo sé. Y, sin embargo…</p>
+
+        <p class="dialogo">—Lis—me corta con suavidad—, no voy a irme de San Vicente. Y espero que a tu padre no se le vaya la cabeza y me despida por seguirte el juego con las carreras, porque entonces sí que entraría en otro taller o ya vería qué hago. Pero no voy a dejar sola a mi madre con lo que tiene encima. Ya sabes que mi hermana vive a miles de kilómetros y que lo de mi padre empeora cada día. Así que no: no tengo tiempo para ligues ni para nada de eso.</p>
+
+        <p class="dialogo">—¿Y vas a pasarte solo el resto de tu vida?—pregunto.</p>
+
+        <p class="dialogo">—A ver, pequeña entrometida… ¿y tú? ¿Por qué no tienes novio? Marta ya ha salido con… ¿una docena?</p>
+
+        <p class="dialogo">—No son tantos. Y Marta y yo no somos iguales. No tengo ni tiempo ni ganas de aguantar a niñatos que solo buscan lo mismo. Lo primero en mi vida es estudiar; después, correr. Esas son mis prioridades.</p>
+
+        <p class="dialogo">—Te aseguro que, si miraras alrededor, verías que no solo los niñatos se interesan por ti, Spidi.</p>
+
+        <p class="dialogo">—Bah, me da igual. No voy a salir con nadie. Me queda un curso para mantener las notas, y sabes que en mi carrera no se entra con un cinco de media.</p>
+
+        <p class="dialogo">—¿Sigues pensando irte a Madrid?</p>
+
+        <p class="dialogo">—Sí. Cataluña no es una opción para mí y Madrid es la segunda mejor de España.</p>
+
+        <p class="dialogo">—Pero tienes Navarra y el País Vasco…</p>
+
+        <p class="dialogo">—No—lo interrumpo—. Y porque no puedo irme al MIT; si no, ese sería mi sueño.</p>
+
+        <p class="dialogo">—Tu padre sigue pensando que vas de farol. Le vas a dar un disgusto.</p>
+
+        <p>Un coche nos adelanta a una velocidad que no debería llevar ni en autovía. El rebufo sacude el nuestro y Luis suelta una maldición.</p>
+
+        <p class="dialogo">—¿Crees que alguna vez rehará su vida?—pregunto cuando el BMW que nos ha rebasado desaparece a lo lejos.</p>
+
+        <p class="dialogo">—El que nos ha adelantado es el capullo de De la Orden. O eso creo; tiene un coche igual. Y sobre tu padre… no sabría decirte. Ni siquiera ha quitado su foto del despacho. Bueno, sus fotos, más bien.</p>
+
+        <p class="dialogo">—¿De la Orden es el que estaba allí cuando salíamos?—pregunto, recordando su mirada fija y su sonrisa de suficiencia.</p>
+
+        <p class="dialogo">—Sí, el niño de papá que se ha comprado un equipo para competir.</p>
+
+        <p class="dialogo">—Bueno, nosotros también pagamos lo nuestro—le resto importancia—. No sé por qué le tienes tanta manía.</p>
+
+        <p class="dialogo">—No es lo mismo, cariño. Tiene equipo completo, mecánicos, repuestos, algo parecido a una motorhome. Compite en el campeonato de España.</p>
+
+        <p class="dialogo">—Puede comprarse lo que quiera, pero conmigo muerde el polvo, por mucho BMW que lleve.</p>
+
+        <p class="dialogo">—Eso seguro. Contigo no hay quien pueda, al menos en los regionales.</p>
+
+        <p>El zumbido constante del motor y el balanceo suave del coche acaban venciendo al cansancio que llevo encima. No sé en qué punto del trayecto me quedo dormida. Solo soy consciente de que Luis detiene el coche frente a casa. Estoy tan agotada que no consigo abrir los ojos. Me dejo hacer mientras lucha con los arneses—incómodos incluso despierta—y me saca en brazos. Oigo murmullos. La voz grave de mi padre y la suya, hablando de no conducir tan tarde la próxima vez, de quedarse a dormir en algún sitio. Y yo que pensaba que me castigaría si no volvíamos a casa.</p>
+
+        <p class="dialogo">—Buenas noches, pequeña.</p>
+
+        <p>El roce cálido de sus labios en mi frente es lo último que recuerdo.</p>
+      </div>
+
+      <div class="fin">
+        <h2>Aquí acaba el adelanto</h2>
+        <p>Lo que viene después es la tensión con Beltrán de la Orden, las carreras a nivel nacional y un romance que pisa el acelerador desde la primera curva.</p>
+        <div class="cta-row">
+          <a class="btn btn-rally" href="https://amzn.eu/d/0f3F7ih3" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="index.html">Volver a la ficha</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Eva M. Saladrigas · <em>Scratch: El Rally de Mi Vida</em>. Capítulo publicado con permiso de la autora.</p>
+      <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a El Rincón del Autopublicado</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
