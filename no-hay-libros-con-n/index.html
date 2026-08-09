@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Que no hay libros con Ñ? — Antología colectiva</title>
+  <meta name="description" content="¿Que no hay libros con Ñ? Una antología de relatos donde lo terrenal, la magia, el miedo, el amor y el dolor se escriben con ñ." />
+  <meta name="author" content="VV.AA." />
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="¿Que no hay libros con Ñ? — Antología colectiva" />
+  <meta property="og:description" content="Relatos y vidas escritas con Ñ, con ñ de cariño y de sueños." />
+  <meta property="og:image" content="portada.jpeg" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a1028'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23b08d57' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--oscuro:#2b1a1e;--oscuro-2:#3a2228;--oscuro-3:#4a2d34;--dorado:#d94f7a;--dorado-claro:#e8729a;--dorado-suave:rgba(217,79,122,.12);--dorado-border:rgba(217,79,122,.3);--purpura:#5c2a4a;--purpura-suave:rgba(92,42,74,.3);--hueso:#f5f0e8;--gris:#8a7570;--gris-claro:#b0a49e}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{background:var(--oscuro);color:var(--hueso);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;line-height:1.8;overflow-x:hidden}
+    h1,h2,h3{font-family:'Josefin Sans',sans-serif;font-weight:300;letter-spacing:.04em}a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+    nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(43,26,30,.92);backdrop-filter:blur(9px);border-bottom:1px solid var(--dorado-border)}
+    nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
+    nav .brand{font-family:'Josefin Sans',sans-serif;color:var(--dorado);letter-spacing:.2em;font-size:.9rem;text-transform:uppercase}
+    nav .links{display:flex;gap:26px}nav .links a{text-decoration:none;font-family:'Josefin Sans',sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--gris);text-transform:uppercase;transition:color .3s}nav .links a:hover{color:#fff}nav .links a.home{color:var(--dorado)}
+    .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;z-index:60}.nav-toggle span{display:block;width:24px;height:2px;background:var(--dorado);margin:5px 0;transition:transform .3s,opacity .3s}
+    .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-toggle.open span:nth-child(2){opacity:0}.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(max-width:820px){.nav-toggle{display:block}nav .links{position:fixed;top:0;right:0;bottom:0;width:min(74vw,290px);flex-direction:column;justify-content:center;gap:30px;background:rgba(43,26,30,.98);border-left:1px solid var(--dorado-border);transform:translateX(100%);transition:transform .35s ease}nav .links.open{transform:translateX(0)}nav .links a{font-size:1rem}}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px;background:radial-gradient(circle at 30% 40%,var(--purpura-suave),transparent 60%),radial-gradient(circle at 70% 60%,rgba(217,79,122,.05),transparent 50%),linear-gradient(180deg,#1f1012 0%,var(--oscuro) 100%)}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
+    .cover-frame{justify-self:center;width:280px;max-width:100%;border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.05),0 30px 70px rgba(0,0,0,.8),0 0 50px rgba(217,79,122,.15);transition:transform .5s ease}
+    .cover-frame:hover{transform:translateY(-6px)}.cover-frame img{display:block;width:100%;height:auto;border-radius:4px}
+    .hero-text .eyebrow{color:var(--dorado);text-transform:uppercase;letter-spacing:.35em;font-size:.68rem;margin-bottom:16px;font-family:'Josefin Sans',sans-serif}
+    .hero-text h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.1;color:#fff;text-shadow:0 0 30px rgba(217,79,122,.2)}
+    .hero-text .autora{margin-top:14px;color:var(--hueso);font-size:1.2rem;letter-spacing:.12em;font-family:'Josefin Sans',sans-serif;font-weight:300}
+    .hero-text .tagline{margin-top:22px;font-size:1.2rem;font-style:italic;color:var(--gris);max-width:44ch}
+    .cta-row{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;font-family:'Josefin Sans',sans-serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:3px;cursor:pointer;transition:all .3s ease}
+    .btn-primary{background:linear-gradient(135deg,#b03860,var(--dorado));color:#fff;font-weight:600;box-shadow:0 10px 28px rgba(217,79,122,.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(217,79,122,.45)}
+    .btn-ghost{border:1px solid var(--dorado-border);color:var(--dorado-claro);background:transparent}.btn-ghost:hover{background:var(--dorado-suave);border-color:var(--dorado)}
+    @media(max-width:820px){.hero-grid{grid-template-columns:1fr;text-align:center;gap:40px}.cta-row{justify-content:center}}
+    section{padding:92px 0}.section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:10px;text-transform:uppercase;letter-spacing:.08em}.section-title span{color:var(--dorado)}
+    .divider{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--dorado),transparent);margin:0 auto 46px}
+    .sinopsis{background:linear-gradient(180deg,var(--oscuro),var(--oscuro-2));border-top:1px solid var(--dorado-border);border-bottom:1px solid var(--dorado-border)}
+    .sinopsis .lead{max-width:62ch;margin:0 auto}.sinopsis .lead p{font-size:1.15rem;color:#d5d5d0;margin-bottom:20px}
+    .autoras-section{background:var(--oscuro-2)}
+    .autoras-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:940px;margin:0 auto}
+    .autora-card{padding:24px 28px;background:var(--oscuro-3);border:1px solid var(--dorado-border);border-radius:6px;transition:transform .3s ease,box-shadow .3s ease}
+    .autora-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.5),0 0 20px rgba(217,79,122,.1)}
+    .autora-card h3{color:#fff;font-size:1.1rem;margin-bottom:6px;font-weight:400}
+    .autora-card .instagram{color:var(--dorado);font-family:'Josefin Sans',sans-serif;font-size:.8rem;letter-spacing:.04em;text-decoration:none;transition:color .3s}
+    .autora-card .instagram:hover{color:var(--dorado-claro)}
+    .contacto{background:linear-gradient(180deg,rgba(217,79,122,.05),transparent),var(--oscuro);text-align:center}.contacto p{max-width:48ch;margin:0 auto 30px;color:#d5d5d0}
+    .redes-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+    .red{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:40px;text-decoration:none;font-size:.8rem;letter-spacing:.05em;border:1px solid rgba(255,255,255,.2);color:var(--hueso);background:rgba(255,255,255,.03);transition:all .3s ease;font-family:'Josefin Sans',sans-serif}
+    .red:hover{transform:translateY(-3px);border-color:var(--dorado);color:#fff}.red svg{width:18px;height:18px;fill:currentColor}
+    footer{text-align:center;padding:40px 24px;color:var(--gris);font-size:.9rem;border-top:1px solid rgba(255,255,255,.06)}footer a{color:var(--dorado);text-decoration:none}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <span class="brand">¿Que no hay libros con Ñ?</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; El Rincón</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#autoras">Autoras</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpeg" alt="Portada de ¿Que no hay libros con Ñ?" loading="eager" decoding="async" />
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Antología de relatos</div>
+        <h1>¿Que no hay libros con Ñ?</h1>
+        <div class="autora">VV.AA.</div>
+        <p class="tagline">Relatos y vidas escritas con Ñ, con ñ de cariño y de sueños. Construidas con tesón, risas y empeño.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://amzn.to/4wFNARc" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer sinopsis</a>
+          <a class="btn btn-ghost" href="#autoras">Conocer a las autoras</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal"><span>Sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <div class="lead reveal">
+        <p>Cuando se encuentran unas lokuel@s para las que las palabras son tan importantes y aceptan un desafío surgido de risas y buen humor, el resultado es este libro donde lo terrenal, la magia, el miedo, el amor y el dolor se escriben con ñ.</p>
+        <p>Aquí no hay sitio para la monotonía, aquí encontrarás relatos y vidas escritas con Ñ, con ñ de cariño y de sueños. Construidas con tesón, risas y empeño.</p>
+        <p>Si decides adentrarte en el mundo mágico de esta letra tan especial y acompañarnos, esperamos que te sorprendas y te diviertas con cada uno de nuestros relatos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="autoras" class="autoras-section">
+    <div class="wrap">
+      <h2 class="section-title reveal">Las <span>autoras</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autoras-grid">
+        <div class="autora-card reveal">
+          <h3>Cristina Villar Losa</h3>
+          <a class="instagram" href="https://www.instagram.com/contigocvlescribe" target="_blank" rel="noopener">@contigocvlescribe</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Isacat7</h3>
+          <a class="instagram" href="https://www.instagram.com/isacat7" target="_blank" rel="noopener">@isacat7</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>M.H. Rarezas</h3>
+          <a class="instagram" href="https://www.instagram.com/m.h.rarezas" target="_blank" rel="noopener">@m.h.rarezas</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Asun</h3>
+          <a class="instagram" href="https://www.instagram.com/lalokadeloslibros_84" target="_blank" rel="noopener">@lalokadeloslibros_84</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Jessica Walsh</h3>
+          <a class="instagram" href="https://www.instagram.com/jessicawalshescritora" target="_blank" rel="noopener">@jessicawalshescritora</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Teresa Pérez Landa</h3>
+          <a class="instagram" href="https://www.instagram.com/teresaperezlanda" target="_blank" rel="noopener">@teresaperezlanda</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Yennis Molina</h3>
+          <a class="instagram" href="https://www.instagram.com/Yennis.molina.alfonso" target="_blank" rel="noopener">@Yennis.molina.alfonso</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Eva M. Saladrigas</h3>
+          <a class="instagram" href="https://www.instagram.com/evam_saladrigas" target="_blank" rel="noopener">@evam_saladrigas</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Celia Esgar</h3>
+          <a class="instagram" href="https://www.instagram.com/celiaesgar_escritora" target="_blank" rel="noopener">@celiaesgar_escritora</a>
+        </div>
+        <div class="autora-card reveal">
+          <h3>Elisabeth Cortés Barrera</h3>
+          <a class="instagram" href="https://www.instagram.com/elicortesbarrera.escritora" target="_blank" rel="noopener">@elicortesbarrera.escritora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <div class="wrap">
+      <h2 class="section-title reveal">Contacto</h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Encuentra a las autoras en sus redes sociales y descubre más sobre sus proyectos individuales.</p>
+      <div class="redes-row reveal">
+        <a class="red" href="https://www.instagram.com/contigocvlescribe" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          Instagram de las autoras
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> ¿Que no hay libros con Ñ? Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a El Rincón del Autopublicado</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
