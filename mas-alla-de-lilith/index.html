@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Más allá de Lilith — Verónica Chía Alcázar | Erótica · Poesía</title>
+  <meta name="description" content="Más allá de Lilith, de Verónica Chía Alcázar. Un viaje íntimo hacia el deseo, la libertad y el descubrimiento de una misma. Relatos y poemas cargados de sensualidad, erotismo y emoción." />
+  <meta name="author" content="Verónica Chía Alcázar" />
+  <meta name="keywords" content="Más allá de Lilith, Verónica Chía Alcázar, erótica, poesía, relatos eróticos, autopublicado, deseo, libertad, sensualidad, Lilith" />
+  <meta property="og:title" content="Más allá de Lilith — Verónica Chía Alcázar" />
+  <meta property="og:description" content="Un viaje íntimo hacia el deseo, la libertad y el descubrimiento de una misma." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portadamasalladelilith.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="portadamasalladelilith.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0a14'/%3E%3Cpath d='M32 12c-8 0-14 6-14 14 0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14zm0 19a5 5 0 1 1 0-10 5 5 0 0 1 0 10z' fill='%23c4485b'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: tonos burdeos, vino tinto y rosa empolvado.
+       Inspirada en la sensualidad y el erotismo del libro.
+       Fondo oscuro con acentos cálidos de frambuesa y dorado rosado. ============ */
+    :root {
+      --noche: #1a0a14;       /* fondo principal */
+      --noche-2: #221220;     /* secciones alternas */
+      --noche-3: #2e1a2a;     /* cajas */
+      --noche-hondo: #0f0509;
+      --vino: #c4485b;        /* acento principal */
+      --vino-claro: #e8899a;
+      --rosa: #d4717e;        /* rosa intermedio */
+      --dorado: #d4a574;      /* dorado cálido */
+      --hueso: #f5ede8;
+      --texto: #d9cdd4;
+      --texto-suave: #a08e9a;
+      --linea: rgba(196, 72, 91, .22);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .55);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--texto);
+      font-family: 'Raleway', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--vino); color: var(--hueso); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(26, 10, 20, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--hueso); letter-spacing: .04em; font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--vino-claro); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--vino); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 3px; text-decoration: none;
+      font-family: 'Raleway', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-vino { background: linear-gradient(135deg, var(--vino), #a33a4d); color: #fff; box-shadow: 0 12px 28px rgba(196, 72, 91, .28); }
+    .btn-vino:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(196, 72, 91, .38); }
+    .btn-ghost { background: transparent; color: var(--vino-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--vino); color: var(--vino); transform: translateY(-2px); }
+    .btn-dorado { background: var(--dorado); color: #1a0a14; }
+    .btn-dorado:hover { background: #e0b48a; transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.3rem); color: var(--hueso); line-height: 1.12;
+    }
+    .section-title span { color: var(--vino-claro); }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--vino), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--vino), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--dorado); }
+
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 68px 0 94px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(196, 72, 91, .12), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 62px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.2deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
+      color: var(--vino-claro); font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+    }
+    .hero-text .saga { font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: var(--dorado); }
+    .hero-text h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 1;
+      color: var(--hueso); margin-top: 12px; font-style: italic;
+    }
+    .hero-text .autora { margin-top: 18px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 24px; font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.6vw, 1.7rem); color: var(--vino-claro); max-width: 30ch; line-height: 1.4;
+      font-style: italic;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(46, 26, 42, .6);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--vino); box-shadow: 0 0 0 4px rgba(196, 72, 91, .2); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--vino);
+      font-style: italic;
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; color: var(--vino-claro); text-align: center; font-style: italic;
+    }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ POEMA ============ */
+    .poema-box {
+      max-width: 600px; margin: 0 auto; padding: 48px 40px; text-align: center;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      box-shadow: var(--sombra); position: relative;
+    }
+    .poema-box::before {
+      content: '\201C'; position: absolute; top: 14px; left: 24px;
+      font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--vino);
+      opacity: .3; line-height: 1;
+    }
+    .poema-box h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--hueso);
+      margin-bottom: 24px; font-style: italic;
+    }
+    .poema-box .versos {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 2;
+      color: var(--texto); white-space: pre-line;
+    }
+    .poema-box .versos em { color: var(--vino-claro); font-style: normal; }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon {
+      justify-self: center; width: 260px; height: 260px; border-radius: 50%;
+      overflow: hidden; background: var(--noche-3); display: grid; place-items: center;
+      box-shadow: var(--sombra); border: 2px solid var(--vino);
+    }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { display: none; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--vino-claro); }
+    .autora-texto h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--dorado); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--vino); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--vino); color: var(--vino-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--vino-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--vino); border-color: var(--vino); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--noche); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+      .poema-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Más allá de Lilith</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#poema">Poema</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portadamasalladelilith.jpg" alt="Portada de Más allá de Lilith, de Verónica Chía Alcázar"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>Más allá de<br>Lilith</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Erótica · Poesía · Relatos</div>
+        <h1>Más allá de Lilith</h1>
+        <div class="autora">Verónica Chía Alcázar</div>
+        <p class="tagline">Un viaje íntimo hacia el deseo, la libertad y el descubrimiento de una misma.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible en Amazon</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-vino" href="https://amzn.eu/d/0gVwZlt5" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Descubrir más</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+
+      <div class="cuerpo reveal">
+        <p>Lilith nace de una mujer que durante años intentó encajar en lo que se esperaba de ella: ser buena hija, buena madre, buena pareja, buena mujer. Hasta que un día decide dejar de pedir permiso para sentir.</p>
+        <p>A través de relatos y poemas cargados de sensualidad, erotismo y emoción, Lilith explora sus fantasías, sus límites, sus heridas y todo aquello que durante demasiado tiempo permaneció oculto.</p>
+        <p class="suelta">Más allá de Lilith no habla únicamente de sexo. Habla de recuperar el cuerpo, la voz y el deseo. De aceptar las propias imperfecciones y descubrir que la libertad también puede comenzar cuando una mujer decide volver a elegirse.</p>
+        <p class="cierre">Porque todas llevamos dentro una parte de Lilith esperando despertar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POEMA ============ -->
+  <section id="poema">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Un <span>poema</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Un fragmento de lo que encontrarás entre estas páginas.</p>
+      </div>
+
+      <div class="poema-box reveal">
+        <h3>Me solté</h3>
+        <div class="versos">Me cansé de querer caer bien,
+de encogerme para no molestar.
+De tapar mi escote,
+de apretar el vientre,
+de tragar saliva cuando deseaba gritar.
+
+Me solté el pelo
+y con él,
+<em>las ganas.</em>
+
+Desde entonces,
+ya no me salvo.
+
+<em>Me elijo.
+Me ardo.
+Me devoro.</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="autora.jpg" alt="Verónica Chía Alcázar" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">V</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Verónica Chía Alcázar</h3>
+          <div class="rol">Autora de Más allá de Lilith</div>
+
+          <p>Verónica Chía Alcázar es autora autopublicada y escritora apasionada por las historias que exploran el deseo, las emociones y la parte más íntima de las personas.</p>
+          <p>En <em>Más allá de Lilith</em> combina relatos y poesía para dar voz a una mujer que decide romper con el miedo, la culpa y los límites impuestos y comenzar a descubrirse desde la libertad.</p>
+          <p>Su escritura nace de una mirada directa, sensual y emocional, donde el erotismo se convierte también en una forma de autoconocimiento y expresión.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Seguirla en redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Más allá de Lilith</em> está disponible en Amazon.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Comprar en Amazon</h3>
+          <p>El libro completo. Relatos y poemas para descubrir a Lilith y, quizás, a ti misma.</p>
+          <a class="btn btn-vino" href="https://amzn.eu/d/0gVwZlt5" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">Más allá de Lilith</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">🌐</div>
+          <h3>Web de la autora</h3>
+          <p>Descubre más sobre el libro en la web oficial de Verónica.</p>
+          <a class="btn btn-ghost" href="https://www.provokme.shop/mas-alla-de-lilith.html" target="_blank" rel="noopener">Visitar la web</a>
+          <span class="extra">provokme.shop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Verónica</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Comparte sus letras, su proceso y mucho más. Pásate a saludarla.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://instagram.com/pluma_y_placer" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @pluma_y_placer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Verónica Chía Alcázar · <em>Más allá de Lilith</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
