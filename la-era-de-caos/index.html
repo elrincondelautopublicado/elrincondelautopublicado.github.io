@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>La Era del Caos: El Umbral de la Destrucción — Rubén Esteban Inés | Fantasía épica</title>
+  <meta name="description" content="La Era del Caos: El Umbral de la Destrucción, de Rubén Esteban Inés. El Viejo Mundo está sumido en la oscuridad. Un hijo de la magia ha sido elegido para enfrentar al malvado brujo Lord Sharkdúsh. Fantasía épica." />
+  <meta name="author" content="Rubén Esteban Inés" />
+  <meta name="keywords" content="La Era del Caos, El Umbral de la Destrucción, Rubén Esteban Inés, fantasía épica, grimdark, Lord Sharkdúsh, autopublicado, trilogía" />
+  <meta property="og:title" content="La Era del Caos: El Umbral de la Destrucción — Rubén Esteban Inés" />
+  <meta property="og:description" content="El Viejo Mundo está sumido en la oscuridad. Un hijo de la magia ha sido elegido para enfrentar las fuerzas del mal." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="Portada libro.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="Portada libro.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0e05'/%3E%3Cpath d='M32 10l4 14h14l-11 8 4 14-11-8-11 8 4-14-11-8h14z' fill='%23c77b2a'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: fantasía épica con tonos de fuego, bronce y oscuridad.
+       Inspirada en un mundo en guerra, magia antigua y batallas legendarias. ============ */
+    :root {
+      --noche: #120c06;       /* fondo principal */
+      --noche-2: #1a1008;     /* secciones alternas */
+      --noche-3: #24180c;     /* cajas */
+      --noche-hondo: #0a0603;
+      --bronce: #c77b2a;      /* acento principal */
+      --bronce-claro: #e8a84c;
+      --fuego: #d4542a;       /* rojo fuego */
+      --ceniza: #a89078;      /* tono cálido neutro */
+      --hueso: #f2ebe3;
+      --texto: #d4ccc4;
+      --texto-suave: #9e9488;
+      --linea: rgba(199, 123, 42, .22);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--texto);
+      font-family: 'Nunito Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--bronce); color: var(--noche-hondo); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(18, 12, 6, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Cinzel', serif; font-size: 1.15rem; color: var(--bronce-claro); letter-spacing: .06em; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--bronce-claro); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--bronce); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 3px; text-decoration: none;
+      font-family: 'Nunito Sans', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-bronce { background: linear-gradient(135deg, var(--bronce), #a5621e); color: #fff; box-shadow: 0 12px 28px rgba(199, 123, 42, .3); }
+    .btn-bronce:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(199, 123, 42, .4); }
+    .btn-ghost { background: transparent; color: var(--bronce-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--bronce); color: var(--bronce); transform: translateY(-2px); }
+    .btn-fuego { background: var(--fuego); color: #fff; }
+    .btn-fuego:hover { background: #e0633a; transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Cinzel', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.3rem); color: var(--hueso); line-height: 1.12;
+    }
+    .section-title span { color: var(--bronce-claro); }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--bronce), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--bronce), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--fuego); }
+
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 68px 0 94px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(199, 123, 42, .1), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 62px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.2deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
+      color: var(--bronce-claro); font-family: 'Cinzel', serif; font-size: 2rem;
+    }
+    .hero-text h1 {
+      font-family: 'Cinzel Decorative', serif; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.1;
+      color: var(--hueso); margin-top: 12px;
+    }
+    .hero-text .subtitulo {
+      font-family: 'Cinzel', serif; font-size: clamp(1.2rem, 3vw, 1.7rem);
+      color: var(--bronce-claro); margin-top: 8px;
+    }
+    .hero-text .autora { margin-top: 18px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 24px; font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 2.2vw, 1.3rem); color: var(--ceniza); max-width: 36ch; line-height: 1.5;
+      font-style: italic;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(36, 24, 12, .6);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--fuego); box-shadow: 0 0 0 4px rgba(212, 84, 42, .2); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Cinzel', serif; font-size: 1.15rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--bronce);
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Cinzel', serif;
+      font-size: 1.3rem; color: var(--bronce-claro); text-align: center;
+    }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ INVOCACIÓN (poema/sinopsis épica) ============ */
+    .invocacion-box {
+      max-width: 620px; margin: 0 auto; padding: 48px 40px; text-align: center;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      box-shadow: var(--sombra); position: relative;
+    }
+    .invocacion-box::before {
+      content: '\2694'; position: absolute; top: 18px; left: 24px;
+      font-size: 2.5rem; color: var(--bronce); opacity: .25; line-height: 1;
+    }
+    .invocacion-box .versos {
+      font-family: 'Cinzel', serif; font-size: 1.05rem; line-height: 2;
+      color: var(--texto); white-space: pre-line;
+    }
+    .invocacion-box .versos em { color: var(--bronce-claro); font-style: normal; }
+
+    /* ============ SAGA ============ */
+    .saga-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; max-width: 760px; margin: 0 auto; }
+    .saga-libro {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      overflow: hidden; box-shadow: var(--sombra); transition: transform .25s, border-color .25s;
+      text-decoration: none; color: inherit;
+    }
+    .saga-libro:hover { transform: translateY(-5px); border-color: var(--bronce); }
+    .saga-libro .saga-port { aspect-ratio: 2/3; overflow: hidden; background: var(--noche-hondo); }
+    .saga-libro .saga-port img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .saga-libro:hover .saga-port img { transform: scale(1.03); }
+    .saga-libro .saga-info { padding: 18px 16px 22px; }
+    .saga-libro .saga-info h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--hueso); margin-bottom: 6px; line-height: 1.3; }
+    .saga-libro .saga-info .saga-num { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--fuego); margin-bottom: 8px; }
+    .saga-libro .saga-info p { font-size: .88rem; color: var(--texto-suave); }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon {
+      justify-self: center; width: 260px; height: 260px; border-radius: 50%;
+      overflow: hidden; background: var(--noche-3); display: grid; place-items: center;
+      box-shadow: var(--sombra); border: 2px solid var(--bronce);
+    }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { display: none; font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--bronce-claro); }
+    .autora-texto h3 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--fuego); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--bronce); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--bronce); color: var(--bronce-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--bronce-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--bronce); border-color: var(--bronce); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--noche); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+      .invocacion-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">La Era del Caos</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#saga">La saga</a>
+        <a href="#autor">El autor</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="Portada libro.png" alt="Portada de La Era del Caos: El Umbral de la Destrucción, de Rubén Esteban Inés"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>La Era del Caos<br>El Umbral de la Destrucción</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Fantasía épica · Trilogía</div>
+        <h1>La Era del Caos</h1>
+        <div class="subtitulo">El Umbral de la Destrucción</div>
+        <div class="autora">Rubén Esteban Inés</div>
+        <p class="tagline">Porque en tiempos de caos, solo los valientes se atreven a cambiar el destino.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Libro 2 de la trilogía · Ya disponible</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-bronce" href="https://www.amazon.es/dp/8419983845" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Descubrir más</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+
+      <div class="cuerpo reveal">
+        <p>El Viejo Mundo está sumido en la oscuridad, gobernado por el malvado brujo Lord Sharkdúsh y sus temibles aliados, pero hay una esperanza: un hijo de la magia, un gelfling, ha sido elegido para enfrentarlos.</p>
+        <p>Nuestro valiente protagonista se someterá a un entrenamiento intenso preparándose para la batalla definitiva contra las fuerzas del mal. Junto a sus leales amigos vivirá aventuras increíbles en su misión de restaurar la esperanza, la ilusión y la libertad en el mundo.</p>
+        <p class="suelta">A medida que se adentran en la oscuridad, descubrirán secretos ancestrales y encontrarán nuevos e inesperados aliados en su lucha contra el malvado brujo. La tensión irá en aumento a medida que se acercan a la gran batalla final.</p>
+        <p class="cierre">¡Únete a ellos y cambia el destino! ¿Te aventuras?</p>
+      </div>
+
+      <div class="invocacion-box reveal">
+        <div class="versos">A ti, viajero del caos,
+que has abierto este umbral sin temor.
+
+Que los vientos del Viejo Mundo te acompañen
+mientras avanzas entre sombras,
+donde el brujo Lord Sharkdúsh extiende su reinado de oscuridad
+y las razas antiguas —elfos, enanos y humanos—
+unen su último aliento en la eterna Resistencia.
+
+Que tus pasos sigan la senda de los cinco guardianes:
+<em>Célebros, Nanan Push, Enzo, Dolmed y Freedon,</em>
+y que el vuelo de Zufra te recuerde que incluso en la noche más profunda
+existe un punto de luz que no puede ser apagado.
+
+Porque en tiempos de caos,
+<em>solo los valientes se atreven a cambiar el destino.</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA SAGA ============ -->
+  <section id="saga">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>trilogía</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Tres libros. Un mundo. Una guerra por la luz. La familia De la Sangre contra la oscuridad de Lord Sharkdúsh.</p>
+      </div>
+      <div class="saga-grid">
+        <a class="saga-libro reveal" href="https://www.amazon.es/dp/B0CKNXYR8L" target="_blank" rel="noopener">
+          <div class="saga-port"><img src="hola.jpg" alt="Portada de La Era del Caos: La Última Ilusión" loading="lazy" /></div>
+          <div class="saga-info">
+            <div class="saga-num">Libro 1 · 2021</div>
+            <h3>La Última Ilusión</h3>
+            <p>Cinco miembros de la Resistencia buscan al Elegido que traerá la paz al Viejo Mundo.</p>
+          </div>
+        </a>
+        <a class="saga-libro reveal" href="https://www.amazon.es/dp/8419983845" target="_blank" rel="noopener">
+          <div class="saga-port"><img src="Portada libro.png" alt="Portada de La Era del Caos: El Umbral de la Destrucción" loading="lazy" /></div>
+          <div class="saga-info">
+            <div class="saga-num">Libro 2 · 2025</div>
+            <h3>El Umbral de la Destrucción</h3>
+            <p>El Elegido se entrena para la batalla definitiva contra las fuerzas del mal.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOR ============ -->
+  <section id="autor" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre el <span>autor</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="esteban.jpg" alt="Rubén Esteban Inés" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">R</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Rubén Esteban Inés</h3>
+          <div class="rol">Autor de La Era del Caos</div>
+
+          <p>Un joven soñador de 41 años, que tras incontables partidas en la Super Nintendo, más de doscientos libros devorados y más de sesenta aventuras de rol vividas, decidió dar un salto hacia lo imposible: crear su propio mundo y su propia saga.</p>
+          <p>Inspirado por su mayor maestro, J.R.R. Tolkien —cuya obra <em>El Hobbit</em> lo marcó desde temprana edad—, Rubén emprendió el camino de la fantasía épica. Desde entonces ha dedicado su vida a escribir su trilogía <em>La Era del Caos</em>, una epopeya nacida de la disciplina, la imaginación y una pasión inquebrantable.</p>
+          <p>Con cada página, Rubén busca atrapar al lector y transportarlo a un universo único, forjado con la misma devoción con la que un artesano da forma a su obra más preciada.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Seguirle en redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>La Era del Caos: El Umbral de la Destrucción</em> está disponible en Amazon.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Tapa blanda</h3>
+          <p>El segundo libro de la trilogía. La batalla definitiva se acerca al Viejo Mundo.</p>
+          <a class="btn btn-bronce" href="https://www.amazon.es/dp/8419983845" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">El Umbral de la Destrucción</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📕</div>
+          <h3>Libro 1: La Última Ilusión</h3>
+          <p>Si aún no conoces el Viejo Mundo, empieza por el principio de la aventura.</p>
+          <a class="btn btn-ghost" href="https://www.amazon.es/dp/B0CKNXYR8L" target="_blank" rel="noopener">Ver en Amazon</a>
+          <span class="extra">Donde todo comienza</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Rubén</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Comparte su mundo, sus avances y la llegada del tercer libro. Pásate a saludarle.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/la_era_del_caos" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @la_era_del_caos
+        </a>
+        <a class="red" href="https://www.facebook.com/profile.php?id=100083453772498" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook · La Era del Caos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Rubén Esteban Inés · <em>La Era del Caos: El Umbral de la Destrucción</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
