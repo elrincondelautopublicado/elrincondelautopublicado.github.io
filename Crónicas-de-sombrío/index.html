@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Crónicas de Sombrío — J.L. Campillo | Fantasía oscura</title>
+  <meta name="description" content="Crónicas de Sombrío, de J.L. Campillo. En la nación de Albor, un niño llamado Olffer de la Sangre presencia el asesinato de su padre. Un viaje que lo llevará a conocer la verdad sobre aquella noche. Fantasía oscura (grimdark)." />
+  <meta name="author" content="J.L. Campillo" />
+  <meta name="keywords" content="Crónicas de Sombrío, J.L. Campillo, fantasía oscura, grimdark, Olffer de la Sangre, Sombrío, saga, autopublicado" />
+  <meta property="og:title" content="Crónicas de Sombrío — J.L. Campillo" />
+  <meta property="og:description" content="Permitidme que os hable de Sombrío: donde las mesas se llaman tablas, las semanas duran diez jornadas y las vidas en edades." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="3-CRÓNICAS DE SOMBRÍO PORTADA.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="3-CRÓNICAS DE SOMBRÍO PORTADA.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Cpath d='M32 10l4 14h14l-11 8 4 14-11-8-11 8 4-14-11-8h14z' fill='%23708090'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: fantasía oscura / grimdark.
+       Negros profundos, grises acero, y toques de un verde frío
+       como la niebla de un bosque siniestro. ============ */
+    :root {
+      --noche: #0d1117;       /* fondo principal */
+      --noche-2: #131920;     /* secciones alternas */
+      --noche-3: #1c2530;     /* cajas */
+      --noche-hondo: #080b0f;
+      --acero: #708090;       /* acento principal */
+      --acero-claro: #a8b8c8;
+      --niebla: #4a6741;      /* verde bosque */
+      --niebla-claro: #7a9a70;
+      --hueso: #e8e4df;
+      --texto: #c8cdd3;
+      --texto-suave: #8a939e;
+      --linea: rgba(112, 128, 144, .22);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--texto);
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--acero); color: var(--noche-hondo); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(13, 17, 23, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--hueso); letter-spacing: .06em; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--acero-claro); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--acero); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 3px; text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-acero { background: linear-gradient(135deg, var(--acero), #566370); color: #fff; box-shadow: 0 12px 28px rgba(112, 128, 144, .25); }
+    .btn-acero:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(112, 128, 144, .35); }
+    .btn-ghost { background: transparent; color: var(--acero-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--acero); color: var(--acero); transform: translateY(-2px); }
+    .btn-bosque { background: var(--niebla); color: #fff; }
+    .btn-bosque:hover { background: var(--niebla-claro); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Cinzel', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.3rem); color: var(--hueso); line-height: 1.12;
+    }
+    .section-title span { color: var(--acero-claro); }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--acero), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--acero), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--niebla-claro); }
+
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 68px 0 94px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(74, 103, 65, .1), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 62px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.2deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
+      color: var(--acero-claro); font-family: 'Cinzel', serif; font-size: 2rem;
+    }
+    .hero-text h1 {
+      font-family: 'Cinzel', serif; font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.05;
+      color: var(--hueso); margin-top: 12px;
+    }
+    .hero-text .autora { margin-top: 18px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 24px; font-family: 'Cinzel', serif;
+      font-size: clamp(1.1rem, 2.4vw, 1.5rem); color: var(--acero-claro); max-width: 34ch; line-height: 1.4;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(28, 37, 48, .6);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--niebla); box-shadow: 0 0 0 4px rgba(74, 103, 65, .22); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--niebla);
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Cinzel', serif;
+      font-size: 1.3rem; color: var(--acero-claro); text-align: center;
+    }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ SAGA (los tres libros) ============ */
+    .saga-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; max-width: 900px; margin: 0 auto; }
+    .saga-libro {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      overflow: hidden; box-shadow: var(--sombra); transition: transform .25s, border-color .25s;
+      text-decoration: none; color: inherit;
+    }
+    .saga-libro:hover { transform: translateY(-5px); border-color: var(--acero); }
+    .saga-libro .saga-port { aspect-ratio: 2/3; overflow: hidden; background: var(--noche-hondo); }
+    .saga-libro .saga-port img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .saga-libro:hover .saga-port img { transform: scale(1.03); }
+    .saga-libro .saga-info { padding: 18px 16px 22px; }
+    .saga-libro .saga-info h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--hueso); margin-bottom: 6px; line-height: 1.3; }
+    .saga-libro .saga-info .saga-num { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--niebla-claro); margin-bottom: 8px; }
+    .saga-libro .saga-info p { font-size: .88rem; color: var(--texto-suave); }
+
+    /* ============ CITA ============ */
+    .cita-box {
+      max-width: 650px; margin: 58px auto 0; padding: 38px 34px; text-align: center;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      box-shadow: var(--sombra); position: relative;
+    }
+    .cita-box::before {
+      content: '\201C'; position: absolute; top: 10px; left: 20px;
+      font-family: 'Cinzel', serif; font-size: 5rem; color: var(--acero);
+      opacity: .2; line-height: 1;
+    }
+    .cita-box .cita {
+      font-family: 'Cinzel', serif; font-size: 1.1rem; line-height: 1.7;
+      color: var(--texto); font-style: italic;
+    }
+    .cita-box .cita-autor { margin-top: 16px; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon {
+      justify-self: center; width: 260px; height: 260px; border-radius: 50%;
+      overflow: hidden; background: var(--noche-3); display: grid; place-items: center;
+      box-shadow: var(--sombra); border: 2px solid var(--acero);
+    }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { display: none; font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--acero-claro); }
+    .autora-texto h3 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--niebla-claro); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--acero); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--acero); color: var(--acero-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--acero-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--acero); border-color: var(--acero); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--noche); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Crónicas de Sombrío</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#historia">La historia</a>
+        <a href="#saga">La saga</a>
+        <a href="#autor">El autor</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="3-CRÓNICAS DE SOMBRÍO PORTADA.jpg" alt="Portada de Crónicas de Sombrío, de J.L. Campillo"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>Crónicas de<br>Sombrío</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Fantasía oscura · Grimdark</div>
+        <h1>Crónicas de Sombrío</h1>
+        <div class="autora">J.L. Campillo</div>
+        <p class="tagline">Permitidme que os hable de Sombrío: donde las mesas se llaman tablas, las semanas duran diez jornadas y las vidas en edades.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Saga en curso · 3 libros publicados</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-acero" href="https://amzn.eu/d/0i9FxQ6h" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#historia">Descubrir Sombrío</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ LA HISTORIA ============ -->
+  <section id="historia" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+
+      <div class="cuerpo reveal">
+        <p>En la nación de Albor, un niño llamado Olffer de la Sangre está presente la noche en que su padre es asesinado; aunque una misteriosa anciana hace que él olvide en parte aquel doloroso recuerdo.</p>
+        <p>Tiempo más tarde, convertido en un atractivo joven, duda qué hacer con su vida: quedarse a vivir en Gozoso junto a su familia, o aceptar la oferta de su mejor amigo y viajar al oeste, a la ciudad de Pugna, en la que se construyen enormes barcos con los que conquistar las desconocidas tierras de Ignoto.</p>
+        <p class="suelta">Pero la desaparición de su hermana lo empujará a emprender un viaje muy distinto, en el que conocerá parte de ese terrible y hambriento mundo donde transcurrían las historias que le contaba la abuela Imgremm cuando él era niño.</p>
+        <p class="cierre">Un viaje que lo llevará a conocer la verdad sobre lo que pasó aquella noche en que su padre fuera asesinado.</p>
+      </div>
+
+      <div class="cita-box reveal">
+        <div class="cita">"Pero sabe que debe ser fuerte o, de lo contrario, el mundo se abocará una vez más, esta vez quizá de modo definitivo, a un terrible final y que la oscuridad volverá a gobernar."</div>
+        <div class="cita-autor">Crónicas de Sombrío</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA SAGA ============ -->
+  <section id="saga">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>saga</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Una pentalogía de fantasía oscura. Tres libros publicados, dos por llegar. La familia De la Sangre frente a un mundo terrible y hambriento.</p>
+      </div>
+      <div class="saga-grid">
+        <a class="saga-libro reveal" href="https://amzn.eu/d/0i9FxQ6h" target="_blank" rel="noopener">
+          <div class="saga-port"><img src="3-CRÓNICAS DE SOMBRÍO PORTADA.jpg" alt="Portada de Crónicas de Sombrío" loading="lazy" /></div>
+          <div class="saga-info">
+            <div class="saga-num">Libro 1 · 2021</div>
+            <h3>Crónicas de Sombrío</h3>
+            <p>El inicio de todo. La noche del asesinato y el viaje de Olffer hacia la verdad.</p>
+          </div>
+        </a>
+        <a class="saga-libro reveal" href="https://amzn.eu/d/07xSr3ax" target="_blank" rel="noopener">
+          <div class="saga-port"><img src="4- portada Los consejos del Párroco.jpg" alt="Portada de Los consejos del Párroco" loading="lazy" /></div>
+          <div class="saga-info">
+            <div class="saga-num">Libro 2 · 2023</div>
+            <h3>Los consejos del Párroco</h3>
+            <p>La primera continuación. Los De la Sangre se adentran más en la oscuridad de Sombrío.</p>
+          </div>
+        </a>
+        <a class="saga-libro reveal" href="https://amzn.eu/d/0f4xjxSl" target="_blank" rel="noopener">
+          <div class="saga-port"><img src="5-La niña que nunca tiene miedo portada.jpg" alt="Portada de La niña que nunca tiene miedo" loading="lazy" /></div>
+          <div class="saga-info">
+            <div class="saga-num">Libro 3 · 2025</div>
+            <h3>La niña que nunca tiene miedo</h3>
+            <p>El cierre de círculo. La historia que dio origen a Sombrío.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOR ============ -->
+  <section id="autor" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre el <span>autor</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="foto j.l Campillo.jpg" alt="J.L. Campillo" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">J</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>J.L. Campillo</h3>
+          <div class="rol">Autor de Crónicas de Sombrío</div>
+
+          <p>Javier López Campillo nació en Madrid en 1972. Escritor desde niño y director de cine por vocación (estudió en Séptima Ars en 1995), ha compaginado su pasión por contar historias con la vida real y el trabajo.</p>
+          <p>Tras publicar <em>El animal dormido</em> (2008), un thriller oscuro ambientado en Madrid, y <em>Malaventurados</em> (2014), una coral sobre la culpa y la venganza, decidió crear su propio mundo para la saga que su mujer Carmen —su editora y cómplice— siempre quiso leer: fantasía oscura.</p>
+          <p>Así nació Sombrío. Años de construcción minuciosa para un mundo con sus propias reglas, medidas, jornadas y edades. El resultado es una pentalogía grimdark protagonizada por la familia De la Sangre, donde quien la hace la paga y la oscuridad siempre acecha.</p>
+          <p>Junto a Carmen y al diseñador Sergio Guivernau (portadas), publica de forma independiente, cuidando cada detalle sin rendir cuentas a nadie más que a los lectores.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Seguirle en redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Crónicas de Sombrío</em> está disponible en Amazon en tapa blanda y ebook.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Tapa blanda</h3>
+          <p>El libro completo en papel. Sumérgete en Sombrío con el libro entre las manos.</p>
+          <a class="btn btn-acero" href="https://amzn.eu/d/0i9FxQ6h" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">Crónicas de Sombrío · Libro 1</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📱</div>
+          <h3>Ebook</h3>
+          <p>La versión digital para leer en Kindle o cualquier dispositivo.</p>
+          <a class="btn btn-ghost" href="https://amzn.eu/d/0iFSXl8V" target="_blank" rel="noopener">Versión Kindle</a>
+          <span class="extra">Formato digital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>J.L. Campillo</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Cuenta cómo avanza Sombrío y lo que viene después. Pásate a saludarle.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/j.l.campillo.escritor/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @j.l.campillo.escritor
+        </a>
+        <a class="red" href="https://www.facebook.com/J.L.Campillo.escritor" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a class="red" href="https://x.com/JLopezCampillo" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X · @JLopezCampillo
+        </a>
+        <a class="red" href="https://www.amazon.es/stores/J.L.-Campillo/author/B09D5QMY2H" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.045 18.02c.072-.116.187-.124.348-.024 2.104 1.454 4.4 2.18 6.887 2.18 3.04 0 5.777-1.14 8.212-3.42.162-.147.298-.1.406.14.084.2.012.328-.214.49-2.46 2.02-5.3 3.03-8.514 3.03-2.727 0-5.236-.7-7.524-2.1-.162-.1-.212-.2-.148-.3h-.005zm20.97-2.96c-.197-.262-.498-.396-.9-.4-.81 0-1.464.404-1.963 1.21-.162.273-.142.4.06.39.7-.05 1.276-.076 1.728-.076.6 0 .89.16.87.48-.02.187-.116.47-.29.85-.173.386-.1.476.213.274.626-.41.996-.98 1.11-1.71.076-.5-.07-.82-.44-1.017h-.006z"/><path d="M12.258 14.14c-1.86 0-3.29-.48-4.29-1.44-1-1.02-1.5-2.3-1.5-3.84 0-1.74.57-3.18 1.71-4.32 1.14-1.14 2.69-1.71 4.65-1.71 1.62 0 2.92.45 3.9 1.35.98.9 1.47 2.05 1.47 3.45 0 1.74-.54 3.15-1.62 4.23-1.08 1.08-2.53 1.62-4.35 1.62l.03.66zm.36-9.78c-1.14 0-2.07.48-2.79 1.44-.72.96-1.08 2.16-1.08 3.6 0 1.32.33 2.37.99 3.15.66.78 1.47 1.17 2.43 1.17 1.14 0 2.05-.45 2.73-1.35.68-.9 1.02-2.1 1.02-3.6 0-1.44-.33-2.55-.99-3.33-.66-.72-1.41-1.08-2.25-1.08h-.06z"/></svg>
+          Amazon · Página de autor
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> J.L. Campillo · <em>Crónicas de Sombrío</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
