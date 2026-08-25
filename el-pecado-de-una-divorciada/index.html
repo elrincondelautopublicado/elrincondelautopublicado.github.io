@@ -122,7 +122,7 @@
       transform: rotate(-1.2deg); transition: transform .4s;
     }
     .cover-frame:hover { transform: rotate(0) translateY(-6px); }
-    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-frame img { display: block; width: 100%; height: auto; aspect-ratio: 2/3; object-fit: cover; object-position: center; }
     .cover-fallback {
       display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
       color: var(--pecado-claro); font-family: 'Playfair Display', serif; font-size: 2rem;
