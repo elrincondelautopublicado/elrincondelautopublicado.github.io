@@ -120,9 +120,10 @@
       position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
       box-shadow: var(--sombra); border: 1px solid var(--linea);
       transform: rotate(-1.2deg); transition: transform .4s;
+      aspect-ratio: 2/3;
     }
     .cover-frame:hover { transform: rotate(0) translateY(-6px); }
-    .cover-frame img { display: block; width: 100%; height: auto; aspect-ratio: 2/3; object-fit: cover; object-position: center; }
+    .cover-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
     .cover-fallback {
       display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
       color: var(--pecado-claro); font-family: 'Playfair Display', serif; font-size: 2rem;
