@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>El Pecado de una Divorciada — Anastasia White | Erótica · Autoficción</title>
+  <meta name="description" content="El Pecado de una Divorciada. Después de treinta años de matrimonio, una mujer firma su divorcio y decide recuperar su deseo. Una historia de libertad, contradicciones y autoconocimiento contada sin filtros." />
+  <meta name="author" content="Anastasia White" />
+  <meta name="keywords" content="El Pecado de una Divorciada, Anastasia White, erótica, autoficción, divorcio, deseo, libertad sexual, autopublicado" />
+  <meta property="og:title" content="El Pecado de una Divorciada — Anastasia White" />
+  <meta property="og:description" content="Después de treinta años de matrimonio, una mujer firma su divorcio y decide recuperar su deseo. Nunca es tarde para volver a arder." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="unnamed.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="unnamed.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c0a0a'/%3E%3Cpath d='M32 16c-6 0-10 4-10 9 0 7 10 18 10 18s10-11 10-18c0-5-4-9-10-9zm0 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8z' fill='%23b8364f'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: rojo pecado, negro profundo, piel.
+       Sensual, directa, sin disculpas. Como el libro. ============ */
+    :root {
+      --noche: #1c0a0a;       /* fondo principal */
+      --noche-2: #261010;     /* secciones alternas */
+      --noche-3: #331818;     /* cajas */
+      --noche-hondo: #0e0404;
+      --pecado: #b8364f;      /* acento principal — rojo intenso */
+      --pecado-claro: #e06b80;
+      --piel: #d4a88c;        /* tono cálido piel */
+      --oro: #c8a870;         /* dorado discreto */
+      --hueso: #f5ede8;
+      --texto: #d8cec8;
+      --texto-suave: #a0908a;
+      --linea: rgba(184, 54, 79, .2);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--texto);
+      font-family: 'Work Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--pecado); color: var(--hueso); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(28, 10, 10, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hueso); letter-spacing: .02em; font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--pecado-claro); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--pecado); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 3px; text-decoration: none;
+      font-family: 'Work Sans', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-pecado { background: linear-gradient(135deg, var(--pecado), #922a3e); color: #fff; box-shadow: 0 12px 28px rgba(184, 54, 79, .3); }
+    .btn-pecado:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(184, 54, 79, .4); }
+    .btn-ghost { background: transparent; color: var(--pecado-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--pecado); color: var(--pecado); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Playfair Display', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.3rem); color: var(--hueso); line-height: 1.12;
+    }
+    .section-title span { color: var(--pecado-claro); }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--pecado), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--pecado), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--piel); }
+
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 68px 0 94px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(184, 54, 79, .08), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 62px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.2deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
+      color: var(--pecado-claro); font-family: 'Playfair Display', serif; font-size: 2rem;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.05;
+      color: var(--hueso); margin-top: 12px; font-style: italic;
+    }
+    .hero-text .autora { margin-top: 18px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 24px; font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--piel); max-width: 32ch; line-height: 1.5;
+      font-style: italic;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(51, 24, 24, .6);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--pecado); box-shadow: 0 0 0 4px rgba(184, 54, 79, .2); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--pecado);
+      font-style: italic;
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--pecado-claro); text-align: center; font-style: italic;
+    }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ EXTRACTO ============ */
+    .extracto-box {
+      max-width: 680px; margin: 0 auto; padding: 48px 40px; text-align: left;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      box-shadow: var(--sombra); position: relative;
+    }
+    .extracto-box::before {
+      content: '\201C'; position: absolute; top: 14px; left: 24px;
+      font-family: 'Playfair Display', serif; font-size: 5rem; color: var(--pecado);
+      opacity: .2; line-height: 1;
+    }
+    .extracto-box h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--hueso);
+      margin-bottom: 24px; font-style: italic; text-align: center;
+    }
+    .extracto-box p {
+      font-size: 1rem; line-height: 1.9; margin-bottom: 18px; color: var(--texto);
+    }
+    .extracto-box p em { color: var(--pecado-claro); font-style: normal; }
+    .extracto-box p.destacada {
+      font-family: 'Playfair Display', serif; font-size: 1.15rem;
+      color: var(--hueso); font-style: italic; border-left: 2px solid var(--pecado);
+      padding-left: 18px; margin: 28px 0;
+    }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--pecado); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--pecado); color: var(--pecado-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--pecado-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--pecado); border-color: var(--pecado); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--noche); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+      .extracto-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">El Pecado de una Divorciada</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#extracto">Leer un poco</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="unnamed.png" alt="Portada de El Pecado de una Divorciada, de Anastasia White"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>El Pecado de<br>una Divorciada</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Erótica · Autoficción</div>
+        <h1>El Pecado de una Divorciada</h1>
+        <div class="autora">Anastasia White</div>
+        <p class="tagline">Nunca es tarde para volver a arder.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible en Amazon</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-pecado" href="https://amzn.eu/d/0h79IeoT" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Descubrir más</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+
+      <div class="cuerpo reveal">
+        <p>Después de treinta años de matrimonio, una mujer firma su divorcio y decide explorar una parte de sí misma que durante años había permanecido en segundo plano: el deseo.</p>
+        <p>Llegan nuevas experiencias, nuevos hombres, encuentros inesperados y una libertad que hasta entonces no se había permitido. Pero entre todas esas historias hay un hombre que termina convirtiéndose en el verdadero protagonista de su aventura.</p>
+        <p class="suelta">Él es El Pecado. Una relación difícil de definir, sin etiquetas ni reglas. Un hombre que aparece y desaparece, que la atrae, la provoca, la desconcierta y consigue mantenerla enganchada a una historia que parece no tener principio ni final.</p>
+        <p>Mientras intenta entender qué es exactamente lo que los une, ella continúa descubriendo el sexo, el deseo y distintas formas de relacionarse. Su conflicto no está en atreverse a desear, sino en comprender por qué hay alguien capaz de despertar algo que no consigues apagar.</p>
+        <p class="cierre">Una historia de deseo, libertad, contradicciones y autoconocimiento, contada con naturalidad, ironía y sin demasiados filtros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTRACTO ============ -->
+  <section id="extracto">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Un <span>fragmento</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">De la introducción. Lo que hay dentro del libro.</p>
+      </div>
+
+      <div class="extracto-box reveal">
+        <h3>Introducción</h3>
+        <p>Decidí escribir esto con la misma sinceridad con la que abrí la cama: sin florituras, sin pedir permiso. La educación sentimental se nos da empalagosa; la educación sexual, con manuales para otras. Yo tuve que inventarme mi propia gramática a destiempo. Descubrí que el deseo no caduca, que la líbido tiene memoria de acero y que la culpa es el sujetador más incómodo.</p>
+        <p class="destacada">Después de treinta años de matrimonio, un día firmé un papel. Un divorcio. Lloré y celebré. Simplemente, respiré. Como si por fin alguien me hubiera quitado la faja emocional de los últimos veinte años.</p>
+        <p>Y juré tres cosas: dormir sin culpas, reírme con la boca llena, y recuperar la piel. A mi edad, el reloj deja de ser enemigo y se vuelve cómplice: cada minuto que te niegas, no vuelve.</p>
+        <p>Parecía una tragedia, pero no lo fue. Fue una puerta abierta. Y detrás de esa puerta me esperaba algo que llevaba décadas dormido, mi deseo. <em>Y tenía hambre.</em></p>
+        <p>Me lancé al vacío sin arnés. Sin manual. Solo con mis ganas, mis bragas de encaje olvidadas en el cajón y una certeza: quería vivir la vida que no me había permitido, con lucidez, el descaro y la libertad de mis cincuenta y muchos.</p>
+        <p class="destacada">No quería amor. Quería sofás, coches, baños de bares, y pasillos con las luces apagadas. Quería follar y escribir sobre ello. Reírme después. O llorar. Pero siempre decidir yo.</p>
+        <p>Y eso hice. Y lo volvería a hacer.</p>
+        <p>Pero claro, siempre hay un giro. Y justo cuando parecía que tenía las riendas de mi deseo, apareció él. El que no era como los demás. El que me desarmó con una mirada sucia y voz de mando. El que volvía y desaparecía como un puto eclipse, dejándome a oscuras. <em>El que no follaba: poseía.</em></p>
+        <p>Y ahí, en medio de mi libertad recién estrenada, empezó la historia que no he podido cerrar. La historia de El Pecado o El Monarca.</p>
+        <p style="text-align:center;font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--pecado-claro);margin-top:28px;"><em>Bienvenidos.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>El Pecado de una Divorciada</em> está disponible en Amazon.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Comprar en Amazon</h3>
+          <p>La crónica sin filtros de una mujer que decide recuperar su deseo y vivir sin pedir permiso.</p>
+          <a class="btn btn-pecado" href="https://amzn.eu/d/0h79IeoT" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">El Pecado de una Divorciada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Anastasia</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Donde sigue contando sin filtros. Pásate a saludarla.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/anastasiawhite.official" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @anastasiawhite.official
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Anastasia White · <em>El Pecado de una Divorciada</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
