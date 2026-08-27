@@ -111,11 +111,12 @@
 
     /* ============ RECOMENDACIÓN DE LA CASA ============ */
     .recomendacion { background: var(--papel-2); padding: 84px 0; border-top: 1px solid rgba(120,90,60,.15); border-bottom: 1px solid rgba(120,90,60,.15); }
-    .rec-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--teja); text-align: center; display: block; margin-bottom: 4px; transform: rotate(-1deg); }
-    .rec-titulo { text-align: center; font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 44px; }
-    .rec-grid { display: grid; grid-template-columns: 260px 1fr; gap: 46px; align-items: center; max-width: 860px; margin: 0 auto; }
+    .rec-dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1080px; margin: 0 auto; align-items: start; }
+    .rec-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--teja); display: block; margin-bottom: 4px; transform: rotate(-1deg); }
+    .rec-titulo { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 30px; }
+    .rec-grid { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; }
     .rec-portada { position: relative; }
-    .rec-portada a { display: block; transform: rotate(-2deg); transition: transform .4s ease; box-shadow: 0 22px 50px rgba(42,31,24,.35); }
+    .rec-portada a { display: block; transform: rotate(-2deg); transition: transform .4s ease; box-shadow: 0 16px 40px rgba(42,31,24,.3); }
     .rec-portada a:hover { transform: rotate(0deg) translateY(-4px); }
     .rec-portada img { display: block; width: 100%; border-radius: 2px; }
     /* etiqueta de precio colgando con cordel */
@@ -125,6 +126,18 @@
     .rec-texto .autor { font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--sage); margin-bottom: 14px; }
     .rec-texto p { color: var(--tinta); margin-bottom: 18px; }
     .rec-texto .comilla { border-left: 3px solid var(--ocre); padding-left: 16px; font-style: italic; color: var(--tinta-suave); }
+
+    /* ============ EL RINCÓN DE LAS LETRAS ============ */
+    .letras-col { border-left: 1px solid rgba(120,90,60,.15); padding-left: 40px; }
+    .letras-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--teja); display: block; margin-bottom: 4px; transform: rotate(-1deg); }
+    .letras-titulo { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 24px; }
+    .letras-articulo { background: #fffaf0; padding: 28px 26px; border-radius: 4px; box-shadow: 0 8px 24px rgba(42,31,24,.12); border: 1px solid rgba(120,90,60,.1); }
+    .letras-articulo .articulo-cat { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--teja); margin-bottom: 8px; }
+    .letras-articulo h4 { font-family: 'Bitter', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--tinta); }
+    .letras-articulo .extracto { font-size: .95rem; color: var(--tinta-suave); line-height: 1.7; margin-bottom: 18px; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+    .letras-articulo .leer-mas { font-family: 'Bitter', serif; font-size: .9rem; color: var(--teja); text-decoration: none; border-bottom: 2px solid var(--ocre); padding-bottom: 2px; transition: color .2s; }
+    .letras-articulo .leer-mas:hover { color: var(--teja-honda); }
+    .letras-articulo .articulo-fecha { display: block; margin-top: 14px; font-size: .78rem; color: var(--tinta-suave); }
 
     /* ============ LA MESA (más libros) ============ */
     .mesa { padding: 84px 0; background: var(--nogal); }
@@ -192,8 +205,10 @@
     @media (max-width: 800px) {
       .escaparate .wrap { grid-template-columns: 1fr; gap: 46px; }
       .nota { max-width: 380px; }
-      .rec-grid { grid-template-columns: 1fr; gap: 34px; justify-items: center; text-align: center; }
-      .rec-portada { max-width: 240px; }
+      .rec-dos-columnas { grid-template-columns: 1fr; gap: 50px; }
+      .letras-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(120,90,60,.15); padding-top: 40px; }
+      .rec-grid { grid-template-columns: 1fr; gap: 24px; justify-items: center; text-align: center; }
+      .rec-portada { max-width: 200px; }
       .rec-texto .comilla { text-align: left; }
     }
   </style>
@@ -240,26 +255,43 @@
     </div>
   </header>
 
-  <!-- ============ RECOMENDACIÓN DE LA CASA ============ -->
+  <!-- ============ RECOMENDACIÓN + RINCÓN DE LAS LETRAS ============ -->
   <section id="recomendacion" class="recomendacion">
     <div class="wrap">
-      <span class="rec-etiqueta reveal">lo que te ponemos en la mano</span>
-      <h2 class="rec-titulo slab reveal">La recomendación de la casa</h2>
-      <div class="rec-grid">
-        <div class="rec-portada reveal">
-          <a href="el-guerrero-del-dragon-de-diamante/index.html" aria-label="Abrir la página de El Guerrero del Dragón de Diamante">
-            <img src="el-guerrero-del-dragon-de-diamante/guerrero-portada.jpg" alt="Portada de El Guerrero del Dragón de Diamante, de Eva Contreras Cerro" loading="eager" decoding="async" />
-          </a>
-          <span class="colgante">léelo</span>
+      <div class="rec-dos-columnas">
+        <!-- COLUMNA IZQUIERDA: Recomendación de la casa -->
+        <div class="rec-col reveal">
+          <span class="rec-etiqueta">lo que te ponemos en la mano</span>
+          <h2 class="rec-titulo slab">La recomendación de la casa</h2>
+          <div class="rec-grid">
+            <div class="rec-portada">
+              <a href="el-guerrero-del-dragon-de-diamante/index.html" aria-label="Abrir la página de El Guerrero del Dragón de Diamante">
+                <img src="el-guerrero-del-dragon-de-diamante/guerrero-portada.jpg" alt="Portada de El Guerrero del Dragón de Diamante, de Eva Contreras Cerro" loading="eager" decoding="async" />
+              </a>
+              <span class="colgante">léelo</span>
+            </div>
+            <div class="rec-texto">
+              <h3>El Guerrero del Dragón de Diamante</h3>
+              <div class="autor">de Eva Contreras Cerro (Karmatrix)</div>
+              <p>Una trilogía de fantasía épica con héroes, dragones y una oscuridad que siempre encuentra el modo de regresar.</p>
+              <p class="comilla">"De esas sagas que te atrapan desde la primera página y no te sueltan hasta el final."</p>
+              <div class="escaparate-cta">
+                <a class="btn btn-teja" href="el-guerrero-del-dragon-de-diamante/index.html">Entrar en su rincón</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="rec-texto reveal">
-          <h3>El Guerrero del Dragón de Diamante</h3>
-          <div class="autor">de Eva Contreras Cerro (Karmatrix)</div>
-          <p>Una trilogía de fantasía épica con héroes, dragones y una oscuridad que, por más que la derrotes, siempre encuentra el modo de regresar. Un mundo donde la magia tiene un precio y las lealtades se quiebran cuando menos lo esperas.</p>
-          <p class="comilla">"De esas sagas que te atrapan desde la primera página y no te sueltan hasta el final. Épica pura con personajes que se te quedan dentro."</p>
-          <div class="escaparate-cta">
-            <a class="btn btn-teja" href="el-guerrero-del-dragon-de-diamante/index.html">Entrar en su rincón</a>
-            <a class="btn btn-lapiz" href="el-guerrero-del-dragon-de-diamante/capitulo1.html">Leer las primeras páginas</a>
+
+        <!-- COLUMNA DERECHA: El rincón de las letras -->
+        <div class="letras-col reveal">
+          <span class="letras-etiqueta">lectura de la semana</span>
+          <h2 class="letras-titulo slab">El rincón de las letras</h2>
+          <div class="letras-articulo">
+            <div class="articulo-cat">Artículo</div>
+            <h4>Autopublicar no es rendirse: es elegirse</h4>
+            <p class="extracto">Hay una frase que se repite mucho en los círculos literarios: "Si tu libro fuera bueno, una editorial lo habría publicado." Es una frase cómoda. Coloca al escritor independiente en el lugar del que no pudo, del que no llegó. Pero la realidad es otra. Cada vez más autores eligen publicar solos no porque no tengan otra opción, sino porque prefieren mantener el control de su obra, sus tiempos y sus decisiones.</p>
+            <a class="leer-mas" href="rincon-de-las-letras/autopublicar-no-es-rendirse.html">Leer artículo completo →</a>
+            <span class="articulo-fecha">Semana del 25 de agosto, 2026</span>
           </div>
         </div>
       </div>
