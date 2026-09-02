@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Cuando el cuerpo baila, la mente olvida — Lau Marot | Romántica contemporánea</title>
+  <meta name="description" content="Cuando el cuerpo baila, la mente olvida, de Lau Marot. María carga con inseguridades y heridas que no ha sabido cerrar. Un viaje a Brasil, una pérdida y Tailandia: una historia sobre sanar, viajar y aprender a elegirse." />
+  <meta name="author" content="Lau Marot" />
+  <meta name="keywords" content="Cuando el cuerpo baila la mente olvida, Lau Marot, romántica contemporánea, novela romántica, autopublicado, Brasil, Tailandia, amor, autoconocimiento" />
+  <meta property="og:title" content="Cuando el cuerpo baila, la mente olvida — Lau Marot" />
+  <meta property="og:description" content="Una novela que recuerda que, cuando el cuerpo baila, la mente olvida… y el alma vuelve a respirar." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="Portada.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="Portada.jpeg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c2714f'/%3E%3Cpath d='M32 20c0 0-12 8-12 18a12 12 0 0 0 24 0c0-10-12-18-12-18z' fill='%23f9e4c8'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: atardecer en la playa.
+       Tonos cálidos de arena, coral, naranja suave y cielo rosado.
+       Inspirada en la portada del libro. ============ */
+    :root {
+      --arena: #fdf6ee;         /* fondo principal */
+      --arena-2: #f7ede0;       /* secciones alternas */
+      --arena-3: #f0e0cc;       /* cajas */
+      --coral: #c2714f;         /* acento principal */
+      --coral-claro: #e09070;   /* coral más suave */
+      --dorado: #d4956a;        /* dorado arena */
+      --cielo: #7baec8;         /* azul cielo suave */
+      --tinta: #3a2a1e;         /* texto oscuro */
+      --tinta-suave: #7a6050;
+      --linea: rgba(194, 113, 79, .2);
+      --sombra: 0 16px 48px rgba(58, 42, 30, .15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--arena);
+      color: var(--tinta);
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--coral); color: #fff; }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(253, 246, 238, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--tinta); letter-spacing: .02em; font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--tinta-suave); text-decoration: none; font-size: .84rem; letter-spacing: .04em; transition: color .2s; }
+    nav a:hover, nav a:focus-visible { color: var(--coral); }
+    nav a.home { color: var(--tinta); font-weight: 500; }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--coral); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 30px; text-decoration: none;
+      font-family: 'Nunito', sans-serif; font-size: .84rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+    .btn-coral { background: var(--coral); color: #fff; box-shadow: 0 10px 24px rgba(194,113,79,.3); }
+    .btn-coral:hover { background: #ae6040; transform: translateY(-2px); box-shadow: 0 16px 32px rgba(194,113,79,.4); }
+    .btn-ghost { background: transparent; color: var(--coral); border: 1.5px solid var(--coral); }
+    .btn-ghost:hover { background: var(--coral); color: #fff; transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Playfair Display', serif; font-weight: 500;
+      font-size: clamp(2rem, 5vw, 3.1rem); color: var(--tinta); line-height: 1.15;
+    }
+    .section-title span { color: var(--coral); }
+    .rule { width: 60px; height: 2px; background: var(--coral); border-radius: 2px; margin: 18px 0 32px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--coral); }
+
+    section { padding: 90px 0; }
+    .alt { background: var(--arena-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 70px 0 90px; position: relative; overflow: hidden; background: linear-gradient(160deg, #fdf6ee 60%, #f7ede0 100%); }
+    .hero::before {
+      content: ''; position: absolute; top: -100px; right: -200px;
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,149,106,.15), transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 70px; align-items: center; position: relative; }
+    .cover-frame {
+      border-radius: 12px; overflow: hidden; background: var(--arena-3);
+      box-shadow: var(--sombra); transform: rotate(-1.5deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); box-shadow: 0 28px 60px rgba(58,42,30,.22); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback { display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center; color: var(--coral); font-family: 'Playfair Display', serif; font-size: 1.6rem; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.1; color: var(--tinta); margin-top: 12px; }
+    .hero-text .autora { margin-top: 16px; font-size: .88rem; letter-spacing: .18em; text-transform: uppercase; color: var(--tinta-suave); }
+    .hero-text .tagline { margin-top: 22px; font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--coral); max-width: 36ch; line-height: 1.5; font-style: italic; }
+    .badge { display: inline-flex; align-items: center; gap: 9px; margin-top: 20px; padding: 8px 18px; border: 1.5px solid var(--linea); border-radius: 30px; background: var(--arena-3); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 20px; font-size: 1.06rem; }
+    .cuerpo p.suelta { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--tinta); padding-left: 20px; border-left: 3px solid var(--coral); font-style: italic; }
+    .cuerpo p.cierre { margin-top: 36px; font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--coral); text-align: center; font-style: italic; }
+    .intro { max-width: 58ch; margin: 0 auto 32px; color: var(--tinta-suave); text-align: center; }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon { justify-self: center; width: 260px; height: 260px; border-radius: 50%; overflow: hidden; background: var(--arena-3); display: grid; place-items: center; box-shadow: var(--sombra); border: 3px solid var(--coral); }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { display: none; font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--coral); }
+    .autora-texto h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--tinta); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--coral); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato { background: var(--arena); border: 1.5px solid var(--linea); border-radius: 16px; padding: 38px 30px; text-align: center; box-shadow: var(--sombra); transition: transform .25s, border-color .25s, box-shadow .25s; }
+    .formato:hover { transform: translateY(-5px); border-color: var(--coral); box-shadow: 0 20px 48px rgba(194,113,79,.2); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--tinta); margin-bottom: 12px; }
+    .formato p { color: var(--tinta-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 14px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px; background: var(--arena); border: 1.5px solid var(--linea); border-radius: 40px; color: var(--tinta); text-decoration: none; font-size: .94rem; transition: transform .2s, border-color .2s, box-shadow .2s; }
+    .red:hover { transform: translateY(-3px); border-color: var(--coral); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea); background: var(--arena-2); color: var(--tinta-suave); font-size: .9rem; }
+    footer a { color: var(--coral); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: #ae6040; border-color: var(--coral); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: var(--arena); border-bottom: 1px solid var(--linea); max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Cuando el cuerpo baila, la mente olvida</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="Portada.jpeg" alt="Portada de Cuando el cuerpo baila, la mente olvida, de Lau Marot"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">Cuando el cuerpo baila,<br>la mente olvida</div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Romántica contemporánea</div>
+        <h1>Cuando el cuerpo baila, la mente olvida</h1>
+        <div class="autora">Lau Marot</div>
+        <p class="tagline">Una novela que recuerda que, cuando el cuerpo baila, la mente olvida… y el alma vuelve a respirar.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible en Amazon</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-coral" href="https://amzn.eu/d/06ZYxBGp" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="https://www.amazon.es/dp/B0H27VJXLC" target="_blank" rel="noopener">Leer una muestra</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SINOPSIS -->
+  <section id="sinopsis" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="cuerpo reveal">
+        <p>María parece tener una vida normal, pero carga con inseguridades y heridas que no ha sabido cerrar.</p>
+        <p>Un viaje a Brasil la sacude por dentro: entre playas, libertad y la aparición de Paolo, descubre una parte de sí misma que creía perdida.</p>
+        <p>Al volver, la realidad la golpea con pérdidas, traiciones y despedidas que la rompen por completo. Paolo intenta acompañarla, pero la distancia y sus propios miedos levantan muros difíciles de derribar.</p>
+        <p class="suelta">Buscando aire, viaja a Tailandia, donde el silencio y la distancia le permiten reencontrarse, soltar lo que duele y elegir(se) con valentía.</p>
+        <p>De regreso, la vida le ofrece nuevas oportunidades, amistades que sostienen y un amor que no sabe aún qué lugar ocupará, pero que ya dejó su huella.</p>
+        <p class="cierre">Una historia sobre sanar, viajar, reconstruirse y aprender que a veces hay que romperse para renacer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTORA -->
+  <section id="autora">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="Foto de autora.jpeg" alt="Lau Marot" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">L</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Lau Marot</h3>
+          <div class="rol">Autora de Cuando el cuerpo baila, la mente olvida</div>
+          <p>Lau Marot escribe sobre el amor, la amistad y las emociones que nos atraviesan, buscando conectar con el lector a través de personajes y sentimientos cercanos.</p>
+          <p>En su escritura encuentra también un espacio para hablar de escucharse, dejarse llevar por lo que sentimos y aprender a elegirse.</p>
+          <p>En 2026 publicó su primera novela, <em>Cuando el cuerpo baila, la mente olvida</em>, una historia que invita a dejarse llevar por aquello que sentimos y, a veces, no sabemos explicar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPRA -->
+  <section id="comprar" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Cuando el cuerpo baila, la mente olvida</em> está disponible en Amazon.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Comprar en Amazon</h3>
+          <p>La novela completa. Deja que María te lleve a Brasil, a Tailandia y de vuelta a ti misma.</p>
+          <a class="btn btn-coral" href="https://amzn.eu/d/06ZYxBGp" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">Cuando el cuerpo baila, la mente olvida</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📄</div>
+          <h3>Leer una muestra</h3>
+          <p>¿Quieres saber si es tu tipo de historia? Lee las primeras páginas antes de decidir.</p>
+          <a class="btn btn-ghost" href="https://www.amazon.es/dp/B0H27VJXLC" target="_blank" rel="noopener">Ver muestra gratis</a>
+          <span class="extra">Primeras páginas en Amazon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Lau Marot · <em>Cuando el cuerpo baila, la mente olvida</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => { const willOpen = !navLinks.classList.contains('open'); navToggle.classList.toggle('open',willOpen); navLinks.classList.toggle('open',willOpen); navToggle.setAttribute('aria-expanded',String(willOpen)); navToggle.setAttribute('aria-label',willOpen?'Cerrar menú':'Abrir menú'); });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if(e.key==='Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
