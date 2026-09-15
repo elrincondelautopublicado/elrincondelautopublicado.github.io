@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Mujer busca príncipe que no destiña — Esther Williams | Comedia romántica</title>
+  <meta name="description" content="Mujer busca príncipe que no destiña, de Esther Williams. Una novela ácida, divertida y despiadadamente sincera sobre el amor en tiempos de Tinder, el ghosting y las relaciones sin manual de instrucciones." />
+  <meta name="author" content="Esther Williams" />
+  <meta name="keywords" content="Mujer busca príncipe que no destiña, Esther Williams, comedia romántica, novela romántica, humor, Tinder, autopublicado" />
+  <meta property="og:title" content="Mujer busca príncipe que no destiña — Esther Williams" />
+  <meta property="og:description" content="Tana no busca al hombre perfecto; busca uno que no destiña." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e1430'/%3E%3Cpath d='M20 30l6-8 6 8 6-8 6 8-2 12H22z' fill='%23d8b24a'/%3E%3Ccircle cx='32' cy='46' r='4' fill='%23c0392b'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: noche de ciudad + rojo pasión + dorado corona ============
+       Sacada de la portada: cielo índigo con luces, el vestido rojo de ella,
+       la corona dorada de él y las etiquetas rojas de "red flags". */
+    :root {
+      --noche: #0e1430;
+      --noche-2: #131a3d;
+      --noche-3: #1b2350;
+      --tinta: #eaecf5;
+      --tinta-suave: #b9bfd6;
+      --gris: #8a90ab;
+      --linea: rgba(216,178,74,.22);
+      --rojo: #c0392b;
+      --rojo-vivo: #e05a4c;
+      --oro: #d8b24a;
+      --oro-claro: #f0d488;
+      --sombra: 0 18px 50px rgba(0,0,0,.5);
+      --sombra-fuerte: 0 26px 70px rgba(0,0,0,.65);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--tinta-suave);
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-weight: 300;
+      font-size: 1.06rem;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    /* luces de ciudad muy sutiles al fondo */
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+      background:
+        radial-gradient(circle at 15% 85%, rgba(224,90,76,.10), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(216,178,74,.10), transparent 42%);
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    ::selection { background: var(--rojo); color: #fff; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 26px; position: relative; z-index: 1; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(14,20,48,.9); backdrop-filter: blur(11px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 26px; }
+    .brand { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--oro-claro); letter-spacing: .01em; }
+    nav .links { display: flex; align-items: center; gap: 26px; }
+    nav a { color: var(--tinta-suave); text-decoration: none; font-size: .82rem; letter-spacing: .04em; transition: color .25s; }
+    nav a:hover { color: var(--oro-claro); }
+    nav a.home { color: var(--oro); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--oro); margin: 5px 0; transition: transform .3s, opacity .3s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 40px;
+      text-decoration: none; font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .06em; text-transform: uppercase; cursor: pointer; transition: all .25s ease; }
+    .btn-primary { background: linear-gradient(135deg, #a52e22, var(--rojo)); color: #fff; box-shadow: 0 12px 28px rgba(192,57,43,.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(192,57,43,.55); }
+    .btn-ghost { background: transparent; color: var(--oro-claro); border: 1px solid var(--oro); }
+    .btn-ghost:hover { background: rgba(216,178,74,.12); transform: translateY(-2px); }
+    .btn-oro { background: linear-gradient(135deg, #b8923a, var(--oro)); color: #1a1a1a; font-weight: 600; }
+    .btn-oro:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(216,178,74,.4); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title { text-align: center; font-size: clamp(2rem, 4.5vw, 3rem); color: var(--tinta); line-height: 1.1; }
+    .section-title span { font-style: italic; color: var(--oro-claro); }
+    .rule { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--oro), transparent); margin: 18px auto 44px; }
+    .eyebrow { text-align: center; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--oro); }
+    section { padding: 92px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+    .intro { max-width: 56ch; margin: 0 auto 34px; color: var(--gris); text-align: center; }
+
+    /* ============ HERO ============ */
+    .hero { padding: 74px 0 92px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 60px; align-items: center; }
+    .cover-frame { position: relative; border-radius: 6px; overflow: hidden; box-shadow: var(--sombra-fuerte); transform: rotate(-1.4deg); transition: transform .45s; }
+    .cover-frame:hover { transform: rotate(0deg) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .hero-text .eyebrow { text-align: left; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.02; color: #fff; margin-top: 12px; }
+    .hero-text h1 em { font-style: italic; color: var(--oro-claro); }
+    .hero-text .autora { margin-top: 18px; font-size: .82rem; letter-spacing: .22em; text-transform: uppercase; color: var(--oro); }
+    .hero-text .tagline { margin-top: 22px; font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.2rem, 2.6vw, 1.6rem); color: var(--tinta); max-width: 26ch; line-height: 1.35; }
+    .badge { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; padding: 8px 18px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(255,255,255,.03);
+      font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta-suave); }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--rojo-vivo); box-shadow: 0 0 0 4px rgba(224,90,76,.18); }
+
+    /* ============ SINOPSIS ============ */
+    .sinopsis .pregunta { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.6rem, 4vw, 2.5rem);
+      line-height: 1.3; color: var(--oro-claro); max-width: 22ch; margin: 0 auto 50px; text-align: center; }
+    .cuerpo { max-width: 60ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; color: var(--tinta-suave); }
+    .cuerpo p.suelta { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; color: var(--tinta); padding-left: 20px; border-left: 3px solid var(--rojo); }
+    .cuerpo p.cierre { margin-top: 36px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--oro-claro); text-align: center; }
+
+    /* chips de temas (guiño a las etiquetas de la portada) */
+    .chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 620px; margin: 46px auto 0; }
+    .chip { font-family: 'Poppins', sans-serif; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+      padding: 9px 18px; border-radius: 40px; background: linear-gradient(135deg, #a52e22, var(--rojo)); color: #fff;
+      box-shadow: 0 6px 16px rgba(192,57,43,.35); transform: rotate(-1.5deg); }
+    .chip:nth-child(even) { transform: rotate(1.5deg); }
+
+    /* caja firmado */
+    .firma-box { max-width: 700px; margin: 60px auto 0; padding: 34px 32px; text-align: center;
+      background: var(--noche-3); border: 1px solid var(--linea); border-left: 4px solid var(--oro); border-radius: 6px; box-shadow: var(--sombra); }
+    .firma-box .firma-icono { font-size: 1.9rem; margin-bottom: 10px; }
+    .firma-box p { color: var(--tinta-suave); margin-bottom: 20px; }
+    .firma-box strong { color: var(--oro-claro); font-weight: 600; }
+
+    /* ============ PRIMERAS PÁGINAS ============ */
+    .adelanto-box { max-width: 640px; margin: 0 auto; background: var(--noche-2); border: 1px solid var(--linea);
+      border-radius: 8px; padding: 40px 38px; box-shadow: var(--sombra); }
+    .adelanto-box .cap-nombre { font-family: 'Playfair Display', serif; font-style: italic; color: var(--oro-claro); font-size: 1.35rem; text-align: center; margin-bottom: 8px; }
+    .adelanto-box .cap-sub { text-align: center; color: var(--gris); font-size: .9rem; margin-bottom: 26px; }
+    .adelanto-box p { color: var(--tinta-suave); margin-bottom: 18px; }
+    .adelanto-box .fade { -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent); }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 260px 1fr; gap: 54px; align-items: start; max-width: 940px; margin: 0 auto; }
+    .medallon { justify-self: center; width: 220px; height: 220px; border-radius: 50%; overflow: hidden; background: var(--noche-3);
+      display: grid; place-items: center; box-shadow: var(--sombra-fuerte); border: 2px solid var(--oro); }
+    .medallon .inicial { font-family: 'Playfair Display', serif; font-size: 4.2rem; color: var(--oro); }
+    .autora-texto h3 { color: #fff; font-size: clamp(1.7rem, 3.4vw, 2.2rem); }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--oro); margin: 8px 0 20px; }
+    .autora-texto p { margin-bottom: 16px; }
+
+    /* ============ COMPRA / REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 8px; }
+    .red { display: inline-flex; align-items: center; gap: 11px; padding: 13px 24px; background: rgba(255,255,255,.03);
+      border: 1px solid var(--linea); border-radius: 40px; color: var(--tinta); text-decoration: none; font-size: .9rem; transition: all .25s; }
+    .red:hover { transform: translateY(-3px); border-color: var(--oro); color: var(--oro-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 44px 0 50px; text-align: center; border-top: 1px solid var(--linea); background: var(--noche-2); color: var(--gris); font-size: .88rem; }
+    footer a { color: var(--oro-claro); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-text .eyebrow { text-align: center; }
+      .cover-frame { max-width: 280px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    }
+    @media (max-width: 800px) {
+      .nav-toggle { display: block; }
+      nav .links { position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 280px); flex-direction: column;
+        justify-content: center; gap: 28px; background: var(--noche-2); border-left: 1px solid var(--linea);
+        transform: translateX(100%); transition: transform .35s ease; }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1.05rem; }
+      section { padding: 70px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Mujer busca príncipe…</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">La historia</a>
+        <a href="#adelanto">Primeras páginas</a>
+        <a href="#autora">La autora</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de Mujer busca príncipe que no destiña, de Esther Williams: una pareja de espaldas frente a una ciudad de noche; él lleva corona y etiquetas de red flags" loading="eager" decoding="async" />
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Comedia romántica</div>
+        <h1>Mujer busca <em>príncipe</em> que no destiña</h1>
+        <div class="autora">Esther Williams</div>
+        <p class="tagline">Tana no busca al hombre perfecto; busca uno que no destiña.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Amor en tiempos de Tinder</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="#sinopsis">Leer de qué va</a>
+          <a class="btn btn-oro" href="#adelanto">Primeras páginas</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis alt">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>historia</span></h2>
+      <div class="rule reveal"></div>
+
+      <p class="pregunta reveal">Tana no busca al hombre perfecto; busca uno que no destiña.</p>
+
+      <div class="cuerpo reveal">
+        <p>Después de demasiadas citas fallidas, promesas a medias, silencios incómodos y príncipes modernos con miedo al compromiso, Tana decide enfrentarse al caos sentimental del siglo XXI: aplicaciones de citas, hombres emocionalmente no disponibles y coronas que se caen a la primera copa de vino.</p>
+        <p class="suelta"><em>Mujer busca príncipe que no destiña</em> es una novela ácida, divertida y despiadadamente sincera sobre el amor en tiempos de Tinder, el ghosting, el benching y las relaciones sin manual de instrucciones.</p>
+        <p class="cierre">Una historia para quienes siguen creyendo en el amor, pero ya no se tragan los cuentos.</p>
+      </div>
+
+      <div class="chips reveal" aria-label="Temas de la novela">
+        <span class="chip">Red flag</span>
+        <span class="chip">Ghosting</span>
+        <span class="chip">Love bombing</span>
+        <span class="chip">Gaslighting</span>
+        <span class="chip">Poliamor</span>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres tu ejemplar <strong>firmado por la autora</strong>? Escríbele por sus redes y lo habláis directamente con ella.</p>
+        <a class="btn btn-primary" href="#redes">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIMERAS PÁGINAS ============ -->
+  <section id="adelanto">
+    <div class="wrap">
+      <h2 class="section-title reveal">Primeras <span>páginas</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Un aperitivo del primer capítulo. Con una copa de vino en la mano, como debe ser.</p>
+
+      <div class="adelanto-box reveal">
+        <div class="cap-nombre">El bufet libre</div>
+        <div class="cap-sub">(O cómo el poliamor puede pillarte desprevenida con una copa en la mano)</div>
+        <p>Admito que «poliamor» me parecía una palabra vacía y poco atractiva. Algo que lees en artículos modernos, comentas con una copa de vino y guardas en el cajón mental de «interesante, pero no para mí». Como el yoga aéreo o el ayuno intermitente: muy bien en Instagram, pero dudoso cuando lo practicas sin manual.</p>
+        <p>Estaba sentada con Victoria en una terraza de Malasaña, de esas con mesas diminutas, sillas incómodas y camareros que te juzgan si tardas más de diez minutos en pedir. Ella llevaba unas gafas de sol enormes y cara de editora cansada del mundo. Yo, un vestido cómodo y una copa de vino blanco que ya iba por la mitad.</p>
+        <p class="fade">—He hecho <em>match</em> —le dije enseñándole el móvil. Victoria se inclinó hacia la pantalla con interés profesional, como si estuviera evaluando una novela inédita. Era muy atractivo. Su sonrisa iluminaba la pantalla y las fotos estaban cuidadosamente seleccionadas...</p>
+
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-oro" href="capitulo1.html">Leer el primer capítulo completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="alt">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+      <div class="rule reveal"></div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <span class="inicial">E</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Esther Williams</h3>
+          <div class="rol">Comedia romántica</div>
+          <p>Esther Williams es la autora de <em>La sonrisa escondida</em> y, ahora, de <em>Mujer busca príncipe que no destiña</em>: una mirada ácida, divertida y sin filtros sobre el amor moderno.</p>
+          <p>Escribe sobre citas imposibles, príncipes que destiñen a la primera copa de vino y sobre esa generación que sigue creyendo en el amor aunque ya no se trague los cuentos.</p>
+          <p>La encuentras en sus redes, donde comparte su día a día, sus historias y su humor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sigue a la <span>autora</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Pásate por sus redes a saludarla, seguir sus novedades y pedirle tu ejemplar firmado.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/estherwilliams.escritora/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2m0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07m0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9m0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94m5.66-2.2a1.04 1.04 0 1 1-2.08 0 1.04 1.04 0 0 1 2.08 0"/></svg>
+          Instagram · @estherwilliams.escritora
+        </a>
+        <a class="red" href="https://www.facebook.com/people/Esther-Williams/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook · Esther Williams
+        </a>
+        <a class="red" href="https://www.tiktok.com/@estherwilliams.escritora" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.03-2.82h-3.1v12.9a2.6 2.6 0 0 1-2.6 2.5 2.6 2.6 0 0 1 0-5.2c.27 0 .53.04.77.12v-3.2a5.8 5.8 0 0 0-.77-.05A5.73 5.73 0 0 0 4.14 15.8 5.73 5.73 0 0 0 9.87 21.5a5.73 5.73 0 0 0 5.73-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.28a4.3 4.3 0 0 1-3.3-1.46z"/></svg>
+          TikTok · @estherwilliams.escritora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Esther Williams · <em>Mujer busca príncipe que no destiña</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
