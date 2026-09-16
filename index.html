@@ -111,10 +111,10 @@
 
     /* ============ RECOMENDACIÓN DE LA CASA ============ */
     .recomendacion { background: var(--papel-2); padding: 84px 0; border-top: 1px solid rgba(120,90,60,.15); border-bottom: 1px solid rgba(120,90,60,.15); }
-    .rec-dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; max-width: 1080px; margin: 0 auto; align-items: start; }
+    .rec-dos-columnas { display: grid; grid-template-columns: 0.85fr 1.5fr 0.85fr; gap: 40px; max-width: 1320px; margin: 0 auto; align-items: start; }
     .rec-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--teja); display: block; margin-bottom: 4px; transform: rotate(-1deg); }
     .rec-titulo { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 30px; }
-    .rec-grid { display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; }
+    .rec-grid { display: grid; grid-template-columns: 175px 1fr; gap: 30px; align-items: center; }
     .rec-portada { position: relative; }
     .rec-portada a { display: block; transform: rotate(-2deg); transition: transform .4s ease; box-shadow: 0 16px 40px rgba(42,31,24,.3); }
     .rec-portada a:hover { transform: rotate(0deg) translateY(-4px); }
@@ -138,6 +138,18 @@
     .letras-articulo .leer-mas { font-family: 'Bitter', serif; font-size: .9rem; color: var(--teja); text-decoration: none; border-bottom: 2px solid var(--ocre); padding-bottom: 2px; transition: color .2s; }
     .letras-articulo .leer-mas:hover { color: var(--teja-honda); }
     .letras-articulo .articulo-fecha { display: block; margin-top: 14px; font-size: .78rem; color: var(--tinta-suave); }
+
+    /* ============ LA COLUMNA DE LA SRA. WHITE ============ */
+    .white-col { border-right: 1px solid rgba(120,90,60,.15); padding-right: 40px; }
+    .white-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--teja); display: block; margin-bottom: 4px; transform: rotate(-1deg); }
+    .white-titulo { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 24px; }
+    .white-articulo { background: #fffaf0; padding: 28px 26px; border-radius: 4px; box-shadow: 0 8px 24px rgba(42,31,24,.12); border: 1px solid rgba(120,90,60,.1); }
+    .white-articulo .articulo-cat { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--teja); margin-bottom: 8px; }
+    .white-articulo h4 { font-family: 'Bitter', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--tinta); font-style: italic; }
+    .white-articulo .extracto { font-size: .95rem; color: var(--tinta-suave); line-height: 1.7; margin-bottom: 18px; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+    .white-articulo .leer-mas { font-family: 'Bitter', serif; font-size: .9rem; color: var(--teja); text-decoration: none; border-bottom: 2px solid var(--ocre); padding-bottom: 2px; transition: color .2s; }
+    .white-articulo .leer-mas:hover { color: var(--teja-honda); }
+    .white-articulo .articulo-fecha { display: block; margin-top: 14px; font-size: .78rem; color: var(--tinta-suave); }
 
     /* ============ LA MESA (más libros) ============ */
     .mesa { padding: 84px 0; background: var(--nogal); }
@@ -202,11 +214,14 @@
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
     .reveal.show { opacity: 1; transform: none; }
 
+    @media (max-width: 1080px) {
+      .rec-dos-columnas { grid-template-columns: 1fr; gap: 50px; max-width: 640px; }
+      .letras-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(120,90,60,.15); padding-top: 40px; }
+      .white-col { border-right: none; padding-right: 0; }
+    }
     @media (max-width: 800px) {
       .escaparate .wrap { grid-template-columns: 1fr; gap: 46px; }
       .nota { max-width: 380px; }
-      .rec-dos-columnas { grid-template-columns: 1fr; gap: 50px; }
-      .letras-col { border-left: none; padding-left: 0; border-top: 1px solid rgba(120,90,60,.15); padding-top: 40px; }
       .rec-grid { grid-template-columns: 1fr; gap: 24px; justify-items: center; text-align: center; }
       .rec-portada { max-width: 200px; }
       .rec-texto .comilla { text-align: left; }
@@ -255,28 +270,42 @@
     </div>
   </header>
 
-  <!-- ============ RECOMENDACIÓN + RINCÓN DE LAS LETRAS ============ -->
+  <!-- ============ SRA. WHITE + RECOMENDACIÓN + RINCÓN DE LAS LETRAS ============ -->
   <section id="recomendacion" class="recomendacion">
     <div class="wrap">
       <div class="rec-dos-columnas">
-        <!-- COLUMNA IZQUIERDA: Recomendación de la casa -->
+        <!-- COLUMNA IZQUIERDA: La columna de la Sra. White -->
+        <div class="white-col reveal">
+          <span class="white-etiqueta">la columna de la Sra. White</span>
+          <h2 class="white-titulo slab">La columna de la Sra. White</h2>
+          <div class="white-articulo">
+            <div class="articulo-cat">Opinión</div>
+            <h4>La edad</h4>
+            <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:var(--teja); margin-bottom:12px;">— Anastasia White</p>
+            <p class="extracto">Hay una frase que empieza a aparecer a partir de cierta edad: «A tu edad…». Y después de esas tres palabras puede venir prácticamente cualquier cosa. Todas sorprendentes. Nadie me avisó de que, a partir de cierta cifra, había que dejar de tener ganas. Yo debo de haber perdido el reglamento.</p>
+            <a class="leer-mas" href="rincon-de-las-letras/la-edad.html">Leer columna completa →</a>
+            <span class="articulo-fecha">Semana del 16 de septiembre, 2026</span>
+          </div>
+        </div>
+
+        <!-- COLUMNA CENTRO: Recomendación de la casa -->
         <div class="rec-col reveal">
           <span class="rec-etiqueta">lo que te ponemos en la mano</span>
           <h2 class="rec-titulo slab">La recomendación de la casa</h2>
           <div class="rec-grid">
             <div class="rec-portada">
-              <a href="la-firma-del-miedo/index.html" aria-label="Abrir la página de La firma del miedo">
-                <img src="la-firma-del-miedo/portada.jpg" alt="Portada de La firma del miedo, de Teresa Pérez Landa" loading="eager" decoding="async" />
+              <a href="mas-alla-de-lilith/index.html" aria-label="Abrir la página de Más allá de Lilith">
+                <img src="mas-alla-de-lilith/portadamasalladelilith.jpg" alt="Portada de Más allá de Lilith, de Verónica Chía Alcázar" loading="eager" decoding="async" />
               </a>
               <span class="colgante">léelo</span>
             </div>
             <div class="rec-texto">
-              <h3>La firma del miedo</h3>
-              <div class="autor">de Teresa Pérez Landa</div>
-              <p>Un thriller de novela negra: un cadáver sin nombre aparece en Central Park convertido en obra macabra, y la inspectora Beth Malone reconoce una firma que ya creía enterrada.</p>
-              <p class="comilla">"¿Crees que jamás cometerías un acto atroz? ¿Estás preparado para ver?"</p>
+              <h3>Más allá de Lilith</h3>
+              <div class="autor">de Verónica Chía Alcázar</div>
+              <p>Relatos y poemas cargados de sensualidad, erotismo y emoción. Lilith es la mujer que un día decide dejar de pedir permiso para sentir y sale a recuperar su cuerpo, su voz y su deseo.</p>
+              <p class="comilla">"Porque todas llevamos dentro una parte de Lilith esperando despertar."</p>
               <div class="escaparate-cta">
-                <a class="btn btn-teja" href="la-firma-del-miedo/index.html">Entrar en su rincón</a>
+                <a class="btn btn-teja" href="mas-alla-de-lilith/index.html">Entrar en su rincón</a>
               </div>
             </div>
           </div>
@@ -288,11 +317,11 @@
           <h2 class="letras-titulo slab">El rincón de las letras</h2>
           <div class="letras-articulo">
             <div class="articulo-cat">Relato</div>
-            <h4>El café</h4>
-            <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:var(--teja); margin-bottom:12px;">— Anastasia White</p>
-            <p class="extracto">Cuando abrió la puerta supo que algo no estaba bien. No porque faltara nada, al contrario, todo estaba exactamente donde debía estar. El bolso sobre el mueble de entrada, las llaves en el cuenco de siempre, los cojines colocados en su sitio. Demasiado en su sitio. Entró despacio y entonces reparó en la taza que había sobre la mesa del comedor. Una taza de café.</p>
-            <a class="leer-mas" href="rincon-de-las-letras/el-cafe.html">Leer relato completo →</a>
-            <span class="articulo-fecha">Semana del 6 de septiembre, 2026</span>
+            <h4>El violín que no cesa</h4>
+            <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:var(--teja); margin-bottom:12px;">— Rafael Mariscal Roca</p>
+            <p class="extracto">Judith dejó su Mediterráneo natal para tocar el violín en la filarmónica de París. Vive junto al Sena con su perro Scott y con Chris, su gran amor. Cada mañana madruga, entrena, ensaya el Clair de Lune de Debussy… y le escribe. Pero hay días en que el dolor esconde su velo, y todo parece estar exactamente en su sitio. Demasiado en su sitio.</p>
+            <a class="leer-mas" href="rincon-de-las-letras/el-violin-que-no-cesa.html">Leer relato completo →</a>
+            <span class="articulo-fecha">Semana del 16 de septiembre, 2026</span>
           </div>
         </div>
       </div>
