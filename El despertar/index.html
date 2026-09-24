@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>El Despertar — M.AMIRA.H. | Romántica · Contemporánea</title>
+  <meta name="description" content="El Despertar, de M.AMIRA.H. Primer volumen de la saga Nudos y Promesas. Una novela íntima y emocional sobre la búsqueda de uno mismo, el valor de cuestionar las propias certezas y el poder transformador de una conexión." />
+  <meta name="author" content="M.AMIRA.H." />
+  <meta name="keywords" content="El Despertar, M.AMIRA.H, Nudos y Promesas, romántica, contemporánea, autopublicado, saga, deseo, identidad, conexión" />
+  <meta property="og:title" content="El Despertar — M.AMIRA.H." />
+  <meta property="og:description" content="Una novela íntima y emocional sobre la búsqueda de uno mismo. Primer volumen de la saga Nudos y Promesas." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="portada.png" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a0a0f'/%3E%3Cpath d='M32 14c0 0-14 8-14 20a14 14 0 0 0 28 0C46 22 32 14 32 14z' fill='%238b2252'/%3E%3Ccircle cx='32' cy='34' r='5' fill='%23c94070'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: granate oscuro y dorado cálido.
+       Inspirada en la portada: noche, rojo pasional, dorado.
+       Fondo casi negro con acentos carmesí y dorado arena. ============ */
+    :root {
+      --noche: #110608;
+      --noche-2: #1a0b10;
+      --noche-3: #231018;
+      --noche-hondo: #0a0305;
+      --carmin: #8b2252;
+      --carmin-claro: #c94070;
+      --rosa: #d4778a;
+      --dorado: #c9962f;
+      --dorado-claro: #e8c478;
+      --hueso: #f5ece8;
+      --texto: #d9c8c4;
+      --texto-suave: #9e8880;
+      --linea: rgba(139, 34, 82, .28);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .65);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--noche);
+      color: var(--texto);
+      font-family: 'Raleway', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--carmin); color: var(--hueso); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(17, 6, 8, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--hueso); letter-spacing: .04em; font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--dorado-claro); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--carmin-claro); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 3px; text-decoration: none;
+      font-family: 'Raleway', sans-serif; font-size: .82rem; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-carmin { background: linear-gradient(135deg, var(--carmin), #5c1235); color: #fff; box-shadow: 0 12px 28px rgba(139, 34, 82, .35); }
+    .btn-carmin:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(139, 34, 82, .5); }
+    .btn-ghost { background: transparent; color: var(--dorado-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--dorado); color: var(--dorado); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.3rem); color: var(--hueso); line-height: 1.12;
+    }
+    .section-title span { color: var(--carmin-claro); }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--carmin), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--carmin), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--dorado); }
+
+    section { padding: 94px 0; }
+    .alt { background: var(--noche-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 68px 0 94px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(139, 34, 82, .16), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 62px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 4px; overflow: hidden; background: var(--noche-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.2deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: none; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center;
+      color: var(--carmin-claro); font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+    }
+    .hero-text .saga { font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: var(--dorado); }
+    .hero-text h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 1;
+      color: var(--hueso); margin-top: 12px; font-style: italic;
+    }
+    .hero-text .autora { margin-top: 18px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 24px; font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.6vw, 1.7rem); color: var(--carmin-claro); max-width: 30ch; line-height: 1.4;
+      font-style: italic;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(35, 16, 24, .6);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--carmin-claro); box-shadow: 0 0 0 4px rgba(201, 64, 112, .22); }
+
+    /* ============ SINOPSIS ============ */
+    .cuerpo { max-width: 62ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--carmin);
+      font-style: italic;
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem; color: var(--carmin-claro); text-align: center; font-style: italic;
+    }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ FRAGMENTO ============ */
+    .fragmento-box {
+      max-width: 640px; margin: 0 auto; padding: 48px 40px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      box-shadow: var(--sombra); position: relative;
+    }
+    .fragmento-box::before {
+      content: '\201C'; position: absolute; top: 14px; left: 24px;
+      font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: var(--carmin);
+      opacity: .3; line-height: 1;
+    }
+    .fragmento-box h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--hueso);
+      margin-bottom: 24px; font-style: italic;
+    }
+    .fragmento-box .versos {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 2;
+      color: var(--texto); white-space: pre-line;
+    }
+    .fragmento-box .versos em { color: var(--carmin-claro); font-style: normal; }
+    .fragmento-box .pie-frag {
+      margin-top: 24px; text-align: right; font-size: .78rem;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--texto-suave);
+    }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon {
+      justify-self: center; width: 260px; height: 260px; border-radius: 50%;
+      overflow: hidden; background: var(--noche-3); display: grid; place-items: center;
+      box-shadow: var(--sombra); border: 2px solid var(--carmin);
+    }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { display: none; font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--carmin-claro); }
+    .autora-texto h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.4vw, 2.4rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--dorado); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 620px; margin: 0 auto; }
+    .formato {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 4px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--carmin); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--carmin); color: var(--carmin-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--noche-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--carmin-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--carmin); border-color: var(--carmin); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 300px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--noche); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+      .fragmento-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">El Despertar</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#fragmento">Fragmento</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.png" alt="Portada de El Despertar, de M.AMIRA.H."
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback">
+          <div>El<br>Despertar</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="saga">Nudos y Promesas · Libro I</div>
+        <h1>El Despertar</h1>
+        <div class="autora">M.AMIRA.H.</div>
+        <p class="tagline">Porque hay encuentros que cambian nuestra vida. Y hay personas capaces de despertarnos a quienes realmente somos.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Ya disponible en Amazon</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-carmin" href="https://amzn.eu/d/0c4odXSy" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Descubrir más</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>historia</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="cuerpo reveal">
+        <p>Clara siempre creyó conocerse. Había construido una vida estable, segura y cuidadosamente ordenada. Pero bajo la superficie persistía una pregunta para la que nunca había encontrado respuesta.</p>
+        <p>Hasta que una decisión aparentemente insignificante la condujo a un lugar inesperado. Y a alguien que cambiaría su vida para siempre.</p>
+        <p>Míster V. aparece en su vida cuando ella más necesita enfrentarse a aquello que lleva años evitando: la posibilidad de que la verdadera libertad no consista en controlar cada aspecto de su existencia, sino en aceptar quién es realmente.</p>
+        <p class="suelta">Entre conversaciones que dejan huella, silencios cargados de significado y una conexión imposible de ignorar, Clara emprenderá un camino de descubrimiento que transformará para siempre su manera de entender el deseo, la confianza y la entrega.</p>
+        <p><em>El Despertar</em> es una novela íntima y emocional sobre la búsqueda de uno mismo, el valor de cuestionar las propias certezas y el poder transformador de una conexión capaz de cambiarlo todo.</p>
+        <p class="cierre">Porque hay encuentros que cambian nuestra vida.<br>Y hay personas capaces de despertarnos a quienes realmente somos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRAGMENTO ============ -->
+  <section id="fragmento">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Un <span>fragmento</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">El primer capítulo está disponible para que te lleves una idea de lo que te espera.</p>
+      </div>
+      <div class="fragmento-box reveal">
+        <h3>Capítulo 1 — El Despertar</h3>
+        <div class="versos">Clara nunca había pensado que una sola decisión
+pudiera cambiar el rumbo de todo.
+
+Pero esa mañana, al cruzar aquella puerta,
+algo en ella supo que no habría vuelta atrás.
+
+<em>Que despertar, a veces, duele.
+Y que merece la pena igual.</em></div>
+        <div class="pie-frag">Primer volumen de la saga Nudos y Promesas</div>
+      </div>
+      <div class="center" style="margin-top: 34px;">
+        <a class="btn btn-ghost reveal" href="Capítulo 1 - El Despertar.pdf" target="_blank" rel="noopener">Leer el primer capítulo (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="foto autora.jpg" alt="M.AMIRA.H., autora de El Despertar" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">M</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>M.AMIRA.H.</h3>
+          <div class="rol">Autora de la saga Nudos y Promesas</div>
+          <p>M.AMIRA.H. es el pseudónimo de la autora de la saga <em>Nudos y Promesas</em>. Su obra se centra en la exploración de las relaciones humanas desde una perspectiva íntima y psicológica, donde el deseo, la identidad y los vínculos emocionales adquieren un papel central.</p>
+          <p>A través de una narrativa elegante y reflexiva, construye historias que indagan en la complejidad de las conexiones personales, los límites individuales y las distintas formas en las que las personas se relacionan consigo mismas y con los demás.</p>
+          <p><em>El Despertar</em> es el primer volumen de su saga, una obra que invita a cuestionarse las propias certezas y descubrir el poder transformador de una conexión auténtica.</p>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Seguirla en redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>El Despertar</em> está disponible en Amazon.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📖</div>
+          <h3>Comprar en Amazon</h3>
+          <p>El primer volumen de la saga Nudos y Promesas. Una historia que no te soltará hasta la última página.</p>
+          <a class="btn btn-carmin" href="https://amzn.eu/d/0c4odXSy" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">El Despertar · Nudos y Promesas I</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>M.AMIRA.H.</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Comparte su proceso, sus historias y mucho más. Pásate a saludarla.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/nudosypromesas" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @nudosypromesas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> M.AMIRA.H. · <em>El Despertar</em> · Saga Nudos y Promesas. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
