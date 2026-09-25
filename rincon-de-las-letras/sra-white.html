@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La columna de la Sra. White — Archivo</title>
+  <meta name="description" content="Todas las columnas de Anastasia White publicadas en La librería de los que publican solos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --papel: #f4f6f9;
+      --papel-2: #e8ecf2;
+      --tinta: #1a1e2e;
+      --tinta-suave: #4a5168;
+      --teja: #3d6b9e;
+      --teja-honda: #2c5580;
+      --ocre: #5b8abf;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--papel); color: var(--tinta);
+      font-family: 'Lora', Georgia, serif; font-size: 1.08rem; line-height: 1.75;
+      overflow-x: hidden;
+    }
+    a { color: var(--teja); text-decoration: none; }
+    a:hover { color: var(--teja-honda); }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 26px; }
+
+    /* CABECERA */
+    .cabecera { background: var(--tinta); color: var(--papel); padding: 60px 0 50px; border-bottom: 3px solid var(--ocre); }
+    .cabecera .volver { display: inline-block; margin-bottom: 28px; font-family: 'Bitter', serif; font-size: .88rem; color: rgba(244,246,249,.6); border-bottom: 1px solid rgba(244,246,249,.25); transition: color .2s; }
+    .cabecera .volver:hover { color: var(--papel); }
+    .cabecera .etiqueta { font-family: 'Caveat', cursive; font-size: 1.6rem; color: var(--ocre); display: block; transform: rotate(-1deg); margin-bottom: 6px; }
+    .cabecera h1 { font-family: 'Bitter', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; font-style: italic; line-height: 1.1; margin-bottom: 18px; }
+    .cabecera .bio { max-width: 52ch; color: rgba(244,246,249,.75); font-size: 1rem; line-height: 1.7; }
+    .cabecera .bio em { color: var(--ocre); font-style: normal; }
+
+    /* LISTA DE COLUMNAS */
+    .archivo { padding: 60px 0 100px; }
+    .archivo-titulo { font-family: 'Bitter', serif; font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid var(--papel-2); }
+
+    .columna { display: grid; grid-template-columns: 90px 1fr; gap: 0; margin-bottom: 0; border-bottom: 1px solid var(--papel-2); transition: background .2s; }
+    .columna:first-of-type { border-top: 1px solid var(--papel-2); }
+    .columna:hover { background: #fff; }
+    .columna .fecha-col { padding: 26px 20px 26px 0; font-size: .82rem; color: var(--tinta-suave); font-family: 'Bitter', serif; line-height: 1.4; border-right: 1px solid var(--papel-2); }
+    .columna .fecha-col .dia { font-size: 1.6rem; font-weight: 700; color: var(--ocre); display: block; line-height: 1; }
+    .columna .fecha-col .mes { display: block; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; margin-top: 2px; }
+    .columna .cuerpo-col { padding: 26px 0 26px 24px; }
+    .columna .tipo { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--teja); margin-bottom: 6px; }
+    .columna h2 { font-family: 'Bitter', serif; font-size: 1.25rem; font-weight: 700; font-style: italic; line-height: 1.2; margin-bottom: 8px; }
+    .columna h2 a { color: var(--tinta); transition: color .2s; }
+    .columna h2 a:hover { color: var(--teja); }
+    .columna .extracto { font-size: .95rem; color: var(--tinta-suave); line-height: 1.65; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .columna .leer { font-family: 'Bitter', serif; font-size: .88rem; color: var(--teja); border-bottom: 1px solid var(--ocre); padding-bottom: 1px; transition: color .2s; }
+    .columna .leer:hover { color: var(--teja-honda); }
+
+    /* FIRMA */
+    .firma-seccion { margin-top: 60px; padding: 36px 32px; background: #fffaf0; border-left: 3px solid var(--ocre); box-shadow: 0 6px 18px rgba(42,31,24,.08); }
+    .firma-seccion .mano { font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--teja); display: block; margin-bottom: 8px; }
+    .firma-seccion p { font-size: .98rem; color: var(--tinta-suave); }
+    .firma-seccion a { color: var(--teja); border-bottom: 1px solid var(--ocre); }
+
+    @media (max-width: 600px) {
+      .columna { grid-template-columns: 1fr; }
+      .columna .fecha-col { border-right: none; border-bottom: 1px solid var(--papel-2); padding: 16px 0 10px; display: flex; gap: 8px; align-items: baseline; }
+      .columna .fecha-col .dia { font-size: 1.1rem; }
+      .columna .cuerpo-col { padding: 14px 0 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cabecera">
+    <div class="wrap">
+      <a class="volver" href="../index.html">&larr; Volver a La librería</a>
+      <span class="etiqueta">la columna de</span>
+      <h1>La Sra. White</h1>
+      <p class="bio">Anastasia White escribe cada semana sobre lo que observa, lo que le molesta y lo que le hace gracia. Es la autora de <em>El Pecado de una Divorciada</em>. Tiene opiniones propias y no siempre pide permiso para expresarlas.</p>
+    </div>
+  </div>
+
+  <div class="archivo">
+    <div class="wrap">
+      <div class="archivo-titulo">Todas las columnas · de la más reciente a la más antigua</div>
+
+      <!-- EL ENTRENADOR -->
+      <div class="columna">
+        <div class="fecha-col">
+          <span class="dia">24</span>
+          <span class="mes">sep<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Columna de opinión</div>
+          <h2><a href="el-entrenador.html">El entrenador</a></h2>
+          <p class="extracto">Hay gente que va al gimnasio a entrenar. Hay gente que va a hacer ejercicio. Y luego está la gente que va al gimnasio a pasar un buen rato. Estos últimos son mis favoritos. Se sientan en una máquina, cogen el móvil, sonríen… y así pueden pasar perfectamente veinte minutos.</p>
+          <a class="leer" href="el-entrenador.html">Leer columna →</a>
+        </div>
+      </div>
+
+      <!-- LA EDAD -->
+      <div class="columna">
+        <div class="fecha-col">
+          <span class="dia">16</span>
+          <span class="mes">sep<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Columna de opinión</div>
+          <h2><a href="la-edad.html">La edad</a></h2>
+          <p class="extracto">Hay una frase que empieza a aparecer a partir de cierta edad: «A tu edad…». Y después de esas tres palabras puede venir prácticamente cualquier cosa. Nadie me avisó de que, a partir de cierta cifra, había que dejar de tener ganas. Yo debo de haber perdido el reglamento.</p>
+          <a class="leer" href="la-edad.html">Leer columna →</a>
+        </div>
+      </div>
+
+      <!-- EL CAFÉ -->
+      <div class="columna">
+        <div class="fecha-col">
+          <span class="dia">6</span>
+          <span class="mes">sep<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Relato</div>
+          <h2><a href="el-cafe.html">El café</a></h2>
+          <p class="extracto">Cuando abrió la puerta supo que algo no estaba bien. No porque faltara nada, al contrario, todo estaba exactamente donde debía estar. El bolso sobre el mueble de entrada, las llaves en el cuenco de siempre, los cojines colocados en su sitio. Demasiado en su sitio.</p>
+          <a class="leer" href="el-cafe.html">Leer relato →</a>
+        </div>
+      </div>
+
+      <div class="firma-seccion">
+        <span class="mano">¿Quién es Anastasia White?</span>
+        <p>Anastasia White es el pseudónimo de la autora de <a href="../el-pecado-de-una-divorciada/index.html"><em>El Pecado de una Divorciada</em></a>. Escribe columnas de opinión y relatos cortos para La librería de los que publican solos desde septiembre de 2026.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

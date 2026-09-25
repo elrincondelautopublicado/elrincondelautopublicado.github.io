@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Rincón de las Letras — Archivo de relatos</title>
+  <meta name="description" content="Todos los relatos y artículos publicados en El Rincón de las Letras de La librería de los que publican solos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --papel: #f4f6f9;
+      --papel-2: #e8ecf2;
+      --tinta: #1a1e2e;
+      --tinta-suave: #4a5168;
+      --teja: #3d6b9e;
+      --teja-honda: #2c5580;
+      --ocre: #5b8abf;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--papel); color: var(--tinta);
+      font-family: 'Lora', Georgia, serif; font-size: 1.08rem; line-height: 1.75;
+      overflow-x: hidden;
+    }
+    a { color: var(--teja); text-decoration: none; }
+    a:hover { color: var(--teja-honda); }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 26px; }
+
+    /* CABECERA */
+    .cabecera { background: var(--tinta); color: var(--papel); padding: 60px 0 50px; border-bottom: 3px solid var(--ocre); }
+    .cabecera .volver { display: inline-block; margin-bottom: 28px; font-family: 'Bitter', serif; font-size: .88rem; color: rgba(244,246,249,.6); border-bottom: 1px solid rgba(244,246,249,.25); transition: color .2s; }
+    .cabecera .volver:hover { color: var(--papel); }
+    .cabecera .etiqueta { font-family: 'Caveat', cursive; font-size: 1.6rem; color: var(--ocre); display: block; transform: rotate(-1deg); margin-bottom: 6px; }
+    .cabecera h1 { font-family: 'Bitter', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; font-style: italic; line-height: 1.1; margin-bottom: 18px; }
+    .cabecera .bio { max-width: 52ch; color: rgba(244,246,249,.75); font-size: 1rem; line-height: 1.7; }
+    .cabecera .bio em { color: var(--ocre); font-style: normal; }
+
+    /* LISTA */
+    .archivo { padding: 60px 0 100px; }
+    .archivo-titulo { font-family: 'Bitter', serif; font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid var(--papel-2); }
+
+    .relato { display: grid; grid-template-columns: 90px 1fr; gap: 0; border-bottom: 1px solid var(--papel-2); transition: background .2s; }
+    .relato:first-of-type { border-top: 1px solid var(--papel-2); }
+    .relato:hover { background: #fff; }
+    .relato .fecha-col { padding: 26px 20px 26px 0; font-size: .82rem; color: var(--tinta-suave); font-family: 'Bitter', serif; line-height: 1.4; border-right: 1px solid var(--papel-2); }
+    .relato .fecha-col .dia { font-size: 1.6rem; font-weight: 700; color: var(--ocre); display: block; line-height: 1; }
+    .relato .fecha-col .mes { display: block; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; margin-top: 2px; }
+    .relato .cuerpo-col { padding: 26px 0 26px 24px; }
+    .relato .tipo { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--teja); margin-bottom: 6px; }
+    .relato h2 { font-family: 'Bitter', serif; font-size: 1.25rem; font-weight: 700; font-style: italic; line-height: 1.2; margin-bottom: 4px; }
+    .relato h2 a { color: var(--tinta); transition: color .2s; }
+    .relato h2 a:hover { color: var(--teja); }
+    .relato .autor { font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--teja); margin-bottom: 8px; }
+    .relato .extracto { font-size: .95rem; color: var(--tinta-suave); line-height: 1.65; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .relato .leer { font-family: 'Bitter', serif; font-size: .88rem; color: var(--teja); border-bottom: 1px solid var(--ocre); padding-bottom: 1px; transition: color .2s; }
+    .relato .leer:hover { color: var(--teja-honda); }
+
+    /* ENLACE SRA WHITE */
+    .bloque-white { margin-top: 60px; padding: 36px 32px; background: #fffaf0; border-left: 3px solid var(--ocre); box-shadow: 0 6px 18px rgba(42,31,24,.08); }
+    .bloque-white .mano { font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--teja); display: block; margin-bottom: 8px; }
+    .bloque-white p { font-size: .98rem; color: var(--tinta-suave); margin-bottom: 14px; }
+    .bloque-white a.btn { display: inline-block; font-family: 'Bitter', serif; font-size: .88rem; color: #fff; background: var(--teja); padding: 10px 22px; border-radius: 2px; transition: background .2s; }
+    .bloque-white a.btn:hover { background: var(--teja-honda); }
+
+    @media (max-width: 600px) {
+      .relato { grid-template-columns: 1fr; }
+      .relato .fecha-col { border-right: none; border-bottom: 1px solid var(--papel-2); padding: 16px 0 10px; display: flex; gap: 8px; align-items: baseline; }
+      .relato .fecha-col .dia { font-size: 1.1rem; }
+      .relato .cuerpo-col { padding: 14px 0 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cabecera">
+    <div class="wrap">
+      <a class="volver" href="../index.html">&larr; Volver a La librería</a>
+      <span class="etiqueta">lectura de la semana</span>
+      <h1>El Rincón de las Letras</h1>
+      <p class="bio">Relatos cortos, artículos y reflexiones sobre la escritura y la autopublicación. Un espacio para leer sin prisa, en el escaparate de <em>La librería de los que publican solos</em>.</p>
+    </div>
+  </div>
+
+  <div class="archivo">
+    <div class="wrap">
+      <div class="archivo-titulo">Todos los textos · de los más recientes a los más antiguos</div>
+
+      <!-- SHADOW CREEK -->
+      <div class="relato">
+        <div class="fecha-col">
+          <span class="dia">24</span>
+          <span class="mes">sep<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Relato · Terror</div>
+          <h2><a href="shadow-creek.html">Shadow Creek</a></h2>
+          <div class="autor">— Teresa Pérez Landa</div>
+          <p class="extracto">Kennebec Journal, lunes 12 de octubre de 1864. El joven Jonathan Lorrel, viajante de profesión, se dirigía hacia Auburn. Nunca llegó. Fue visto por última vez en la taberna del nuevo Shadow Creek, donde los más ancianos hablan de una maldición que cubre de sombras estas tierras.</p>
+          <a class="leer" href="shadow-creek.html">Leer relato →</a>
+        </div>
+      </div>
+
+      <!-- EL VIOLÍN QUE NO CESA -->
+      <div class="relato">
+        <div class="fecha-col">
+          <span class="dia">16</span>
+          <span class="mes">sep<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Relato</div>
+          <h2><a href="el-violin-que-no-cesa.html">El violín que no cesa</a></h2>
+          <div class="autor">— Rafael Mariscal Roca</div>
+          <p class="extracto">Judith dejó su Mediterráneo natal para tocar el violín en la filarmónica de París. Vive junto al Sena con su perro Scott y con Chris, su gran amor. Cada mañana madruga, entrena, ensaya el Clair de Lune de Debussy… Pero hay días en que el dolor esconde su velo, y todo parece estar demasiado en su sitio.</p>
+          <a class="leer" href="el-violin-que-no-cesa.html">Leer relato →</a>
+        </div>
+      </div>
+
+      <!-- AUTOPUBLICAR NO ES RENDIRSE -->
+      <div class="relato">
+        <div class="fecha-col">
+          <span class="dia">25</span>
+          <span class="mes">ago<br>2026</span>
+        </div>
+        <div class="cuerpo-col">
+          <div class="tipo">Artículo</div>
+          <h2><a href="autopublicar-no-es-rendirse.html">Autopublicar no es rendirse: es elegirse</a></h2>
+          <div class="autor">— Rafa, el de la tienda</div>
+          <p class="extracto">Hay una frase que se repite mucho en los círculos literarios: «Si tu libro fuera bueno, una editorial lo habría publicado». Es una frase cómoda. Coloca al escritor independiente en el lugar del que no pudo, del que no llegó. Pero la realidad es otra.</p>
+          <a class="leer" href="autopublicar-no-es-rendirse.html">Leer artículo →</a>
+        </div>
+      </div>
+
+      <div class="bloque-white">
+        <span class="mano">¿Buscas a la Sra. White?</span>
+        <p>Las columnas de opinión y los relatos de Anastasia White tienen su propio archivo.</p>
+        <a class="btn" href="sra-white.html">Ver todas las columnas de la Sra. White →</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
