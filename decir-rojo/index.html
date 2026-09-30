@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decir rojo — Néstor N. Val | Erótica literaria adulta</title>
+  <meta name="description" content="Decir rojo, de Néstor N. Val. Diez relatos de erótica literaria adulta sobre poder, consentimiento y deseo. Para lectores que no buscan romance, buscan intensidad." />
+  <meta name="author" content="Néstor N. Val" />
+  <meta name="keywords" content="Decir rojo, Néstor N. Val, erótica literaria, relatos eróticos, poder, consentimiento, deseo, adultos" />
+  <meta name="rating" content="adult" />
+  <meta property="og:title" content="Decir rojo — Néstor N. Val" />
+  <meta property="og:description" content="Diez relatos de erótica literaria sobre poder, consentimiento y deseo. Intensidad, no romance." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="portada.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2312090b'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%238e1230'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --tinta: #12090b;
+      --tinta-2: #1c1013;
+      --tinta-3: #271619;
+      --burdeos: #8e1230;
+      --burdeos-claro: #c23755;
+      --rosa: #e79aab;
+      --hueso: #f3ece9;
+      --texto: #cdbfc0;
+      --texto-suave: #9a888b;
+      --linea: rgba(194, 55, 85, .24);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .66);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--tinta); color: var(--texto);
+      font-family: 'Archivo', system-ui, sans-serif; font-weight: 400;
+      line-height: 1.85; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      background-image:
+        radial-gradient(ellipse at 20% -8%, rgba(142,18,48,.24), transparent 55%),
+        radial-gradient(ellipse at 88% 10%, rgba(142,18,48,.12), transparent 52%);
+      background-attachment: fixed;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--burdeos); color: #fff; }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(18,9,11,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--linea); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.32rem; color: var(--hueso); letter-spacing: .01em; }
+    .brand em { color: var(--burdeos-claro); font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--texto-suave); text-decoration: none; font-size: .82rem; letter-spacing: .04em; transition: color .2s; }
+    nav a:hover, nav a:focus-visible { color: var(--burdeos-claro); }
+    nav a.home { color: var(--hueso); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--burdeos-claro); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* BOTONES */
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; border-radius: 3px; text-decoration: none; font-family: 'Archivo', sans-serif; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s; }
+    .btn-burdeos { background: var(--burdeos); color: #fff; box-shadow: 0 12px 28px rgba(142,18,48,.36); }
+    .btn-burdeos:hover { background: var(--burdeos-claro); color: #fff; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--hueso); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--burdeos-claro); color: var(--burdeos-claro); transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* TITULARES */
+    .section-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3rem); color: var(--hueso); line-height: 1.12; }
+    .section-title span { color: var(--burdeos-claro); font-style: italic; }
+    .rule { width: 84px; height: 3px; background: linear-gradient(90deg, var(--burdeos), var(--rosa)); margin: 18px 0 34px; border-radius: 2px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; }
+    .eyebrow { font-family: 'Archivo', sans-serif; font-size: .74rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--burdeos-claro); }
+    section { padding: 92px 0; }
+    .alt { background: var(--tinta-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+    .intro { max-width: 58ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* AVISO +18 */
+    .aviso18 { background: var(--tinta-3); border: 1px solid var(--linea); border-left: 4px solid var(--burdeos); border-radius: 4px; max-width: 720px; margin: 0 auto; padding: 22px 26px; display: flex; gap: 16px; align-items: center; }
+    .aviso18 .marca { flex: none; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.5rem; color: var(--burdeos-claro); border: 2px solid var(--burdeos); border-radius: 50%; width: 58px; height: 58px; display: grid; place-items: center; }
+    .aviso18 p { font-size: .98rem; color: var(--texto); }
+    .aviso18 strong { color: var(--hueso); }
+
+    /* HERO */
+    .hero { padding: 64px 0 92px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 60px; align-items: center; position: relative; }
+    .cover-frame { position: relative; border-radius: 5px; overflow: hidden; background: var(--tinta-3); box-shadow: var(--sombra); border: 1px solid var(--linea); transform: rotate(-1.4deg); transition: transform .4s; }
+    .cover-frame::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 60px rgba(142,18,48,.28); pointer-events: none; }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback { display: grid; place-items: center; aspect-ratio: 2/3; padding: 30px; text-align: center; color: var(--burdeos-claro); font-family: 'Fraunces', serif; font-size: 1.8rem; font-style: italic; }
+    .hero-text h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(3rem, 8vw, 5.4rem); line-height: 1; color: var(--hueso); margin-top: 12px; }
+    .hero-text .autora { margin-top: 18px; font-family: 'Archivo', sans-serif; font-size: .84rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline { margin-top: 22px; font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.2rem, 2.6vw, 1.6rem); color: var(--rosa); max-width: 30ch; line-height: 1.45; }
+    .badge { display: inline-flex; align-items: center; gap: 9px; margin-top: 22px; padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(142,18,48,.16); font-family: 'Archivo', sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--texto); }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--burdeos-claro); box-shadow: 0 0 0 4px rgba(142,18,48,.24); }
+
+    /* CUERPO */
+    .cuerpo { max-width: 60ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.12rem; }
+    .cuerpo p.suelta { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.4rem; color: var(--hueso); padding-left: 22px; border-left: 3px solid var(--burdeos); line-height: 1.4; }
+    .cuerpo p.cierre { margin-top: 36px; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.35rem; color: var(--burdeos-claro); text-align: center; }
+
+    /* CLAVES */
+    .claves { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 40px auto 0; }
+    .clave { font-family: 'Archivo', sans-serif; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; padding: 9px 18px; border: 1px solid var(--linea); border-radius: 40px; color: var(--rosa); background: rgba(142,18,48,.1); }
+
+    /* AUTOR */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon { justify-self: center; width: 240px; height: 240px; border-radius: 50%; overflow: hidden; background: var(--tinta-3); display: grid; place-items: center; box-shadow: var(--sombra); border: 2px solid var(--burdeos); }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .medallon .inicial { font-family: 'Fraunces', serif; font-size: 4.5rem; color: var(--burdeos-claro); }
+    .autora-texto h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(1.7rem, 3.4vw, 2.3rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-family: 'Archivo', sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--burdeos-claro); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; font-size: 1.06rem; }
+
+    /* COMPRA */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato { background: var(--tinta-3); border: 1px solid var(--linea); border-radius: 5px; padding: 36px 30px; text-align: center; box-shadow: var(--sombra); transition: transform .25s, border-color .25s; }
+    .formato:hover { transform: translateY(-5px); border-color: var(--burdeos); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .96rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* REDES */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px; background: var(--tinta-3); border: 1px solid var(--linea); border-radius: 40px; color: var(--hueso); text-decoration: none; font-size: .94rem; transition: transform .2s, border-color .2s, color .2s, box-shadow .2s; }
+    .red:hover { transform: translateY(-3px); border-color: var(--burdeos-claro); color: var(--burdeos-claro); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* FOOTER */
+    footer { padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea); background: var(--tinta-2); color: var(--texto-suave); font-family: 'Archivo', sans-serif; font-size: .88rem; }
+    footer a { color: var(--rosa); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--burdeos-claro); border-color: var(--burdeos-claro); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; } .cover-frame { max-width: 290px; margin: 0 auto; } .hero-text .tagline { margin-left: auto; margin-right: auto; } .cta-row { justify-content: center; } .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; } }
+    @media (max-width: 760px) { section { padding: 68px 0; } .aviso18 { flex-direction: column; text-align: center; } .nav-toggle { display: block; } nav .links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: var(--tinta); border-bottom: 1px solid var(--linea); max-height: 0; overflow: hidden; transition: max-height .3s ease; } nav .links.open { max-height: 460px; } nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Decir <em>rojo</em></span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#libro">El libro</a>
+        <a href="#relato">Primer relato</a>
+        <a href="#autor">El autor</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de Decir rojo, de Néstor N. Val" loading="eager" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;"><div>Decir rojo</div></div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Erótica literaria adulta · 10 relatos</div>
+        <h1>Decir rojo</h1>
+        <div class="autora">Néstor N. Val</div>
+        <p class="tagline">Hay deseos que empiezan con una regla.</p>
+        <div><span class="badge"><span class="punto" aria-hidden="true"></span> +18 · Publicación 30 oct 2026</span></div>
+        <div class="cta-row">
+          <a class="btn btn-burdeos" href="https://www.amazon.com/dp/B0HKSX76X6" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#relato">Leer un adelanto</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="aviso" class="alt" style="padding:44px 0;">
+    <div class="wrap">
+      <div class="aviso18 reveal">
+        <div class="marca" aria-hidden="true">+18</div>
+        <p><strong>Contenido para público adulto.</strong> <em>Decir rojo</em> es erótica literaria explícita: sexo, poder, control y sus consecuencias emocionales. Si eres menor de edad o este tipo de contenido no es para ti, este no es tu libro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="libro">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">El <span>libro</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="cuerpo reveal">
+        <p><em>Decir rojo</em> reúne diez relatos de erótica adulta y psicológica donde el poder cambia de mano, el consentimiento se pacta y cada límite tiene un precio.</p>
+        <p class="suelta">Sexo, control, entrega y consecuencias emocionales.</p>
+        <p class="cierre">Para lectores que no buscan romance: buscan intensidad.</p>
+      </div>
+      <div class="claves reveal">
+        <span class="clave">Poder</span>
+        <span class="clave">Consentimiento</span>
+        <span class="clave">Deseo</span>
+        <span class="clave">Entrega</span>
+        <span class="clave">Consecuencias</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="relato" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">El primer <span>relato</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">El autor deja leer el arranque de <em>El Intercambio</em>: dos amigas se reencuentran diez años después y una servilleta con unas reglas lo cambia todo. Lectura para público adulto.</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-burdeos" href="capitulo1.html">Leer el adelanto</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="autor">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">El <span>autor</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <span class="inicial">N</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Néstor N. Val</h3>
+          <div class="rol">Autor de Decir rojo</div>
+          <p>Néstor N. Val firma con <em>Decir rojo</em> una colección de erótica literaria que se aleja del romance para adentrarse en el terreno del poder, el consentimiento y el deseo llevado hasta sus consecuencias.</p>
+          <p>Puedes seguir su trabajo y sus novedades en su web y en Instagram.</p>
+          <div class="cta-row"><a class="btn btn-ghost" href="#redes">Ver sus redes</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Conseguir <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>Decir rojo</em> estará disponible en Amazon, en ebook y en papel, a partir del 30 de octubre de 2026.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📕</div>
+          <h3>Comprar en Amazon</h3>
+          <p>Diez relatos de erótica literaria en ebook y en papel.</p>
+          <a class="btn btn-burdeos" href="https://www.amazon.com/dp/B0HKSX76X6" target="_blank" rel="noopener">Ir a Amazon</a>
+          <span class="extra">Ebook y papel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="redes">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Néstor</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Novedades, adelantos y su universo de relatos.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://www.instagram.com/nestor.n.val" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @nestor.n.val
+        </a>
+        <a class="red" href="https://nestornval.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 1.8c1.1 1.1 1.9 2.7 2.4 4.4H9.6c.5-1.7 1.3-3.3 2.4-4.4zm-1.9.3A12 12 0 0 0 8.1 8.2H4.6a8.2 8.2 0 0 1 5.5-4.1zM3.9 12c0-.7.1-1.4.3-2h5.3a17 17 0 0 0 0 4H4.2a8.2 8.2 0 0 1-.3-2zm.7 4h3.5c.4 1.5 1.1 3 2 4.1A8.2 8.2 0 0 1 4.6 16zm7.4 4.4c-1.1-1.1-1.9-2.7-2.4-4.4h4.8c-.5 1.7-1.3 3.3-2.4 4.4zm2.8-.3c.9-1.1 1.6-2.6 2-4.1h3.5a8.2 8.2 0 0 1-5.5 4.1zM14.8 14H9.2a15 15 0 0 1 0-4h5.6a15 15 0 0 1 0 4zm1.7 0a17 17 0 0 0 0-4h5.3a8.2 8.2 0 0 1 0 4h-5.3zm-.6-5.8a12 12 0 0 0-2-4.1 8.2 8.2 0 0 1 5.5 4.1h-3.5z"/></svg>
+          nestornval.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Néstor N. Val · <em>Decir rojo</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); navToggle.setAttribute('aria-label','Abrir menú'); };
+      navToggle.addEventListener('click', () => { const w = !navLinks.classList.contains('open'); navToggle.classList.toggle('open',w); navLinks.classList.toggle('open',w); navToggle.setAttribute('aria-expanded',String(w)); navToggle.setAttribute('aria-label',w?'Cerrar menú':'Abrir menú'); });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', e => { if (e.key==='Escape') closeMenu(); });
+    }
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }); }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
