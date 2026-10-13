@@ -340,51 +340,44 @@
     </div>
   </header>
 
-  <!-- ============ RINCÓN DE LAS LETRAS — antes de la recomendación ============ -->
-  <section id="rincon-letras" class="columnas-editoriales" style="padding: 60px 0;">
+  <!-- ============ RINCÓN DE LAS LETRAS + RECOMENDACIÓN — lado a lado ============ -->
+  <section id="rincon-letras" style="background:var(--papel);padding:60px 0;border-bottom:1px solid var(--linea-clara);">
     <div class="wrap">
-      <div style="max-width:560px;">
-        <span class="col-etiqueta">lectura de la semana</span>
-        <h2 class="slab" style="font-size:clamp(1.4rem,2.8vw,1.9rem);margin-bottom:22px;color:var(--tinta);">El rincón de las letras</h2>
-        <div class="col-articulo">
-          <div class="articulo-cat">Poema</div>
-          <h4>Vértigo Escarlata</h4>
-          <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:var(--oro); margin-bottom:12px;">— Aitana Pérez Chía</p>
-          <p class="extracto">Dicen que hay un hilo, rojo, invisible, terco como el destino y suave como un susurro que no se olvida. Pero yo no creo en hilos como quien cree en cuentos, yo creo en la forma en la que llegaste cuando todo en mí estaba desordenado y, aun así, encajaste.</p>
-          <a class="leer-mas" href="rincon-de-las-letras/vertigo-escarlata.html">Leer poema completo →</a>
-          <span class="articulo-fecha">Octubre, 2026</span>
-          <a class="ver-mas" href="rincon-de-las-letras/index.html">Ver todos los textos →</a>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+
+        <!-- RINCÓN DE LAS LETRAS -->
+        <div class="reveal">
+          <span style="font-family:'Caveat',cursive;font-size:1.9rem;color:var(--oro);display:block;margin-bottom:4px;">lectura de la semana</span>
+          <h2 class="slab" style="font-size:clamp(1.4rem,2.8vw,1.9rem);margin-bottom:22px;color:var(--tinta);">El rincón de las letras</h2>
+          <div class="col-articulo">
+            <div class="articulo-cat">Poema</div>
+            <h4>Vértigo Escarlata</h4>
+            <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--oro);margin-bottom:12px;">— Aitana Pérez Chía</p>
+            <p class="extracto">Dicen que hay un hilo, rojo, invisible, terco como el destino y suave como un susurro que no se olvida. Pero yo no creo en hilos como quien cree en cuentos, yo creo en la forma en la que llegaste cuando todo en mí estaba desordenado y, aun así, encajaste.</p>
+            <a class="leer-mas" href="rincon-de-las-letras/vertigo-escarlata.html">Leer poema completo →</a>
+            <span class="articulo-fecha">Octubre, 2026</span>
+            <a class="ver-mas" href="rincon-de-las-letras/index.html">Ver todos los textos →</a>
+          </div>
         </div>
+
+        <!-- RECOMENDACIÓN DE LA CASA -->
+        <div class="reveal">
+          <span style="font-family:'Caveat',cursive;font-size:1.9rem;color:var(--oro);display:block;margin-bottom:4px;">lo que te ponemos en la mano</span>
+          <h2 class="slab" style="font-size:clamp(1.4rem,2.8vw,1.9rem);margin-bottom:22px;color:var(--tinta);">La recomendación de la casa</h2>
+          <div class="col-articulo">
+            <div class="articulo-cat">Fantasía</div>
+            <h4>El Guerrero del Dragón de Diamante</h4>
+            <p style="font-family:'Caveat',cursive;font-size:1.2rem;color:var(--oro);margin-bottom:12px;">— Eva Contreras Cerro (Karmatrix)</p>
+            <p class="extracto">Keykum y los Guerreros del Dragón han logrado descubrir la verdad sobre ellos mismos. Ahora se enfrentan a un destino peligroso mientras el mundo que creían conocer se tambalea bajo la amenaza de un poder ya olvidado, capaz de aterrorizar a ambos mundos.</p>
+            <a class="leer-mas" href="el-guerrero-del-dragon-de-diamante/index.html">Entrar en su rincón →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ============ RECOMENDACIÓN DE LA CASA — sola y grande ============ -->
-  <section id="recomendacion" class="recomendacion">
-    <div class="wrap">
-      <div class="rec-header reveal">
-        <span class="rec-etiqueta">lo que te ponemos en la mano</span>
-        <h2 class="rec-titulo slab">La recomendación de la casa</h2>
-      </div>
-      <div class="rec-grid reveal">
-        <div class="rec-portada">
-          <a href="el-guerrero-del-dragon-de-diamante/index.html" aria-label="Abrir la página de El Guerrero del Dragón de Diamante">
-            <img src="el-guerrero-del-dragon-de-diamante/guerrero-vol3.jpg" alt="Portada del Volumen III de El Guerrero del Dragón de Diamante, de Eva Contreras Cerro" loading="eager" decoding="async" />
-          </a>
-          <span class="colgante">léelo</span>
-        </div>
-        <div class="rec-texto">
-          <h3>El Guerrero del Dragón de Diamante</h3>
-          <div class="autor">de Eva Contreras Cerro (Karmatrix)</div>
-          <p>Keykum y los Guerreros del Dragón han logrado descubrir la verdad sobre ellos mismos. Ahora se enfrentan a un destino peligroso mientras el mundo que creían conocer se tambalea bajo la amenaza de un poder ya olvidado, capaz de aterrorizar a ambos mundos. Juntos, alzarán sus espadas una vez más, cuando la sexta luna se alce en el cielo.</p>
-          <p class="comilla">Con este volumen 3, la saga llega a su fin.</p>
-          <div class="escaparate-cta" style="margin-top:28px;">
-            <a class="btn btn-oro" href="el-guerrero-del-dragon-de-diamante/index.html">Entrar en su rincón</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ============ RECOMENDACIÓN DE LA CASA — integrada arriba con el Rincón ============ -->
 
   <!-- ============ LA MESA DE NOVEDADES ============ -->
   <section id="mesa" class="mesa">
