@@ -341,9 +341,13 @@
   </header>
 
   <!-- ============ RINCÓN DE LAS LETRAS + RECOMENDACIÓN — lado a lado ============ -->
+  <style>
+    .rincon-rec-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+    @media (max-width:760px) { .rincon-rec-grid { grid-template-columns:1fr; gap:40px; } }
+  </style>
   <section id="rincon-letras" style="background:var(--papel);padding:60px 0;border-bottom:1px solid var(--linea-clara);">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+      <div class="rincon-rec-grid">
 
         <!-- RINCÓN DE LAS LETRAS -->
         <div class="reveal">
