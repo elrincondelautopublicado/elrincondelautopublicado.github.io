@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Sin querer… pero queriendo — Summer Eight | Novela romántica</title>
+  <meta name="description" content="Sin querer… pero queriendo, de Summer Eight. Una historia de amor real que empezó en un instituto en 2003: el primer amor, las dudas de la adolescencia y sentimientos imposibles de esconder. Bilogía con Sin querer… pero escogiéndote." />
+  <meta name="author" content="Summer Eight" />
+  <meta name="keywords" content="Sin querer pero queriendo, Sin querer pero escogiéndote, Summer Eight, novela romántica, romance juvenil, primer amor, historia real, bilogía, amor" />
+
+  <!-- ====== Open Graph ====== -->
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Sin querer… pero queriendo — Summer Eight" />
+  <meta property="og:description" content="Hay historias de amor que empiezan mucho antes del primer beso. Una historia real, contada desde dos perspectivas." />
+  <meta property="og:image" content="portada-queriendo.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sin querer… pero queriendo — Summer Eight" />
+  <meta name="twitter:description" content="El primer amor, las dudas de la adolescencia y los sentimientos que terminan encontrando su camino." />
+  <meta name="twitter:image" content="portada-queriendo.png" />
+
+  <!-- ====== Favicon ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8734f'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23fff7f0' text-anchor='middle'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== Datos estructurados ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Sin querer… pero queriendo",
+    "author": { "@type": "Person", "name": "Summer Eight" },
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/EBook",
+    "genre": ["Romántica", "Romance contemporáneo", "Romance juvenil"],
+    "image": "portada-queriendo.png",
+    "description": "Una historia de amor inspirada en hechos reales que comenzó en un instituto en 2003. Sobre el primer amor, las dudas de la adolescencia y los sentimientos que terminan encontrando su camino.",
+    "workExample": {
+      "@type": "Book",
+      "name": "Sin querer… pero escogiéndote",
+      "author": { "@type": "Person", "name": "Summer Eight" }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --crema: #fff6ef;
+      --crema-2: #ffeadd;
+      --melocoton: #ffd8c2;
+      --coral: #e8734f;          /* atardecer cálido */
+      --coral-oscuro: #c5512f;
+      --rosa: #d94f73;           /* del "escogiéndote" */
+      --rosa-suave: #f6d9e1;
+      --dorado: #e0a24e;
+      --violeta: #6c4a6e;        /* cielo de atardecer */
+      --texto: #4a3b3a;
+      --gris: #8a7872;
+      --blanco: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--crema);
+      color: var(--texto);
+      font-family: 'Poppins', system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; letter-spacing: .01em; }
+    .script { font-family: 'Dancing Script', cursive; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(255,246,239,.85); backdrop-filter: blur(9px);
+      border-bottom: 1px solid rgba(232,115,79,.22);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Dancing Script', cursive; color: var(--coral-oscuro); font-size: 1.5rem; font-weight: 700; }
+    nav .links { display: flex; gap: 26px; align-items: center; }
+    nav .links a { text-decoration: none; font-size: .82rem; letter-spacing: .04em; color: var(--gris); text-transform: uppercase; font-weight: 500; transition: color .3s; }
+    nav .links a:hover { color: var(--coral); }
+    nav .links a.home { color: var(--rosa); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--coral); margin: 5px 0; transition: transform .3s ease, opacity .3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 760px) {
+      .nav-toggle { display: block; }
+      nav .links {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px);
+        flex-direction: column; justify-content: center; gap: 30px;
+        background: rgba(255,246,239,.98); backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(232,115,79,.25);
+        transform: translateX(100%); transition: transform .35s ease;
+      }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(224,162,78,.30), transparent 45%),
+        radial-gradient(circle at 85% 82%, rgba(217,79,115,.22), transparent 45%),
+        linear-gradient(160deg, #ffd9b0 0%, var(--crema) 42%, var(--rosa-suave) 100%);
+      overflow: hidden; padding: 120px 0 70px;
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: center; }
+    .cover-frame { justify-self: center; width: 300px; max-width: 100%; border-radius: 10px; box-shadow: 0 20px 50px rgba(197,81,47,.30), 0 8px 20px rgba(0,0,0,.12); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-8px) rotate(-1deg); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 10px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, var(--melocoton), var(--rosa-suave)); border-radius: 10px; color: var(--coral-oscuro); }
+    .cover-fallback .script { font-size: 2rem; line-height: 1.2; }
+    .cover-fallback small { display:block; margin-top: 14px; color: var(--gris); font-family: 'Poppins',sans-serif; font-size: .72rem; letter-spacing: .05em; }
+    .hero-text .eyebrow { color: var(--rosa); text-transform: uppercase; letter-spacing: .3em; font-size: .76rem; font-weight: 600; margin-bottom: 14px; }
+    .hero-text h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; color: var(--coral-oscuro); }
+    .hero-text .autora { margin-top: 12px; font-family: 'Dancing Script', cursive; color: var(--dorado); font-size: 1.9rem; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.3rem; font-style: italic; color: var(--texto); max-width: 44ch; font-family: 'Playfair Display', serif; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+    }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: .92rem; letter-spacing: .03em; text-decoration: none; border-radius: 40px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--coral), var(--coral-oscuro)); color: #fff; box-shadow: 0 10px 26px rgba(197,81,47,.4); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(197,81,47,.55); }
+    .btn-ghost { border: 2px solid var(--rosa); color: var(--rosa); background: transparent; }
+    .btn-ghost:hover { background: var(--rosa); color: #fff; }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 90px 0; }
+    .section-title { text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--coral-oscuro); margin-bottom: 10px; }
+    .divider { width: 90px; height: 30px; margin: 4px auto 44px; }
+    .divider::after { content: "❧"; display: block; text-align: center; color: var(--dorado); font-size: 1.6rem; }
+
+    /* ============ SINOPSIS ============ */
+    .sinopsis { background: var(--blanco); }
+    .sinopsis .hook { text-align: center; font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--coral); max-width: 26ch; margin: 0 auto 40px; line-height: 1.3; }
+    .sinopsis p { max-width: 64ch; margin: 0 auto 20px; font-size: 1.12rem; color: #5b4b49; }
+    .sinopsis .cierre { text-align: center; font-style: italic; font-family: 'Playfair Display', serif; color: var(--coral-oscuro); font-size: 1.25rem; max-width: 52ch; }
+
+    /* ============ BOOKTRAILERS ============ */
+    .trailers { background: linear-gradient(160deg, var(--crema-2), var(--melocoton)); text-align: center; }
+    .trailers > .wrap > p { max-width: 50ch; margin: 0 auto 40px; color: #5b4b49; font-size: 1.1rem; }
+    .trailers-grid { display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; }
+    .trailer-card { background: var(--blanco); border: 1px solid var(--melocoton); border-radius: 18px; padding: 30px 28px; max-width: 340px; box-shadow: 0 12px 30px rgba(197,81,47,.14); display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .trailer-card .play { width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--coral), var(--rosa)); box-shadow: 0 8px 20px rgba(217,79,115,.35); }
+    .trailer-card .play svg { width: 26px; height: 26px; fill: #fff; margin-left: 3px; }
+    .trailer-card h4 { font-family: 'Playfair Display', serif; color: var(--coral-oscuro); font-size: 1.2rem; }
+    .trailer-card .pov { font-size: .78rem; color: var(--rosa); text-transform: uppercase; letter-spacing: .1em; }
+
+    /* ============ SEGUNDA NOVELA ============ */
+    .bilogia { background: linear-gradient(160deg, var(--violeta), #3c2b45); color: #f6e9ef; }
+    .bilogia .section-title { color: #ffd9b0; }
+    .bilogia .divider::after { color: var(--rosa); }
+    .bilogia-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: center; max-width: 960px; margin: 0 auto; }
+    .bilogia-cover { justify-self: center; width: 300px; max-width: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.45); transition: transform .5s ease; }
+    .bilogia-cover:hover { transform: translateY(-8px) rotate(1deg); }
+    .bilogia-cover img { display: block; width: 100%; height: auto; }
+    .bilogia-texto .eyebrow { color: var(--rosa); text-transform: uppercase; letter-spacing: .26em; font-size: .74rem; font-weight: 600; margin-bottom: 10px; }
+    .bilogia-texto h3 { color: #ffd9b0; font-size: 2rem; margin-bottom: 14px; }
+    .bilogia-texto p { color: #e8d6de; margin-bottom: 16px; }
+    .bilogia-texto .frase { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #ffd9b0; }
+    @media (max-width: 760px) {
+      .bilogia-grid { grid-template-columns: 1fr; text-align: center; gap: 34px; }
+      .bilogia-texto p { text-align: left; }
+    }
+
+    /* ============ AUTORA ============ */
+    .autora-sec { background: linear-gradient(160deg, var(--crema-2), var(--rosa-suave)); }
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 50px; align-items: start; max-width: 960px; margin: 0 auto; }
+    .autora-foto { justify-self: center; width: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 44px rgba(217,79,115,.30); background: var(--blanco); }
+    .autora-foto img { display: block; width: 100%; height: auto; }
+    .autora-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 1/1; background: linear-gradient(160deg, var(--melocoton), var(--rosa-suave)); color: var(--coral-oscuro); font-family: 'Dancing Script', cursive; font-size: 3.6rem; }
+    .autora-foto figcaption { padding: 10px 14px; text-align: center; font-size: .78rem; color: var(--gris); font-style: italic; background: var(--blanco); }
+    .autora-texto h3 { color: var(--coral-oscuro); font-size: 1.7rem; margin-bottom: 4px; }
+    .autora-texto .rol { color: var(--rosa); font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+    .autora-texto p { margin-bottom: 16px; color: #5b4b49; }
+    .autora-texto .cierre { font-family: 'Playfair Display', serif; font-style: italic; color: var(--coral-oscuro); }
+    @media (max-width: 760px) {
+      .autora-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .autora-texto p { text-align: left; }
+    }
+
+    /* ============ REDES ============ */
+    .redes { background: var(--blanco); text-align: center; }
+    .redes p { max-width: 46ch; margin: 0 auto 34px; color: var(--gris); }
+    .redes-row { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
+    .red { display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: .92rem; border: 2px solid var(--melocoton); color: var(--texto); transition: all .3s ease; background: var(--crema); }
+    .red:hover { transform: translateY(-3px); border-color: var(--coral); color: var(--coral-oscuro); box-shadow: 0 10px 24px rgba(232,115,79,.25); }
+    .red svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* ============ COMPRA ============ */
+    .buy { background: linear-gradient(160deg, var(--melocoton), var(--crema)); text-align: center; }
+    .buy p { max-width: 52ch; margin: 0 auto 32px; font-size: 1.15rem; color: #5b4b49; }
+    .buy-cards { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; margin-top: 10px; }
+    .buy-card { background: var(--blanco); border: 1px solid var(--melocoton); border-radius: 16px; padding: 24px 26px; max-width: 320px; box-shadow: 0 10px 26px rgba(197,81,47,.12); }
+    .buy-card h4 { font-family: 'Playfair Display', serif; color: var(--coral-oscuro); font-size: 1.15rem; margin-bottom: 6px; }
+    .buy-card .pov { font-size: .8rem; color: var(--rosa); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; }
+
+    /* ============ FOOTER ============ */
+    footer { text-align: center; padding: 38px 24px; color: var(--gris); font-size: .88rem; background: var(--crema-2); border-top: 1px solid var(--melocoton); }
+    footer a { color: var(--coral-oscuro); text-decoration: none; }
+
+    /* ============ ANIMACIÓN ============ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Sin querer… pero queriendo</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#booktrailers">Booktrailers</a>
+        <a href="#bilogia">La otra mitad</a>
+        <a href="#autora">La autora</a>
+        <a href="#redes">Redes</a>
+        <a href="#comprar">Comprar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada-queriendo.png" alt="Portada de Sin querer… pero queriendo, de Summer Eight"
+             loading="eager"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>
+            <span class="script">Sin querer… pero queriendo</span>
+            <small>Añade la portada como<br>portada-queriendo.png</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Novela romántica · Historia real</div>
+        <h1>Sin querer…<br>pero queriendo</h1>
+        <div class="autora">Summer Eight</div>
+        <p class="tagline">«Hay historias de amor que empiezan mucho antes del primer beso.»</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#comprar">Comprar en Amazon</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span class="script" style="color:var(--coral);font-size:1.3em;">sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <p class="hook reveal">Hay historias de amor que empiezan mucho antes del primer beso.</p>
+      <p class="reveal">En 2003, Lara tenía dieciséis años y un compañero de instituto que conseguía poner su mundo patas arriba. Lucas era ese chico al que parecía imposible resistirse: seguro de sí mismo, provocador y con una facilidad desesperante para hacerla perder los nervios.</p>
+      <p class="reveal">Entre miradas, bromas, celos, conversaciones y momentos que ninguno de los dos se atrevía a nombrar, una amistad comenzó a convertirse en algo mucho más complicado. Pero Lara no sabía si aquello que sentía era correspondido. Y mientras intentaba convencerse de que podía controlar sus sentimientos, Lucas parecía empeñado en demostrarle lo contrario.</p>
+      <p class="reveal">Una historia inspirada en hechos reales sobre el primer amor, las dudas de la adolescencia y esos sentimientos que, por mucho que intentemos esconder, terminan encontrando su camino.</p>
+      <p class="cierre reveal">Una historia que comenzó en un instituto en 2003 y que, 23 años después, continúa.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKTRAILERS ============ -->
+  <section id="booktrailers" class="trailers">
+    <div class="wrap">
+      <h2 class="section-title reveal">Los <span class="script" style="color:var(--coral);font-size:1.3em;">booktrailers</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Un vistazo a la historia de Lara y Lucas. Cada novela tiene su propio booktrailer en Instagram.</p>
+      <div class="trailers-grid reveal">
+        <div class="trailer-card">
+          <a class="play" href="https://www.instagram.com/p/DYCZrKzI5wH/" target="_blank" rel="noopener" aria-label="Ver el booktrailer de Sin querer… pero queriendo en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </a>
+          <h4>Sin querer… pero queriendo</h4>
+          <div class="pov">La historia de Lara</div>
+          <a class="btn btn-primary" href="https://www.instagram.com/p/DYCZrKzI5wH/" target="_blank" rel="noopener">Ver booktrailer</a>
+        </div>
+        <div class="trailer-card">
+          <a class="play" href="https://www.instagram.com/p/DeZwFUXI3Qd/" target="_blank" rel="noopener" aria-label="Ver el booktrailer de Sin querer… pero escogiéndote en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </a>
+          <h4>Sin querer… pero escogiéndote</h4>
+          <div class="pov">La historia de Lucas</div>
+          <a class="btn btn-ghost" href="https://www.instagram.com/p/DeZwFUXI3Qd/" target="_blank" rel="noopener">Ver booktrailer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEGUNDA NOVELA (BILOGÍA) ============ -->
+  <section id="bilogia" class="bilogia">
+    <div class="wrap">
+      <h2 class="section-title reveal">La otra mitad de la <span class="script" style="color:var(--rosa);font-size:1.3em;">historia</span></h2>
+      <div class="divider reveal"></div>
+      <div class="bilogia-grid">
+        <div class="bilogia-cover reveal">
+          <img src="portada-escogiendote.png" alt="Portada de Sin querer… pero escogiéndote, de Summer Eight"
+               loading="lazy"
+               onerror="this.closest('.bilogia-cover').style.display='none';" />
+        </div>
+        <div class="bilogia-texto reveal">
+          <div class="eyebrow">Segunda novela</div>
+          <h3>Sin querer… pero escogiéndote</h3>
+          <p>Creías conocer la historia de Lara y Lucas. Pero solo conocías una mitad. Porque mientras Lara intentaba comprender lo que estaba sintiendo, Lucas vivía su propia batalla entre lo que deseaba, lo que callaba y lo que no se atrevía a confesar.</p>
+          <p>Las mismas miradas. Los mismos encuentros. Los mismos recuerdos. Pero una forma completamente diferente de vivirlos. Esta novela recupera aquella historia de amor desde los ojos de Lucas y revela sentimientos, dudas y momentos que Lara nunca llegó a conocer.</p>
+          <p class="frase">Dos novelas. Dos perspectivas. Una sola historia real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autora-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sobre la <span class="script" style="color:var(--coral);font-size:1.3em;">autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autora-grid">
+        <figure class="autora-foto reveal">
+          <img src="summer-eight-autora.png" alt="Ilustración de Summer Eight, autora"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">S</div>
+          <figcaption>Ilustración de Summer Eight</figcaption>
+        </figure>
+        <div class="autora-texto reveal">
+          <h3>Summer Eight</h3>
+          <div class="rol">Autora de la bilogía Sin querer…</div>
+          <p>Summer Eight es el seudónimo de una autora independiente que decidió convertir una de las historias más importantes de su vida en dos novelas románticas.</p>
+          <p>Su inspiración nace de una historia de amor real que comenzó en un instituto en 2003 y que continúa más de dos décadas después. Con <em>Sin querer… pero queriendo</em> y <em>Sin querer… pero escogiéndote</em>, invita a los lectores a descubrir cómo dos personas pueden vivir los mismos momentos de maneras completamente diferentes.</p>
+          <p class="cierre">Porque hay historias que no terminan cuando llega el primer beso. Algunas apenas están empezando.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="redes">
+    <div class="wrap">
+      <h2 class="section-title reveal">Sígueme en <span class="script" style="color:var(--coral);font-size:1.3em;">redes</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">¿Te ha gustado la historia de Lara y Lucas? Acompáñame para novedades y próximos proyectos.</p>
+      <div class="redes-row reveal">
+        <a class="red" href="https://www.instagram.com/summer.eight008/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2m0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07m0 3.37a4.45 4.45 0 1 1 0 8.9 4.45 4.45 0 0 1 0-8.9m0 1.98a2.47 2.47 0 1 0 0 4.94 2.47 2.47 0 0 0 0-4.94m5.66-2.2a1.04 1.04 0 1 1-2.08 0 1.04 1.04 0 0 1 2.08 0"/></svg>
+          @summer.eight008
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="buy">
+    <div class="wrap">
+      <h2 class="section-title reveal">Empieza a <span class="script" style="color:var(--coral);font-size:1.3em;">leer</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Las dos novelas están disponibles en Amazon. Vive la historia de Lara y Lucas desde las dos orillas.</p>
+      <div class="buy-cards reveal">
+        <div class="buy-card">
+          <h4>Sin querer… pero queriendo</h4>
+          <div class="pov">La historia de Lara</div>
+          <a class="btn btn-primary" href="https://www.amazon.es/dp/B0GYXSVS7S" target="_blank" rel="noopener">Ver en Amazon</a>
+        </div>
+        <div class="buy-card">
+          <h4>Sin querer… pero escogiéndote</h4>
+          <div class="pov">La historia de Lucas</div>
+          <a class="btn btn-ghost" href="https://www.amazon.es/dp/B0HLTCCJD5" target="_blank" rel="noopener">Ver en Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Summer Eight · <em>Sin querer… pero queriendo</em> y <em>Sin querer… pero escogiéndote</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
