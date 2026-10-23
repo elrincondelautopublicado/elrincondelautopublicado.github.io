@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>GRAN M: Libro I — Pulso Cero | Víctor Medel Bello · Ciencia ficción biopunk</title>
+  <meta name="description" content="GRAN M: Libro I — Pulso Cero, de Víctor Medel Bello. Ciencia ficción biopunk y distópica: una ciudad suspendida sobre una Tierra alterada, misiones de descenso, deuda, propaganda y el poder de quienes controlan la información." />
+  <meta name="author" content="Víctor Medel Bello" />
+  <meta name="keywords" content="GRAN M, Pulso Cero, Víctor Medel Bello, ciencia ficción, biopunk, distopía, postapocalíptico, ciudad suspendida, Senkai" />
+
+  <!-- ====== Open Graph ====== -->
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="GRAN M: Libro I — Pulso Cero — Víctor Medel Bello" />
+  <meta property="og:description" content="Si el sistema deja de reconocerte, ¿sigues vivo? Ciencia ficción biopunk y distópica." />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GRAN M: Libro I — Pulso Cero — Víctor Medel Bello" />
+  <meta name="twitter:description" content="Una ciudad suspendida, misiones de descenso y una verdad que contradice los registros oficiales." />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <!-- ====== Favicon ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d10'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='%23e8903a' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== Datos estructurados ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "GRAN M: Libro I — Pulso Cero",
+    "author": { "@type": "Person", "name": "Víctor Medel Bello" },
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/EBook",
+    "genre": ["Ciencia ficción", "Biopunk", "Distopía"],
+    "image": "portada.jpg",
+    "isbn": "9798176860511",
+    "description": "En una ciudad suspendida sobre una Tierra alterada, Senkai, un joven de diecinueve años, acepta misiones de descenso porque necesita dinero y la cobertura médica de su familia depende de trabajos peligrosos. Durante sus expediciones encuentra señales de vida y archivos que contradicen la versión oficial."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --negro: #0a0b0e;          /* fondo profundo */
+      --negro-2: #101217;        /* secciones */
+      --negro-3: #181b22;        /* tarjetas */
+      --humo: #232833;           /* bordes */
+      --ambar: #e8903a;          /* sol del atardecer de la portada */
+      --ambar-claro: #ffb765;
+      --cobre: #c56a2b;
+      --cian: #4fd6d0;           /* señal industrial / biopunk */
+      --cian-apagado: #2c7f7c;
+      --hueso: #e9e4da;          /* texto claro */
+      --gris: #9aa0ab;           /* texto secundario */
+      --gris-2: #6b7280;
+      --blanco: #f6f4ef;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: 'Exo 2', system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Orbitron', 'Rajdhani', sans-serif; letter-spacing: .02em; }
+    .cond { font-family: 'Rajdhani', sans-serif; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    em { color: var(--ambar-claro); font-style: italic; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(10,11,14,.82); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(232,144,58,.22);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Orbitron', sans-serif; font-weight: 900; color: var(--ambar); font-size: 1.15rem; letter-spacing: .14em; }
+    nav .links { display: flex; gap: 26px; align-items: center; }
+    nav .links a { text-decoration: none; font-size: .78rem; letter-spacing: .08em; color: var(--gris); text-transform: uppercase; font-weight: 600; font-family: 'Rajdhani', sans-serif; transition: color .3s; }
+    nav .links a:hover { color: var(--cian); }
+    nav .links a.home { color: var(--ambar); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ambar); margin: 5px 0; transition: transform .3s ease, opacity .3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 760px) {
+      .nav-toggle { display: block; }
+      nav .links {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px);
+        flex-direction: column; justify-content: center; gap: 30px;
+        background: rgba(10,11,14,.98); backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(232,144,58,.25);
+        transform: translateX(100%); transition: transform .35s ease;
+      }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background:
+        radial-gradient(circle at 78% 22%, rgba(232,144,58,.26), transparent 48%),
+        radial-gradient(circle at 12% 80%, rgba(79,214,208,.12), transparent 46%),
+        linear-gradient(160deg, #15110c 0%, var(--negro) 55%, #0b0f12 100%);
+      overflow: hidden; padding: 120px 0 70px;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; opacity: .05; pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: center; }
+    .cover-frame { justify-self: center; width: 320px; max-width: 100%; border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(232,144,58,.3); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-8px); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, var(--negro-3), #1d140b); border-radius: 6px; color: var(--ambar); border: 1px solid var(--humo); }
+    .cover-fallback .big { font-family: 'Orbitron',sans-serif; font-weight: 900; font-size: 2.6rem; }
+    .cover-fallback small { display:block; margin-top: 14px; color: var(--gris); font-size: .72rem; letter-spacing: .05em; }
+    .hero-text .eyebrow { color: var(--cian); text-transform: uppercase; letter-spacing: .34em; font-size: .74rem; font-weight: 700; margin-bottom: 16px; font-family: 'Rajdhani', sans-serif; }
+    .hero-text h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 7vw, 5rem); line-height: .98; color: var(--blanco); text-shadow: 0 0 40px rgba(232,144,58,.25); }
+    .hero-text .sub { font-family: 'Rajdhani', sans-serif; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--ambar); font-size: 1rem; margin-top: 10px; }
+    .hero-text .autora { margin-top: 18px; font-family: 'Rajdhani', sans-serif; font-weight: 600; color: var(--gris); font-size: 1.15rem; letter-spacing: .05em; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.3rem; font-style: italic; color: var(--hueso); max-width: 42ch; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+    }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: .92rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; border-radius: 4px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--ambar), var(--cobre)); color: #140d06; box-shadow: 0 10px 26px rgba(232,144,58,.32); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(232,144,58,.5); }
+    .btn-ghost { border: 1px solid var(--cian); color: var(--cian); background: transparent; }
+    .btn-ghost:hover { background: var(--cian); color: var(--negro); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 92px 0; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 4vw, 2.5rem); color: var(--blanco); margin-bottom: 10px; }
+    .section-title span { color: var(--ambar); }
+    .divider { width: 120px; height: 2px; margin: 18px auto 46px; background: linear-gradient(90deg, transparent, var(--ambar), transparent); position: relative; }
+    .divider::after { content: "◆"; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); color: var(--cian); font-size: .9rem; background: var(--negro); padding: 0 8px; }
+
+    /* ============ SINOPSIS ============ */
+    .sinopsis { background: var(--negro-2); }
+    .sinopsis .hook { text-align: center; font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 1.7rem; color: var(--ambar-claro); max-width: 24ch; margin: 0 auto 40px; line-height: 1.3; letter-spacing: .01em; }
+    .sinopsis p { max-width: 64ch; margin: 0 auto 20px; font-size: 1.12rem; color: #c6cbd4; }
+    .sinopsis .cierre { text-align: center; font-style: italic; color: var(--cian); font-size: 1.22rem; max-width: 52ch; font-family: 'Rajdhani', sans-serif; font-weight: 500; }
+
+    /* ============ TEMAS / CHIPS ============ */
+    .temas { background: var(--negro); }
+    .temas .intro { text-align: center; max-width: 60ch; margin: 0 auto 34px; color: var(--gris); }
+    .chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 740px; margin: 0 auto; }
+    .chip { border: 1px solid var(--humo); color: var(--cian); background: var(--negro-3); border-radius: 40px; padding: 8px 20px; font-family: 'Rajdhani', sans-serif; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: .82rem; }
+    .ficha-tecnica { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-top: 44px; }
+    .dato { background: var(--negro-3); border: 1px solid var(--humo); border-radius: 10px; padding: 20px 26px; min-width: 180px; text-align: center; }
+    .dato .etq { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; color: var(--gris-2); margin-bottom: 6px; }
+    .dato .val { font-family: 'Orbitron', sans-serif; color: var(--ambar); font-size: 1.05rem; }
+
+    /* ============ AUTOR ============ */
+    .autor-sec { background: linear-gradient(160deg, var(--negro-2), #12100c); }
+    .autor-grid { display: grid; grid-template-columns: 220px 1fr; gap: 50px; align-items: start; max-width: 900px; margin: 0 auto; }
+    .autor-medallon { justify-self: center; width: 200px; height: 200px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #2a1d10, var(--negro-3)); border: 1px solid rgba(232,144,58,.4); font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 4.2rem; color: var(--ambar); box-shadow: 0 0 40px rgba(232,144,58,.18); }
+    .autor-texto h3 { color: var(--ambar); font-size: 1.6rem; margin-bottom: 4px; }
+    .autor-texto .rol { color: var(--cian); font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+    .autor-texto p { margin-bottom: 16px; color: #c6cbd4; }
+    .autor-texto .cierre { font-style: italic; color: var(--hueso); }
+    .autor-texto .perfil { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding: 12px 24px; border-radius: 4px; border: 1px solid var(--cian); color: var(--cian); text-decoration: none; font-family: 'Rajdhani', sans-serif; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: .85rem; transition: all .3s ease; }
+    .autor-texto .perfil:hover { background: var(--cian); color: var(--negro); }
+    @media (max-width: 760px) {
+      .autor-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .autor-texto p { text-align: left; }
+    }
+
+    /* ============ COMPRA ============ */
+    .buy { background: var(--negro); text-align: center; }
+    .buy p { max-width: 52ch; margin: 0 auto 36px; font-size: 1.12rem; color: #c6cbd4; }
+    .buy-cards { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+    .buy-card { background: var(--negro-3); border: 1px solid var(--humo); border-radius: 12px; padding: 28px 30px; max-width: 320px; display: flex; flex-direction: column; align-items: center; gap: 12px; transition: border-color .3s ease, transform .3s ease; }
+    .buy-card:hover { border-color: rgba(232,144,58,.5); transform: translateY(-4px); }
+    .buy-card h4 { font-family: 'Orbitron', sans-serif; color: var(--blanco); font-size: 1.05rem; }
+    .buy-card .pov { font-family: 'Rajdhani', sans-serif; font-size: .82rem; color: var(--cian); text-transform: uppercase; letter-spacing: .1em; }
+
+    /* ============ FOOTER ============ */
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .86rem; background: var(--negro-2); border-top: 1px solid rgba(232,144,58,.2); }
+    footer a { color: var(--ambar); text-decoration: none; }
+
+    /* ============ ANIMACIÓN ============ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">GRAN M</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#temas">El mundo</a>
+        <a href="#autor">El autor</a>
+        <a href="#comprar">Comprar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de GRAN M: Libro I — Pulso Cero, de Víctor Medel Bello"
+             loading="eager"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>
+            <span class="big">GRAN M</span>
+            <small>Libro I: Pulso Cero<br>Añade la portada como portada.jpg</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Ciencia ficción · Biopunk · Distopía</div>
+        <h1>GRAN M</h1>
+        <div class="sub">Libro I · Pulso Cero</div>
+        <div class="autora">Víctor Medel Bello</div>
+        <p class="tagline">«Si el sistema deja de reconocerte, ¿sigues vivo?»</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#comprar">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <p class="hook reveal">Sesenta y ocho años después del fin de casi todo, una ciudad suspendida observa una Tierra que empieza a contradecir los registros oficiales.</p>
+      <p class="reveal">En una ciudad suspendida sobre una Tierra alterada, <strong>Senkai</strong>, un joven de diecinueve años, acepta misiones de descenso porque necesita dinero: la cobertura médica de su familia depende de aceptar los trabajos más peligrosos.</p>
+      <p class="reveal">Durante sus expediciones a la superficie encuentra lo que no debería existir: señales de vida y archivos que contradicen la versión oficial del mundo. Datos que no encajan, una amenaza biológica que altera las reglas y una pregunta que no deja de crecer: ¿cuánto de lo que le han contado es verdad?</p>
+      <p class="reveal">Una novela de ciencia ficción biopunk y distópica sobre la supervivencia, la deuda, la propaganda y el poder de quienes controlan la información.</p>
+      <p class="cierre reveal">Sobrevivir también tiene condiciones.</p>
+    </div>
+  </section>
+
+  <!-- ============ EL MUNDO / TEMAS ============ -->
+  <section id="temas" class="temas">
+    <div class="wrap">
+      <h2 class="section-title reveal">De qué está hecho este <span>mundo</span></h2>
+      <div class="divider reveal"></div>
+      <p class="intro reveal">Una Tierra arrasada, una ciudad que flota sobre ella y un relato oficial que se resquebraja. Estos son los ejes que recorren <em>Pulso Cero</em>.</p>
+      <div class="chips reveal">
+        <span class="chip">Biopunk</span>
+        <span class="chip">Distopía</span>
+        <span class="chip">Postapocalipsis</span>
+        <span class="chip">Supervivencia</span>
+        <span class="chip">Deuda</span>
+        <span class="chip">Propaganda</span>
+        <span class="chip">Control de la información</span>
+      </div>
+      <div class="ficha-tecnica reveal">
+        <div class="dato"><div class="etq">Serie</div><div class="val">GRAN M</div></div>
+        <div class="dato"><div class="etq">Entrega</div><div class="val">Libro I</div></div>
+        <div class="dato"><div class="etq">Formatos</div><div class="val">Kindle + papel</div></div>
+        <div class="dato"><div class="etq">Páginas</div><div class="val">460</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOR ============ -->
+  <section id="autor" class="autor-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">El <span>autor</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autor-grid">
+        <div class="autor-medallon reveal">V</div>
+        <div class="autor-texto reveal">
+          <h3>Víctor Medel Bello</h3>
+          <div class="rol">Autor de ciencia ficción</div>
+          <p>Víctor Medel Bello firma <em>GRAN M</em>, una saga de ciencia ficción biopunk y distópica que arranca con <em>Pulso Cero</em>. Una historia de mundos construidos con cuidado, donde la supervivencia, la propaganda y el control de la información mueven los hilos.</p>
+          <p class="cierre">Pulso Cero es solo el comienzo de GRAN M.</p>
+          <a class="perfil" href="https://www.amazon.com/stores/V%C3%ADctor-Medel-Bello/author/B0HLMS46JC" target="_blank" rel="noopener">Página del autor en Amazon →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="buy">
+    <div class="wrap">
+      <h2 class="section-title reveal">Empieza a <span>leer</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">GRAN M: Libro I — Pulso Cero está disponible en Amazon en los dos formatos. Desciende a la superficie con Senkai.</p>
+      <div class="buy-cards reveal">
+        <div class="buy-card">
+          <h4>Edición Kindle</h4>
+          <div class="pov">eBook · Kindle Unlimited</div>
+          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HL5WTN2C" target="_blank" rel="noopener">Ver en Amazon</a>
+        </div>
+        <div class="buy-card">
+          <h4>Tapa blanda</h4>
+          <div class="pov">460 páginas</div>
+          <a class="btn btn-ghost" href="https://www.amazon.com/dp/B0HL5YZH1D" target="_blank" rel="noopener">Ver en Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Víctor Medel Bello · <em>GRAN M: Libro I — Pulso Cero</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
