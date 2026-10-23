@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los hijos rotos — Primer capítulo | Laura Pérez Caballero</title>
+  <meta name="description" content="Lee el primer capítulo de Los hijos rotos, de Laura Pérez Caballero. La llegada de Rei a El Páramo." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0a0a'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%238f2b2b' text-anchor='middle'%3E%E2%9C%A0%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --negro: #0c0a0a; --negro-2: #141010; --humo: #2c2322;
+      --sangre: #8f2b2b; --sangre-viva: #b5403f; --verde-claro: #8fb083;
+      --hueso: #e6ded2; --gris: #9a918a; --gris-2: #6a615c; --blanco: #f4efe7;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--negro); color: var(--hueso); font-family: 'Spectral', Georgia, serif; font-size: 1.12rem; line-height: 1.9; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 26px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(12,10,10,.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(143,43,43,.3); }
+    nav .wrap { max-width: 1080px; display: flex; justify-content: space-between; align-items: center; padding: 14px 26px; }
+    nav .brand { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--hueso); font-size: 1.05rem; letter-spacing: .18em; text-transform: uppercase; }
+    nav a { font-family: 'Oswald', sans-serif; font-size: .78rem; letter-spacing: .1em; color: var(--sangre-viva); text-transform: uppercase; text-decoration: none; }
+
+    header.cab { padding: 150px 0 50px; text-align: center; border-bottom: 1px solid var(--humo); }
+    header.cab .eyebrow { font-family: 'Oswald', sans-serif; color: var(--sangre-viva); text-transform: uppercase; letter-spacing: .3em; font-size: .72rem; margin-bottom: 18px; }
+    header.cab h1 { font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: uppercase; font-size: clamp(2rem, 5vw, 3rem); color: var(--blanco); line-height: 1.05; }
+    header.cab .autora { margin-top: 14px; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--sangre-viva); font-size: 1.4rem; }
+
+    .aviso { max-width: 720px; margin: 36px auto 0; padding: 16px 22px; border-left: 3px solid var(--sangre); background: var(--negro-2); color: var(--gris); font-size: .92rem; border-radius: 0 8px 8px 0; }
+
+    .texto { padding: 56px 0 90px; }
+    .texto .num { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--sangre-viva); font-size: 2.4rem; text-align: center; margin-bottom: 34px; }
+    .texto p { margin-bottom: 20px; text-align: justify; color: #d8cfc3; }
+    .texto p.primero::first-letter { font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; line-height: .8; float: left; margin: 6px 12px 0 0; color: var(--sangre-viva); }
+    .texto p.dialogo { text-align: left; padding-left: 1.2em; text-indent: -1.2em; color: var(--hueso); }
+
+    .fin { text-align: center; padding: 20px 0 10px; }
+    .fin .sep { color: var(--sangre); letter-spacing: .5em; margin-bottom: 30px; }
+    .fin p { color: var(--gris); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 26px; }
+    .btn { display: inline-flex; gap: 10px; padding: 15px 32px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: .88rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 3px; background: linear-gradient(135deg, var(--sangre), #6e1f1f); color: var(--hueso); transition: all .3s ease; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(143,43,43,.5); }
+    footer { text-align: center; padding: 36px 24px; color: var(--gris-2); font-size: .85rem; background: var(--negro-2); border-top: 1px solid rgba(143,43,43,.25); }
+    footer a { color: var(--sangre-viva); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <span class="brand">Los hijos rotos</span>
+      <a href="index.html">&larr; Volver a la ficha</a>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <div class="wrap">
+      <div class="eyebrow">Primer capítulo</div>
+      <h1>Los hijos rotos</h1>
+      <div class="autora">Laura Pérez Caballero</div>
+    </div>
+    <div class="aviso">Aviso de contenido: thriller psicológico de tono adulto, con escenas duras y algún pasaje grotesco.</div>
+  </header>
+
+  <article class="texto">
+    <div class="wrap">
+      <div class="num">1</div>
+      <p class="primero">Llegó de forma imprevista. Tan imprevista como llega una ligera brisa en un día abrasador de verano. Y durante uno, dos, tres segundos, durante un momento efímero, sientes un alivio indescriptible al que no te puedes resistir. Así llegó. De improviso, como un placer volátil e irresistible.</p>
+      <p>La casa estaba a la salida o a la entrada del pueblo, según se mirara. Era de estilo indiano, de tres plantas, con su palmera en el enorme patio, y estaba muy descuidada, casi en ruinas, como su propietario.</p>
+      <p>El mismo se encontraba encamado en una de las habitaciones de la tercera planta. La persiana echada, tratando de amortiguar el calor sofocante que se colaba por cada grieta, se movió ligeramente cuando el muchacho abrió la puerta.</p>
+      <p>La mujer, de mediana edad y ojos de ratón, se volvió hacia él con un plato en la mano, dejando al hombre encamado con la boca abierta ante la nada cuando retiró la cuchara y le escrutó con más desprecio que miedo. La habitación olía a rancio, a medicinas, a piel vieja y cuarteada y a la indignación de aquella mujer ante la llegada abrupta del desconocido.</p>
+      <p class="dialogo">—¿Quién eres tú? ¿Qué haces aquí?</p>
+      <p>Los ojos del muchacho eran de un verde afilado y parecieron relamerse ante la mirada de ratón de la vieja. Enmarcado en el vano de la puerta, su respuesta fue tan cínica como su gesto.</p>
+      <p class="dialogo">—La puerta estaba abierta.</p>
+      <p class="dialogo">—¿Y eso te da derecho a entrar en una casa que no es tuya?</p>
+      <p class="dialogo">—Estoy de paso. Llevo días caminando. Voy de aquí para allá buscándome la vida y me preguntaba si podrían darme algo de beber. Un poco de agua, o tal vez una cerveza fresquita.</p>
+      <p>El verde afilado se posó con descaro sobre el azul gastado de los ojos del hombre postrado. El viejo, atónito, se dio un golpe sobre uno de los muslos.</p>
+      <p class="dialogo">—Ja, una cerveza. Has venido al sitio equivocado, muchacho. Esta bruja hace siglos que no permite una gota de alcohol en esta casa.</p>
+      <p>La mujer dejó el plato sobre una mesilla al lado de la cama y puso los brazos en jarras, dirigiéndose al muchacho e ignorando el improperio del hombre.</p>
+      <p class="dialogo">—El pueblo está apenas a dos kilómetros. Allí tienes una cantina.</p>
+      <p class="dialogo">—Ya, pero no tengo dinero.</p>
+      <p>La mujer rezongó moviendo la cabeza de un lado a otro.</p>
+      <p class="dialogo">—Panda de vagos, haraganes. Hacía tiempo que ninguno pisaba El Páramo, pero vuelven a ser malos tiempos. Es como una maldición que se repite cada veinticinco años.</p>
+      <p>El hombre postrado golpeó la mesilla haciendo caer el plato con una papilla grisácea. Furibundo movió un brazo en el aire y luego arremetió contra ella, punzante.</p>
+      <p class="dialogo">—¡Cállate, bruja! Ve a la cocina y sube un poco de agua para el muchacho.</p>
+      <p>La mujer se apresuró a recoger el plato mientras el muchacho se encogía de hombros. La papilla había salpicado sobre el pijama y las sábanas y la mujer comenzó a soltar una retahíla de palabras apenas audibles sobre que ahora tendría que cambiarlo y echar a lavar todo.</p>
+      <p>Minia rezongó aún un poco más. Murmuraba por lo bajo y el viejo esperaba paciente a que se marchara. Lo hizo llevándose con ella el plato.</p>
+      <p>Después, el viejo se dirigió al muchacho achicando sus ojos gastados.</p>
+      <p class="dialogo">—¿A dónde te diriges, chico?</p>
+      <p class="dialogo">—Aquí, allá. No vengo de ningún lado ni voy a ningún sitio. No pertenezco al mundo, el mundo me pertenece.</p>
+      <p>Ante tal declaración, se escuchó la risa agria de Minia mientras salía por la puerta camino de la cocina.</p>
+      <p>Rei se apoyó en el poyete de la ventana y sacó un paquete de tabaco del bolsillo de sus tejanos. El viejo le miró pasando la lengua sobre los labios. Rei encenció el cigarrillo sin quitarle los ojos de encima.</p>
+      <p class="dialogo">—Dame uno de esos, chico.</p>
+      <p class="dialogo">—No sé, no quiero meterme en problemas. Esa mujer …</p>
+      <p>El viejo sacudió los brazos en el aire. Al hablar diminutas gotas de saliva salían disparadas de su boca.</p>
+      <p class="dialogo">—Esta es mi casa. Pero esos están empeñados en torturarme, se aprovechan de que no puedo moverme y me privan de todo. Dame uno muchacho, aquí soy yo el que manda, no esa vieja.</p>
+      <p>Rei le pasó el mismo cigarro que había encendido y observó cómo el viejo le daba una calada. Inhalaba y exhalabal humo con verdadero placer.</p>
+      <p class="dialogo">—Chico, ¿estarás unos días por aquí?</p>
+      <p>Rei se encogió de hombros.</p>
+      <p class="dialogo">—No tengo prisa, nadie me espera. ¿Qué es lo que quiere?</p>
+      <p class="dialogo">—Tal vez podríamos compartir alguna cerveza juntos. —El viejo le guiñó el ojo y le dio otra calada al cigarrillo—. Puedo darte algo de dinero para que te hagas con algo de bebida y vuelvas a charlar conmigo. Aquí me aburro bastante, solo vienen esa vieja y el doctor, y para lo que vienen mejor se quedaban en su casa. Chico, llevo más de un año metido en esta cama sin poder hacer nada.</p>
+      <p>Minia entró en la habitación con un vaso de agua en la mano. Al ver al viejo enrojeció.</p>
+      <p class="dialogo">—Pero ¿qué estás haciendo, Rubio? ¿Cómo se te ocurre fumar? ¿No sabes lo que ha dicho el doctor?</p>
+      <p class="dialogo">—Claro que sé lo que dice el doctor, pero él bien que fuma —replicó el viejo.</p>
+      <p class="dialogo">—Él no está enfermo.</p>
+      <p class="dialogo">—Más razones para que lo deje él. Yo me voy a morir igual.</p>
+      <p>Minia dejó el vaso de agua con brusquedad sobre la mesita y le arrebató el cigarrillo al viejo. Luego se volvió hacia Rei.</p>
+      <p class="dialogo">—Se lo has dado tú, ¿no?</p>
+      <p>El viejo alargaba las manos intentado recuperar el cigarro, pero Minia lo apagó en el vaso de agua que acababa de traer.</p>
+      <p class="dialogo">—Lárgate de aquí —le ordenó Minia a Rei.</p>
+      <p>El viejo comenzó a toser y la mujer se agachó y le dio unos golpes en la espalda. Sin embargo, él la apartó sin miramientos.</p>
+      <p class="dialogo">—¿Quién te crees que eres tú para echar a nadie de mi casa? —Y antes de darle tiempo a responder volvió su mirada hacia Rei—. ¿Cuidarías de este viejo en sus últimos días?</p>
+      <p>La mujer echó la cabeza hacia atrás estirando el cuello como una gallina. No podía creerse lo que estaba oyendo. Aquel viejo había terminado de volverse loco.</p>
+      <p>El muchacho volvió a encogerse de hombros.</p>
+      <p class="dialogo">—¿Por qué no? Este lugar es parte del mundo, como cualquier otra parte y creo que podríamos ayudarnos mutuamente, ¿no? Yo soy joven y usted tiene dinero.</p>
+      <p>La mujer abrió los ojos de ratón como si le acabasen de pisar el rabo. Tenía que estar soñando. El pasmo la dejó un momento vacilante y luego habló con voz chirriante, cerca de la histeria.</p>
+      <p class="dialogo">—¡Descarado! Ni siquiera tratas de disimular tus intenciones. Mira que querer aprovecharte de un viejo tullido y enfermo y encima confesarlo con esa desvergüenza.</p>
+      <p class="dialogo">—Cállate, Minia. Estás despedida.</p>
+      <p>La mujer movió con violencia los brazos. Achicó los ojos intercambiando su mirada del viejo a Rei y de Rei al viejo.</p>
+      <p class="dialogo">—Sabes bien que tú no puedes despedirme. —Se deshizo el lazo del mandil, que tenía atado a la espalda, para después sacarlo por la cabeza despeinando parte de su moño canoso—. Ya veremos lo que dice el doctor cuando se entere.</p>
+      <p class="dialogo">—Bla, bla, bla… —Se burló el viejo agitando una mano frente a sí—. Dale al chico unos billetes de la caja para gastos y llévale en esa tartana que tienes hasta El Páramo. Primera parada la cantina.</p>
+      <p>La mujer restregó una mano con la otra. Había enrojecido y columpiaba su mirada de roedor entre el viejo y el chico. Después caminó hasta la puerta abierta de la habitación y, antes de cerrarla de un portazo, que balanceó la persiana generando una brevísima brisa, bufó.</p>
+      <p class="dialogo">—Puede que el mundo le pertenezca, pero ese diablo no se subirá nunca conmigo en mi tartana.</p>
+      <p>Tenía razón.</p>
+
+      <div class="fin">
+        <div class="sep">✠ ✠ ✠</div>
+        <p>La historia de Rei en El Páramo no ha hecho más que empezar.</p>
+        <a class="btn" href="https://www.amazon.es/dp/B0H6JXBFMG" target="_blank" rel="noopener">Seguir leyendo en Amazon</a>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Laura Pérez Caballero · <em>Los hijos rotos</em>.</p>
+    <p style="margin-top:8px;"><a href="index.html">← Volver a la ficha del libro</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

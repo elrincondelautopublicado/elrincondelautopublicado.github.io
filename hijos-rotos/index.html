@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>Los hijos rotos — Laura Pérez Caballero | Thriller psicológico y horror social</title>
+  <meta name="description" content="Los hijos rotos, de Laura Pérez Caballero. Un extraño llega a un pueblo donde todos comparten un secreto. Thriller psicológico con tintes de horror social sobre la manipulación, la culpa y la oscuridad de una comunidad." />
+  <meta name="author" content="Laura Pérez Caballero" />
+  <meta name="keywords" content="Los hijos rotos, Laura Pérez Caballero, thriller psicológico, horror social, manipulación, novela negra, El Páramo, Rei" />
+
+  <!-- ====== Open Graph ====== -->
+  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Los hijos rotos — Laura Pérez Caballero" />
+  <meta property="og:description" content="¿Quién es realmente ese muchacho? ¿A qué ha venido? ¿Y por qué todos empiezan a temerlo?" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Los hijos rotos — Laura Pérez Caballero" />
+  <meta name="twitter:description" content="Un thriller psicológico con tintes de horror social sobre el poder de la influencia y los secretos compartidos." />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <!-- ====== Favicon ====== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0a0a'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' fill='%238f2b2b' text-anchor='middle'%3E%E2%9C%A0%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== Datos estructurados ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Los hijos rotos",
+    "author": { "@type": "Person", "name": "Laura Pérez Caballero" },
+    "inLanguage": "es",
+    "bookFormat": "https://schema.org/EBook",
+    "genre": ["Thriller psicológico", "Horror social", "Novela negra"],
+    "image": "portada.jpg",
+    "description": "Un extraño llega a un pueblo donde todos comparten un secreto. Thriller psicológico con tintes de horror social sobre el poder de la influencia, los secretos compartidos y la oscuridad que puede esconder una comunidad en apariencia tranquila."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Oswald:wght@300;400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --negro: #0c0a0a;          /* fondo profundo */
+      --negro-2: #141010;        /* secciones */
+      --negro-3: #1c1616;        /* tarjetas */
+      --humo: #2c2322;           /* bordes */
+      --sangre: #8f2b2b;         /* rojo apagado */
+      --sangre-viva: #b5403f;
+      --verde: #5f7d57;          /* el verde afilado de los ojos de Rei */
+      --verde-claro: #8fb083;
+      --hueso: #e6ded2;          /* texto claro */
+      --gris: #9a918a;           /* texto secundario */
+      --gris-2: #6a615c;
+      --blanco: #f4efe7;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: 'Spectral', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: .02em; text-transform: uppercase; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    em { color: var(--verde-claro); font-style: italic; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(12,10,10,.84); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(143,43,43,.3);
+    }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+    nav .brand { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--hueso); font-size: 1.1rem; letter-spacing: .18em; text-transform: uppercase; }
+    nav .links { display: flex; gap: 24px; align-items: center; }
+    nav .links a { text-decoration: none; font-family: 'Oswald', sans-serif; font-size: .78rem; letter-spacing: .1em; color: var(--gris); text-transform: uppercase; font-weight: 400; transition: color .3s; }
+    nav .links a:hover { color: var(--sangre-viva); }
+    nav .links a.home { color: var(--sangre-viva); }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; z-index: 60; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--sangre-viva); margin: 5px 0; transition: transform .3s ease, opacity .3s ease; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 760px) {
+      .nav-toggle { display: block; }
+      nav .links {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(74vw, 290px);
+        flex-direction: column; justify-content: center; gap: 30px;
+        background: rgba(12,10,10,.98); backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(143,43,43,.3);
+        transform: translateX(100%); transition: transform .35s ease;
+      }
+      nav .links.open { transform: translateX(0); }
+      nav .links a { font-size: 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(143,43,43,.22), transparent 48%),
+        radial-gradient(circle at 15% 85%, rgba(95,125,87,.1), transparent 46%),
+        linear-gradient(160deg, #120d0d 0%, var(--negro) 60%, #0a0808 100%);
+      overflow: hidden; padding: 120px 0 70px;
+    }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: center; }
+    .cover-frame { justify-self: center; width: 320px; max-width: 100%; border-radius: 4px; box-shadow: 0 24px 60px rgba(0,0,0,.7), 0 0 0 1px rgba(143,43,43,.3); transition: transform .5s ease; }
+    .cover-frame:hover { transform: translateY(-8px); }
+    .cover-frame img { display: block; width: 100%; height: auto; border-radius: 4px; }
+    .cover-fallback { display: grid; place-items: center; text-align: center; aspect-ratio: 2/3; padding: 30px; background: linear-gradient(160deg, var(--negro-3), #221010); border-radius: 4px; color: var(--sangre-viva); border: 1px solid var(--humo); }
+    .cover-fallback .big { font-family: 'Oswald',sans-serif; font-weight: 600; font-size: 2.2rem; }
+    .cover-fallback small { display:block; margin-top: 14px; color: var(--gris); font-size: .72rem; letter-spacing: .05em; }
+    .hero-text .eyebrow { color: var(--sangre-viva); text-transform: uppercase; letter-spacing: .34em; font-size: .74rem; font-weight: 500; margin-bottom: 16px; font-family: 'Oswald', sans-serif; }
+    .hero-text h1 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1; color: var(--blanco); }
+    .hero-text .autora { margin-top: 16px; font-family: 'Cormorant Garamond', serif; color: var(--sangre-viva); font-size: 1.8rem; font-style: italic; }
+    .hero-text .tagline { margin-top: 22px; font-size: 1.3rem; font-style: italic; color: var(--hueso); max-width: 44ch; font-family: 'Cormorant Garamond', serif; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+    }
+
+    /* ============ BOTONES ============ */
+    .cta-row { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; font-family: 'Oswald', sans-serif; font-weight: 500; font-size: .88rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 3px; cursor: pointer; transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--sangre), #6e1f1f); color: var(--hueso); box-shadow: 0 10px 26px rgba(143,43,43,.35); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(143,43,43,.55); }
+    .btn-ghost { border: 1px solid var(--gris-2); color: var(--hueso); background: transparent; }
+    .btn-ghost:hover { border-color: var(--sangre-viva); color: var(--sangre-viva); }
+
+    /* ============ SECCIONES ============ */
+    section { padding: 92px 0; }
+    .section-title { text-align: center; font-size: clamp(1.7rem, 4vw, 2.4rem); color: var(--blanco); margin-bottom: 10px; }
+    .section-title span { color: var(--sangre-viva); }
+    .divider { width: 120px; height: 1px; margin: 18px auto 46px; background: linear-gradient(90deg, transparent, var(--sangre), transparent); position: relative; }
+    .divider::after { content: "✠"; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); color: var(--sangre); font-size: 1.1rem; background: var(--negro); padding: 0 10px; }
+
+    /* ============ SINOPSIS ============ */
+    .sinopsis { background: var(--negro-2); }
+    .sinopsis .hook { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.9rem; color: var(--sangre-viva); max-width: 26ch; margin: 0 auto 40px; line-height: 1.3; }
+    .sinopsis p { max-width: 64ch; margin: 0 auto 20px; font-size: 1.12rem; color: #cfc6ba; }
+    .sinopsis .cierre { text-align: center; font-style: italic; color: var(--verde-claro); font-size: 1.22rem; max-width: 54ch; font-family: 'Cormorant Garamond', serif; }
+
+    /* ============ CAPÍTULO ============ */
+    .cap { background: var(--negro); text-align: center; }
+    .cap p { max-width: 54ch; margin: 0 auto 28px; color: #cfc6ba; font-size: 1.12rem; }
+
+    /* ============ RESEÑAS ============ */
+    .resenas { background: linear-gradient(160deg, var(--negro-2), #100b0b); }
+    .resenas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 1000px; margin: 0 auto; }
+    .resena { background: var(--negro-3); border: 1px solid var(--humo); border-radius: 10px; padding: 24px 26px; }
+    .resena .estrellas { color: var(--sangre-viva); letter-spacing: .12em; font-size: .95rem; margin-bottom: 6px; }
+    .resena h4 { font-family: 'Oswald', sans-serif; color: var(--hueso); font-size: 1rem; margin-bottom: 10px; text-transform: none; font-weight: 500; }
+    .resena p { color: #bdb4a9; font-size: .98rem; line-height: 1.7; margin-bottom: 12px; }
+    .resena .autor-r { font-family: 'Oswald', sans-serif; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--verde); }
+
+    /* ============ AUTORA ============ */
+    .autora-sec { background: var(--negro); }
+    .autora-grid { display: grid; grid-template-columns: 240px 1fr; gap: 50px; align-items: start; max-width: 920px; margin: 0 auto; }
+    .autora-foto { justify-self: center; width: 240px; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 44px rgba(0,0,0,.5); border: 1px solid var(--humo); background: var(--negro-3); }
+    .autora-foto img { display: block; width: 100%; height: auto; }
+    .autora-foto .foto-fallback { display: grid; place-items: center; aspect-ratio: 3/4; background: linear-gradient(160deg, var(--negro-3), #221010); color: var(--sangre-viva); font-family: 'Cormorant Garamond', serif; font-size: 4rem; }
+    .autora-texto h3 { color: var(--sangre-viva); font-size: 1.5rem; margin-bottom: 4px; }
+    .autora-texto .rol { color: var(--verde); font-family: 'Oswald', sans-serif; font-weight: 400; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 18px; }
+    .autora-texto p { margin-bottom: 16px; color: #cfc6ba; }
+    .autora-texto .perfil { display: inline-flex; align-items: center; gap: 10px; margin-top: 8px; padding: 12px 24px; border-radius: 3px; border: 1px solid var(--gris-2); color: var(--hueso); text-decoration: none; font-family: 'Oswald', sans-serif; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; font-size: .82rem; transition: all .3s ease; }
+    .autora-texto .perfil:hover { border-color: var(--sangre-viva); color: var(--sangre-viva); }
+    @media (max-width: 760px) {
+      .autora-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+      .autora-texto p { text-align: left; }
+    }
+
+    /* ============ COMPRA ============ */
+    .buy { background: linear-gradient(160deg, #140d0d, var(--negro)); text-align: center; }
+    .buy p { max-width: 52ch; margin: 0 auto 36px; font-size: 1.12rem; color: #cfc6ba; }
+
+    /* ============ FOOTER ============ */
+    footer { text-align: center; padding: 40px 24px; color: var(--gris-2); font-size: .86rem; background: var(--negro-2); border-top: 1px solid rgba(143,43,43,.25); }
+    footer a { color: var(--sangre-viva); text-decoration: none; }
+
+    /* ============ ANIMACIÓN ============ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">Los hijos rotos</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#sinopsis">Sinopsis</a>
+        <a href="#capitulo">Primer capítulo</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#autora">La autora</a>
+        <a href="#comprar">Comprar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de Los hijos rotos, de Laura Pérez Caballero"
+             loading="eager"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>
+            <span class="big">Los hijos rotos</span>
+            <small>Añade la portada como portada.jpg</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Thriller psicológico · Horror social</div>
+        <h1>Los hijos<br>rotos</h1>
+        <div class="autora">Laura Pérez Caballero</div>
+        <p class="tagline">«¿Quién es realmente ese muchacho? ¿A qué ha venido? ¿Y por qué todos empiezan a temerlo?»</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#comprar">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="#sinopsis">Leer la sinopsis</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SINOPSIS ============ -->
+  <section id="sinopsis" class="sinopsis">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>sinopsis</span></h2>
+      <div class="divider reveal"></div>
+      <p class="hook reveal">Una historia de horror y manipulación.</p>
+      <p class="reveal">Un extraño llega a un pueblo donde todos comparten un secreto. Poco a poco, su inexplicable presencia se va volviendo cada vez más inquietante y amenaza con sacar a la luz esos secretos que todos conocen, pero que nadie quiere recordar ni pronunciar en voz alta.</p>
+      <p class="reveal">Mientras el miedo y la culpa se apoderan de sus habitantes, una pregunta ronda la cabeza de todos: ¿quién es realmente ese muchacho? ¿A qué ha venido?</p>
+      <p class="reveal">Un thriller psicológico con tintes de horror social sobre el poder de la influencia, los secretos compartidos y la oscuridad que puede esconder una comunidad en apariencia tranquila.</p>
+      <p class="cierre reveal">A veces el verdadero horror no es que llegue alguien dispuesto a descubrir nuestros secretos, sino descubrir que llevamos demasiado tiempo viviendo con ellos.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRIMER CAPÍTULO ============ -->
+  <section id="capitulo" class="cap">
+    <div class="wrap">
+      <h2 class="section-title reveal">Primer <span>capítulo</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Llegó de forma imprevista. Tan imprevista como llega una ligera brisa en un día abrasador de verano. De improviso, como un placer volátil e irresistible.</p>
+      <p class="reveal">La casa estaba a la salida o a la entrada del pueblo, según se mirara, de estilo indiano y casi en ruinas, como su propietario. En El Páramo, Rei se presenta con unos ojos de un verde afilado y una certeza inquietante: «No pertenezco al mundo, el mundo me pertenece.»</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-ghost" href="capitulo1.html">Leer el primer capítulo completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section id="resenas" class="resenas">
+    <div class="wrap">
+      <h2 class="section-title reveal">Lo que dicen los <span>lectores</span></h2>
+      <div class="divider reveal"></div>
+      <div class="resenas-grid">
+        <div class="resena reveal">
+          <div class="estrellas">★★★★★</div>
+          <h4>«Pensaba que el peligro venía de fuera. Hasta que entendí que siempre estuvo dentro.»</h4>
+          <p>No necesita mostrarte el monstruo para hacerte sentir miedo. El verdadero terror está en lo que se intuye, en las miradas, en los silencios. Una mezcla brillante entre thriller psicológico y horror social.</p>
+          <div class="autor-r">Sheila 📚 Books · ★★★★★</div>
+        </div>
+        <div class="resena reveal">
+          <div class="estrellas">★★★★★</div>
+          <h4>No puedes parar de leer</h4>
+          <p>Me lo leí en dos tardes. Te va sorprendiendo en cada giro que da la historia que no te ves venir. Un misterio que no se desvela hasta el final y que te hará que no sueltes el libro.</p>
+          <div class="autor-r">María José O.</div>
+        </div>
+        <div class="resena reveal">
+          <div class="estrellas">★★★★★</div>
+          <h4>Impresionante</h4>
+          <p>Es adictiva, trepidante, con unos pedazo de giros… una trama BRUTAL. Como siempre, leer a Laura es un acierto.</p>
+          <div class="autor-r">Laura</div>
+        </div>
+        <div class="resena reveal">
+          <div class="estrellas">★★★★★</div>
+          <h4>Adictivo</h4>
+          <p>Lleno de giros dramáticos de los acontecimientos, ¡incluso doble giro! La pluma de la autora me encanta, súper ágil y adictiva.</p>
+          <div class="autor-r">Amazon Kunde</div>
+        </div>
+        <div class="resena reveal">
+          <div class="estrellas">★★★★★</div>
+          <h4>Una novela trepidante; su lectura te atrapará</h4>
+          <p>Si te gustan los thrillers psicológicos, no podrás dejar de leer sus páginas. Una trama muy bien hilada con un gran talento narrativo.</p>
+          <div class="autor-r">Cristina M.</div>
+        </div>
+        <div class="resena reveal">
+          <div class="estrellas">★★★☆☆</div>
+          <h4>Original</h4>
+          <p>Una novela bastante original y diferente a lo que suelo leer. Lo que más me ha gustado han sido los giros del final, porque consiguen darle sentido a muchas cosas.</p>
+          <div class="autor-r">ThrillerBookZone · ★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="autora-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">La <span>autora</span></h2>
+      <div class="divider reveal"></div>
+      <div class="autora-grid">
+        <figure class="autora-foto reveal">
+          <img src="laura-autora.jpg" alt="Laura Pérez Caballero, autora"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="foto-fallback" style="display:none;">L</div>
+        </figure>
+        <div class="autora-texto reveal">
+          <h3>Laura Pérez Caballero</h3>
+          <div class="rol">Asturias, 1976</div>
+          <p>Laura Pérez Caballero nació en 1976 en Mieres, Asturias, donde sigue residiendo. Comenzó su carrera literaria escribiendo relatos, con los que obtuvo premios como el Primer Premio del concurso <em>Todos somos iguales, todos somos diferentes</em> de Madrid, el Primer Premio del concurso <em>El mejor maestro</em> organizado por Zenda libros, y el Palacio Valdés de Jaén en tres ocasiones.</p>
+          <p>En Amazon tiene novelas de varios géneros, siendo el predominante el thriller: <em>La tormenta infinita</em>, <em>Dioses de Piedra</em>, <em>La cruz del verdugo</em>, <em>El hombre que amaba demasiado</em> y <em>El orfanato, los hijos de Sariel</em> —con el que llegó al nº1 de los más vendidos en la categoría de Historias de fantasmas— son sus libros más destacados.</p>
+          <p>Su última novela es <em>Los hijos rotos</em>, un thriller psicológico sobre una historia de manipulación.</p>
+          <a class="perfil" href="https://www.amazon.es/Laura-P%C3%A9rez-Caballero/e/B00JE6FCDG" target="_blank" rel="noopener">Página de la autora en Amazon →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar" class="buy">
+    <div class="wrap">
+      <h2 class="section-title reveal">Empieza a <span>leer</span></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Los hijos rotos está disponible en Amazon. Entra en El Páramo… si te atreves.</p>
+      <div class="cta-row reveal" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://www.amazon.es/dp/B0H6JXBFMG" target="_blank" rel="noopener">Ver en Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Laura Pérez Caballero · <em>Los hijos rotos</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
