@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== SEO ====== -->
+  <title>El callejón de los suspiros. Aventuras de Falote — Margarita Bokusu Mina | Narrativa contemporánea</title>
+  <meta name="description" content="El callejón de los suspiros. Aventuras de Falote, de Margarita Bokusu Mina. Una crónica sentimental y artística, a tiempo casi real, entre Málaga, Granada y París: chats, correos y blog sobre arte, dinero y deseo." />
+  <meta name="author" content="Margarita Bokusu Mina" />
+  <meta name="keywords" content="El callejón de los suspiros, Aventuras de Falote, Margarita Bokusu Mina, narrativa contemporánea, novela documental, Málaga, Granada, París, arte, autopublicado" />
+  <meta property="og:title" content="El callejón de los suspiros. Aventuras de Falote — Margarita Bokusu Mina" />
+  <meta property="og:description" content="Una crónica sentimental y artística, a tiempo casi real, entre Málaga, Granada y París." />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="portada.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="portada.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%237aa6d6'/%3E%3Cpath d='M20 46V20l12-4 12 4v26l-12-4z' fill='%23e3a94e'/%3E%3Cpath d='M32 16v30' stroke='%23b65a86' stroke-width='2'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ PALETA: la propia portada ============
+       Ilustración a pastel de un callejón malagueño: el azul del cielo, el
+       malva/lila del edificio de la izquierda, el ocre dorado de la torre y
+       los toques de magenta y verde de los balcones. Ningún otro libro del
+       portal usa esta mezcla de cielo pastel con ocre andaluz. */
+    :root {
+      --cielo: #294a6b;       /* fondo: azul noche del cielo */
+      --cielo-2: #31557a;     /* secciones alternas */
+      --cielo-3: #3a6089;     /* cajas */
+      --cielo-hondo: #1c3550;
+      --ocre: #e3a94e;        /* la torre dorada */
+      --ocre-claro: #f6cf8e;
+      --malva: #b56aa0;       /* el edificio de la izquierda / los magentas */
+      --malva-claro: #d892c4;
+      --verde: #5fae8e;       /* los balcones */
+      --hueso: #f6f1e6;
+      --texto: #dfe6ef;
+      --texto-suave: #a9bcd1;
+      --linea: rgba(246, 207, 142, .28);
+      --sombra: 0 22px 58px rgba(0, 0, 0, .42);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cielo);
+      color: var(--texto);
+      font-family: 'Figtree', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    ::selection { background: var(--ocre); color: var(--cielo-hondo); }
+
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(41, 74, 107, .9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; }
+    .brand { font-family: 'Petrona', serif; font-size: 1.28rem; color: var(--ocre-claro); letter-spacing: .02em; font-style: italic; }
+    nav .links { display: flex; align-items: center; gap: 24px; }
+    nav a {
+      color: var(--texto-suave); text-decoration: none; font-size: .84rem;
+      letter-spacing: .04em; transition: color .2s;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--ocre); }
+    nav a.home { color: var(--hueso); }
+
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; width: 42px; height: 34px; padding: 6px; }
+    .nav-toggle span { display: block; height: 2px; background: var(--ocre); margin: 5px 0; transition: transform .25s, opacity .25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============ BOTONES ============ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 40px; text-decoration: none;
+      font-family: 'Figtree', sans-serif; font-size: .82rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      transition: transform .2s, background .2s, color .2s, box-shadow .2s, border-color .2s;
+    }
+    .btn-oro { background: linear-gradient(135deg, var(--ocre), #d4933c); color: #33210a; box-shadow: 0 12px 28px rgba(227,169,78,.26); }
+    .btn-oro:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(227,169,78,.36); }
+    .btn-ghost { background: transparent; color: var(--ocre-claro); border: 1px solid var(--linea); }
+    .btn-ghost:hover { border-color: var(--ocre); color: var(--ocre); transform: translateY(-2px); }
+    .btn-malva { background: var(--malva); color: #fff; }
+    .btn-malva:hover { background: #c47cb0; transform: translateY(-2px); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+    /* ============ TITULARES ============ */
+    .section-title {
+      font-family: 'Petrona', serif; font-weight: 500;
+      font-size: clamp(2.1rem, 5vw, 3.2rem); color: var(--hueso); line-height: 1.14;
+    }
+    .section-title span { color: var(--ocre); font-style: italic; }
+    .rule { width: 84px; height: 1px; background: linear-gradient(90deg, var(--ocre), transparent); margin: 20px 0 34px; }
+    .center { text-align: center; }
+    .center .rule { margin-left: auto; margin-right: auto; background: linear-gradient(90deg, transparent, var(--ocre), transparent); }
+    .eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--malva-claro); }
+
+    section { padding: 92px 0; }
+    .alt { background: var(--cielo-2); border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea); }
+
+    /* ============ HERO ============ */
+    .hero { padding: 66px 0 92px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -240px; left: 50%; transform: translateX(-50%);
+      width: 960px; height: 640px; pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(246,207,142,.14), transparent 68%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 350px) 1fr; gap: 60px; align-items: center; position: relative; }
+    .cover-frame {
+      position: relative; border-radius: 6px; overflow: hidden; background: var(--cielo-hondo);
+      box-shadow: var(--sombra); border: 1px solid var(--linea);
+      transform: rotate(-1.4deg); transition: transform .4s;
+    }
+    .cover-frame:hover { transform: rotate(0) translateY(-6px); }
+    .cover-frame img { display: block; width: 100%; height: auto; }
+    .cover-fallback {
+      display: grid; place-items: center; aspect-ratio: 600/980; padding: 30px; text-align: center;
+      color: var(--ocre); font-family: 'Petrona', serif; font-size: 1.7rem; font-style: italic;
+    }
+    .hero-text h1 {
+      font-family: 'Petrona', serif; font-weight: 500; font-size: clamp(2.5rem, 6.6vw, 4.4rem); line-height: 1.02;
+      color: var(--hueso); margin-top: 10px;
+    }
+    .hero-text .serie { margin-top: 10px; font-family: 'Petrona', serif; font-style: italic; font-size: clamp(1.2rem, 2.6vw, 1.7rem); color: var(--ocre-claro); }
+    .hero-text .autora { margin-top: 20px; font-size: .86rem; letter-spacing: .2em; text-transform: uppercase; color: var(--hueso); }
+    .hero-text .tagline {
+      margin-top: 22px; font-family: 'Petrona', serif; font-style: italic;
+      font-size: clamp(1.15rem, 2.4vw, 1.5rem); color: var(--malva-claro); max-width: 36ch; line-height: 1.45;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+      padding: 8px 16px; border: 1px solid var(--linea); border-radius: 40px; background: rgba(58,96,137,.5);
+      font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto);
+    }
+    .badge .punto { width: 8px; height: 8px; border-radius: 50%; background: var(--ocre); box-shadow: 0 0 0 4px rgba(227,169,78,.18); }
+
+    /* ============ CUERPO ============ */
+    .cuerpo { max-width: 64ch; margin: 0 auto; }
+    .cuerpo p { margin-bottom: 22px; font-size: 1.06rem; }
+    .cuerpo p.suelta {
+      font-family: 'Petrona', serif; font-style: italic; font-size: 1.3rem; color: var(--hueso);
+      padding-left: 22px; border-left: 2px solid var(--ocre);
+    }
+    .cuerpo p.cierre {
+      margin-top: 38px; font-family: 'Petrona', serif; font-style: italic;
+      font-size: 1.4rem; color: var(--ocre); text-align: center;
+    }
+    .intro { max-width: 60ch; margin: 0 auto 34px; color: var(--texto-suave); text-align: center; }
+
+    /* ============ AVISO ============ */
+    .aviso {
+      max-width: 700px; margin: 0 auto 40px; padding: 18px 24px;
+      background: rgba(181,106,160,.12); border: 1px solid rgba(181,106,160,.4);
+      border-left: 3px solid var(--malva); border-radius: 6px;
+      font-size: .95rem; color: var(--texto); text-align: left;
+    }
+    .aviso strong { color: var(--malva-claro); }
+
+    /* ============ RASGOS / DOCUMENTAL ============ */
+    .trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .persona {
+      background: var(--cielo-3); border: 1px solid var(--linea); border-radius: 8px;
+      padding: 32px 28px; box-shadow: var(--sombra); transition: transform .25s, border-color .25s;
+    }
+    .persona:hover { transform: translateY(-5px); border-color: var(--ocre); }
+    .persona .icono { font-size: 1.7rem; }
+    .persona h3 { font-family: 'Petrona', serif; font-size: 1.5rem; color: var(--hueso); margin: 10px 0 4px; }
+    .persona .rol { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--malva-claro); margin-bottom: 14px; }
+    .persona p { font-size: 1rem; }
+
+    /* ============ CHIPS DE TEMAS ============ */
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 820px; margin: 4px auto 0; }
+    .chip {
+      padding: 7px 16px; border: 1px solid var(--linea); border-radius: 40px;
+      background: var(--cielo-3); font-size: .84rem; color: var(--texto);
+    }
+
+    /* ============ OTRAS NOVELAS (tira mini) ============ */
+    .mini-tira {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      max-width: 820px; margin: 0 auto;
+    }
+    .mini-tira a {
+      display: block; width: 66px; height: 92px; border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--linea); background: var(--cielo-3);
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+    }
+    .mini-tira a:hover { transform: translateY(-3px) scale(1.04); border-color: var(--ocre); box-shadow: var(--sombra); }
+    .mini-tira img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ============ CAJA FIRMADO ============ */
+    .firma-box {
+      max-width: 700px; margin: 60px auto 0; padding: 34px 32px; text-align: center;
+      background: var(--cielo-3); border: 1px solid var(--linea); border-left: 3px solid var(--ocre);
+      border-radius: 8px; box-shadow: var(--sombra);
+    }
+    .firma-box .firma-icono { font-size: 1.9rem; margin-bottom: 10px; }
+    .firma-box p { margin-bottom: 20px; }
+    .firma-box strong { color: var(--hueso); font-weight: 500; }
+
+    /* ============ AUTORA ============ */
+    .autora-grid { display: grid; grid-template-columns: 300px 1fr; gap: 54px; align-items: start; max-width: 980px; margin: 0 auto; }
+    .medallon {
+      justify-self: center; width: 260px; height: 260px; border-radius: 50%;
+      overflow: hidden; background: var(--cielo-3); display: grid; place-items: center;
+      box-shadow: var(--sombra); border: 2px solid var(--ocre);
+    }
+    .medallon img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+    .medallon .inicial { display: none; font-family: 'Petrona', serif; font-size: 4.5rem; color: var(--ocre); }
+    .autora-texto h3 { font-family: 'Petrona', serif; font-size: clamp(1.8rem, 3.4vw, 2.3rem); color: var(--hueso); line-height: 1.15; }
+    .autora-texto .rol { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin: 12px 0 22px; }
+    .autora-texto p { margin-bottom: 18px; }
+
+    /* ============ COMPRA ============ */
+    .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .formato {
+      background: var(--cielo-3); border: 1px solid var(--linea); border-radius: 8px;
+      padding: 38px 30px; text-align: center; box-shadow: var(--sombra);
+      transition: transform .25s, border-color .25s;
+    }
+    .formato:hover { transform: translateY(-5px); border-color: var(--ocre); }
+    .formato .icono { font-size: 2rem; margin-bottom: 12px; }
+    .formato h3 { font-family: 'Petrona', serif; font-size: 1.4rem; color: var(--hueso); margin-bottom: 12px; }
+    .formato p { color: var(--texto-suave); font-size: .98rem; margin-bottom: 24px; }
+    .formato .extra { display: block; margin-top: 16px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
+
+    /* ============ REDES ============ */
+    .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .red {
+      display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px;
+      background: var(--cielo-3); border: 1px solid var(--linea); border-radius: 40px;
+      color: var(--hueso); text-decoration: none; font-size: .94rem;
+      transition: transform .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .red:hover { transform: translateY(-3px); border-color: var(--ocre); color: var(--ocre); box-shadow: var(--sombra); }
+    .red svg { width: 19px; height: 19px; fill: currentColor; }
+
+    /* ============ FOOTER ============ */
+    footer {
+      padding: 52px 0 58px; text-align: center; border-top: 1px solid var(--linea);
+      background: var(--cielo-2); color: var(--texto-suave); font-size: .9rem;
+    }
+    footer a { color: var(--ocre-claro); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--ocre); border-color: var(--ocre); }
+
+    /* ============ REVEAL ============ */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; text-align: center; }
+      .cover-frame { max-width: 290px; margin: 0 auto; }
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .cta-row { justify-content: center; }
+      .autora-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    }
+    @media (max-width: 760px) {
+      section { padding: 70px 0; }
+      .nav-toggle { display: block; }
+      nav .links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: flex-start; gap: 0;
+        background: var(--cielo); border-bottom: 1px solid var(--linea);
+        max-height: 0; overflow: hidden; transition: max-height .3s ease;
+      }
+      nav .links.open { max-height: 460px; }
+      nav .links a { padding: 15px 6vw; width: 100%; border-bottom: 1px solid var(--linea); font-size: .95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="wrap">
+      <span class="brand">El callejón de los suspiros</span>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="navLinks">
+        <a class="home" href="../index.html">&larr; La librería</a>
+        <a href="#historia">La novela</a>
+        <a href="#claves">Las claves</a>
+        <a href="#autora">La autora</a>
+        <a href="#otras">Otras novelas</a>
+        <a href="#comprar">Conseguirlo</a>
+        <a href="#redes">Redes</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="cover-frame reveal">
+        <img src="portada.jpg" alt="Portada de El callejón de los suspiros. Aventuras de Falote, de Margarita Bokusu Mina: una ilustración a pastel de un callejón malagueño con un edificio ocre y palomas volando sobre un cielo azul"
+             loading="eager" decoding="async"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <div class="cover-fallback" style="display:none;">
+          <div>El callejón<br>de los suspiros</div>
+        </div>
+      </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow">Narrativa contemporánea</div>
+        <h1>El callejón de los suspiros</h1>
+        <div class="serie">Aventuras de Falote</div>
+        <div class="autora">Margarita Bokusu Mina</div>
+        <p class="tagline">Una crónica sentimental y artística, a tiempo casi real, entre Málaga, Granada y París.</p>
+        <div>
+          <span class="badge"><span class="punto" aria-hidden="true"></span> Su 14.ª novela · Ya disponible en Amazon</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-oro" href="https://www.amazon.es/s?k=El+callej%C3%B3n+de+los+suspiros+Margarita+Bokusu+Mina" target="_blank" rel="noopener">Buscar el libro</a>
+          <a class="btn btn-ghost" href="#historia">Leer de qué va</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ LA NOVELA ============ -->
+  <section id="historia" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">La <span>novela</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+
+      <div class="aviso reveal">
+        <strong>Nota para el lector:</strong> es una novela para público adulto. Incluye registro coloquial, debate político y sexualidad explícita.
+      </div>
+
+      <div class="cuerpo reveal">
+        <p><em>El callejón de los suspiros. Aventuras de Falote</em> se caracteriza por su originalidad. La obra se plantea como una crónica sentimental y artística, a tiempo casi real, entre Málaga, Granada y París. Aparecen chats, correos electrónicos y entradas de blog que le dan una textura documental potente y actual.</p>
+        <p>El arranque, con mensajes y trueque de libros, fija desde el principio el tono y el conflicto —arte, dinero y deseo— y sitúa la obra en la cultura de las redes sociales. La división por capítulos ordena la experiencia y permite una lectura cronológica clara que ayuda al lector.</p>
+        <p>La narradora, Margarita, es consistente, directa y expone vulnerabilidad y criterio. Falote opera como motor dramático y espejo ideológico y erótico, con momentos de lucidez estética y de caos emocional. Cuando toma la palabra, la prosa pasa del diarismo al manifiesto artístico, con referencias a galerías, debates y figuración.</p>
+        <p>La ambientación y la atmósfera funcionan bien. El paisaje social se centra en barrios, cafés, talleres y la economía frágil de lo creativo. La obra captura la incertidumbre cotidiana y el pulso del circuito cultural independiente.</p>
+        <p class="suelta">Un mosaico con fuerza implícita y expresiva, coherente con su propuesta documental.</p>
+      </div>
+
+      <div class="firma-box reveal">
+        <div class="firma-icono" aria-hidden="true">🖋️</div>
+        <p>¿Quieres saber más de la obra y de su autora? Margarita cuenta en su <strong>blog</strong> todo lo ocurrido desde que decidió publicar, y está en todas sus redes.</p>
+        <a class="btn btn-malva" href="#redes">Ver sus redes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LAS CLAVES ============ -->
+  <section id="claves">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Las <span>claves</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Una novela construida a base de chats, correos y blog: la vida del circuito artístico independiente contada casi en tiempo real.</p>
+      </div>
+      <div class="trio">
+        <div class="persona reveal">
+          <div class="icono" aria-hidden="true">💬</div>
+          <h3>Textura documental</h3>
+          <div class="rol">chats · correos · blog</div>
+          <p>Mensajes, correos electrónicos y entradas de blog dan a la obra una textura documental potente y actual, en la cultura de las redes sociales.</p>
+        </div>
+        <div class="persona reveal">
+          <div class="icono" aria-hidden="true">✍️</div>
+          <h3>Margarita</h3>
+          <div class="rol">la narradora</div>
+          <p>Consistente, directa, expone vulnerabilidad y criterio. Su voz pasa del diarismo íntimo a la crónica de un mundo precario y creativo.</p>
+        </div>
+        <div class="persona reveal">
+          <div class="icono" aria-hidden="true">🎨</div>
+          <h3>Falote</h3>
+          <div class="rol">motor y espejo</div>
+          <p>Espejo ideológico y erótico. Con él la prosa salta al manifiesto artístico: galerías, debates y figuración, entre la lucidez estética y el caos emocional.</p>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:56px;">
+        <p class="intro reveal">Los temas que sostienen el relato, hilados por la continuidad temporal y por las entradas de recuento de ventas e intercambios:</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">El amor</span>
+        <span class="chip">El trabajo precario</span>
+        <span class="chip">La amistad</span>
+        <span class="chip">Los celos</span>
+        <span class="chip">La autopromoción</span>
+        <span class="chip">El arte</span>
+        <span class="chip">La censura</span>
+        <span class="chip">El debate político</span>
+        <span class="chip">El psicoanálisis</span>
+        <span class="chip">La familia</span>
+      </div>
+
+      <div class="center" style="margin-top:48px;">
+        <p class="intro reveal">El estilo y los diálogos son un registro híbrido: coloquial, andaluz, con tecnicismos artísticos, algo de francés e inglés y sexualidad explícita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORA ============ -->
+  <section id="autora" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Sobre la <span>autora</span></h2>
+        <div class="rule reveal"></div>
+      </div>
+      <div class="autora-grid">
+        <div class="medallon reveal">
+          <img src="margarita-autora.jpg" alt="Margarita Bokusu Mina" loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+          <span class="inicial">M</span>
+        </div>
+        <div class="autora-texto reveal">
+          <h3>Margarita Bokusu Mina</h3>
+          <div class="rol">Seudónimo · autora de 14 novelas</div>
+
+          <p>Margarita Bokusu Mina es el seudónimo de esta malagueña que a los 13 años comenzó a escribir diarios, a los 16 cartas y a los 18 inició sus estudios de Psicología para abandonarlos, cuando aún no había cumplido los 20, y marcharse a Londres, donde vivió algo más de dos años, siendo principalmente acomodadora en un teatro y viajando más que nunca. Posteriormente residió en Barcelona nueve meses y actualmente lo hace en Andalucía.</p>
+          <p>En 2003 se licenció en Filología Inglesa y en 2008 comenzó a escribir su primera novela epistolar, que publicaría, después de un lustro, con Bubok: <em>«Margarita y el maestro. Una historia de vampir@s, frankosteins y superheroínas de barrio»</em>. Con esta editorial dio a conocer doce más, la última el verano de 2022.</p>
+          <p>En primavera de 2023 pensó que era el momento de publicarlas con Amazon. Hasta el momento ha compartido ocho, la mitad también en Kindle Unlimited. Este 2026 también publicó su 14.ª novela en Amazon: <em>«El callejón de los suspiros. Aventuras de Falote»</em>.</p>
+          <p>Después de trabajar muy poco, no por falta de ganas sino de oportunidades, sobre todo como auxiliar administrativa y teleoperadora, en 2014 aprobó unas oposiciones para profesora y desde 2016 es interina.</p>
+          <p>Si se escribe «Margarita Bokusu Mina» en cualquier buscador, se pueden encontrar sus novelas, leer sus inicios y sus contraportadas —con sinopsis y críticas—, además de artículos y relatos publicados en más de veinte medios digitales de América y España. También tiene un blog, donde cuenta todo lo ocurrido desde que decidió publicar, y un canal de YouTube.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="#redes">Ver sus redes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPRA ============ -->
+  <section id="comprar">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal"><em>El callejón de los suspiros. Aventuras de Falote</em> está a la venta en Amazon, su 14.ª novela.</p>
+      </div>
+      <div class="formatos">
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📘</div>
+          <h3>Comprar en Amazon</h3>
+          <p>Busca el título para entrar en el callejón, entre Málaga, Granada y París, de la mano de Margarita y Falote.</p>
+          <a class="btn btn-oro" href="https://www.amazon.es/s?k=El+callej%C3%B3n+de+los+suspiros+Margarita+Bokusu+Mina" target="_blank" rel="noopener">Buscar en Amazon</a>
+          <span class="extra">Aventuras de Falote · 2026</span>
+        </div>
+        <div class="formato reveal">
+          <div class="icono" aria-hidden="true">📚</div>
+          <h3>Sus otras novelas</h3>
+          <p>Catorce novelas entre Bubok y Amazon, la mitad también en Kindle Unlimited. Búscala por su nombre y asómate a sus inicios y contraportadas.</p>
+          <a class="btn btn-ghost" href="https://www.amazon.es/s?k=Margarita+Bokusu+Mina" target="_blank" rel="noopener">Ver su obra</a>
+          <span class="extra">Margarita Bokusu Mina</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OTRAS NOVELAS ============ -->
+  <section id="otras" style="padding:64px 0;">
+    <div class="wrap center">
+      <h2 class="section-title reveal" style="font-size:clamp(1.6rem,3.4vw,2.2rem);">Sus <span>otras novelas</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal" style="margin-bottom:26px;">Catorce títulos entre Bubok y Amazon. Pasa el ratón y haz clic para ver cada portada; los enlaces de compra están en su perfil.</p>
+      <div class="mini-tira reveal">
+        <a href="otras-novelas/novela-01.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-01.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-02.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-02.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-03.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-03.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-04.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-04.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-05.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-05.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-06.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-06.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-07.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-07.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-08.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-08.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-09.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-09.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-10.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-10.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-11.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-11.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-12.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-12.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-13.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-13.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+        <a href="otras-novelas/novela-14.jpg" target="_blank" rel="noopener"><img src="otras-novelas/novela-14.jpg" alt="Portada de otra novela de Margarita Bokusu Mina" loading="lazy" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REDES ============ -->
+  <section id="redes" class="alt">
+    <div class="wrap center">
+      <h2 class="section-title reveal">Sigue a <span>Margarita</span></h2>
+      <div class="rule reveal"></div>
+      <p class="intro reveal">Entre Instagram, su blog y su canal de YouTube cuenta todo lo que ocurre desde que decidió publicar. Pásate a saludarla.</p>
+      <div class="redes reveal">
+        <a class="red" href="https://instagram.com/mbokusu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.23 1 .5 1.4.94.44.43.71.83.94 1.4.17.42.37 1.02.42 2.22.06 1.27.07 1.67.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.23.6-.5 1-.94 1.4-.43.44-.83.71-1.4.94-.42.17-1.02.37-2.22.42-1.27.06-1.67.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.23-1-.5-1.4-.94-.44-.43-.71-.83-.94-1.4-.17-.42-.37-1.02-.42-2.22C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.23-.6.5-1 .94-1.4.43-.44.83-.71 1.4-.94.42-.17 1.02-.37 2.22-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.16 0-3.5 0-4.74.07-.96.04-1.42.2-1.72.32-.36.14-.6.3-.86.56-.26.26-.42.5-.56.86-.12.3-.28.76-.32 1.72C3.73 8.77 3.72 9.1 3.72 12s0 3.23.07 4.47c.04.96.2 1.42.32 1.72.14.36.3.6.56.86.26.26.5.42.86.56.3.12.76.28 1.72.32 1.24.06 1.58.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.42-.2 1.72-.32.36-.14.6-.3.86-.56.26-.26.42-.5.56-.86.12-.3.28-.76.32-1.72.06-1.24.07-1.58.07-4.47s0-3.23-.07-4.47c-.04-.96-.2-1.42-.32-1.72a2.3 2.3 0 0 0-.56-.86 2.3 2.3 0 0 0-.86-.56c-.3-.12-.76-.28-1.72-.32C15.5 4 15.16 4 12 4zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm6.3-2.1a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg>
+          Instagram · @mbokusu
+        </a>
+        <a class="red" href="https://www.google.com/search?q=Margarita+Bokusu+Mina" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+          Buscarla · Facebook · TikTok · Threads · X
+        </a>
+      </div>
+      <p class="intro reveal" style="margin-top:28px;">Escribe «Margarita Bokusu Mina» en cualquier buscador y encontrarás sus novelas, su blog, su canal de YouTube y sus perfiles en Facebook, TikTok, Threads y X.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Margarita Bokusu Mina · <em>El callejón de los suspiros. Aventuras de Falote</em>. Todos los derechos reservados.</p>
+    <p style="margin-top:8px;"><a href="../index.html">← Volver a La librería</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      const closeMenu = () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+      };
+      navToggle.addEventListener('click', () => {
+        const willOpen = !navLinks.classList.contains('open');
+        navToggle.classList.toggle('open', willOpen);
+        navLinks.classList.toggle('open', willOpen);
+        navToggle.setAttribute('aria-expanded', String(willOpen));
+        navToggle.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
