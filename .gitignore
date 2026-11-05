@@ -1,4 +1,58 @@
-# Archivos originales pesados de autores (no publicar)
+# ==========================================================
+#  .gitignore de "El Rincón del Autopublicado"
+#  Objetivo: que solo se suba lo que se PUBLICA (webs, portadas,
+#  booktrailers) y quede fuera todo el material de trabajo:
+#  originales de autores (Word/PDF), temporales, scripts y reels.
+# ==========================================================
+
+# --- Temporales de Kiro (siempre empiezan por guion bajo) ---
+_*
+
+# --- Python (scripts y caché que usamos para generar cosas) ---
+*.py
+__pycache__/
+*.pyc
+
+# --- Originales de autores en Word (nunca se publican) ---
+*.docx
+*.doc
+
+# --- PDFs sueltos de trabajo en la RAÍZ del sitio (originales, muestras
+#     que no van enlazadas, etc.). Los PDF DENTRO de carpetas de libro
+#     (muestras enlazadas) NO se ignoran. ---
+/*.pdf
+
+# --- Reels / vídeos de trabajo de Instagram (no son del sitio) ---
+/reel-*.mp4
+/reel-*.txt
+/reel-*.html
+/reel-adultos/
+/reel-atrapasuenos/
+instagram/
+
+# --- Capturas y material suelto de Instagram / promo ---
+/Primer post.jpg
+/post-relato-el-cafe.jpg
+/comparte-*.png
+/WhatsApp Image*.jpeg
+/astrographix_visuals-*.jpg
+/audioatlant-*.mp3
+/davinci_*.jpg
+/davinci_*.png
+
+# --- Carpeta de borradores sueltos (NO es un libro) ---
+Nueva carpeta/
+# OJO: "scratch/" NO se ignora: es el libro "Scratch: El Rally de Mi Vida"
+# de Eva M. Saladrigas, que SÍ está publicado en el portal.
+
+# --- NO ignorar (son parte del sitio publicado) ---
+!robots.txt
+!sitemap.xml
+!index.html
+
+# ==========================================================
+#  Reglas antiguas que ya tenías (originales pesados de Suite Tardía)
+# ==========================================================
 suite-tardia/1.*
 suite-tardia/2.*
 suite-tardia/3.*
