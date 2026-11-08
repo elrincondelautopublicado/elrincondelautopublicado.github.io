@@ -198,6 +198,33 @@
     .autora-texto .rol { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--dorado); margin: 12px 0 22px; }
     .autora-texto p { margin-bottom: 18px; }
 
+    /* ============ RESEÑAS ============ */
+    .resenas-resumen {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      margin: 0 auto 48px; text-align: center;
+    }
+    .resenas-resumen .nota { font-family: 'Cormorant Garamond', serif; font-size: 3.4rem; color: var(--hueso); line-height: 1; }
+    .estrellas-fila { color: var(--dorado); font-size: 1.5rem; letter-spacing: .14em; }
+    .resenas-resumen .cuantas { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-suave); }
+    .resenas-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px; max-width: 980px; margin: 0 auto;
+    }
+    .resena {
+      background: var(--noche-3); border: 1px solid var(--linea); border-radius: 6px;
+      border-top: 3px solid var(--vino); padding: 30px 30px 28px;
+      box-shadow: var(--sombra); display: flex; flex-direction: column;
+    }
+    .resena .estrellas-r { color: var(--dorado); font-size: 1rem; letter-spacing: .1em; margin-bottom: 12px; }
+    .resena h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--hueso); font-style: italic; margin-bottom: 14px; line-height: 1.2; }
+    .resena p { font-size: .98rem; color: var(--texto); line-height: 1.7; margin-bottom: 18px; }
+    .resena .firma { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px solid var(--linea); }
+    .resena .quien { font-size: .9rem; color: var(--vino-claro); font-weight: 500; }
+    .resena .cuando { font-size: .76rem; color: var(--texto-suave); letter-spacing: .04em; }
+    .resenas-fuente { text-align: center; margin-top: 34px; font-size: .84rem; color: var(--texto-suave); }
+    .resenas-fuente a { color: var(--vino-claro); border-bottom: 1px solid var(--linea); text-decoration: none; }
+    .resenas-fuente a:hover { color: var(--vino); border-color: var(--vino); }
+
     /* ============ COMPRA ============ */
     .formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
     .formato {
@@ -277,6 +304,7 @@
         <a href="#sinopsis">Sinopsis</a>
         <a href="#poema">Poema</a>
         <a href="#autora">La autora</a>
+        <a href="#resenas">Reseñas</a>
         <a href="#comprar">Conseguirlo</a>
         <a href="#redes">Redes</a>
       </div>
@@ -387,8 +415,79 @@ Me devoro.</em></div>
     </div>
   </section>
 
+  <!-- ============ RESEÑAS ============ -->
+  <section id="resenas">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Lo que dicen <span>los lectores</span></h2>
+        <div class="rule reveal"></div>
+        <p class="intro reveal">Opiniones de quienes ya han viajado más allá de Lilith.</p>
+      </div>
+
+      <div class="resenas-resumen reveal">
+        <div class="nota">5,0</div>
+        <div class="estrellas-fila" aria-hidden="true">★★★★★</div>
+        <div class="cuantas">Valoración media · 5 reseñas</div>
+      </div>
+
+      <div class="resenas-grid">
+        <article class="resena reveal">
+          <div class="estrellas-r" aria-label="5 de 5 estrellas">★★★★★</div>
+          <h4>Una historia diferente</h4>
+          <p>Este libro me ha sorprendido mucho por su combinación de relatos y poemas y por la voz libre, fuerte y decidida de la protagonista. Un libro en el que la identidad y el deseo son el centro. «Más allá de Lilith» es una diferente que lleva al lector más allá de los sentidos.</p>
+          <div class="firma">
+            <span class="quien">Lectora compulsiva</span>
+            <span class="cuando">23 jul 2026</span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="estrellas-r" aria-label="5 de 5 estrellas">★★★★★</div>
+          <h4>Especial y necesario</h4>
+          <p>Es un libro cortito pero lo he dosificado porque me ha gustado mucho. Mezclar poesía y prosa y encontrar el equilibrio entre elegancia y erotismo no es sencillo pero aquí se consigue una muy buena combinación.</p>
+          <div class="firma">
+            <span class="quien">Toni</span>
+            <span class="cuando">24 jul 2026</span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="estrellas-r" aria-label="5 de 5 estrellas">★★★★★</div>
+          <h4>Enhorabuena</h4>
+          <p>He disfrutado muchísimo de leerlo, tanto que me lo leí de una sola vez. Siendo la primera obra de la autora, resulta una lectura fácil, amena y rápida. A través de sus páginas, conocemos a una mujer que aprende a quererse, valorarse y reconocerse a sí misma. Te hace reflexionar de lo realmente importante. Uno mismo.</p>
+          <div class="firma">
+            <span class="quien">Cliente Amazon</span>
+            <span class="cuando">7 jun 2026</span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="estrellas-r" aria-label="5 de 5 estrellas">★★★★★</div>
+          <h4>Muy bueno y ameno</h4>
+          <p>Me ha gustado mucho. Ha sido muy ameno y cuando me he dado cuenta ya lo había acabado. ¡Lo recomiendo!</p>
+          <div class="firma">
+            <span class="quien">juan</span>
+            <span class="cuando">14 jun 2026</span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="estrellas-r" aria-label="5 de 5 estrellas">★★★★★</div>
+          <h4>Lo importante eres tú</h4>
+          <p>Una compilación de relatos eróticos que no habla solo de deseo sino de descubrimiento. En este libro encontramos muchas mujeres o, tal vez, solo una que se descubre, se explora y experimenta más allá de lo que una vez aprendió.</p>
+          <div class="firma">
+            <span class="quien">Cristina</span>
+            <span class="cuando">19 sep 2026</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="resenas-fuente reveal">Reseñas recogidas de <a href="https://amzn.eu/d/0gVwZlt5" target="_blank" rel="noopener">Amazon</a>. ¿Ya lo has leído? Deja la tuya allí.</p>
+    </div>
+  </section>
+
   <!-- ============ COMPRA ============ -->
-  <section id="comprar">
+  <section id="comprar" class="alt">
     <div class="wrap">
       <div class="center">
         <h2 class="section-title reveal">Consigue <span>el libro</span></h2>
@@ -415,7 +514,7 @@ Me devoro.</em></div>
   </section>
 
   <!-- ============ REDES ============ -->
-  <section id="redes" class="alt">
+  <section id="redes">
     <div class="wrap center">
       <h2 class="section-title reveal">Sigue a <span>Verónica</span></h2>
       <div class="rule reveal"></div>
