@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prólogo y Capítulo 1 — Amor, dopamina y otras adicciones | Jeremy Langfit</title>
+  <meta name="description" content="Lee gratis el prólogo y el primer capítulo de Amor, dopamina y otras adicciones, la novela de Jeremy Langfit." />
+  <meta name="author" content="Jeremy Langfit" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ff5ea8'/%3E%3Ctext x='32' y='46' font-size='38' font-weight='900' text-anchor='middle' font-family='Arial' fill='%232f1af0'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rosa: #ff5ea8; --rosa-claro: #ffd3e7; --papel: #fff5f9; --papel-2: #ffe8f2;
+      --azul: #2f1af0; --azul-hondo: #1d0fb0; --tinta: #1a1340; --suave: #5a5380;
+      --linea: rgba(47, 26, 240, .22);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--papel); color: var(--tinta); font-family: 'Literata', Georgia, serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--azul); color: #fff; }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+    nav { position: sticky; top: 0; z-index: 50; background: rgba(255,94,168,.96); backdrop-filter: blur(10px); border-bottom: 2px solid var(--azul); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 0; flex-wrap: wrap; }
+    .brand { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: .95rem; color: var(--azul); letter-spacing: .02em; text-transform: uppercase; }
+    nav .links { display: flex; gap: 22px; }
+    nav a { font-family: 'DM Mono', monospace; color: var(--azul-hondo); text-decoration: none; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
+    nav a:hover, nav a:focus-visible { color: #fff; }
+
+    header.cab { padding: 74px 0 30px; text-align: center; }
+    header.cab .eyebrow { font-family: 'DM Mono', monospace; font-size: .78rem; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: var(--azul); }
+    header.cab h1 { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(1.7rem, 5vw, 3rem); color: var(--azul); margin-top: 16px; line-height: 1.12; text-transform: uppercase; }
+    header.cab .libro { margin-top: 16px; font-family: 'DM Mono', monospace; font-size: .85rem; letter-spacing: .2em; text-transform: uppercase; color: var(--suave); }
+    .rule { width: 90px; height: 4px; background: var(--rosa); margin: 26px auto 0; }
+
+    .lectura { padding: 36px 0 90px; }
+    .texto { max-width: 66ch; margin: 0 auto; font-size: 1.14rem; line-height: 1.95; }
+    .texto p { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-indent: 1.6em; }
+    .texto p.sin-sangria, .texto p.capitular, .texto .escena + p, .texto .cap-cancion + p { text-indent: 0; }
+    .texto .cap-titulo { margin: 58px 0 6px; text-align: center; font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: 1.9rem; color: var(--azul); text-transform: uppercase; letter-spacing: .04em; text-indent: 0; line-height: 1.15; }
+    .texto .cap-titulo:first-child { margin-top: 8px; }
+    .texto .cap-sub { text-align: center; font-family: 'Unbounded', sans-serif; font-weight: 500; font-size: 1rem; color: var(--suave); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; text-indent: 0; }
+    .texto .cap-cancion { text-align: center; font-family: 'DM Mono', monospace; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--azul); background: var(--rosa-claro); display: table; margin: 14px auto 32px; padding: 6px 14px; border-radius: 30px; text-indent: 0; }
+    .texto .escena { margin: 34px auto; text-align: center; color: var(--rosa); font-size: 1.2rem; font-weight: 700; letter-spacing: .6em; text-indent: 0; }
+    .texto p.capitular::first-letter { float: left; font-family: 'Unbounded', sans-serif; font-weight: 900; color: var(--azul); font-size: 3.3em; line-height: .84; padding: .05em .1em 0 0; }
+
+    .fin { max-width: 66ch; margin: 62px auto 0; padding: 36px 28px; text-align: center; background: var(--rosa); border: 2px solid var(--azul); border-radius: 6px; box-shadow: 8px 8px 0 var(--azul); }
+    .fin h2 { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3.2vw, 1.9rem); color: var(--azul); text-transform: uppercase; line-height: 1.15; }
+    .fin p { color: var(--tinta); margin: 14px auto 0; max-width: 50ch; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 26px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 26px; border-radius: 3px; text-decoration: none; font-family: 'DM Mono', monospace; font-size: .82rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s, background .2s, color .2s; }
+    .btn-azul { background: var(--azul); color: #fff; }
+    .btn-azul:hover { background: var(--tinta); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--azul); border: 2px solid var(--azul); }
+    .btn-ghost:hover { background: var(--azul); color: #fff; transform: translateY(-2px); }
+
+    footer { padding: 44px 0 56px; text-align: center; border-top: 2px solid var(--azul); background: var(--papel-2); color: var(--suave); font-size: .88rem; }
+    footer a { color: var(--azul); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    footer a:hover { color: var(--azul-hondo); border-color: var(--azul); }
+
+    @media (max-width: 700px) { .texto { font-size: 1.07rem; } .texto p { text-align: left; } nav .links { gap: 14px; } }
+  </style>
+  <!-- GoatCounter (analitica sin cookies) -->
+  <script data-goatcounter="https://rafamariscalroca.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <span class="brand">Amor, dopamina…</span>
+      <div class="links">
+        <a href="../index.html">&larr; La librería</a>
+        <a href="index.html">Ficha del libro</a>
+        <a href="index.html#comprar">Conseguirlo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <div class="wrap">
+      <div class="eyebrow">Lectura gratuita · Prólogo y Capítulo 1</div>
+      <h1>Amor, dopamina y otras adicciones</h1>
+      <div class="libro">Jeremy Langfit · una novela</div>
+      <div class="rule"></div>
+    </div>
+  </header>
+
+  <main class="lectura">
+    <div class="wrap">
+      <div class="texto">
+        <p class="cap-titulo">Prólogo</p>
+        <p class="cap-cancion">♪ Zero 7 — Today</p>
+
+        <p class="capitular">No sé exactamente cuándo empezó esta historia.</p>
+
+        <p>Podría decir que fue en enero de 2026, cuando contraté a una chica de veinticinco años para trabajar conmigo. Sería prolijo. Tendría fecha, causa y consecuencia. Un comienzo fácil de señalar con el dedo.</p>
+
+        <p>Pero las historias importantes casi nunca empiezan cuando uno cree. A veces empiezan muchos años antes, adentro de uno, y esperan pacientemente hasta encontrar algo —o a alguien— capaz de despertarlas.</p>
+
+        <p>Yo tenía treinta y siete años y, visto desde afuera, una vida bastante armada. Era un americano criado en Córdoba, empresario, marido y padre. Había abierto restaurantes y bares en distintas ciudades, creado marcas, armado sociedades, contratado mucha gente, ganado plata, perdido plata, acumulado éxitos, fracasos y deudas. Había vivido en Nueva York y había vuelto a Córdoba. Tenía proyectos nuevos, problemas viejos y esa sensación bastante millennial de estar haciendo muchas cosas al mismo tiempo sin saber muy bien hacia dónde carajo estaba corriendo.</p>
+
+        <p>Siempre fui bueno empezando cosas. Mantenerlas en el tiempo era otro asunto. Mi cabeza tampoco ayudaba.</p>
+
+        <p>Durante años pensé que simplemente era así: inquieto, intenso, ansioso, creativo, desordenado. Una cabeza con cuarenta y siete pestañas abiertas y música sonando en alguna que no podía encontrar. Pensaba mientras hacía, hacía mientras pensaba en lo siguiente, recordaba algo que había olvidado mientras imaginaba una vida completamente distinta.</p>
+
+        <p>Durante mucho tiempo confundí eso con ambición. Después lo confundí con ansiedad. Mucho más tarde aparecerían cuatro letras para intentar explicar una parte de todo aquello: TDAH.</p>
+
+        <p>Pero en enero de 2026 todavía no sabía cuánto iba a importar esa palabra. Y mucho menos sabía cuánto iba a importar ella.</p>
+
+        <p>Se llamaba Sara.</p>
+
+        <p>Hay algo absurdo en mirar hacia atrás. El cerebro agarra momentos completamente normales y, porque ya conoce lo que pasó después, les pone luces, música y significado. Una mirada que probablemente duró dos segundos se convierte en una señal. Una conversación cualquiera parece esconder una pista. Una decisión insignificante empieza a parecer el momento exacto en que todo cambió.</p>
+
+        <p>No creo demasiado en el destino. O por lo menos no creía demasiado en él entonces. Pero hoy daría bastante por volver a aquella primera conversación y observarme desde afuera. Decirme algo. No sé exactamente qué.</p>
+
+        <p>Quizás: No tenés idea de lo que acabás de hacer.</p>
+
+        <p>O quizás algo bastante más útil: Jeremy, no seas pelotudo.</p>
+
+        <p>Porque mi vida ya venía cargada antes de que Sara apareciera. Trabajo. Familia. Plata. Proyectos. Argentina. Estados Unidos. Restaurantes. Negocios. Personas dependiendo de decisiones mías. Un teléfono que nunca dejaba de sonar. Un matrimonio de más de una década. Un hijo al que amaba más que a cualquier otra cosa en el mundo.</p>
+
+        <p>Y mi cabeza. Siempre mi cabeza.</p>
+
+        <p>Sara no inventó nada de eso. Tampoco rompió una vida que hasta entonces funcionaba perfectamente. Esa sería una explicación demasiado cómoda. Lo que hizo fue bastante más difícil de entender: apareció en un momento particular y encendió una luz sobre lugares que yo llevaba mucho tiempo recorriendo a oscuras.</p>
+
+        <p>Al principio no lo entendí. Pensé que era atracción. Después pensé que era una obsesión. Después dopamina. Después una crisis. Después amor. Después intenté convencerme de que podía ser amistad. En distintos momentos probablemente fue un poco de todo eso.</p>
+
+        <p>Y mientras trataba desesperadamente de entender qué me estaba pasando con ella, empecé a hacerme preguntas mucho más incómodas sobre mí.</p>
+
+        <p>Este libro nació ahí.</p>
+
+        <p>No es solamente una historia sobre Sara. Tampoco es un libro sobre TDAH ni sobre salud mental. Y espero que no sea solamente sobre mí.</p>
+
+        <p>Es catarsis. Terapia. Una historia sobre fingir demencia frente a una realidad que hacía tiempo había dejado de llenarme del todo. Sobre decisiones postergadas, deseos inconvenientes y heridas que uno puede ignorar durante años hasta que algo encuentra exactamente dónde tocar.</p>
+
+        <p>Es sobre volver a enamorarse cuando se supone que uno ya tiene la vida resuelta. Sobre desear algo cuando tenerlo puede destruir otras cosas que también amás. Sobre entrar voluntariamente a un lugar prohibido y después descubrir que salir es bastante más difícil que entrar.</p>
+
+        <p>Es sobre WhatsApp, dopamina, culpa, sexo, ansiedad, trabajo, matrimonio, paternidad y esa maravillosa capacidad que tenemos los seres humanos de entender perfectamente qué deberíamos hacer y, aun así, hacer exactamente lo contrario.</p>
+
+        <p>Pero también es sobre algo que tardé bastante más en entender: la diferencia entre perseguir lo que uno quiere y saber cuándo dejar de perseguirlo.</p>
+
+        <p>Yo había construido gran parte de mi vida haciendo lo primero. Nunca se me había ocurrido que algún día esa misma cualidad podía convertirse en un problema.</p>
+
+        <p>Quizás por eso esta historia me pegó como me pegó.</p>
+
+        <p>Porque apareció algo que quería descubrir con cada parte de mi cuerpo y, por primera vez, descubrirlo podía costarme una vida que también quería conservar.</p>
+
+        <p>No sabía qué hacer con esa contradicción.</p>
+
+        <p>Así que hice lo que hago cuando no entiendo algo: me obsesioné.</p>
+
+        <p>Después intenté entenderlo.</p>
+
+        <p>Y finalmente empecé a escribir.</p>
+
+        <p>Lo viví como una novela.</p>
+
+        <p>Y para intentar sobrevivirlo, decidí transformarlo en una.</p>
+
+        <p class="cap-titulo">1</p>
+        <p class="cap-sub">Una cabeza inquieta</p>
+        <p class="cap-cancion">♪ Mac DeMarco — Still Beating</p>
+
+        <p class="capitular">Nací en San Diego, California. Lo cual suena bastante más interesante de lo que realmente fue, porque me llevaron a Córdoba siendo chico y prácticamente todos mis recuerdos empiezan ahí. Me considero argentino sin serlo. Cordobés, además.</p>
+
+        <p>Y si uno cree que el lugar donde crece termina explicando una parte de quién es, supongo que Córdoba habrá hecho algo conmigo. Una ciudad lo suficientemente grande para querer escaparse y lo suficientemente chica para querer volver. Yo terminé haciendo las dos cosas. Pero faltaban muchos años para eso.</p>
+
+        <p>De chico era inquieto, curioso e introvertido. Una combinación extraña, porque podía pasar horas metido en mi propio mundo y, al mismo tiempo, tener la cabeza funcionando constantemente. Mis padres notaban que había algo distinto en mí. Por momentos llegaron a preguntarse si era autista. No lo era. Décadas después descubriría que había otras explicaciones posibles para algunas de mis conductas.</p>
+
+        <p>Pero decirlo ahora hace que todo parezca demasiado obvio. En ese momento yo simplemente era Jeremy.</p>
+
+        <p>Y además era buen alumno. Muy buen alumno. Fui abanderado, finalista de las Olimpíadas de Matemática y el preferido de más de un profesor. Eso hizo que mi historia con el TDAH fuera un poco más difícil de detectar.</p>
+
+        <p>Existe esa imagen del chico con déficit de atención que no puede quedarse sentado, le va mal en el colegio y vive recibiendo llamados de la directora. Yo era casi lo contrario. Cuando algo me interesaba podía meterme completamente adentro: aprenderlo, entenderlo, cuestionarlo, obsesionarme. El resto del mundo podía desaparecer durante horas.</p>
+
+        <p>El problema aparecía cuando algo no me interesaba. El mundo también desaparecía, pero esta vez el que se iba era yo.</p>
+
+        <p>Muchos años después aprendería una palabra para una parte de eso: hiperfoco. En aquel momento pensaba que simplemente funcionaba así. Y durante bastante tiempo funcionó bastante bien.</p>
+
+        <p>Crecí entre dos personalidades muy diferentes. Mi mamá era ama de casa. Conservadora, presente, madraza. Era estructura. Mi papá era otra cosa: trabajador, relativamente exitoso, cariñoso, soñador, rebelde y bipolar. Era de esas personas genuinamente buenas que podían imaginar cosas que todavía no existían. Había algo en él que no terminaba de aceptar que la vida tuviera que hacerse de determinada manera simplemente porque alguien había decidido que así se hacía.</p>
+
+        <p>Creo que heredé bastante de eso. Para bien y para mal.</p>
+
+        <p>De mi mamá probablemente aprendí el valor de tener un hogar. De mi papá, las ganas de salir de él para descubrir qué había afuera. Con los años entendería que esas dos fuerzas aparentemente opuestas iban a acompañarme bastante: construir algo, querer escapar, extrañarlo, volver y empezar de nuevo.</p>
+
+        <p>Pero había algo más que probablemente había aprendido de ellos. Algo bastante menos romántico.</p>
+
+        <p>La incertidumbre.</p>
+
+        <p>Mis padres se separaron cuando yo era chico. Mi papá atravesó momentos difíciles y hubo una época en la que empecé a sentir que las cosas podían desmoronarse de un día para otro. Que los adultos no siempre tenían todo bajo control. Que las personas que debían cuidarte también podían necesitar que alguien las cuidara.</p>
+
+        <p>Y, por alguna razón, empecé a sentirme responsable de cosas que probablemente no me correspondían.</p>
+
+        <p>No recuerdo haber tomado conscientemente esa decisión. Ningún chico de esa edad se sienta a pensar que llegó el momento de asumir algunas responsabilidades familiares. Simplemente empezás a hacerlo. A prestar atención. A preocuparte. A intentar anticiparte a los problemas.</p>
+
+        <p>Quizás ahí empezó mi necesidad de tener todo bajo control. Lo curioso es que, al mismo tiempo, me acostumbré a vivir sin él.</p>
+
+        <p>Era como si mi cerebro hubiera aprendido a vivir esperando que sucediera algo. Y, cuando no sucedía, se encargara de inventarlo.</p>
+
+        <p>Muchos años después terminaría construyendo una vida bastante estable.</p>
+
+        <p>Había pasado gran parte de mi vida intentando conseguir estabilidad. Pero no estaba demasiado seguro de saber qué hacer con ella.</p>
+
+        <p class="escena" aria-hidden="true">· · ·</p>
+
+        <p>Mi adolescencia fue bastante normal. O por lo menos eso recuerdo.</p>
+
+        <p>Aprendí a desenvolverme socialmente, me convertía fácilmente en líder de los grupos de los que participaba, me iba bien con las mujeres, tenía amigos, salía.</p>
+
+        <p>Pero nunca dejé de ser introvertido. Simplemente descubrí que mi capacidad para socializar dependía bastante de cuánto me interesara la conversación.</p>
+
+        <p>El famoso <em>small talk</em> que a todo el mundo le sale naturalmente a mi me resultaba desafiante. Podía enfrentar una reunión con veinte empresarios sin ningún problema, pero compartir treinta segundos de ascensor con un vecino me parecía una prueba de resistencia psicológica.</p>
+
+        <p>En las reuniones sociales solía quedarme callado. A veces escuchaba. Otras, ni siquiera eso. Mi cuerpo estaba ahí, pero mi cabeza probablemente había encontrado algo más interesante que hacer.</p>
+
+        <p>Lo curioso era lo que sucedía cuando aparecía un tema que realmente me apasionaba. De pronto me transformaba. Hablaba, preguntaba, discutía, conectaba ideas y podía pasar horas sin darme cuenta.</p>
+
+        <p>Así terminé construyendo dos reputaciones completamente opuestas.</p>
+
+        <p>Había grupos que me consideraban prácticamente mudo. Y otros que estaban convencidos de que no me callaba nunca.</p>
+
+        <p>Los dos tenían razón.</p>
+
+        <p>El problema nunca había sido cuánto me gustaba hablar. Era cuánto me interesaba lo que estábamos hablando.</p>
+
+        <p>Y empecé a descubrir algo que después se volvería bastante importante en mi vida: me gustaba hacer cosas.</p>
+
+        <p>No solamente participar. Hacerlas. Inventarlas. Organizarlas.</p>
+
+        <p>A los dieciséis años tenía una matinée. A los diecinueve, un boliche. A los veintiuno abrí mi primer café y lo choqué al año. No importó demasiado. A los veintitrés ya tenía socios que me doblaban en edad y, mientras otros empezaban a preguntarse qué querían hacer cuando fueran grandes, yo llevaba algunos años intentando hacer negocios.</p>
+
+        <p>No porque tuviera un gran plan ni porque a los dieciséis hubiera descubierto mi vocación empresarial. Era bastante más simple: me divertía. Y no sabía quedarme quieto. Me llenaba. Había algo tremendamente estimulante en tener una idea y verla convertirse en algo real. Imaginarla, darle forma, ponerle un nombre, construir una marca, convencer a otros, conseguir un lugar, abrir las puertas y llenarlo de gente.</p>
+
+        <p>El problema aparecía cuando finalmente funcionaba. Para entonces yo ya estaba pensando en otra cosa.</p>
+
+        <p>Al principio me sentía orgulloso. Pleno. Había convertido una idea en algo real y eso me llenaba de satisfacción.</p>
+
+        <p>Pero la sensación duraba poco.</p>
+
+        <p>Lo que ayer me entusiasmaba, hoy empezaba a aburrirme. El éxito quizás seguía ahí, pero la emoción se había ido.</p>
+
+        <p>Y entonces necesitaba otra cosa. Otro proyecto. Otro desafío. Otra dosis de esa sensación.</p>
+
+        <p>Al parecer, alcanzar mis objetivos tenía un efecto secundario bastante molesto: dejaban de interesarme.</p>
+
+        <p>Y no era algo exclusivo de los negocios. En mi vida personal funcionaba bastante parecido. Me entusiasmaba con planes, viajes, actividades. Convencía a todos de que eran ideas extraordinarias. Y muchas veces, cuando los demás finalmente se entusiasmaban, yo ya estaba pensando en otra cosa.</p>
+
+        <p>Vivir conmigo debía ser bastante entretenido. Seguirme el ritmo, probablemente no tanto.</p>
+
+        <p>Ese pequeño detalle tardaría muchos años en entenderlo.</p>
+
+        <p>La facultad fue diferente. Hasta entonces ser inteligente, curioso y tener algo de memoria había alcanzado bastante. De repente había que sentarse a estudiar cosas que no necesariamente me interesaban, sostener la atención durante horas porque sí, organizarse, cumplir plazos y, sobre todo, tener constancia. Mi cabeza empezó a mostrar algunas grietas que hasta entonces habían pasado bastante desapercibidas. No eran suficientemente grandes como para detenerme. Pero estaban.</p>
+
+        <p>También apareció la impulsividad con más fuerza. El alcohol fue durante un tiempo un compañero habitual. Después apareció la marihuana y descubrí que servía para algo que hasta entonces no sabía que necesitaba: bajar el volumen.</p>
+
+        <p>Mi cabeza siempre había tenido ruido. Ideas, planes, preocupaciones. Cosas que quería hacer. Cosas que debería estar haciendo. Cosas que acababa de recordar que no había hecho. A veces necesitaba silencio y durante un tiempo encontré distintas maneras de conseguirlo. Algunas mejores que otras.</p>
+
+        <p>Y después estaba el insomnio.</p>
+
+        <p>Una relación tóxica que había empezado en la adolescencia y que, a diferencia de otras, parecía no tener ninguna intención de terminar.</p>
+
+        <p>Dormir. Una actividad aparentemente sencilla que la humanidad llevaba practicando con bastante éxito desde hacía miles de años. Cerrás los ojos, apagás el cerebro y listo.</p>
+
+        <p>Bueno, no todos.</p>
+
+        <p>Podía pasarme el día agotado, soñando con el momento de apoyar la cabeza en la almohada. Pero apenas lo hacía, mi cerebro interpretaba que había llegado la hora de ponerse a trabajar.</p>
+
+        <p>Pendientes. Ideas. Problemas. Conversaciones que había tenido. Conversaciones que debería haber tenido. Situaciones hipotéticas que probablemente nunca ocurrirían, pero para las que, evidentemente, necesitaba estar preparado.</p>
+
+        <p>Una reunión de directorio a las dos de la mañana. Con todos los participantes hablando al mismo tiempo y sin posibilidad de pedirles que por favor hicieran silencio.</p>
+
+        <p>Y cuando finalmente conseguía dormirme, tampoco podía cantar victoria.</p>
+
+        <p>A veces me despertaba en mitad de la noche. Sin motivo aparente. Abría los ojos y ahí estaba otra vez mi cabeza, perfectamente dispuesta a retomar la conversación donde la habíamos dejado.</p>
+
+        <p>Lo verdaderamente frustrante era que el cansancio no garantizaba el sueño. Podía estar físicamente destruido y mentalmente listo para correr una maratón.</p>
+
+        <p>Y al día siguiente había que levantarse. Estudiar, trabajar, tomar decisiones, resolver problemas. Funcionar como una persona razonablemente competente.</p>
+
+        <p>Todo con un cerebro que había decidido trabajar horas extras durante la madrugada y tomarse el descanso justo cuando empezaba mi jornada.</p>
+
+        <p>Durante años pensé que simplemente dormía mal. Que era otra de esas pequeñas particularidades con las que uno aprende a convivir.</p>
+
+        <p>Todavía no sabía que muchas de las cosas que consideraba defectos aislados podían formar parte de una misma historia.</p>
+
+        <p>La de una cabeza que nunca terminaba de quedarse quieta.</p>
+
+        <p>Ni siquiera cuando yo se lo suplicaba.</p>
+
+        <p>Pero esa misma cabeza que empezaba a mostrar problemas tenía una ventaja enorme: soñaba mucho. Y tenía cierta inconsciencia respecto de la dificultad de convertir esos sueños en realidad. Eso ayudaba.</p>
+
+        <p>Emprender terminó convirtiéndose menos en una profesión que en mi manera de vivir. Nunca me interesó demasiado ganar plata por el simple hecho de acumularla. Quería lo que creía que venía con ella: libertad. Elegir qué hacer con mi tiempo. Crear. Viajar. Tener experiencias. Y, aunque durante muchos años probablemente no lo hubiera reconocido, demostrarme algunas cosas. Y a los demás. Los gringos lo llamarían muy sabiamente “Dick Measuring Purposes”</p>
+
+        <p>Tenía amigos que por nacimiento vivían situaciones excepcionales. Veía sus viajes, su libertad, sus posibilidades y pensaba: yo también quiero eso. No necesariamente quería sus cosas. Quería esa sensación de que la vida podía ser grande, de que no había que conformarse con la versión que te había tocado.</p>
+
+        <p>Así que perseguí casi todas las ideas que se me cruzaron. Y si alguien a mi alrededor consideraba que alguna era una locura, curiosamente eso solía motivarme un poco más. Con los años descubrí que no conocer demasiado un negocio podía ser una ventaja. Cuando no sabés cómo se supone que funcionan las cosas, tampoco sabés cuáles son las reglas que supuestamente no podés romper. Eso me permitió encontrar soluciones bastante creativas.</p>
+
+        <p>Por supuesto. También me permitió cometer errores extraordinariamente estúpidos que cualquier persona con un mínimo de experiencia habría evitado.</p>
+
+        <p>La ignorancia tenía sus beneficios. Y sus costos operativos.</p>
+
+        <p>La gastronomía y el entretenimiento terminaron convirtiéndose en mi mundo. Restaurantes, bares, discotecas, fiestas, marcas, marketing, conceptos. En el camino también hubo una fábrica de cerveza artesanal, una tienda de ropa, una agencia de marketing, una bodega y una marca de vino. Durante más de una década abrí negocios, armé equipos, tuve socios, acerté algunas veces y me equivoqué muchas otras.</p>
+
+        <p>Aunque, para ser justo, acerté lo suficiente como para que eso tampoco ayudara demasiado con mi personalidad. Por momentos me comió el ego. Me sentí una especie de rockstar de un universo bastante más pequeño de lo que yo creía. A los veintidós años probablemente ganaba más dinero que mi padre. Las mujeres me buscaban, la gente de mi ambiente me reconocía y había personas que sabían mi nombre sin que yo tuviera la menor idea de quiénes eran. Para un pendejo de veintipocos años, era un cóctel bastante peligroso.</p>
+
+        <p>Dinero a temprana edad, mujeres, reconocimiento. Todo alimentaba mi ego. Y yo, por supuesto, no tenía ninguna intención de ponerlo a dieta.</p>
+
+        <p>A esa edad me creía bastante experto en seducción. Una confianza extraordinaria para alguien que todavía tenía muchísimo más por aprender del sexo femenino que por enseñarles.</p>
+
+        <p>En realidad, me creía experto en bastantes cosas. Los veintipocos tienen esa ventaja: todavía no acumulaste suficientes fracasos como para que la realidad te arruine la autoestima.</p>
+
+        <p>Hubo excesos, inmadurez y algunos momentos oscuros.</p>
+
+        <p>Pero, debajo de todo eso, había algo que genuinamente amaba: crear.</p>
+
+        <p>Todavía hoy puedo entrar a un local vacío y verlo terminado. Imaginar dónde va la barra, qué música va a sonar, cómo se va a llamar, qué tiene que transmitir la marca, qué va a sentir alguien cuando entre. Después viene la parte difícil: construirlo. Y finalmente, si todo sale bien, llega ese momento extraordinario en que lo que durante meses existió solamente en tu cabeza está abierto, lleno de gente y es real.</p>
+
+        <p>Esa sensación se volvió adictiva.</p>
+
+        <p>Probablemente porque duraba poco.</p>
+
+        <p>Una vez que algo funcionaba, mi cabeza volvía inevitablemente a la misma pregunta:</p>
+
+        <p>¿Y ahora qué?</p>
+
+        <p>Esa pregunta fue responsable de muchas de las mejores decisiones de mi vida.</p>
+
+        <p>Y de algunas de las peores.</p>
+      </div>
+
+      <div class="fin">
+        <h2>Aquí acaba el adelanto</h2>
+        <p>Lo que viene después es Sara, un diagnóstico tardío de TDAH y la pregunta de cuánto de lo que se siente es amor. Cada capítulo tiene su canción.</p>
+        <div class="cta-row">
+          <a class="btn btn-azul" href="https://www.amazon.com/dp/B0HPGZ3VDP" target="_blank" rel="noopener">Conseguir el libro</a>
+          <a class="btn btn-ghost" href="index.html">Volver a la ficha</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Jeremy Langfit · <em>Amor, dopamina y otras adicciones</em>. Capítulo publicado con permiso del autor.</p>
+      <p style="margin-top:8px;"><a href="../index.html">&larr; Volver a La librería de los que publican solos</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
