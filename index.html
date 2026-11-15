@@ -314,6 +314,11 @@
     footer a { color: var(--blanco-2); text-decoration: none; display: block; margin-bottom: 5px; transition: color .2s; }
     footer a:hover { color: var(--oro-claro); }
     footer .col h5 { font-family: 'Bitter', serif; color: var(--blanco); font-size: .9rem; margin-bottom: 12px; letter-spacing: .04em; border-bottom: 1px solid var(--linea-oscura); padding-bottom: 8px; }
+    footer .col-estanteria { flex: 1 1 100%; }
+    footer .estanteria { column-count: 2; column-gap: 34px; }
+    footer .estanteria a { break-inside: avoid; }
+    footer .estanteria + a { margin-top: 16px; }
+    @media (max-width: 700px) { footer .estanteria { column-count: 1; } }
     footer .legal { width: 100%; text-align: center; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(201,146,42,.15); font-size: .82rem; color: rgba(200,208,232,.45); }
 
     /* =====================================================
@@ -692,8 +697,9 @@
         <a href="#escribes">¿Escribes?</a>
         <a href="https://www.instagram.com/elrincondelautopublicado" target="_blank" rel="noopener">Instagram · @elrincondelautopublicado</a>
       </div>
-      <div class="col">
+      <div class="col col-estanteria">
         <h5>En la estantería</h5>
+        <div class="estanteria">
         <a href="tres-dioses/index.html">Tres Dioses — R. Mariscal Roca</a>
         <a href="la-magia-de-lo-inesperado/index.html">La Magia de lo Inesperado — Adelaida M. F.</a>
         <a href="sacristia/index.html">El enigma de la sacristía — Javier Vilar García</a>
@@ -714,6 +720,12 @@
         <a href="scratch/index.html">Scratch: El Rally de Mi Vida — Eva M. Saladrigas</a>
         <a href="cartas-desde-hungria/index.html">Cartas desde Hungría — Ana Barrera Pastor</a>
         <a href="raqmu/index.html">Raqmu — Carmen Hinojal</a>
+        <a href="horus-y-osiris/index.html">Horus y Osiris — Paty Liñán</a>
+        <a href="suite-tardia/index.html">Suite tardía — Pablo Cabrera</a>
+        <a href="semillas-del-pasado/index.html">Semillas del pasado — Cristina Gracia Tenas</a>
+        <a href="no-hay-libros-con-n/index.html">¿Que no hay libros con Ñ? — VV.AA.</a>
+        <a href="el-peaje/index.html">El Peaje — Francisco R. Alamar</a>
+        <a href="amistad-y-picadura/index.html">Amistad y Picadura — Luisa Alonso Reguera</a>
         <a href="dalila-no-amaba-a-sanson/index.html">Dalila no amaba a Sansón — Carmen Frigolet</a>
         <a href="mas-alla-de-lilith/index.html">Más allá de Lilith — Verónica Chía Alcázar</a>
         <a href="Crónicas-de-sombrío/index.html">Crónicas de Sombrío — J.L. Campillo</a>
@@ -733,6 +745,7 @@
         <a href="el-callejon-de-los-suspiros/index.html">El callejón de los suspiros — Margarita Bokusu Mina</a>
         <a href="el-latido-del-vacio/index.html">El Latido del Vacío — J. Simon</a>
         <a href="amor-dopamina-y-otras-adicciones/index.html">Amor, dopamina y otras adicciones — Jeremy Langfit</a>
+        </div>
         <a href="mailto:rafaelmariscalroca@gmail.com">Escríbenos: rafaelmariscalroca@gmail.com</a>
         <a href="https://x.com/messages/compose?recipient_id=126349629" target="_blank" rel="noopener">Escríbenos por mensaje directo en X</a>
       </div>
