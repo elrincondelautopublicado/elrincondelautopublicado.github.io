@@ -282,17 +282,8 @@
     .papelito .papelito-mail a:hover { text-decoration: underline; }
 
     /* =====================================================
-       SRA. WHITE + RINCÓN DE LAS LETRAS — al final
+       TEXTO DESTACADO (lectura de la semana)
        ===================================================== */
-    .columnas-editoriales {
-      background: var(--papel-2);
-      padding: 92px 0;
-      border-top: 1px solid var(--linea-clara);
-      border-bottom: 1px solid var(--linea-clara);
-    }
-    .columnas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-    .col-editorial h2 { font-size: clamp(1.4rem, 2.8vw, 1.9rem); margin-bottom: 22px; color: var(--tinta); }
-    .col-etiqueta { font-family: 'Caveat', cursive; font-size: 1.9rem; color: var(--oro); display: block; margin-bottom: 4px; }
     .col-articulo { background: #fff; padding: 28px 26px; border-radius: 4px; box-shadow: var(--sombra-leve); border: 1px solid rgba(13,27,62,.08); }
     .col-articulo .articulo-cat { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--oro); margin-bottom: 8px; font-family: 'Bitter', serif; }
     .col-articulo h4 { font-family: 'Bitter', serif; font-size: 1.28rem; font-weight: 700; margin-bottom: 10px; color: var(--tinta); }
@@ -302,7 +293,6 @@
     .col-articulo .articulo-fecha { display: block; margin-top: 14px; font-size: .78rem; color: var(--tinta-suave); }
     .col-articulo .ver-mas { display: block; margin-top: 14px; font-family: 'Bitter', serif; font-size: .82rem; color: var(--tinta-suave); text-decoration: none; }
     .col-articulo .ver-mas:hover { color: var(--oro); }
-    @media (max-width: 760px) { .columnas-grid { grid-template-columns: 1fr; gap: 40px; } }
 
     /* =====================================================
        FOOTER
@@ -347,7 +337,6 @@
       <div class="links" id="navLinks">
         <a href="#recomendacion">La recomendación</a>
         <a href="#mesa">La mesa</a>
-        <a href="#sra-white">Sra. White</a>
         <a href="#librero">Quién está detrás</a>
         <a href="#escribes">¿Escribes?</a>
       </div>
@@ -636,30 +625,6 @@
       <p>Esto no es una editorial ni un colectivo: cada autor que aparece aquí es dueño absoluto de su obra y responsable de ella. Yo solo pongo el escaparate y les guardo un sitio en la estantería. Ahora mismo en la estantería hay thriller, novela negra, terror, fantasía, ciencia ficción, comedia romántica, novela contemporánea, poesía y libros sobre educación. Y cabe una más: la tuya.</p>
       <div class="firma">Rafael Mariscal Roca
         <small>autor autopublicado y responsable de La librería de los que publican solos</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ RINCÓN DE LAS LETRAS + SRA. WHITE ============ -->
-  <section id="columnas" class="columnas-editoriales">
-    <div class="wrap">
-      <div class="columnas-grid">
-
-        <!-- LA COLUMNA DE LA SRA. WHITE -->
-        <div id="sra-white" class="col-editorial reveal">
-          <span class="col-etiqueta">la columna de la Sra. White</span>
-          <h2 class="slab">La columna de la Sra. White</h2>
-          <div class="col-articulo">
-            <div class="articulo-cat">Relato</div>
-            <h4>La última copa</h4>
-            <p style="font-family:'Caveat',cursive; font-size:1.2rem; color:var(--oro); margin-bottom:12px;">— Anastasia White</p>
-            <p class="extracto">—¿Siempre miras así a las mujeres? Él levantó la vista de su copa. —¿Así cómo? —Como si estuvieras intentando recordar dónde las has visto desnudas. Sonrió. Despacio. —No. Solo a las que me gustaría ver.</p>
-            <a class="leer-mas" href="rincon-de-las-letras/la-ultima-copa.html">Leer relato completo →</a>
-            <span class="articulo-fecha">Semana del 4 de noviembre, 2026</span>
-            <a class="ver-mas" href="rincon-de-las-letras/sra-white.html">Ver todas las columnas de la Sra. White →</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>

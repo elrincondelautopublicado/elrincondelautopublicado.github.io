@@ -319,24 +319,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/el-autobus.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/el-cafe.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/el-entrenador.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/el-violin-que-no-cesa.html</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -349,20 +331,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/la-edad.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/las-alas-del-guacamayo-azul.html</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/la-sinceridad.html</loc>
-    <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -374,12 +344,6 @@
   </url>
   <url>
     <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/spank.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/sra-white.html</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -473,5 +437,23 @@
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrincondelautopublicado.github.io/amor-dopamina-y-otras-adicciones/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrincondelautopublicado.github.io/amor-dopamina-y-otras-adicciones/capitulo1.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elrincondelautopublicado.github.io/rincon-de-las-letras/desde-sus-ojos.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
