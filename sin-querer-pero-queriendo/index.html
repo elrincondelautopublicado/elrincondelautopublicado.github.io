@@ -200,6 +200,24 @@
       .autora-texto p { text-align: left; }
     }
 
+    /* ============ RESEÑAS ============ */
+    .resenas-sec { background: var(--crema); }
+    .resenas-lista { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+    .resena { width: 100%; background: var(--blanco); border: 1px solid var(--melocoton); border-radius: 18px; padding: 32px 34px; box-shadow: 0 12px 30px rgba(197,81,47,.12); }
+    .resena.larga { max-width: 820px; }
+    .resena.corta { max-width: 520px; }
+    .resena .origen { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 14px; margin-bottom: 14px; font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--rosa); }
+    .resena .estrellas-r { color: var(--dorado); font-size: 1.05rem; letter-spacing: .12em; margin-bottom: 10px; }
+    .resena h4 { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: 1.3rem; color: var(--coral-oscuro); margin-bottom: 12px; line-height: 1.25; }
+    .resena p { font-size: 1rem; line-height: 1.75; color: #5b4b49; margin-bottom: 16px; }
+    .resena .firma { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--melocoton); }
+    .resena .quien { font-weight: 500; font-size: .92rem; color: var(--coral-oscuro); }
+    .resena .cuando { font-size: .78rem; color: var(--gris); }
+    .resenas-fuente { text-align: center; margin-top: 36px; font-size: .86rem; color: var(--gris); }
+    .resenas-fuente a { color: var(--coral-oscuro); text-decoration: none; border-bottom: 1px solid var(--melocoton); }
+    .resenas-fuente a:hover { color: var(--rosa); border-color: var(--rosa); }
+    @media (max-width: 560px) { .resena { padding: 24px 20px; } }
+
     /* ============ REDES ============ */
     .redes { background: var(--blanco); text-align: center; }
     .redes p { max-width: 46ch; margin: 0 auto 34px; color: var(--gris); }
@@ -242,6 +260,7 @@
         <a href="#booktrailers">Booktrailers</a>
         <a href="#bilogia">La otra mitad</a>
         <a href="#autora">La autora</a>
+        <a href="#resenas">Reseñas</a>
         <a href="#redes">Redes</a>
         <a href="#comprar">Comprar</a>
       </div>
@@ -358,6 +377,40 @@
           <p class="cierre">Porque hay historias que no terminan cuando llega el primer beso. Algunas apenas están empezando.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section id="resenas" class="resenas-sec">
+    <div class="wrap">
+      <h2 class="section-title reveal">Lo que dicen los <span class="script" style="color:var(--coral);font-size:1.3em;">lectores</span></h2>
+      <div class="divider reveal"></div>
+      <div class="resenas-lista">
+
+        <article class="resena larga reveal">
+          <div class="origen"><span>Reseña en Instagram</span><span>Colaboración con la autora</span></div>
+          <h4>«Porque hay historias que empiezan. Y otras… que, incluso después de todo… no dejan de empezar nunca»</h4>
+          <p>Quiero empezar agradeciendo a la autora el envío del ejemplar; ha sido un placer leer esta historia y espero que volvamos a colaborar en el futuro.</p>
+          <p>Todas las amigas de Lara habían pasado de curso, menos ella. Y aunque empezar de nuevo nunca es fácil, todo cambia el primer día de clase, cuando Lara y Lucas se miran por primera vez. Un instante sencillo, pero capaz de cambiarles la vida a los dos.</p>
+          <p>Ha sido una lectura súper ágil y amena. La pluma de la autora tiene un estilo muy directo y diferente a lo que suelo leer en novela romántica juvenil, algo que me sorprendió bastante.</p>
+          <p>La narración es sencilla, cercana y muy fácil de seguir, por lo que es una historia que engancha desde el principio y se disfruta sin esfuerzo.</p>
+          <p>De hecho, devoré este libro en muy poco tiempo; es de esas historias que perfectamente puedes leer en menos de 24 horas.</p>
+          <p>Es la primera vez que leo una novela romántica escrita con una prosa tan directa. Aunque personalmente me ha faltado algo más de desarrollo en la trama, más profundidad en algunas escenas y más descripciones, aun así me ha parecido una historia muy bonita y tierna.</p>
+          <p>Además, la novela toca temas como las dudas, las inseguridades y cómo de los errores también se aprende y se crece. Me ha gustado ver la evolución de los personajes a lo largo de la historia y cómo poco a poco van madurando.</p>
+          <p>Novela juvenil romántica, tierna, ligera y perfecta si buscáis una lectura rápida, bonita y fácil de devorar.</p>
+          <div class="firma"><span class="quien">@rakelysuslibros</span><span class="cuando">11 de mayo</span></div>
+        </article>
+
+        <article class="resena corta reveal">
+          <div class="origen"><span>Reseña en Amazon</span><span>Compra verificada</span></div>
+          <div class="estrellas-r" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Buena historia</h4>
+          <p>Una historia intensa</p>
+          <div class="firma"><span class="quien">David</span><span class="cuando">30 de mayo · Versión Kindle</span></div>
+        </article>
+
+      </div>
+      <p class="resenas-fuente reveal">Reseñas recogidas de Instagram y de <a href="https://www.amazon.es/dp/B0GYXSVS7S" target="_blank" rel="noopener">Amazon</a>. ¿Ya lo has leído? Deja la tuya allí.</p>
     </div>
   </section>
 
