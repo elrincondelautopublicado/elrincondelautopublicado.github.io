@@ -131,6 +131,24 @@
     .formato p { color: var(--texto-suave); font-size: .96rem; margin-bottom: 24px; }
     .formato .extra { display: block; margin-top: 16px; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--texto-suave); }
 
+    /* RESEÑAS */
+    .resenas-resumen { display: flex; align-items: baseline; justify-content: center; gap: 14px; margin: -8px 0 40px; }
+    .resenas-resumen .nota { font-family: 'Fraunces', serif; font-weight: 600; font-size: 3.2rem; color: var(--hueso); line-height: 1; }
+    .resenas-resumen .cuantas { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-suave); }
+    .resenas-columnas { column-count: 2; column-gap: 24px; }
+    .resena { break-inside: avoid; -webkit-column-break-inside: avoid; margin: 0 0 24px; background: var(--tinta-3); border: 1px solid var(--linea); border-radius: 5px; padding: 28px 28px 22px; box-shadow: var(--sombra); }
+    .resena .origen { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 12px; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--burdeos-claro); }
+    .resena .estrellas-r { color: var(--rosa); font-size: 1.05rem; letter-spacing: .12em; margin-bottom: 8px; }
+    .resena h4 { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 1.25rem; color: var(--hueso); line-height: 1.3; margin-bottom: 12px; }
+    .resena p { font-size: .98rem; line-height: 1.75; color: var(--texto); margin-bottom: 16px; }
+    .resena .firma { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; padding-top: 14px; border-top: 1px solid var(--linea); }
+    .resena .quien { font-weight: 600; font-size: .9rem; color: var(--rosa); }
+    .resena .cuando { font-size: .75rem; color: var(--texto-suave); }
+    .resenas-fuente { text-align: center; margin-top: 18px; font-size: .86rem; color: var(--texto-suave); }
+    .resenas-fuente a { color: var(--rosa); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    .resenas-fuente a:hover { color: var(--burdeos-claro); border-color: var(--burdeos-claro); }
+    @media (max-width: 800px) { .resenas-columnas { column-count: 1; } }
+
     /* REDES */
     .redes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
     .red { display: inline-flex; align-items: center; gap: 11px; padding: 14px 26px; background: var(--tinta-3); border: 1px solid var(--linea); border-radius: 40px; color: var(--hueso); text-decoration: none; font-size: .94rem; transition: transform .2s, border-color .2s, color .2s, box-shadow .2s; }
@@ -166,6 +184,7 @@
         <a href="#relato">Primer relato</a>
         <a href="desde-sus-ojos.html">Desde sus ojos</a>
         <a href="#autor">El autor</a>
+        <a href="#resenas">Reseñas</a>
         <a href="#comprar">Conseguirlo</a>
         <a href="#redes">Redes</a>
       </div>
@@ -254,12 +273,74 @@
     </div>
   </section>
 
-  <section id="comprar" class="alt">
+  <section id="resenas" class="alt">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="section-title reveal">Lo que dicen los <span>lectores</span></h2>
+        <div class="rule reveal"></div>
+        <div class="resenas-resumen reveal"><span class="nota">4,6</span><span class="cuantas">de 5 · 7 valoraciones en Amazon.es</span></div>
+      </div>
+      <div class="resenas-columnas">
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Lectura que no te deja indiferente</h4>
+          <p>Decir Rojo es un libro que lo forman diez relatos eroticos que se basan como dice el autor en su portada, en el deseo, el poder y el consentimiento. Cuando empecé a leerlo no sabía muy bien lo que me iba a encontrar en sus páginas ya que la novela erótica no es un género que yo controle (y este libro es especialmente intenso y muy explícito) y lo que me encontré fueron diez historias llenas deseo, sensualidad, emociones y sentimientos vistos desde una perspectiva atrevida, diferente y privada. Hay veces que hay que dejarse sorprender y atreverse con lecturas diferentes. Eso si… mejor si tienes más de 🔞.</p>
+          <div class="firma"><span class="quien">Patricia 😊</span><span class="cuando">13 de noviembre de 2026 · Tapa blanda</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="4 estrellas de 5">★★★★☆</div>
+          <h4>Más allá del deseo: una lectura que me sorprendió</h4>
+          <p>Hay libros que llegan sin que sepas muy bien qué esperar de ellos, y este ha sido uno de esos casos. No es el tipo de lectura al que estoy acostumbrada y, sinceramente, me ha sorprendido muchísimo. Estamos ante diez relatos de erótica literaria que exploran el deseo, el poder y el consentimiento. Algunos de ellos no han terminado de llegarme, quizá porque los temas que abordan son demasiado intensos para mí. Sin embargo, otros me han gustado especialmente. Y no ha sido tanto por lo que cuentan, sino por lo que transmiten el cariño, la seguridad, la confianza y esa complicidad que puede construirse entre dos personas. Me ha gustado descubrir cómo una palabra puede cambiarlo todo, cómo puede ser suficiente para escuchar y dejarlo todo en ese mismo instante. Porque el deseo también está en saber escuchar, respetar y cuidar. ❤</p>
+          <div class="firma"><span class="quien">Irene</span><span class="cuando">12 de noviembre de 2026 · Tapa dura</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span><span>Compra verificada</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Sensual, intensa y diferente. Una lectura que despierta los sentidos.</h4>
+          <p>Me ha sorprendido mucho Decir rojo. Es una lectura que me ha gustado y disfrutado más de lo que esperaba. Sus relatos me han parecido intensos, sensuales y capaces de despertar emociones y sensaciones muy diferentes. Me ha gustado la forma en la que el autor juega con el deseo, la tensión y esa línea entre lo que nos atrevemos a expresar y lo que muchas veces guardamos para nosotros mismos. Es un libro que invita a dejarse llevar, a explorar y a disfrutar de historias que se alejan de lo convencional. Pero, sobre todo, me ha gustado que detrás de esa sensualidad también haya espacio para la confianza, la comunicación y el respeto. Lo he disfrutado muchísimo y me ha dejado con muy buen sabor de boca. Sin duda, una lectura que recomendaría a quienes busquen algo diferente, atrevido y que consiga despertar los sentidos.</p>
+          <div class="firma"><span class="quien">Cliente Amazon</span><span class="cuando">10 de noviembre de 2026 · Tapa blanda</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="4 estrellas de 5">★★★★☆</div>
+          <h4>Adictivo</h4>
+          <p>Primero que nada, infinitas gracias al autor por la confianza y haberme mandado su librito en digital. Por lo general no suelo leer muchos libros eróticos, porque me gusta más el romance vainilla, pero tengo que decir que me ha sorprendido para bien. No me voy a extender mucho, porque es un libro súper corito, y no quiero hacer spoiler a nadie. Pero si os gustan los relatos cortitos y eróticos os lo recomiendo al 100%. Yo he disfrutado muchísimo leyendo❤</p>
+          <div class="firma"><span class="quien">Cliente de Kindle</span><span class="cuando">6 de noviembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Relatos eroticos sin ser obcenos</h4>
+          <p>Cuando su autor me ofrecio ser lectora beta de una categoría que no suelo leer estuve apunto de decir que no... Menos mal que no lo hice. El libro saldrá a la venta el día 31 y os invito a ir todos a comprarlo y leerlo ya sea en digital o papel . Decir rojo es un libro con 10 relatos eroticos y la demostración que erotica no es lo mismo que porno . La erotica es un género que no suele leer porque sus autores tienen la costumbre de escribir porno obceno en vez de novelas eroticas y es que la línea es muy fina y sin darte cuenta la pasas. En estos relatos su autor escribe momentos eroticos y sexules sin ser obcenos y lo más importante sin perder el respeto entre personajes con una historia no un aquí te pillo un polvo y adiós , tienen historia aparte de sexo duro . Una lectura fácil que no te hace demasiado y no cansa de leer y como son independientes aunque parezca que tienen unión entre ellos puedes leer cada día uno no hace falta leerlo en una sentada. Yo tengo mis favoritos y desde luego cuando el próximo 31 salga a la venta lo comprare. #100%recomendado</p>
+          <div class="firma"><span class="quien">Em.</span><span class="cuando">1 de noviembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Excitante</h4>
+          <p>Relatos para saborear uno a uno, despacio y con ganas. Historias que además de provocar, te hacen pensar. Realmente interesante.</p>
+          <div class="firma"><span class="quien">Cliente Amazon</span><span class="cuando">1 de noviembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="4 estrellas de 5">★★★★☆</div>
+          <h4>Una lectura diferente que sorprende</h4>
+          <p>Reconozco que no sabía muy bien qué me iba a encontrar cuando empecé Decir rojo, pero ha sido una lectura diferente a lo que suelo leer. Estamos ante un libro formado por diez relatos independientes que giran alrededor del deseo, el poder, el control, la vulnerabilidad y, sobre todo, el consentimiento. Cada historia plantea una situación y unas dinámicas diferentes, y precisamente eso hace que la lectura sea bastante variada, pero a pesar de eso la historia forma un conjunto que gira entorno a un mismo punto y eso hace que no veas las historias de forma individual sino que aborda el mismo punto desde diez perspectivas diferentes. Lo que más me ha llamado la atención es que el autor no se limita únicamente a contar escenas eróticas, sino que intenta explorar también qué hay detrás del deseo y de la necesidad de ceder o ejercer el control. Algunas historias me han resultado más interesantes que otras, pero en conjunto consigue mantener la atención y provocar diferentes sensaciones. Es más, en algunas historias me he quedado con ganas de más y diría que sus personajes y su trama dan para más...para una próxima novela quizas?😉 La escritura es directa, atrevida y explícita, por lo que no es una lectura para todo el mundo. Es un libro dirigido claramente a un público adulto y con escenas bastante intensas. También me ha gustado que el concepto de rojo tenga un significado importante dentro del libro: una palabra que representa un límite y que conecta con una de las cuestiones que están presentes en los relatos: hasta dónde estamos dispuestos a llegar y qué ocurre cuando cedemos el control. Una lectura diferente, provocadora y que, más allá del componente erótico, invita a reflexionar sobre el deseo, los límites y la confianza. Si os gustan las historias eróticas más intensas, explícitas y con dinámicas de poder, creo que puede ser una lectura que os sorprenda.</p>
+          <div class="firma"><span class="quien">Rocio</span><span class="cuando">30 de octubre de 2026 · Tapa dura</span></div>
+        </article>
+      </div>
+      <p class="resenas-fuente reveal">Reseñas recogidas de <a href="https://www.amazon.es/dp/B0HKSX76X6" target="_blank" rel="noopener">Amazon.es</a>, tal como las escribieron sus lectores. ¿Ya lo has leído? Deja la tuya allí.</p>
+    </div>
+  </section>
+
+  <section id="comprar">
     <div class="wrap">
       <div class="center">
         <h2 class="section-title reveal">Conseguir <span>el libro</span></h2>
         <div class="rule reveal"></div>
-        <p class="intro reveal"><em>Decir rojo</em> estará disponible en Amazon, en ebook y en papel, a partir del 30 de octubre de 2026.</p>
+        <p class="intro reveal"><em>Decir rojo</em> ya está disponible en Amazon, en ebook y en papel.</p>
       </div>
       <div class="formatos">
         <div class="formato reveal">
@@ -273,7 +354,7 @@
     </div>
   </section>
 
-  <section id="redes">
+  <section id="redes" class="alt">
     <div class="wrap center">
       <h2 class="section-title reveal">Sigue a <span>Néstor</span></h2>
       <div class="rule reveal"></div>
