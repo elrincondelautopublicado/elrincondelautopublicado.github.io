@@ -82,7 +82,18 @@
     .compra-card{max-width:620px;margin:0 auto;text-align:center;background:var(--noche-3);border:1px solid var(--rayo-borde);border-radius:6px;padding:40px 30px}
     .compra-card p{color:#cdd1de;margin-bottom:22px}.compra-card .isbn{font-size:.85rem;letter-spacing:.1em;color:var(--gris);margin-top:20px;margin-bottom:0}
 
-    .contacto{text-align:center}.contacto p{max-width:48ch;margin:0 auto 30px;color:#d5d8e2}
+    .resenas-resumen{display:flex;align-items:baseline;justify-content:center;gap:14px;margin:-18px 0 40px}.resenas-resumen .nota{font-family:'Forum',serif;font-size:3.2rem;color:#fff;line-height:1}.resenas-resumen .cuantas{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.resenas-columnas{column-count:2;column-gap:24px;max-width:1040px;margin:0 auto}
+.resena{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 24px;background:var(--noche);border:1px solid var(--rayo-borde);border-top:3px solid var(--cobre);border-radius:4px;padding:26px 26px 20px}
+.resena .origen{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-bottom:12px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rayo)}
+.resena .estrellas-r{color:var(--cobre-claro);font-size:1.05rem;letter-spacing:.12em;margin-bottom:8px}
+.resena h4{font-family:'Forum',serif;font-weight:400;font-size:1.3rem;color:#fff;line-height:1.3;margin-bottom:12px}
+.resena p{font-size:.97rem;line-height:1.75;color:#cdd1de;margin-bottom:16px}
+.resena .firma{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px;padding-top:14px;border-top:1px solid var(--rayo-borde)}
+.resena .quien{font-size:.9rem;color:var(--rayo-claro)}.resena .cuando{font-size:.75rem;color:var(--gris)}
+.resenas-fuente{text-align:center;margin-top:14px;font-size:.86rem;color:var(--gris)}.resenas-fuente a{color:var(--rayo);text-decoration:none;border-bottom:1px solid var(--rayo-borde)}
+@media(max-width:800px){.resenas-columnas{column-count:1}}
+.contacto{text-align:center}.contacto p{max-width:48ch;margin:0 auto 30px;color:#d5d8e2}
     .redes-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
     .red{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:40px;text-decoration:none;font-size:.82rem;letter-spacing:.05em;border:1px solid rgba(255,255,255,.2);color:var(--hueso);background:rgba(255,255,255,.03);transition:all .3s ease}
     .red:hover{transform:translateY(-3px);border-color:var(--rayo);color:#fff}.red svg{width:18px;height:18px;fill:currentColor}
@@ -102,6 +113,7 @@
         <a href="#sinopsis">Sinopsis</a>
         <a href="#trailer">Booktrailer</a>
         <a href="#autor">El autor</a>
+      <a href="#resenas">Reseñas</a>
         <a href="#comprar">Comprar</a>
         <a href="#redes">Redes</a>
       </div>
@@ -201,7 +213,74 @@
     </div>
   </section>
 
-  <section id="comprar" class="alt">
+  <section id="resenas" class="alt">
+    <div class="wrap">
+      <h2 class="section-title reveal">Lo que dicen los <span>lectores</span></h2>
+      <div class="divider reveal"></div>
+      <div class="resenas-resumen reveal"><span class="nota">4,6</span><span class="cuantas">de 5 · 12 valoraciones en Amazon.es</span></div>
+      <div class="resenas-columnas">
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Una historia colapso y de límites, de empatía y de esperanza.</h4>
+          <p>Una historia que me ha enganchado desde el principio. Una historia de desheredados destinados a "heredar la tierra". La historia de un mundo organizado a imagen y semejanza de quienes dictan las leyes y controlan la realidad, marginando la "diversidad funcional" como desecho prescindible. Un mundo que, como el nuestro, se rebela ante la estupida idea de que el desarrollo sostenible no necesita del mantenimiento de los recursos (renovables o no) naturales; ni que los beneficios de este desarrollo deban alcanzar a todos (personas y territorios) para evitar desajustes que, tarde o temprano, interfieran en ese sistema perfecto. Una historia de vulnerabilidad, donde se manifiestan dependencias olvidadas por una sociedad que vive una fantasía de suficiencia y autodeterminación que se rebelan como una ficción a la luz de una gran verdad ignorada: necesitamos de nuestro entorno (ecodependencia) y necesitamos de nuestros semejantes (interdependencia). No somos porque sí: SOMOS porque también ES todo lo que nos ha permitido llegar hasta aquí. Y obviar esto es... el fin.</p>
+          <div class="firma"><span class="quien">Jovi</span><span class="cuando">24 de octubre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Una historia que engancha</h4>
+          <p>Este es un libro que engancha. Es un aventura con "magia", con malos y buenos, pero también habla del uso y abuso de los recursos, de vivir fuera de la realidad, de las mentiras de los que mandan y más cosas. Pero para mí, lo más importante para recomendarlo ha sido sentir que el libro tiraba de mi para seguir leyendo. No tiene ningún capítulo flojo o sin tensión y aunque parecen muchas páginas al final se hacen cortas. Es una lectura para disfrutar.</p>
+          <div class="firma"><span class="quien">Pepe</span><span class="cuando">8 de octubre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>💫💫💫💫💫</h4>
+          <p>Aerendil ha funcionado durante eras con una armonía pulcra; nada sobraba y nada faltaba. Todo marchaba según estaba establecido, con un orden y una precisión quirúrgicos. Había quien se encargaba de que las cosas fueran tal y como deberían ser, cada persona tenía una función que cumplir y un destino al que atenerse; todo encajaba y nada ni nadie se salía de lo que estaba establecido previamente; lo torcido se enderezaba y las aristas se limaban. Sin embargo, la perfección no tolera el más mínimo defecto, así que algo como una mínima fricción, una nota discordante, una ínfima abertura o una mota de polvo en un eje pueden hacer que todo salte por los aires desatando un efecto dominó de consecuencias imprevisibles. En diferentes lugares, cuatro protagonistas, como los cuatro puntos cardinales, ven como todo a su alrededor comienza a cambiar, al igual que sus vidas, ya que algo más poderoso que ellos mismos los obliga a cambiar y a enfrentarse a lo que temen. Este es un libro de fantasía bastante complejo en el que se tocan diferentes temas y me ha encantado por distintos motivos. Para empezar, porque tiene unos protagonistas que se terminan metiendo debajo de la piel y te llevan con ellos a través de un viaje de crecimiento, autoconocimiento y mucho dolor, ya que han de enfrentar situaciones extremas para las que creen no estar preparados, poniéndose a prueba página tras página e intentando salir lo más airosos posibles aunque a veces no resulta nada fácil salir indemne. La historia se va contando desde sus cuatro puntos de vista, por lo que iremos conociendo diferentes ubicaciones de este mundo tan bien construido y detallado: las personas que lo transitan, los diversos lugares -desde los ricos y lujosos salones de un palacio hasta el rincón más inmundo e insalubre que necesita una reparación urgente, pasando por otros lugares que desafían nuestra imaginación, ya que se encuentran en el límite de lo conocido y resultan sobrecogedores- e incluso el sistema de magia que lo compone. Todo esto está muy bien descrito y detallado, ya que el autor ha conseguido aunar de forma sobresaliente la magia que se despliega en el libro, la riqueza visual de los escenarios en los que transcurre la acción así como la psicología de los protagonistas. Como lectores, somos testigos de todos los peligros a los que se enfrentan y como estos hacen que evolucionen y se vayan transformando a lo largo de la lectura. También tengo que hacer mención especial al sentir de la novela, y con esto me refiero a la manera de describir los hechos de tal forma que no solo sientes el miedo, el dolor, cansancio o la tensión, por poner algunas de las emociones que se hayan presentes, sino que también puedes sentir la viscosidad, la pegajosidad, la densidad de un aire irrespirable o la permanente incomodidad de sentirte en un cuerpo que parece no ser tuyo. Estas últimas características alcanzan unas nuevas dimensiones en este libro traspasando las páginas y quedándose contigo. En resumen, es un mundo por descubrir, unos protagonistas por conocer y una historia para no perdérsela.</p>
+          <div class="firma"><span class="quien">Maria Ligeia Amate</span><span class="cuando">13 de septiembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>genial</h4>
+          <p>El latido del vacío, de J. Simon, me ha parecido una lectura muy disfrutable, con una ambientación cuidada y un elenco que va ganando peso a medida que avanza la historia. Ambientada en un mundo que funciona a base de «flujo», una especie de fuerza que mueve todo lo que se encuentre en sus tierras. Los habitantes, en mayor o menor medida, lo contienen, y de eso depende su estatus social. Pero hay ciertos personajes que son diferentes, por lo que los llaman “Los Secos”, y eso marcará su destino en la trama. Pero este flujo no se comporta como se espera, algo pasa… Cuatro habitantes son los realmente protagonistas de esta historia, y no pueden ser más dispares: una joven aspirante a monja, una noble/comerciante, un ingeniero/técnico de mantenimiento y un fontanero. ¿Que cómo narices casan cada uno en este entramado de flujos? Ahhhh, hay que adentrarse en las páginas para comprobarlo… Lo único que os puedo decir es que telita con el problema y telita con la solución y telita con la mente de los escritores: como ya he dicho en alguna ocasión (tienen todo mi respeto, ojú, trabajazo para tenerte página tras página inmersos en sus desvaríos/ideas). Lo que más me ha gustado ha sido la evolución de los personajes. Iraia me conquistó al principio por su presencia y por la primera impresión que deja, pero, con el paso de las páginas, Lyra terminó ganándome por completo, porque me pareció un personaje más matizado, con más fuerza y con una evolución especialmente interesante. Esa transición entre ambas me parece uno de los mayores aciertos del libro, porque no se queda en personajes planos ni en papeles previsibles. En su camino hacia el problema, se encuentran con seres y personajes muy interesantes a descubrir. También destacaría que la novela sabe mantener el interés gracias a la forma en que va construyendo las relaciones y las decisiones de sus protagonistas. Hay una sensación constante de crecimiento, de tensiones bien medidas y de evolución emocional que funciona muy bien sin necesidad de recurrir a giros excesivos. En ese sentido, el libro me ha parecido sólido, ágil y con personalidad. Si tuviera que resumirlo en pocas palabras, diría que es una novela que engancha por sus personajes, por cómo evolucionan y por la atmósfera que crea. No me ha parecido perfecta, pero sí una lectura muy recomendable, sobre todo si te gustan las historias enrevesadas que te mantienen pegada al ebook/papel, deseando saber más de los personajes, del misterioso flujo,... para llegar a un final en el que te deja con más misterios por resolver.</p>
+          <div class="firma"><span class="quien">rogarmel</span><span class="cuando">9 de septiembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="4 estrellas de 5">★★★★☆</div>
+          <h4>Un mundo que merece ser explorado.</h4>
+          <p>Una fantasía steampunk con un mundo muy trabajado y un sistema de magia muy original. Rheon ha sido para mí mi personaje favorito y el grupo termina formando una dinámica que invita a seguir leyendo esta historia. Y un final que deja con ganas de descubrir la era de la sed.</p>
+          <div class="firma"><span class="quien">Mirian</span><span class="cuando">6 de septiembre de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Lo normal es solo una ilusión para los miedosos.</h4>
+          <p>J. Simon lo ha vuelto hacer. No tuvo bastante con su thriller de Ciencia Ficción del Proyecto Despertar, que ahora nos trae algo totalmente novedoso que nos hace explotar la cabeza. Se ha vuelto a pasar el juego y con creces. El Latido del Vacío es un libro que, si bien empieza con un lenguaje algo enrevesado y complejo, hablando de flujos, engranajes, tuberías y cosas extrañas; el autor es capaz de difundir su mensaje de forma clara y precisa mientras nos aventuramos en su mundo. Tanto, que casi nos volvemos unos expertos en la materia, que podríamos superar a un fontanero tan famoso como Mario Bros. Bromas aparte, en cada capítulo nos muestra un mundo de fantasía que si por algún momento piensas que puedes averiguar como va a seguir Simon hace que cambies de idea y vaya por otro lado. Esto hace que no dejes de leer e intentes siempre averiguar que va a pasar. Con este libro deja el listón muy alto que hace que los hemos tenido es placer de ser los primeros en leerlo estemos cabreados por no saber como continuará la historia y tengamos que esperar un tiempo con la intriga en el cuerpo haciendo que nuestra mente tenga un ruido constante sin poder tener el poder, aún, para apagarlo. Nos lleva por un mundo que en cada fragmento hace que se nos muestre en la mente como si tuviésemos amnesia y empezáramos a recordar poco a poco hasta el final. Ese final de infarto que te deja con la miel en los labios como si fuese el capítulo final de temporada de tu serie favorita de televisión. Si os gusta la estética steampunk y queréis leer algo, que aún estamos pensando como se le ha podido ocurrir, no dudéis en destinar vuestro tiempo en acompañar a los protagonistas en su gran aventura.</p>
+          <div class="firma"><span class="quien">Churribooks (JR Agenjo)</span><span class="cuando">30 de agosto de 2026 · Tapa blanda</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Fantasía Épica Grimdark 💯 Adictiva</h4>
+          <p>Rincones de Lectura.... Como lectora Beta y después compradora verificada, me aventuré a conocer, a disfrutar, a debatir y poner en valor, el formar parte de Aerendil; un mundo donde el flujo (entendido como magia), es el combustible de la civilización, y éste a su vez, se está acabando, el mundo se fractura, se rompe, y tiende a desaparecer. Todo ello, nos invita a conocer, a un grupo de 4 protagonistas inadaptados, desfavorecidos; los únicos sin un flujo definido y altamente potente, que permanecerán en contra de un imperio de luz, poder, misterios, mentira, despotismo y crueldad absoluta. Estos jóvenes, deberán aventurarse al peligroso sur profundo, para descubrir esa verdad (una verdad, dolorosa, cruda, fragmentada y finalmente reveladora). Los peligros acechan, y los miembros de la Inquisición son letales. Es una novela, con temática Grimdark y Steampunk, perfectamente marcada. Con enclaves propios, de las grandes novelas épicas del pasado. Y con un reparto de personajes, que acabarás amandolos u odiandolos, en igualdad de condiciones. Una trama potente, con una lógica aplastante y muy bien definida. Su nivel de originalidad es máxima, de hecho, es una de sus mejores características; y así es como la pluma del autor lo refleja, como su auténtica tarjeta de presentación. En definitiva, una novela cuya acumulación de características, hacen, que una vez leída, se despierte en el lector, la necesidad de saber y conocer muchísimo más sobre ésta adictiva historia. Los personajes, la trama, la construcción de mundo, el enclave y el género literareo, harán que los futuros lectores, disfruten de éste viaje épico, convirtiendo sus citas literareas, sus epígrafe, sus preludios, y sus frases célebres, como afirmaciones dignas, de permanecer en tu retira, en tu memoria y en tu corazón... Aerendil te espera. Conócela. Forma parte de la historia!!!! ⭐⭐⭐⭐⭐ María José.</p>
+          <div class="firma"><span class="quien">@rinconesdelecturas</span><span class="cuando">28 de agosto de 2026 · Versión Kindle</span></div>
+        </article>
+        <article class="resena reveal">
+          <div class="origen"><span>Reseña en Amazon.es</span></div>
+          <div class="estrellas-r" role="img" aria-label="5 estrellas de 5">★★★★★</div>
+          <h4>Una lectura trepidante que te deja con ganas de más</h4>
+          <p>La historia nos presenta a cuatro personas que, aparentemente, no tienen nada en común. Sin embargo, el destino acaba entrelazando sus caminos en un conflicto que podría salvar o destruir el mundo conocido. Todo depende de quién cuente la historia. Con una ambientación de fantasía oscura con toques steampunk, el autor construye un mundo fascinante donde la acción, la magia y los secretos hacen que cada capítulo termine con la necesidad de leer el siguiente. Es de esos libros que no quieres soltar porque siempre necesitas saber qué va a pasar después. Pero, por encima de todo, me quedo con sus personajes. Aunque aquí el romance no ocupa el centro de la historia, la amistad, la confianza y los lazos que se crean entre ellos demuestran que la familia no siempre es aquella en la que nacemos, sino también la que elegimos. Además, entre toda la fantasía, la novela deja interesantes paralelismos con la sociedad actual que invitan a reflexionar sin perder el ritmo de la aventura. Si te gustan las historias con una gran construcción de mundo, personajes que evolucionan, decisiones imposibles y una aventura que te atrapa desde el principio, apunta este título porque merece mucho la pena.</p>
+          <div class="firma"><span class="quien">Irene</span><span class="cuando">28 de agosto de 2026 · Versión Kindle</span></div>
+        </article>
+      </div>
+      <p class="resenas-fuente reveal">Reseñas recogidas de <a href="https://www.amazon.es/dp/B0HF7PYHJ4" target="_blank" rel="noopener">Amazon.es</a>, tal como las escribieron sus lectores. ¿Ya lo has leído? Deja la tuya allí.</p>
+    </div>
+  </section>
+
+  <section id="comprar">
     <div class="wrap">
       <h2 class="section-title reveal">Consigue el <span>libro</span></h2>
       <div class="divider reveal"></div>
@@ -213,7 +292,7 @@
     </div>
   </section>
 
-  <section id="redes" class="contacto">
+  <section id="redes" class="contacto alt">
     <div class="wrap">
       <h2 class="section-title reveal">Encuéntrale</h2>
       <div class="divider reveal"></div>
